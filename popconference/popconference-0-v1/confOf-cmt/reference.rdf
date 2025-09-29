@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<!DOCTYPE rdf:RDF [
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY align "http://knowledgeweb.semanticweb.org/heterogeneity/alignment#">
+<!ENTITY edoal "http://ns.inria.org/edoal/1.0/">
+<!ENTITY alext "http://exmo.inrialpes.fr/align/ext/1.0/">
+]>
+
+	<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+	xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+	xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#'
+	xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+	xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+	xmlns:edoal='http://ns.inria.org/edoal/1.0/'
+	xmlns:alext='http://exmo.inrialpes.fr/align/ext/1.0/'
+>
+
+	<Alignment>
+		<xml>yes</xml>
+		<level>2EDOAL</level>
+		<type>??</type>
+		<onto1>
+			<Ontology rdf:about="http://confOf">
+				<formalism>
+					<Formalism align:name="OWL" align:uri="http://www.w3.org/2002/07/owl"/>
+				</formalism>
+			</Ontology>
+		</onto1>
+		<onto2>
+			<Ontology rdf:about="http://cmt">
+				<formalism>
+					<Formalism align:name="OWL" align:uri="http://www.w3.org/2002/07/owl"/>
+				</formalism>
+			</Ontology>
+		</onto2>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://confOf#Chair_PC"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cmt#ProgramCommitteeChair"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://confOf#Member_PC"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cmt#ProgramCommitteeMember"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://confOf#Person"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cmt#Person"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://confOf#Author"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cmt#Author"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://confOf#Administrator"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cmt#Administrator"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://confOf#Conference"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cmt#Conference"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://confOf#Contribution"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cmt#Paper"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://confOf#Paper"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cmt#PaperFullVersion"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://confOf#Participant"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cmt#ConferenceMember"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://confOf#Topic"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cmt#SubjectArea"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://confOf#dealsWith"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cmt#hasSubjectArea"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://confOf#writtenBy"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cmt#hasAuthor"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://confOf#writes"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cmt#writePaper"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://confOf#reviewes"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cmt#readPaper"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property rdf:about="http://confOf#hasEmail"/>
+				</entity1>
+				<entity2>
+					<edoal:Property rdf:about="http://cmt#email"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property rdf:about="http://confOf#hasTitle"/>
+				</entity1>
+				<entity2>
+					<edoal:Property rdf:about="http://cmt#title"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:AttributeOccurenceRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://confOf#reviewes"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="&edoal;greater-than"/>
+						<edoal:value>0</edoal:value>
+					</edoal:AttributeOccurenceRestriction>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cmt#Reviewer"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+	</Alignment>
+</rdf:RDF>

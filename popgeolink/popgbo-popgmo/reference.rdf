@@ -1,0 +1,3934 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<!DOCTYPE rdf:RDF [
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY align "http://knowledgeweb.semanticweb.org/heterogeneity/alignment#">
+<!ENTITY edoal "http://ns.inria.org/edoal/1.0/">
+<!ENTITY alext "http://exmo.inrialpes.fr/align/ext/1.0/">
+]>
+
+	<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+	xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+	xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#'
+	xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+	xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+	xmlns:edoal='http://ns.inria.org/edoal/1.0/'
+	xmlns:alext='http://exmo.inrialpes.fr/align/ext/1.0/'
+>
+
+	<Alignment>
+		<xml>yes</xml>
+		<level>2EDOAL</level>
+		<type>?*</type>
+		<onto1>
+			<Ontology rdf:about="http://gbo">
+				<formalism>
+					<Formalism align:name="OWL" align:uri="http://www.w3.org/2002/07/owl"/>
+				</formalism>
+			</Ontology>
+		</onto1>
+		<onto2>
+			<Ontology rdf:about="http://gmo">
+				<formalism>
+					<Formalism align:name="OWL" align:uri="http://www.w3.org/2002/07/owl"/>
+				</formalism>
+			</Ontology>
+		</onto2>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:PropertyDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Award"/>
+								</edoal:class>
+							</edoal:PropertyDomainRestriction>
+							<edoal:Property rdf:about="http://gbo#hasEndDate"/>
+						</edoal:and>
+					</edoal:Property>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#endsOnDate"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#FundingAward"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://www.w3.org/2006/time#inXSDDate"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:PropertyDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Program"/>
+								</edoal:class>
+							</edoal:PropertyDomainRestriction>
+							<edoal:Property rdf:about="http://gbo#hasEndDate"/>
+						</edoal:and>
+					</edoal:Property>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#endsOnDate"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Program"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://www.w3.org/2006/time#inXSDDate"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:PropertyDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Program"/>
+								</edoal:class>
+							</edoal:PropertyDomainRestriction>
+							<edoal:Property rdf:about="http://gbo#hasStartDate"/>
+						</edoal:and>
+					</edoal:Property>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#startsOnDate"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Program"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://www.w3.org/2006/time#inXSDDate"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:PropertyDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Person"/>
+								</edoal:class>
+							</edoal:PropertyDomainRestriction>
+							<edoal:Property rdf:about="http://gbo#hasFullName"/>
+						</edoal:and>
+					</edoal:Property>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#hasPersonName"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Person"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PersonName"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://gmo#fullName"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:PropertyDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Person"/>
+								</edoal:class>
+							</edoal:PropertyDomainRestriction>
+							<edoal:Property rdf:about="http://gbo#hasGivenName"/>
+						</edoal:and>
+					</edoal:Property>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#hasPersonalInfoItem"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Person"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PersonalInfoItem"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://gmo#hasedoal:LiteralValue"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:PropertyDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Person"/>
+								</edoal:class>
+							</edoal:PropertyDomainRestriction>
+							<edoal:Property rdf:about="http://gbo#hasGivenName"/>
+						</edoal:and>
+					</edoal:Property>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#hasPersonName"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Person"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PersonName"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://gmo#firstOrGivenName"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:PropertyDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Person"/>
+								</edoal:class>
+							</edoal:PropertyDomainRestriction>
+							<edoal:Property rdf:about="http://gbo#hasFamilyName"/>
+						</edoal:and>
+					</edoal:Property>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#hasPersonalInfoItem"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Person"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PersonalInfoItem"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://gmo#hasLiteralValue"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:PropertyDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Person"/>
+								</edoal:class>
+							</edoal:PropertyDomainRestriction>
+							<edoal:Property rdf:about="http://gbo#hasFullName"/>
+						</edoal:and>
+					</edoal:Property>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#hasPersonalInfoItem"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Person"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PersonalInfoItem"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://gmo#hasLiteralValue"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:PropertyDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Program"/>
+								</edoal:class>
+							</edoal:PropertyDomainRestriction>
+							<edoal:Property rdf:about="http://gbo#hasAcronym"/>
+						</edoal:and>
+					</edoal:Property>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#describedBy"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Program"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#InformationObject"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://gmo#alsoKnownAs"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://gbo#hasIdentifier"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#describedBy"/>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#InformationObject"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#hasPrimaryIdentifier"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property rdf:about="http://gbo#hasAbstract"/>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#describedBy"/>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#InformationObject"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://gmo#hasDescription"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property rdf:about="http://gbo#hasTitle"/>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#describedBy"/>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#InformationObject"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://gmo#hasCanonicalName"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property rdf:about="http://gbo#hasDescription"/>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#describedBy"/>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#InformationObject"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://gmo#hasDescription"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:AttributeOccurenceRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://gbo#hasGeoFeatureType"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="&edoal;greater-than"/>
+						<edoal:value>0</edoal:value>
+					</edoal:AttributeOccurenceRestriction>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Place"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:AttributeOccurenceRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://gbo#hasPlatformType"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="&edoal;greater-than"/>
+						<edoal:value>0</edoal:value>
+					</edoal:AttributeOccurenceRestriction>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Platform"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:AttributeOccurenceRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://gbo#hasCruiseType"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="&edoal;greater-than"/>
+						<edoal:value>0</edoal:value>
+					</edoal:AttributeOccurenceRestriction>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Cruise"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:AttributeOccurenceRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://gbo#hasSampleType"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="&edoal;greater-than"/>
+						<edoal:value>0</edoal:value>
+					</edoal:AttributeOccurenceRestriction>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:AttributeOccurenceRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://gbo#hasPlaceType"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="&edoal;greater-than"/>
+						<edoal:value>0</edoal:value>
+					</edoal:AttributeOccurenceRestriction>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Place"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#Identifier"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Identifier"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://gbo#hasIdentifierScheme"/>
+				</entity1>
+				<entity2>
+					<edoal:Property rdf:about="http://gmo#hasIdentifierScheme"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property rdf:about="http://gbo#hasIdentifierValue"/>
+				</entity1>
+				<entity2>
+					<edoal:Property rdf:about="http://gmo#hasIdentifierValue"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#Place"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Place"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#GeoFeature"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Place"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#Award"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#FundingAward"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://gbo#hasAward"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://gmo#fundedBy"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Award"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasCoPrincipalInvestigator"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gmo#FundingAward"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation>
+										<edoal:and rdf:parseType="Collection">
+											<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+											<edoal:RelationCoDomainRestriction>
+												<edoal:class>
+													<edoal:Class rdf:about="http://gmo#CoPrincipalInvestigatorRole"/>
+												</edoal:class>
+											</edoal:RelationCoDomainRestriction>
+										</edoal:and>
+									</edoal:Relation>
+									<edoal:Relation rdf:about="http://gmo#performedBy"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Award"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasPrincipalInvestigator"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gmo#FundingAward"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation>
+										<edoal:and rdf:parseType="Collection">
+											<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+											<edoal:RelationCoDomainRestriction>
+												<edoal:class>
+													<edoal:Class rdf:about="http://gmo#PrincipalInvestigatorRole"/>
+												</edoal:class>
+											</edoal:RelationCoDomainRestriction>
+										</edoal:and>
+									</edoal:Relation>
+									<edoal:Relation rdf:about="http://gmo#performedBy"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Award"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasProgramManager"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#FundingAward"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#ProgramManagerRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Award"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasSponsor"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#FundingAward"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#SponsorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:PropertyDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Award"/>
+								</edoal:class>
+							</edoal:PropertyDomainRestriction>
+							<edoal:Property rdf:about="http://gbo#hasStartDate"/>
+						</edoal:and>
+					</edoal:Property>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#startsOnDate"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#FundingAward"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://www.w3.org/2006/time#inXSDDate"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#Program"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Program"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://gbo#hasProgram"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://gmo#associatedWithProgram"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Program"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasCoPrincipalInvestigator"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Program"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#CoPrincipalInvestigatorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Program"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasPrincipalInvestigator"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Program"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PrincipalInvestigatorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Program"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasProgramManager"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Program"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#ProgramManagerRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#Organization"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Organization"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Organization"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#fromCountry"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation rdf:about="http://gmo#hasSite"/>
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gmo#Organization"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:RelationCoDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gmo#Place"/>
+								</edoal:class>
+							</edoal:RelationCoDomainRestriction>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://gbo#hasSubOrganization"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://gmo#hasSubOrganization"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#Person"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Person"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Person"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasAffiliation"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Organization"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AffiliationRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:PropertyDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Person"/>
+								</edoal:class>
+							</edoal:PropertyDomainRestriction>
+							<edoal:Property rdf:about="http://gbo#hasFamilyName"/>
+						</edoal:and>
+					</edoal:Property>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#hasPersonName"/>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Person"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PersonName"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#familyOrSurname"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#Platform"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Platform"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Platform"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gmo#hasOwner"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Platform"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#Vessel"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Vessel"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Vessel"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasOwner"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Vessel"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#VesselOwnerRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#Cruise"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Cruise"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Cruise"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasChiefScientist"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Cruise"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasCoChiefScientist"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Cruise"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasScientist"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Cruise"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasEducator"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Cruise"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasStudent"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Cruise"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasObserver"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Cruise"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasOperator"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Cruise"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasScheduler"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Cruise"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasTechnician"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#PortCall"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#Fix"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://gbo#atPort"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://gmo#atPort"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasCollector"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#CollectorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasContact"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#ContactRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasContributor"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#ContributorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasCurator"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#CuratorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasEditor"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#EditorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasRegistrant"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#RegistrantRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasRightsHolder"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#RightsHolderRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://gbo#originatesFrom"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://gmo#originatesFrom"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#originatesFrom"/>
+							<edoal:RelationCoDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+								</edoal:class>
+							</edoal:RelationCoDomainRestriction>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#derivedUsing"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#SamplingProcess"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#hasInputFeature"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Property rdf:about="http://gbo#hasEndDate"/>
+							<edoal:PropertyDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Award"/>
+								</edoal:class>
+							</edoal:PropertyDomainRestriction>
+						</edoal:and>
+					</edoal:Property>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#endsOnDate"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#FundingAward"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://www.w3.org/2006/time#inXSDDate"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Property>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:PropertyDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Person"/>
+								</edoal:class>
+							</edoal:PropertyDomainRestriction>
+							<edoal:Property rdf:about="http://gbo#hasGivenName"/>
+						</edoal:and>
+					</edoal:Property>
+				</entity1>
+				<entity2>
+					<edoal:Property>
+						<edoal:compose rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#hasPersonalInfoItem"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Person"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PersonalInfoItem"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Property rdf:about="http://gmo#hasLiteralValue"/>
+						</edoal:compose>
+					</edoal:Property>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation rdf:about="http://gbo#isGeoFeatureTypeOf"/>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#Place"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation rdf:about="http://gbo#isPlaceTypeOf"/>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#Place"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://gbo#hasGeoFeatureType"/>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#Place"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://gbo#hasPlatformType"/>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#Platform"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation rdf:about="http://gbo#isPlatformTypeOf"/>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#Platform"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://gbo#hasCruiseType"/>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#Cruise"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation rdf:about="http://gbo#isCruiseTypeOf"/>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#Cruise"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://gbo#hasSampleType"/>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#PhysicalSample"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation rdf:about="http://gbo#isSampleTypeOf"/>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#PhysicalSample"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://gbo#hasPlaceType"/>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#Place"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation rdf:about="http://gbo#isIdentifierOf"/>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#describedBy"/>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#InformationObject"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#hasPrimaryIdentifier"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#PlaceType"/>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#Place"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#GeoFeatureType"/>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#Place"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation rdf:about="http://gbo#isAwardOf"/>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://gmo#fundedBy"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Award"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isCoPrincipalInvestigatorOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gmo#FundingAward"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation>
+										<edoal:and rdf:parseType="Collection">
+											<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+											<edoal:RelationCoDomainRestriction>
+												<edoal:class>
+													<edoal:Class rdf:about="http://gmo#CoPrincipalInvestigatorRole"/>
+												</edoal:class>
+											</edoal:RelationCoDomainRestriction>
+										</edoal:and>
+									</edoal:Relation>
+									<edoal:Relation rdf:about="http://gmo#performedBy"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Award"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isPrincipalInvestigatorOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#FundingAward"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PrincipalInvestigatorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Award"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isProgramManagerOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#FundingAward"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#ProgramManagerRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Award"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isSponsorOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#FundingAward"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#SponsorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation rdf:about="http://gbo#isProgramOf"/>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://gmo#associatedWithProgram"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Program"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isCoPrincipalInvestigatorOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Program"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#CoPrincipalInvestigatorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Program"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isPrincipalInvestigatorOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Program"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PrincipalInvestigatorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Program"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isProgramManagerOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Program"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#ProgramManagerRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Organization"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isCountryOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation rdf:about="http://gmo#hasSite"/>
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gmo#Organization"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:RelationCoDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gmo#Place"/>
+								</edoal:class>
+							</edoal:RelationCoDomainRestriction>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation rdf:about="http://gbo#isSubOrganizationOf"/>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://gmo#hasSubOrganization"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Person"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isAffiliationOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Organization"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AffiliationRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#PlatformType"/>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#Platform"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:RelationDomainRestriction>
+								<edoal:class>
+									<edoal:Class rdf:about="http://gbo#Platform"/>
+								</edoal:class>
+							</edoal:RelationDomainRestriction>
+							<edoal:Relation rdf:about="http://gbo#hasOwner"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Platform"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Platform"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isOwnerOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Platform"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Vessel"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isOwnerOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Vessel"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#VesselOwnerRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#CruiseType"/>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#Cruise"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isChiefScientistOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isCoChiefScientistOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isScientistOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isEducatorIn"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isStudentIn"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isObserverIn"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isOperatorOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isSchedulerOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isTechnicianOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#Cruise"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#AgentRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation rdf:about="http://gbo#isPortOf"/>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://gmo#atPort"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://gbo#PhysicalSampleType"/>
+				</entity1>
+				<entity2>
+					<edoal:AttributeValueRestriction>
+						<edoal:onAttribute>
+							<edoal:Relation rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+						</edoal:onAttribute>
+						<edoal:comparator rdf:resource="http://ns.inria.org/edoal/1.0/#equals"/>
+						<edoal:value>
+							<edoal:Literal align:type="http://www.w3.org/2001/XMLSchema#anyURI" edoal:lang="" edoal:string="http://gmo#PhysicalSample"/>
+						</edoal:value>
+					</edoal:AttributeValueRestriction>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isCollectorOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#CollectorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isContactOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#ContactRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isContributorOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#ContributorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isCuratorOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#CuratorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isEditorOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#EditorRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isRegistrantOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#RegistrantRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isRightsHolderOf"/>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#providesAgentRole"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#RightsHolderRole"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#performedBy"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation rdf:about="http://gbo#isOriginOf"/>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://gmo#originatesFrom"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:Relation rdf:about="http://gbo#isOriginOf"/>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gbo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:and rdf:parseType="Collection">
+							<edoal:Relation>
+								<edoal:and rdf:parseType="Collection">
+									<edoal:Relation rdf:about="http://gmo#derivedUsing"/>
+									<edoal:RelationDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#PhysicalSample"/>
+										</edoal:class>
+									</edoal:RelationDomainRestriction>
+									<edoal:RelationCoDomainRestriction>
+										<edoal:class>
+											<edoal:Class rdf:about="http://gmo#SamplingProcess"/>
+										</edoal:class>
+									</edoal:RelationCoDomainRestriction>
+								</edoal:and>
+							</edoal:Relation>
+							<edoal:Relation rdf:about="http://gmo#hasInputFeature"/>
+						</edoal:and>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+	</Alignment>
+</rdf:RDF>

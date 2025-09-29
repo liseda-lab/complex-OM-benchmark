@@ -1,0 +1,2890 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://gbo"
+     xml:base="http://gbo"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:main="http://gbo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#">
+    <owl:Ontology rdf:about="http://gbo">
+        <dcterms:description rdf:resource="http://schema.geolink.org/images/gbo-overview.svg"/>
+        <rdfs:comment>A base ontology providing a conceptual view into the GeoLink patterns. For data providers, this is the default view of the patterns.</rdfs:comment>
+        <rdfs:label>GeoLink base ontology.</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#wktLiteral -->
+
+    <rdfs:Datatype rdf:about="http://www.opengis.net/ont/geosparql#wktLiteral">
+        <rdfs:comment>Enables the use of Well Known Text strings</rdfs:comment>
+        <rdfs:label>geosparql:wktLiteral</rdfs:label>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+        <rdfs:comment>Enables the use of HTML strings</rdfs:comment>
+        <rdfs:label>rdf:HTML</rdfs:label>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYearMonth -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gbo#atPort -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#atPort">
+        <owl:inverseOf rdf:resource="http://gbo#isPortOf"/>
+        <rdfs:domain rdf:resource="http://gbo#PortCall"/>
+        <rdfs:range rdf:resource="http://gbo#Place"/>
+        <rdfs:comment>The domain of this property is PortCall, which acts as the range of &apos;hasStartPortCall&apos;, &apos;hasMidPortCall&apos;, or &apos;hasEndPortCall&apos; properties.</rdfs:comment>
+        <rdfs:label>atPort</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#coReferentOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#coReferentOf">
+        <owl:inverseOf rdf:resource="http://gbo#coReferentOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>This property is used to state that an object (instance) matches with another object. This can either be a result of manual matching or running some coreference resolution algorithm.</rdfs:comment>
+        <rdfs:label>coReferentOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#containsDataset -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#containsDataset">
+        <owl:inverseOf rdf:resource="http://gbo#isContainedDatasetBy"/>
+        <rdfs:domain rdf:resource="http://gbo#Dataset"/>
+        <rdfs:range rdf:resource="http://gbo#Dataset"/>
+        <rdfs:label>containsDataset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#fromCountry -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#fromCountry">
+        <owl:inverseOf rdf:resource="http://gbo#isCountryOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Organization"/>
+                    <rdf:Description rdf:about="http://gbo#Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Country"/>
+        <rdfs:label>fromCountry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasAffiliation -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasAffiliation">
+        <owl:inverseOf rdf:resource="http://gbo#isAffiliationOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Participant"/>
+                    <rdf:Description rdf:about="http://gbo#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Organization"/>
+        <rdfs:comment>The domain of this property includes, besides persons, also instances of Participant class that act as the range of &apos;hasParticipant&apos; property.</rdfs:comment>
+        <rdfs:label>hasAffiliation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasAuthor">
+        <owl:inverseOf rdf:resource="http://gbo#isAuthorOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Document"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Organization"/>
+                    <rdf:Description rdf:about="http://gbo#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>hasAuthor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasAuthoritativeDigitalRepository -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasAuthoritativeDigitalRepository">
+        <rdfs:subPropertyOf rdf:resource="http://gbo#hasRepository"/>
+        <owl:inverseOf rdf:resource="http://gbo#isAuthoritativeDigitalRepositoryOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Repository"/>
+        <rdfs:label>hasAuthoritativeDigitalRepository</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasAward -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasAward">
+        <owl:inverseOf rdf:resource="http://gbo#isAwardOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://gbo#Award"/>
+        <rdfs:label>hasAward</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasChiefScientist -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasChiefScientist">
+        <owl:inverseOf rdf:resource="http://gbo#isChiefScientistOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasChiefScientist</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasCoChiefScientist -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasCoChiefScientist">
+        <owl:inverseOf rdf:resource="http://gbo#isCoChiefScientistOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasCoChiefScientist</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasCoPrincipalInvestigator -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasCoPrincipalInvestigator">
+        <owl:inverseOf rdf:resource="http://gbo#isCoPrincipalInvestigatorOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Award"/>
+                    <rdf:Description rdf:about="http://gbo#Program"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasCoPrincipalInvestigator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasCollector -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasCollector">
+        <owl:inverseOf rdf:resource="http://gbo#isCollectorOf"/>
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasCollector</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasContact -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasContact">
+        <owl:inverseOf rdf:resource="http://gbo#isContactOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Organization"/>
+                    <rdf:Description rdf:about="http://gbo#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>hasContact</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasContributor -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasContributor">
+        <owl:inverseOf rdf:resource="http://gbo#isContributorOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasContributor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasCreator -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasCreator">
+        <owl:inverseOf rdf:resource="http://gbo#isCreatorOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Organization"/>
+                    <rdf:Description rdf:about="http://gbo#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>hasCreator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasCruise -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasCruise">
+        <owl:inverseOf rdf:resource="http://gbo#isCruiseOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                    <rdf:Description rdf:about="http://gbo#Dive"/>
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Cruise"/>
+        <rdfs:label>hasCruise</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasCruiseType -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasCruiseType">
+        <owl:inverseOf rdf:resource="http://gbo#isCruiseTypeOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://gbo#CruiseType"/>
+        <rdfs:label>hasCruiseType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasCurator -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasCurator">
+        <owl:inverseOf rdf:resource="http://gbo#isCuratorOf"/>
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasCurator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasDataset -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasDataset">
+        <owl:inverseOf rdf:resource="http://gbo#isDatasetOf"/>
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://gbo#Dataset"/>
+        <rdfs:label>hasDataset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasDive -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasDive">
+        <owl:inverseOf rdf:resource="http://gbo#isDiveOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Dive"/>
+        <rdfs:label>hasDive</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasDocumentType -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasDocumentType">
+        <owl:inverseOf rdf:resource="http://gbo#isDocumentTypeOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Document"/>
+        <rdfs:range rdf:resource="http://gbo#DocumentType"/>
+        <rdfs:comment>E.g., article, book, book chapter, presentation, etc. 
+Should use vocabulary from BiBO or CrossRef</rdfs:comment>
+        <rdfs:label>hasDocumentType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasEditor -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasEditor">
+        <owl:inverseOf rdf:resource="http://gbo#isEditorOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasEditor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasEducator -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasEducator">
+        <owl:inverseOf rdf:resource="http://gbo#isEducatorIn"/>
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasEducator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasEndPortCall -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasEndPortCall">
+        <owl:inverseOf rdf:resource="http://gbo#isEndPortCallOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://gbo#PortCall"/>
+        <rdfs:comment>The range of this property is PortCall that acts as the domain of the &apos;atPort&apos; and &apos;hasTimeStamp&apos; property. Graph patterns for data using this property can be of the form:
+-   ?X :hasEndPortCall ?Y . ?Y a PortCall;  :atPort ?PL ; :hasTimeStamp ?T.</rdfs:comment>
+        <rdfs:label>hasEndPortCall</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasFeatureOfInterest -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasFeatureOfInterest">
+        <owl:inverseOf rdf:resource="http://gbo#isFeatureOfInterestOf"/>
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://gbo#Feature"/>
+        <rdfs:label>hasFeatureOfInterest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasFeatureType -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasFeatureType">
+        <owl:inverseOf rdf:resource="http://gbo#isFeatureTypeOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Feature"/>
+        <rdfs:range rdf:resource="http://gbo#FeatureType"/>
+        <rdfs:label>hasFeatureType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasFirstAppearance -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasFirstAppearance">
+        <owl:inverseOf rdf:resource="http://gbo#isFirstAppearanceOf"/>
+        <rdfs:domain rdf:resource="http://gbo#GeologicAge"/>
+        <rdfs:range rdf:resource="http://gbo#GeologicAgeAppearance"/>
+        <rdfs:label>hasFirstAppearance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasFormat -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasFormat">
+        <owl:inverseOf rdf:resource="http://gbo#isFormatOf"/>
+        <rdfs:domain rdf:resource="http://gbo#DigitalObject"/>
+        <rdfs:range rdf:resource="http://gbo#Format"/>
+        <rdfs:label>hasFormat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasGeoFeatureType -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasGeoFeatureType">
+        <rdfs:subPropertyOf rdf:resource="http://gbo#hasFeatureType"/>
+        <rdfs:subPropertyOf rdf:resource="http://gbo#hasPlaceType"/>
+        <owl:inverseOf rdf:resource="http://gbo#isGeoFeatureTypeOf"/>
+        <rdfs:domain rdf:resource="http://gbo#GeoFeature"/>
+        <rdfs:range rdf:resource="http://gbo#GeoFeatureType"/>
+        <rdfs:label>hasGeoFeatureType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasGeologicAge -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasGeologicAge">
+        <owl:inverseOf rdf:resource="http://gbo#isGeologicAgeOf"/>
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://gbo#GeologicAge"/>
+        <rdfs:label>hasGeologicAge</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasIdentifier">
+        <owl:inverseOf rdf:resource="http://gbo#isIdentifierOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Award"/>
+                    <rdf:Description rdf:about="http://gbo#Country"/>
+                    <rdf:Description rdf:about="http://gbo#Cruise"/>
+                    <rdf:Description rdf:about="http://gbo#CruiseType"/>
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                    <rdf:Description rdf:about="http://gbo#Dive"/>
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                    <rdf:Description rdf:about="http://gbo#DocumentType"/>
+                    <rdf:Description rdf:about="http://gbo#Feature"/>
+                    <rdf:Description rdf:about="http://gbo#FeatureType"/>
+                    <rdf:Description rdf:about="http://gbo#Format"/>
+                    <rdf:Description rdf:about="http://gbo#GeologicAge"/>
+                    <rdf:Description rdf:about="http://gbo#Instrument"/>
+                    <rdf:Description rdf:about="http://gbo#InstrumentType"/>
+                    <rdf:Description rdf:about="http://gbo#MeasurementType"/>
+                    <rdf:Description rdf:about="http://gbo#Meeting"/>
+                    <rdf:Description rdf:about="http://gbo#Organization"/>
+                    <rdf:Description rdf:about="http://gbo#Person"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSampleType"/>
+                    <rdf:Description rdf:about="http://gbo#Place"/>
+                    <rdf:Description rdf:about="http://gbo#PlaceType"/>
+                    <rdf:Description rdf:about="http://gbo#Platform"/>
+                    <rdf:Description rdf:about="http://gbo#PlatformType"/>
+                    <rdf:Description rdf:about="http://gbo#PortCall"/>
+                    <rdf:Description rdf:about="http://gbo#Program"/>
+                    <rdf:Description rdf:about="http://gbo#Repository"/>
+                    <rdf:Description rdf:about="http://gbo#RoleType"/>
+                    <rdf:Description rdf:about="http://gbo#StratigraphicUnit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Identifier"/>
+        <rdfs:comment>May be used by itself or in conjunction with hasIdentifierScheme and hasIdentifierValue data properties.</rdfs:comment>
+        <rdfs:label>hasIdentifier</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasIdentifierValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasIdentifierScheme -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasIdentifierScheme">
+        <owl:inverseOf rdf:resource="http://gbo#isIdentifierSchemeOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Identifier"/>
+        <rdfs:range rdf:resource="http://gbo#IdentifierScheme"/>
+        <rdfs:label>hasIdentifierScheme</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasInstrument -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasInstrument">
+        <owl:inverseOf rdf:resource="http://gbo#isInstrumentOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Instrument"/>
+        <rdfs:label>hasInstrument</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasInstrumentType -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasInstrumentType">
+        <owl:inverseOf rdf:resource="http://gbo#isInstrumentTypeOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Instrument"/>
+        <rdfs:range rdf:resource="http://gbo#InstrumentType"/>
+        <rdfs:label>hasInstrumentType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasLastAppearance -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasLastAppearance">
+        <owl:inverseOf rdf:resource="http://gbo#isLastAppearanceOf"/>
+        <rdfs:domain rdf:resource="http://gbo#GeologicAge"/>
+        <rdfs:range rdf:resource="http://gbo#GeologicAgeAppearance"/>
+        <rdfs:label>hasLastAppearance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasMeasurementType -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasMeasurementType">
+        <owl:inverseOf rdf:resource="http://gbo#isMeasurementTypeOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#MeasurementType"/>
+        <rdfs:label>hasMeasurementType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasMeetingParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasMeetingParticipant">
+        <owl:inverseOf rdf:resource="http://gbo#isMeetingParticipantOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Meeting"/>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasMeetingParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasMidPortCall -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasMidPortCall">
+        <owl:inverseOf rdf:resource="http://gbo#isMidPortCallOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://gbo#PortCall"/>
+        <rdfs:comment>The range of this property is PortCall that acts as the domain of the &apos;atPort&apos; and &apos;hasTimeStamp&apos; property. Graph patterns for data using this property can be of the form:
+-   ?X :hasEndPortCall ?Y . ?Y a PortCall;  :atPort ?PL ; :hasTimeStamp ?T.</rdfs:comment>
+        <rdfs:label>hasMidPortCall</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasObserver -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasObserver">
+        <owl:inverseOf rdf:resource="http://gbo#isObserverIn"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Cruise"/>
+                    <rdf:Description rdf:about="http://gbo#Dive"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasObserver</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasOperationArea -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasOperationArea">
+        <owl:inverseOf rdf:resource="http://gbo#isOperationAreaOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Dive"/>
+        <rdfs:range rdf:resource="http://gbo#Place"/>
+        <rdfs:label>hasOperationArea</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasOperator -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasOperator">
+        <owl:inverseOf rdf:resource="http://gbo#isOperatorOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://gbo#Organization"/>
+        <rdfs:label>hasOperator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasOriginDigitalRepository -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasOriginDigitalRepository">
+        <rdfs:subPropertyOf rdf:resource="http://gbo#hasRepository"/>
+        <owl:inverseOf rdf:resource="http://gbo#isOriginDigitalRepositoryOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Repository"/>
+        <rdfs:label>hasOriginDigitalRepository</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasOwner -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasOwner">
+        <owl:inverseOf rdf:resource="http://gbo#isOwnerOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Platform"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Organization"/>
+                    <rdf:Description rdf:about="http://gbo#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>hasOwner</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasPart">
+        <owl:inverseOf rdf:resource="http://gbo#isPartOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#DigitalObject"/>
+        <rdfs:label>hasPart</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasParticipant">
+        <owl:inverseOf rdf:resource="http://gbo#isParticipantOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Award"/>
+                    <rdf:Description rdf:about="http://gbo#Cruise"/>
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                    <rdf:Description rdf:about="http://gbo#Program"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Participant"/>
+        <rdfs:comment>The range of this property includes instances of Participant that act as the domain of the &apos;hasRoleType&apos;, &apos;isPerformedBy&apos;, &apos;hasAffiliation&apos; property. Graph patterns for data using this property can be of the form:
+?X :hasParticipant ?Y.  
+?Y a :Participant . 
+?Y :hasRoleType ?RT. 
+?Y :isPerformedBy ?P. 
+?Y :hasAffiliation ?O.</rdfs:comment>
+        <rdfs:label>hasParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasPhysicalRepository -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasPhysicalRepository">
+        <rdfs:subPropertyOf rdf:resource="http://gbo#hasRepository"/>
+        <owl:inverseOf rdf:resource="http://gbo#isPhysicalRepositoryOf"/>
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Organization"/>
+                    <rdf:Description rdf:about="http://gbo#Repository"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>hasPhysicalRepository</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasPilot -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasPilot">
+        <owl:inverseOf rdf:resource="http://gbo#isPilotOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Dive"/>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasPilot</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasPlace -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasPlace">
+        <owl:inverseOf rdf:resource="http://gbo#isPlaceOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                    <rdf:Description rdf:about="http://gbo#Meeting"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Place"/>
+        <rdfs:label>hasPlace</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasPlaceType -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasPlaceType">
+        <owl:inverseOf rdf:resource="http://gbo#isPlaceTypeOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Place"/>
+        <rdfs:range rdf:resource="http://gbo#PlaceType"/>
+        <rdfs:label>hasPlaceType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasPlatformType -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasPlatformType">
+        <owl:inverseOf rdf:resource="http://gbo#isPlatformTypeOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Platform"/>
+        <rdfs:range rdf:resource="http://gbo#PlatformType"/>
+        <rdfs:label>hasPlatformType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasPrincipalInvestigator -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasPrincipalInvestigator">
+        <owl:inverseOf rdf:resource="http://gbo#isPrincipalInvestigatorOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Award"/>
+                    <rdf:Description rdf:about="http://gbo#Program"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasPrincipalInvestigator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasProgram -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasProgram">
+        <owl:inverseOf rdf:resource="http://gbo#isProgramOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Cruise"/>
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Program"/>
+        <rdfs:label>hasProgram</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasProgramManager -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasProgramManager">
+        <owl:inverseOf rdf:resource="http://gbo#isProgramManagerOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Award"/>
+                    <rdf:Description rdf:about="http://gbo#Program"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasProgramManager</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasPublisher -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasPublisher">
+        <owl:inverseOf rdf:resource="http://gbo#isPublisherOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Document"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Organization"/>
+                    <rdf:Description rdf:about="http://gbo#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>hasPublisher</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasRegistrant -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasRegistrant">
+        <owl:inverseOf rdf:resource="http://gbo#isRegistrantOf"/>
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasRegistrant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasRelatedCruise -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasRelatedCruise">
+        <owl:inverseOf rdf:resource="http://gbo#hasRelatedCruise"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://gbo#Cruise"/>
+        <rdfs:label>hasRelatedCruise</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasRelatedSample -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasRelatedSample">
+        <owl:inverseOf rdf:resource="http://gbo#hasRelatedSample"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:label>hasRelatedSample</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasReplicaDigitalRepository -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasReplicaDigitalRepository">
+        <rdfs:subPropertyOf rdf:resource="http://gbo#hasRepository"/>
+        <owl:inverseOf rdf:resource="http://gbo#isReplicaDigitalRepositoryOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Repository"/>
+        <rdfs:label>hasReplicaDigitalRepository</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasRepository -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasRepository">
+        <owl:inverseOf rdf:resource="http://gbo#isRepositoryOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Organization"/>
+                    <rdf:Description rdf:about="http://gbo#Repository"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>hasRepository</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasRightsHolder -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasRightsHolder">
+        <owl:inverseOf rdf:resource="http://gbo#isRightsHolderOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Organization"/>
+                    <rdf:Description rdf:about="http://gbo#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>hasRightsHolder</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasRoleType -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasRoleType">
+        <owl:inverseOf rdf:resource="http://gbo#isRoleTypeOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Participant"/>
+        <rdfs:range rdf:resource="http://gbo#RoleType"/>
+        <rdfs:comment>The domain of this property is Participant that acts as the range of &apos;hasParticipant&apos; property. Graph patterns for data using this property can be of the form:
+-   ?X :hasParticipation ?Y . ?Y a :Participant;  :hasRoleType ?RT ; :isPerformedBy ?P; :hasAffiliation ?O .</rdfs:comment>
+        <rdfs:label>hasRoleType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasSampleType -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasSampleType">
+        <owl:inverseOf rdf:resource="http://gbo#isSampleTypeOf"/>
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://gbo#PhysicalSampleType"/>
+        <rdfs:label>hasSampleType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasScheduler -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasScheduler">
+        <owl:inverseOf rdf:resource="http://gbo#isSchedulerOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Cruise"/>
+                    <rdf:Description rdf:about="http://gbo#Dive"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Organization"/>
+        <rdfs:label>hasScheduler</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasScientist -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasScientist">
+        <owl:inverseOf rdf:resource="http://gbo#isScientistOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasScientist</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasSponsor -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasSponsor">
+        <owl:inverseOf rdf:resource="http://gbo#isSponsorOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Award"/>
+        <rdfs:range rdf:resource="http://gbo#Organization"/>
+        <rdfs:label>hasSponsor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasStartPortCall -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasStartPortCall">
+        <owl:inverseOf rdf:resource="http://gbo#isStartPortCallOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://gbo#PortCall"/>
+        <rdfs:comment>The range of this property is PortCall that acts as the domain of the &apos;atPort&apos; and &apos;hasTimeStamp&apos; property. Graph patterns for data using this property can be of the form:
+-   ?X :hasEndPortCall ?Y . ?Y a PortCall;  :atPort ?PL ; :hasTimeStamp ?T.</rdfs:comment>
+        <rdfs:label>hasStartPortCall</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasStratigraphicUnit -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasStratigraphicUnit">
+        <owl:inverseOf rdf:resource="http://gbo#isStratigraphicUnitOf"/>
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://gbo#StratigraphicUnit"/>
+        <rdfs:label>hasStratigraphicUnit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasStudent -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasStudent">
+        <owl:inverseOf rdf:resource="http://gbo#isStudentIn"/>
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasStudent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasSubOrganization -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasSubOrganization">
+        <owl:inverseOf rdf:resource="http://gbo#isSubOrganizationOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Organization"/>
+        <rdfs:range rdf:resource="http://gbo#Organization"/>
+        <rdfs:label>hasSubOrganization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasSubmersible -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasSubmersible">
+        <owl:inverseOf rdf:resource="http://gbo#isSubmersibleOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Dive"/>
+        <rdfs:range rdf:resource="http://gbo#Submersible"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasTechnician -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasTechnician">
+        <owl:inverseOf rdf:resource="http://gbo#isTechnicianOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>hasTechnician</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasVendor -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasVendor">
+        <owl:inverseOf rdf:resource="http://gbo#isVendorOf"/>
+        <rdfs:domain rdf:resource="http://gbo#Instrument"/>
+        <rdfs:range rdf:resource="http://gbo#Organization"/>
+        <rdfs:label>hasVendor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#hasVessel -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#hasVessel">
+        <owl:inverseOf rdf:resource="http://gbo#isVesselOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Cruise"/>
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://gbo#Vessel"/>
+        <rdfs:label>hasVessel</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isAffiliationOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isAffiliationOf">
+        <rdfs:label>isAffiliationOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isAuthorOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isAuthorOf">
+        <rdfs:label>isAuthorOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isAuthoritativeDigitalRepositoryOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isAuthoritativeDigitalRepositoryOf">
+        <rdfs:label>isAuthoritativeDigitalRepositoryOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isAwardOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isAwardOf">
+        <rdfs:label>isAwardOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isChiefScientistOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isChiefScientistOf">
+        <rdfs:label>isChiefScientistOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isCoChiefScientistOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isCoChiefScientistOf">
+        <rdfs:label>isCoChiefScientistOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isCoPrincipalInvestigatorOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isCoPrincipalInvestigatorOf">
+        <rdfs:label>isCoPrincipalInvestigatorOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isCollectorOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isCollectorOf">
+        <rdfs:label>isCollectorOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isContactOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isContactOf">
+        <rdfs:label>isContactOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isContainedDatasetBy -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isContainedDatasetBy">
+        <rdfs:label>isContainedDatasetBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isContributorOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isContributorOf">
+        <rdfs:label>isContributorOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isCountryOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isCountryOf">
+        <rdfs:label>isCountryOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isCreatorOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isCreatorOf">
+        <rdfs:label>isCreatorOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isCruiseOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isCruiseOf">
+        <rdfs:label>isCruiseOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isCruiseTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isCruiseTypeOf">
+        <rdfs:label>isCruiseTypeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isCuratorOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isCuratorOf"/>
+    
+
+
+    <!-- http://gbo#isDatasetOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isDatasetOf">
+        <rdfs:label>isDatasetOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isDiveOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isDiveOf">
+        <rdfs:label>isDiveOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isDocumentTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isDocumentTypeOf">
+        <rdfs:label>isDocumentTypeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isEditorOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isEditorOf">
+        <rdfs:label>isEditorOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isEducatorIn -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isEducatorIn">
+        <rdfs:label>isEducatorIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isEndPortCallOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isEndPortCallOf">
+        <rdfs:label>isEndPortCallOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isFeatureOfInterestOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isFeatureOfInterestOf">
+        <rdfs:label>isFeatureOfInterestOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isFeatureTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isFeatureTypeOf">
+        <rdfs:label>isFeatureTypeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isFirstAppearanceOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isFirstAppearanceOf"/>
+    
+
+
+    <!-- http://gbo#isFormatOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isFormatOf">
+        <rdfs:label>isFormatOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isGeoFeatureTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isGeoFeatureTypeOf">
+        <rdfs:label>isGeoFeatureTypeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isGeologicAgeOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isGeologicAgeOf"/>
+    
+
+
+    <!-- http://gbo#isIdentifierOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isIdentifierOf"/>
+    
+
+
+    <!-- http://gbo#isIdentifierSchemeOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isIdentifierSchemeOf">
+        <rdfs:label>isIdentifierSchemeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isInstrumentOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isInstrumentOf">
+        <rdfs:label>isInstrumentOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isInstrumentTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isInstrumentTypeOf">
+        <rdfs:label>isInstrumentTypeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isLastAppearanceOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isLastAppearanceOf"/>
+    
+
+
+    <!-- http://gbo#isMeasurementTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isMeasurementTypeOf">
+        <rdfs:label>isMeasurementTypeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isMeetingParticipantOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isMeetingParticipantOf">
+        <rdfs:label>isMeetingParticipantOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isMidPortCallOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isMidPortCallOf">
+        <rdfs:label>isMidPortCallOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isObserverIn -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isObserverIn">
+        <rdfs:label>isObserverIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isOperationAreaOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isOperationAreaOf"/>
+    
+
+
+    <!-- http://gbo#isOperatorOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isOperatorOf">
+        <rdfs:label>isOperatorOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isOriginDigitalRepositoryOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isOriginDigitalRepositoryOf">
+        <rdfs:label>isOriginDigitalRepositoryOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isOriginOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isOriginOf">
+        <owl:inverseOf rdf:resource="http://gbo#originatesFrom"/>
+        <rdfs:label>isOriginOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isOwnerOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isOwnerOf">
+        <rdfs:label>isOwnerOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isPartOf">
+        <rdfs:label>isPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isParticipantOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isParticipantOf">
+        <rdfs:label>isParticipantOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isPerformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isPerformedBy">
+        <owl:inverseOf rdf:resource="http://gbo#performs"/>
+        <rdfs:domain rdf:resource="http://gbo#Participant"/>
+        <rdfs:range rdf:resource="http://gbo#Person"/>
+        <rdfs:label>isPerformedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isPhysicalRepositoryOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isPhysicalRepositoryOf">
+        <rdfs:label>isPhysicalRepositoryOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isPilotOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isPilotOf"/>
+    
+
+
+    <!-- http://gbo#isPlaceOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isPlaceOf"/>
+    
+
+
+    <!-- http://gbo#isPlaceTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isPlaceTypeOf">
+        <rdfs:label>isPlaceTypeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isPlatformTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isPlatformTypeOf">
+        <rdfs:label>isPlatformTypeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isPortOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isPortOf">
+        <rdfs:label>isPortOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isPrincipalInvestigatorOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isPrincipalInvestigatorOf">
+        <rdfs:label>isPrincipalInvestigatorOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isProgramManagerOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isProgramManagerOf">
+        <rdfs:label>isProgramManagerOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isProgramOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isProgramOf">
+        <rdfs:label>isProgramOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isPublisherOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isPublisherOf">
+        <rdfs:label>isPublisherOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isRegistrantOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isRegistrantOf">
+        <rdfs:label>isRegistrantOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isReplicaDigitalRepositoryOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isReplicaDigitalRepositoryOf">
+        <rdfs:label>isReplicaDigitalRepositoryOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isRepositoryOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isRepositoryOf">
+        <rdfs:label>isRepositoryOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isRightsHolderOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isRightsHolderOf">
+        <rdfs:label>isRightsHolderOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isRoleTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isRoleTypeOf">
+        <rdfs:label>isRoleTypeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isSampleTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isSampleTypeOf">
+        <rdfs:label>isSampleTypeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isSchedulerOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isSchedulerOf">
+        <rdfs:label>isSchedulerOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isScientistOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isScientistOf">
+        <rdfs:label>isScientistOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isSponsorOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isSponsorOf">
+        <rdfs:label>isSponsorOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isStartPortCallOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isStartPortCallOf">
+        <rdfs:label>isStartPortCallOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isStratigraphicUnitOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isStratigraphicUnitOf">
+        <rdfs:label>isStratigraphicUnitOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isStudentIn -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isStudentIn">
+        <rdfs:label>isStudentIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isSubOrganizationOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isSubOrganizationOf">
+        <rdfs:label>isSubOrganizationOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isSubmersibleOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isSubmersibleOf"/>
+    
+
+
+    <!-- http://gbo#isTechnicianOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isTechnicianOf">
+        <rdfs:label>isTechnicianOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isVendorOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isVendorOf">
+        <rdfs:label>isVendorOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#isVesselOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#isVesselOf">
+        <rdfs:label>isVesselOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#originatesFrom -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#originatesFrom">
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Feature"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>originatesFrom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#performs -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#performs">
+        <rdfs:label>performs</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#strongCoReferentOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#strongCoReferentOf">
+        <rdfs:subPropertyOf rdf:resource="http://gbo#coReferentOf"/>
+        <rdfs:comment>Used to state that an instance matches with another based on a highly trusted machine-generated matching. The matching requires at least one additional corroborating piece of information that is trusted to differentiate individuals (e.g., surname and email match).</rdfs:comment>
+        <rdfs:label>strongCoReferentOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gbo#weakCoReferentOf -->
+
+    <owl:ObjectProperty rdf:about="http://gbo#weakCoReferentOf">
+        <rdfs:subPropertyOf rdf:resource="http://gbo#coReferentOf"/>
+        <rdfs:comment>Used to state that an instance matches with another based on a totally loose, machine-generated matching. The matching only needs at least one important property matches.</rdfs:comment>
+        <rdfs:label>weakCoReferentOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gbo#accordingTo -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#accordingTo">
+        <rdfs:domain rdf:resource="http://gbo#GeologicAge"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label>accordingTo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasAbstract -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasAbstract">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Award"/>
+                    <rdf:Description rdf:about="http://gbo#Cruise"/>
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                    <rdf:Description rdf:about="http://gbo#Program"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasAbstract</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasAcronym -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasAcronym">
+        <rdfs:domain rdf:resource="http://gbo#Program"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasAcronym</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasByteLength -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasByteLength">
+        <rdfs:domain rdf:resource="http://gbo#DigitalObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+        <rdfs:label>hasByteLength</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasChecksum -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasChecksum">
+        <rdfs:domain rdf:resource="http://gbo#DigitalObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasChecksum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasChecksumAlgorithm -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasChecksumAlgorithm">
+        <rdfs:domain rdf:resource="http://gbo#DigitalObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>For specifying the checksum algorithm&apos;s used to compute the checksum value of the digital objects. The value is provided in hasChecksum property.</rdfs:comment>
+        <rdfs:label>hasChecksumAlgorithm</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasChecksum"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasCitationText -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasCitationText">
+        <rdfs:domain rdf:resource="http://gbo#Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasCitationText</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasCollectionEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasCollectionEndDate">
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>hasCollectionEndDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasCollectionStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasCollectionStartDate">
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>hasCollectionStartDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasDescription">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label>hasDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasDuration">
+        <rdfs:domain rdf:resource="http://gbo#Dive"/>
+        <rdfs:label>hasDuration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasElevationDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasElevationDescription">
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasElevationDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasEmailAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasEmailAddress">
+        <rdfs:domain rdf:resource="http://gbo#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label>hasEmailAddress</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasEndDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Award"/>
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#Meeting"/>
+                    <rdf:Description rdf:about="http://gbo#Program"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>hasEndDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasEndTime -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasEndTime">
+        <rdfs:domain rdf:resource="http://gbo#Dive"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasFamilyName -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasFamilyName">
+        <rdfs:domain rdf:resource="http://gbo#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasFamilyName</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasFullName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasGivenName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasMiddleName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasNamePrefix"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasNameSuffix"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasFormatType -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasFormatType">
+        <rdfs:domain rdf:resource="http://gbo#Format"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasFormatType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasFullName -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasFullName">
+        <rdfs:domain rdf:resource="http://gbo#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasFullName</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasFamilyName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasGivenName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasMiddleName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasNamePrefix"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasNameSuffix"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasGeologicAgeUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasGeologicAgeUnit">
+        <rdfs:domain rdf:resource="http://gbo#GeologicAgeAppearance"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label>hasGeologicAgeUnit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasGeologicAgeValue -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasGeologicAgeValue">
+        <rdfs:domain rdf:resource="http://gbo#GeologicAgeAppearance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>hasGeologicAgeValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasGeometryAsWktLiteral -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasGeometryAsWktLiteral">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                    <rdf:Description rdf:about="http://gbo#Dive"/>
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                    <rdf:Description rdf:about="http://gbo#GeoFeature"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                    <rdf:Description rdf:about="http://gbo#Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
+        <rdfs:label>hasGeometryAsWktLiteral</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasGivenName -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasGivenName">
+        <rdfs:domain rdf:resource="http://gbo#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasGivenName</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasFamilyName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasFullName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasMiddleName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasNamePrefix"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasNameSuffix"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasIdentifierResolveURL -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasIdentifierResolveURL">
+        <rdfs:domain rdf:resource="http://gbo#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label>hasIdentifierResolveURL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasIdentifierValue -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasIdentifierValue">
+        <rdfs:domain rdf:resource="http://gbo#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Points to the actual string value of identifier., e.g.: &quot;doi:10.5063/AA/ArchivalTag.4.1&quot;</rdfs:comment>
+        <rdfs:label>hasIdentifierValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasLandingPage -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasLandingPage">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>A URI pointing to a human-readable landing page for a Dataset or DigitalObject.</rdfs:comment>
+        <rdfs:label>hasLandingPage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasLastUpdateDate -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasLastUpdateDate">
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>hasLastUpdateDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasMaterial -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasMaterial">
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>values drawn from multiple vocabularies eg. mineral types, rock types</rdfs:comment>
+        <rdfs:label>hasMaterial</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasMaterialType -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasMaterialType">
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label>hasMaterialType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasMaxDepth -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasMaxDepth">
+        <rdfs:domain rdf:resource="http://gbo#Dive"/>
+        <rdfs:label>hasMaxDepth</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasMiddleName -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasMiddleName">
+        <rdfs:domain rdf:resource="http://gbo#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasMiddleName</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasFamilyName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasFullName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasGivenName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasNamePrefix"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasNameSuffix"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasModel -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasModel">
+        <rdfs:domain rdf:resource="http://gbo#Instrument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasModel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasNamePrefix -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasNamePrefix">
+        <rdfs:domain rdf:resource="http://gbo#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasNamePrefix</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasFamilyName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasFullName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasGivenName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasMiddleName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasNameSuffix"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasNameSuffix -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasNameSuffix">
+        <rdfs:domain rdf:resource="http://gbo#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasNameSuffix</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasFamilyName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasFullName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasGivenName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasMiddleName"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasNamePrefix"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasParticipationEndTime -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasParticipationEndTime">
+        <rdfs:domain rdf:resource="http://gbo#Participant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>hasParticipationEndTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasParticipationStartTime -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasParticipationStartTime">
+        <rdfs:domain rdf:resource="http://gbo#Participant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>hasParticipationStartTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasPosition -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasPosition">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#GeoFeature"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
+        <rdfs:label>hasPosition</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasProject -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasProject">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Cruise"/>
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasProject</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasPublicationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasPublicationDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label>hasPublicationDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasRegistrationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasRegistrationDate">
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>hasRegistrationDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasSamplingMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasSamplingMethod">
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label>hasSamplingMethod</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasSource -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasSource">
+        <rdfs:domain rdf:resource="http://gbo#DigitalObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label>hasSource</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasStageName -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasStageName">
+        <rdfs:domain rdf:resource="http://gbo#GeologicAge"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasStartDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Award"/>
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#Meeting"/>
+                    <rdf:Description rdf:about="http://gbo#Program"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>hasStartDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasStartTime -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasStartTime">
+        <rdfs:domain rdf:resource="http://gbo#Dive"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasTectonicSetting -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasTectonicSetting">
+        <rdfs:domain rdf:resource="http://gbo#PhysicalSample"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label>hasTectonicSetting</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasTimeStamp">
+        <rdfs:domain rdf:resource="http://gbo#PortCall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>The domain of this property is PortCall that acts as the range of &apos;hasStartPortCall&apos;, &apos;hasMidPortCall&apos;, or &apos;hasEndPortCall&apos; properties.</rdfs:comment>
+        <rdfs:label>hasTimeStamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasTitle">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Award"/>
+                    <rdf:Description rdf:about="http://gbo#Cruise"/>
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                    <rdf:Description rdf:about="http://gbo#Dive"/>
+                    <rdf:Description rdf:about="http://gbo#Document"/>
+                    <rdf:Description rdf:about="http://gbo#Feature"/>
+                    <rdf:Description rdf:about="http://gbo#Instrument"/>
+                    <rdf:Description rdf:about="http://gbo#Organization"/>
+                    <rdf:Description rdf:about="http://gbo#PhysicalSample"/>
+                    <rdf:Description rdf:about="http://gbo#Place"/>
+                    <rdf:Description rdf:about="http://gbo#Program"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasTrack -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasTrack">
+        <rdfs:domain rdf:resource="http://gbo#Cruise"/>
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
+        <rdfs:label>hasTrack</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gbo#hasUploadDate -->
+
+    <owl:DatatypeProperty rdf:about="http://gbo#hasUploadDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gbo#Dataset"/>
+                    <rdf:Description rdf:about="http://gbo#DigitalObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>The range of this property is a dateTime indicating when the Dataset or DigitalObject was uploaded to its originDigitalRepository.</rdfs:comment>
+        <rdfs:label>hasUploadDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gbo#Award -->
+
+    <owl:Class rdf:about="http://gbo#Award">
+        <rdfs:comment>Funding provided by an Organization enabling Participation.</rdfs:comment>
+        <rdfs:label>Award</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Country -->
+
+    <owl:Class rdf:about="http://gbo#Country">
+        <rdfs:comment>A formally recognized, governed nation of Persons with a defined territory</rdfs:comment>
+        <rdfs:label>Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Cruise -->
+
+    <owl:Class rdf:about="http://gbo#Cruise">
+        <rdfs:comment>An event occuring on a Vessel traversing a Trajectory.</rdfs:comment>
+        <rdfs:label>Cruise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#CruiseType -->
+
+    <owl:Class rdf:about="http://gbo#CruiseType">
+        <rdfs:comment>The type of Cruise - operational, transit, etc.</rdfs:comment>
+        <rdfs:label>CruiseType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Dataset -->
+
+    <owl:Class rdf:about="http://gbo#Dataset">
+        <rdfs:comment>A collection of Measurements.</rdfs:comment>
+        <rdfs:label>Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#DigitalObject -->
+
+    <owl:Class rdf:about="http://gbo#DigitalObject">
+        <rdfs:comment>A digital representation of a Thing</rdfs:comment>
+        <rdfs:label>DigitalObject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Dive -->
+
+    <owl:Class rdf:about="http://gbo#Dive">
+        <rdfs:comment>Analogous to cruise being an expedition/event/deployment conducted aboard vessel, dive is an expedition/event/deployment conducted on/in a submersible platform.</rdfs:comment>
+        <rdfs:label>Dive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Document -->
+
+    <owl:Class rdf:about="http://gbo#Document">
+        <rdfs:comment>A textual, word-based, non-structured expression of information, such as a report, presentation, published article, or lecture.</rdfs:comment>
+        <rdfs:label>Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#DocumentType -->
+
+    <owl:Class rdf:about="http://gbo#DocumentType">
+        <rdfs:label>DocumentType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Feature -->
+
+    <owl:Class rdf:about="http://gbo#Feature">
+        <rdfs:comment>A significant locality where observations are made, samples are acquired, or measurements are done. Not necessarily geospatial in nature.</rdfs:comment>
+        <rdfs:label>Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#FeatureType -->
+
+    <owl:Class rdf:about="http://gbo#FeatureType">
+        <rdfs:comment>Types of generic features.</rdfs:comment>
+        <rdfs:label>FeatureType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Format -->
+
+    <owl:Class rdf:about="http://gbo#Format">
+        <rdfs:comment>The type of data format for a DigitalObject</rdfs:comment>
+        <rdfs:label>Format</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#GeoFeature -->
+
+    <owl:Class rdf:about="http://gbo#GeoFeature">
+        <rdfs:subClassOf rdf:resource="http://gbo#Feature"/>
+        <rdfs:subClassOf rdf:resource="http://gbo#Place"/>
+        <rdfs:comment>A significant geospatial locality where observations are made. GEBCO vocabulary terms are included as subclasses.</rdfs:comment>
+        <rdfs:label>GeoFeature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#GeoFeatureType -->
+
+    <owl:Class rdf:about="http://gbo#GeoFeatureType">
+        <rdfs:subClassOf rdf:resource="http://gbo#FeatureType"/>
+        <rdfs:subClassOf rdf:resource="http://gbo#PlaceType"/>
+        <rdfs:comment>The type of spatial feature - from gazetteer. GEBCO vocabulary terms are included as instances.</rdfs:comment>
+        <rdfs:label>GeoFeatureType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#GeologicAge -->
+
+    <owl:Class rdf:about="http://gbo#GeologicAge">
+        <rdfs:comment>Captures geologic age, e.g., jurassic, pleistocene, etc.</rdfs:comment>
+        <rdfs:label>GeologicAge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#GeologicAgeAppearance -->
+
+    <owl:Class rdf:about="http://gbo#GeologicAgeAppearance">
+        <rdfs:comment>This class essentially is intended to capture the relation exemplified by the sentence &quot;Pleistocene has first appearance of 1.6 million years before present&quot;. Here, Pleistocene is a geologic age, and &apos;hast first appearance&apos; points to an entity that has a value component and a unit component.
+Data providers can opt not to populate this class directly with explicit URI instances, but rather use blank nodes as instances of this class. An example set of triples would be as follows where the blank node that acts as the filler of the hasFirstAppearance property is an instance of this class:
+
+d:age1 a :GeologicAge .
+d:age1 :hasFirstAppearance 
+   [ :hasGeologicAgeValue &quot;1.6&quot;^^xsd:double ;
+     :hasGeologicAgeUnit iso31:Ma ] .</rdfs:comment>
+        <rdfs:label>GeologicAgeAppearance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Identifier -->
+
+    <owl:Class rdf:about="http://gbo#Identifier">
+        <rdfs:comment>Capturing various forms of identifiers, e.g., DOIs, ARKs, local strings, UUID strings, etc. Can be any URI that is understood as identifier of an entity, or a blank node, in which case, hasIdentifierScheme and hasIdentifierValue properties should be used to provide details.</rdfs:comment>
+        <rdfs:label>Identifier</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasIdentifier"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasIdentifierScheme"/>
+        <rdfs:seeAlso rdf:resource="http://gbo#hasIdentifierValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#IdentifierScheme -->
+
+    <owl:Class rdf:about="http://gbo#IdentifierScheme">
+        <rdfs:comment>Represents URIs of identifier schemes, e.g., http://purl.org/spar/datacite/ark for ARK, or
+http://purl.org/spar/datacite/doi for DOI.</rdfs:comment>
+        <rdfs:label>IdentifierScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Instrument -->
+
+    <owl:Class rdf:about="http://gbo#Instrument">
+        <rdfs:comment>A specific instance of an Instrument being used to make observations resulting in a Dataset.NERC&apos;s L05 and L22 vocabulary terms are included as subclasses.</rdfs:comment>
+        <rdfs:label>Instrument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#InstrumentType -->
+
+    <owl:Class rdf:about="http://gbo#InstrumentType">
+        <rdfs:comment>The type of Instrument being used to make observations - CTD, ADCP, microscope. NERC&apos;s L05 and L22 vocabulary terms are included as instances.</rdfs:comment>
+        <rdfs:label>InstrumentType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#MeasurementType -->
+
+    <owl:Class rdf:about="http://gbo#MeasurementType">
+        <rdfs:comment>The type of Measurement being recorded - atmospheric emission, land surface temperature, depth, salinity of the water column. NERC&apos;s P02 and P03 vocabulary terms are included as instances.</rdfs:comment>
+        <rdfs:label>MeasurementType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Meeting -->
+
+    <owl:Class rdf:about="http://gbo#Meeting">
+        <rdfs:comment>To represent, e.g., &quot;Person W attends Conference X at Place Y which occurred on Start/End Dates Z1-Z2&quot;</rdfs:comment>
+        <rdfs:label>Meeting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Organization -->
+
+    <owl:Class rdf:about="http://gbo#Organization">
+        <rdfs:comment>A physical or virtual collection of Agents in some formally recognized capacity of significance.</rdfs:comment>
+        <rdfs:label>Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Participant -->
+
+    <owl:Class rdf:about="http://gbo#Participant">
+        <rdfs:comment>A reification of the n-ary (n &gt;= 3) relation representing a participation of a Person performing a certain RoleType in a Cruise/Award/Program/Dataset/PhysicalSample. To an instance of Participant, one can attach additional information using properties such as hasAffiliation. One can also adds temporal information through hasParticipationStartTime and hasParticipationEndTime.</rdfs:comment>
+        <rdfs:label>Participant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Person -->
+
+    <owl:Class rdf:about="http://gbo#Person">
+        <rdfs:comment>A homo sapien Agent of some significance</rdfs:comment>
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#PhysicalSample -->
+
+    <owl:Class rdf:about="http://gbo#PhysicalSample">
+        <rdfs:comment>An object of observation that may be preserved, catalogued, and/or preserved. Our modeling of physical sample metadata roughly corresponds to the International Geo Sample Number (IGSN) metadata schema (http://schema.igsn.org/).</rdfs:comment>
+        <rdfs:label>PhysicalSample</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#PhysicalSampleType -->
+
+    <owl:Class rdf:about="http://gbo#PhysicalSampleType">
+        <rdfs:comment>Types of physical samples.</rdfs:comment>
+        <rdfs:label>PhysicalSampleType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Place -->
+
+    <owl:Class rdf:about="http://gbo#Place">
+        <rdfs:comment>A location with at least some type of spatial extent.</rdfs:comment>
+        <rdfs:label>Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#PlaceType -->
+
+    <owl:Class rdf:about="http://gbo#PlaceType">
+        <rdfs:comment>A common descriptor for a type of Place - ocean, shoreline, island, etc.</rdfs:comment>
+        <rdfs:label>PlaceType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Platform -->
+
+    <owl:Class rdf:about="http://gbo#Platform">
+        <rdfs:comment>A physical object of significance enabling observations resulting in a Dataset. NERC&apos;s L06 vocabulary terms (i.e., ICES platform codes) are included as subclasses.</rdfs:comment>
+        <rdfs:label>Platform</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#PlatformType -->
+
+    <owl:Class rdf:about="http://gbo#PlatformType">
+        <rdfs:comment>A type of Platform - vessel, glider, float, laboratory, etc. NERC&apos;s L06 vocabulary terms are included as instances.</rdfs:comment>
+        <rdfs:label>PlatformType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#PortCall -->
+
+    <owl:Class rdf:about="http://gbo#PortCall">
+        <rdfs:comment>A designated, specific port visited by a Vessel for some significant reason - the start or end of a mission; transfer of passengers, goods, or equipment.</rdfs:comment>
+        <rdfs:label>PortCall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Program -->
+
+    <owl:Class rdf:about="http://gbo#Program">
+        <rdfs:comment>A formally recognized scientific effort receiving significant funding, requiring large scale coordination</rdfs:comment>
+        <rdfs:label>Program</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Repository -->
+
+    <owl:Class rdf:about="http://gbo#Repository">
+        <rdfs:comment>A recognized, formal entity responsible for curating a certain set of Datasets or DigitalObjects</rdfs:comment>
+        <rdfs:label>Repository</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#RoleType -->
+
+    <owl:Class rdf:about="http://gbo#RoleType">
+        <rdfs:comment>A specific type of role performed by an Agent - Principal Investigator, Chief Scientist, Publisher, etc.</rdfs:comment>
+        <rdfs:label>RoleType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Station -->
+
+    <owl:Class rdf:about="http://gbo#Station">
+        <rdfs:subClassOf rdf:resource="http://gbo#Place"/>
+        <rdfs:label>Station</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#StratigraphicUnit -->
+
+    <owl:Class rdf:about="http://gbo#StratigraphicUnit">
+        <rdfs:comment>Captures named instances (URIs have to be minted for them) from stratigraphic gazetteers such as the USGS National Geologic Map Database or controlled vocabulary from the International Stratigraphic Union. Examples of stratigraphic units include Bonneville Formation, Portland Formation, Gray Gulch Formation, etc.</rdfs:comment>
+        <rdfs:label>StratigraphicUnit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Submersible -->
+
+    <owl:Class rdf:about="http://gbo#Submersible">
+        <rdfs:subClassOf rdf:resource="http://gbo#Platform"/>
+        <rdfs:label>Submersible</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gbo#Vessel -->
+
+    <owl:Class rdf:about="http://gbo#Vessel">
+        <rdfs:subClassOf rdf:resource="http://gbo#Platform"/>
+        <rdfs:comment>The platform enabling a Cruise</rdfs:comment>
+        <rdfs:label>Vessel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gbo#aguAbstractScheme -->
+
+    <owl:NamedIndividual rdf:about="http://gbo#aguAbstractScheme">
+        <rdf:type rdf:resource="http://gbo#IdentifierScheme"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American Geophysical Union Abstract Identifier</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gbo#nsfAwardScheme -->
+
+    <owl:NamedIndividual rdf:about="http://gbo#nsfAwardScheme">
+        <rdf:type rdf:resource="http://gbo#IdentifierScheme"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National Science Foundation Award Number</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

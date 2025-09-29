@@ -1,0 +1,2602 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://gmo"
+     xml:base="http://gmo"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:agentrole="http://gmo#"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#">
+    <owl:Ontology rdf:about="http://gmo">
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+        <rdfs:label>GeoLink Modular Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gmo#DASE_RULE -->
+
+    <owl:AnnotationProperty rdf:about="http://gmo#DASE_RULE"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gmo#agentRoleIn -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#agentRoleIn">
+        <owl:inverseOf rdf:resource="http://gmo#providesAgentRole"/>
+        <rdfs:domain rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:comment>agentRoleIn connects a role to the thing thing in which the role is performed by the agent.</rdfs:comment>
+        <rdfs:label>agentRoleIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#associatedWithProgram -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#associatedWithProgram">
+        <rdfs:range rdf:resource="http://gmo#Program"/>
+        <rdfs:label>associatedWithProgram</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#atPort -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#atPort">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://gmo#hasPosition"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://gmo#hasSpatialFootprint"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://gmo#r_Port"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>atPort connects a fix to an instance of Port. It is used when the fix corresponds to a port stop in the beginning, middle, or end of a cruise.</rdfs:comment>
+        <rdfs:label>atPort</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://gmo#atPort"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#propertyChainAxiom"/>
+        <owl:annotatedTarget rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://gmo#hasPosition"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://gmo#hasSpatialFootprint"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://gmo#r_Port"/>
+        </owl:annotatedTarget>
+        <agentrole:DASE_RULE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R2___trajectory:hasPosition(?x,?y) ^ place:hasSpatialFootprint(?z,?y) ^ :Port(?z) -&gt; :atPort(?x,?z)___If position of a fix corresponds to a (spatial footprint of a) port, then that fix is at that port.___http://gmo#freshObjectProperty1</agentrole:DASE_RULE>
+    </owl:Axiom>
+    
+
+
+    <!-- http://gmo#atTime -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#atTime">
+        <rdfs:comment>Provides temporal information of a fix.</rdfs:comment>
+        <rdfs:label>atTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#derivedUsing -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#derivedUsing">
+        <rdfs:domain rdf:resource="http://gmo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://gmo#SamplingProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#describedBy -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#describedBy">
+        <rdfs:range rdf:resource="http://gmo#InformationObject"/>
+        <rdfs:label>describedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#endsAtFix -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#endsAtFix">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://gmo#startsFromFix"/>
+            <rdf:Description rdf:about="http://gmo#hasNextFix"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>Provides the fix where the segment ends.</rdfs:comment>
+        <rdfs:label>endsAtFix</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#endsAtTime -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#endsAtTime">
+        <rdfs:subPropertyOf rdf:resource="http://gmo#occursAtTime"/>
+        <rdfs:label>endsAtTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#endsOnDate -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#endsOnDate">
+        <rdfs:label>endsOnDate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#fundedBy -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#fundedBy">
+        <rdfs:range rdf:resource="http://gmo#FundingAward"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasAgentRoleType -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasAgentRoleType">
+        <rdfs:label>hasAgentRoleType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasAlternativeIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasAlternativeIdentifier">
+        <rdfs:label>hasAlternativeIdentifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasAttribute -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasAttribute">
+        <rdfs:comment>Provides an attribute of a fix or a segment.</rdfs:comment>
+        <rdfs:label>hasAttribute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasAwardAmount -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasAwardAmount"/>
+    
+
+
+    <!-- http://gmo#hasCurrencyCode -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasCurrencyCode"/>
+    
+
+
+    <!-- http://gmo#hasDataSource -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasDataSource">
+        <rdfs:comment>Provides the source (e.g., a sensor, a device, etc.) from which information about the fix was obtained.</rdfs:comment>
+        <rdfs:label>hasDataSource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasFix -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasFix">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://gmo#hasFix"/>
+            <rdf:Description rdf:about="http://gmo#hasNextFix"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>Provides a fix for the trajectory.</rdfs:comment>
+        <rdfs:label>hasFix</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasInputFeature -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasInputFeature"/>
+    
+
+
+    <!-- http://gmo#hasNextFix -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasNextFix">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment>Provides the next fix after this fix in the sequence.</rdfs:comment>
+        <rdfs:label>hasNextFix</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasPersonName -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasPersonName">
+        <rdfs:subPropertyOf rdf:resource="http://gmo#hasPersonalInfoItem"/>
+        <rdfs:label>hasPersonName</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasPersonalInfoItem -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasPersonalInfoItem">
+        <rdfs:label>hasPersonalInfoItem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasPosition -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasPosition">
+        <rdfs:comment>Provides a geographical location of a fix.</rdfs:comment>
+        <rdfs:label>hasPosition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasPrimaryIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasPrimaryIdentifier">
+        <rdfs:label>hasPrimaryIdentifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasProperty">
+        <rdfs:range rdf:resource="http://gmo#Property"/>
+        <rdfs:label>hasProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasRelatedCruise -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasRelatedCruise">
+        <rdfs:label>hasRelatedCruise</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasSegment -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasSegment">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://gmo#hasFix"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://gmo#startsFromFix"/>
+            </rdf:Description>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>Provides a segment of the trajectory.</rdfs:comment>
+        <rdfs:label>hasSegment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasSite -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasSite">
+        <rdfs:label>hasSite</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasSpatialFootprint -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasSpatialFootprint">
+        <rdfs:comment>Provides to a spatial footprint of the place, which is specified as a geometry.</rdfs:comment>
+        <rdfs:label>hasSpatialFootprint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasSubOrganization -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasSubOrganization">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:label>hasSubOrganization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasTemporalExtent -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasTemporalExtent">
+        <rdfs:comment>hasTemporalExtent points to information about the temporal extent of the agent role, e.g., the duration in which the role is valid for the agent in concern.</rdfs:comment>
+        <rdfs:label>hasTemporalExtent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasTrajectory -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasTrajectory">
+        <rdfs:comment>The hasTrajectory connects a cruise to its trajectory.</rdfs:comment>
+        <rdfs:label>hasTrajectory</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasUnit">
+        <rdfs:label>hasUnit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#hasValue -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#hasValue">
+        <rdfs:domain rdf:resource="http://gmo#PersonalInfoItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#occursAtPlace -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#occursAtPlace">
+        <rdfs:label>occursAtPlace</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#occursAtTime -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#occursAtTime">
+        <rdfs:label>occursAtTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#originatesFrom -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#originatesFrom">
+        <rdfs:domain rdf:resource="http://gmo#PhysicalSample"/>
+        <rdfs:range rdf:resource="http://gmo#Feature"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://gmo#derivedUsing"/>
+            <rdf:Description rdf:about="http://gmo#hasInputFeature"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#performedBy -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#performedBy">
+        <owl:inverseOf rdf:resource="http://gmo#performsAgentRole"/>
+        <rdfs:comment>performedBy connects  a role to the agent that performs it.</rdfs:comment>
+        <rdfs:label>performedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#performsAgentRole -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#performsAgentRole">
+        <rdfs:label>performsAgentRole</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#providesAgentRole -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#providesAgentRole">
+        <rdfs:range rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:comment>providesAgentRole is the inverse of isAgentRoleIn.</rdfs:comment>
+        <rdfs:label>providesAgentRole</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#r_Port -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#r_Port">
+        <rdfs:comment>The class Port typecasted as an object property. Logically, r_Port(x,x) &lt;-&gt; Port(x)</rdfs:comment>
+        <rdfs:label>r_Port</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#realizationAbout -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#realizationAbout">
+        <rdfs:domain rdf:resource="http://gmo#InformationRealization"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://gmo#realizedBy"/>
+            </rdf:Description>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://gmo#describedBy"/>
+            </rdf:Description>
+        </owl:propertyChainAxiom>
+        <rdfs:label>realizationAbout</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#realizedBy -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#realizedBy">
+        <rdfs:label>realizedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#startsAtTime -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#startsAtTime">
+        <rdfs:subPropertyOf rdf:resource="http://gmo#occursAtTime"/>
+        <rdfs:label>startsAtTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#startsFromFix -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#startsFromFix">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment>Provides the fix from which the segment starts.</rdfs:comment>
+        <rdfs:label>startsFromFix</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#startsOnDate -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#startsOnDate">
+        <rdfs:label>startsOnDate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#traveledBy -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#traveledBy">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://gmo#hasTrajectory"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://gmo#undertakenBy"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>If a cruise is undertaken by a vessel, then its trajectory is traveled by the vessel.</rdfs:comment>
+        <rdfs:label>traveledBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gmo#traversedBy -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#traversedBy">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://gmo#hasSegment"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://gmo#traveledBy"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>Provides a moving object that traverses the segment.</rdfs:comment>
+        <rdfs:label>traversedBy</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://gmo#traversedBy"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#propertyChainAxiom"/>
+        <owl:annotatedTarget rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://gmo#hasSegment"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://gmo#traveledBy"/>
+        </owl:annotatedTarget>
+        <rdfs:comment>This axiom is equivalent to the rule: 
+:traveledBy(?x,?y) ^ trajectory:hasSegment(?x,?z) -&gt; trajectory:traversedBy(?z,?y)</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://gmo#undertakenBy -->
+
+    <owl:ObjectProperty rdf:about="http://gmo#undertakenBy">
+        <rdfs:comment>This connects a cruise to the vessel on which the cruise is conducted.</rdfs:comment>
+        <rdfs:label>undertakenBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gmo#alsoKnownAs -->
+
+    <owl:DatatypeProperty rdf:about="http://gmo#alsoKnownAs">
+        <rdfs:comment>Provides the name alias of the object/entity described by this information object.</rdfs:comment>
+        <rdfs:label>alsoKnownAs</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gmo#familyOrSurname -->
+
+    <owl:DatatypeProperty rdf:about="http://gmo#familyOrSurname">
+        <rdfs:label>familyOrSurname</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gmo#firstOrGivenName -->
+
+    <owl:DatatypeProperty rdf:about="http://gmo#firstOrGivenName">
+        <rdfs:label>firstOrGivenName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gmo#fullName -->
+
+    <owl:DatatypeProperty rdf:about="http://gmo#fullName">
+        <rdfs:subPropertyOf rdf:resource="http://gmo#hasLiteralValue"/>
+        <rdfs:label>fullName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gmo#hasCanonicalName -->
+
+    <owl:DatatypeProperty rdf:about="http://gmo#hasCanonicalName">
+        <rdfs:label>hasCanonicalName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gmo#hasCurrencyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://gmo#hasCurrencyValue"/>
+    
+
+
+    <!-- http://gmo#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://gmo#hasDescription">
+        <rdfs:label>hasDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gmo#hasIdentifierScheme -->
+
+    <owl:DatatypeProperty rdf:about="http://gmo#hasIdentifierScheme">
+        <rdfs:comment>Provides the scheme of the identifier (as a string or URI), e.g., doi, orcid, etc.</rdfs:comment>
+        <rdfs:label>hasIdentifierScheme</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gmo#hasIdentifierValue -->
+
+    <owl:DatatypeProperty rdf:about="http://gmo#hasIdentifierValue">
+        <rdfs:comment>Provides the value of the identifier (of type xsd:string or xsd:anyURI)</rdfs:comment>
+        <rdfs:label>hasIdentifierValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gmo#hasLiteralValue -->
+
+    <owl:DatatypeProperty rdf:about="http://gmo#hasLiteralValue">
+        <rdfs:domain rdf:resource="http://gmo#PersonalInfoItem"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gmo#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://gmo#hasName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gmo#hasWebpage -->
+
+    <owl:DatatypeProperty rdf:about="http://gmo#hasWebpage">
+        <rdfs:label>hasWebpage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gmo#AffiliationRole -->
+
+    <owl:Class rdf:about="http://gmo#AffiliationRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#agentRoleIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#AgencyProgramManagerRole -->
+
+    <owl:Class rdf:about="http://gmo#AgencyProgramManagerRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>AgencyProgramManagerRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Agent -->
+
+    <owl:Class rdf:about="http://gmo#Agent">
+        <rdfs:comment>Represents agents, e.g., persons, organizations, etc.
+Can be used as a hook of a more detailed model of agent.</rdfs:comment>
+        <rdfs:label>Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#AgentRole -->
+
+    <owl:Class rdf:about="http://gmo#AgentRole">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasAgentRoleType"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#AgentRoleType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasTemporalExtent"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#performedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#agentRoleIn"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasTemporalExtent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#performedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An instance of AgentRole represents a role performed by an agent, which is temporally restricted by a starting and ending time.  Every agent role is performed by exactly one agent. One can create a subclass of AgentRole to model a particular kind of roles.</rdfs:comment>
+        <rdfs:label>AgentRole</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://gmo#AgentRole"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#performedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Agent"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>Guarded range for performedBy (range: Agent, guard: AgentRole)</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://gmo#AgentRoleType -->
+
+    <owl:Class rdf:about="http://gmo#AgentRoleType">
+        <rdfs:comment>Class that contains types of agent roles. Allows one to put types of agent roles (which can be seen as subclasses of AgentRole) as named individuals, and the axiomatization could infer anonymous subclasses of AgentRole from those individuals.</rdfs:comment>
+        <rdfs:label>AgentRoleType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Attribute -->
+
+    <owl:Class rdf:about="http://gmo#Attribute">
+        <rdfs:comment>Represents all kinds of attributes of a fix or a segment in a trajectory.</rdfs:comment>
+        <rdfs:label>Attribute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#AwardAmount -->
+
+    <owl:Class rdf:about="http://gmo#AwardAmount">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasCurrencyCode"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#CurrencyCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasCurrencyCode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#CurrencyCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasCurrencyValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasCurrencyValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>AwardAmount</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#CoPrincipalInvestigatorRole -->
+
+    <owl:Class rdf:about="http://gmo#CoPrincipalInvestigatorRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>CoPrincipalInvestigatorRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#CollectorRole -->
+
+    <owl:Class rdf:about="http://gmo#CollectorRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>CollectorRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#ContactRole -->
+
+    <owl:Class rdf:about="http://gmo#ContactRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>ContactRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#ContributorRole -->
+
+    <owl:Class rdf:about="http://gmo#ContributorRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>ContributorRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Cruise -->
+
+    <owl:Class rdf:about="http://gmo#Cruise">
+        <rdfs:subClassOf rdf:resource="http://gmo#Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#associatedWithProgram"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Program"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#fundedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#FundingAward"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasRelatedCruise"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Cruise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasTrajectory"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#CruiseTrajectory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#undertakenBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Vessel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasTrajectory"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#CruiseTrajectory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#undertakenBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#Vessel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A cruise is an event through the alignment with Event pattern. A cruise has exactly one trajectory, is undertaken by exactly one vessel, and is described by exactly one information object. Additionally, this information object describes exactly only the cruise. If a cruise is undertaken by a vessel, then the trajectory of the cruise has to be traveled by the vessel. Note that since isTraveledBy is implied by a property chain, OWL 2 specification forbids us to express a cardinality restriction using this peroperty. Consequently, we cannot axiomatize that the trajectory of a cruise can only be traveled by one vessel.
+
+Involvements of agents in a cruise is modeled via the AgentRole, which is aligned to the Agent Role pattern. A cruise may be funded by some funding award, associated with some program, and related to some other cruise. These information are attached to the information object associated with a cruise.</rdfs:comment>
+        <rdfs:label>Cruise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#CruiseTrajectory -->
+
+    <owl:Class rdf:about="http://gmo#CruiseTrajectory">
+        <rdfs:subClassOf rdf:resource="http://gmo#Trajectory"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasFix"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://gmo#StartingFix"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://gmo#hasNextFix"/>
+                                <owl:someValuesFrom rdf:resource="http://gmo#Fix"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#traveledBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Vessel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A trajectory is given by a collection of fixes, representing time-stamped locations. Non-spatiotemporal information specific to a fix can be included by assigning it some attributes, for example, to indicate that the fix is the arrival to some port stop. The ordering of the fixes is based on their temporal information, although such an ordering is not axiomatized in this pattern. Between two consecutive fixes, we can define a segment, which is traversed by some moving object. There is no requirement forcing that all segments in the trajectory can only be traversed by the same moving object.
+
+In the context of GeoLink project, the data typically already contains ordering of fixes, i.e., the nextFix relation is explicit in the data, and thus, segments are auto-instantiated from it. This is motivated by real scenarios whereby indeed only properties of fixes will often be known, in particular their locations, and temporal extension, whether they are at ports, whether they are arrival or departure fixes from ports, and in which sequence the fixes occurred. The traversing vessel will usually also be known. However, trajectory segments to which the trajectory pattern attaches information about the vessel are usually not explicitly represented in the data.</rdfs:comment>
+        <rdfs:label>Trajectory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#CuratorRole -->
+
+    <owl:Class rdf:about="http://gmo#CuratorRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>CuratorRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#CurrencyCode -->
+
+    <owl:Class rdf:about="http://gmo#CurrencyCode">
+        <rdfs:label>CurrencyCode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#DataManagerRole -->
+
+    <owl:Class rdf:about="http://gmo#DataManagerRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>DataManagerRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#EditorRole -->
+
+    <owl:Class rdf:about="http://gmo#EditorRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>EditorRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#EndingFix -->
+
+    <owl:Class rdf:about="http://gmo#EndingFix">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gmo#Fix"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://gmo#hasNextFix"/>
+                                <owl:someValuesFrom rdf:resource="http://gmo#Fix"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>An instance of EndingFix represents the final fix in the specification of a trajectory</rdfs:comment>
+        <rdfs:label>EndingFix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Event -->
+
+    <owl:Class rdf:about="http://gmo#Event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#occursAtPlace"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#occursAtTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#endsAtTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#occursAtPlace"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#occursAtTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#startsAtTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Feature -->
+
+    <owl:Class rdf:about="http://gmo#Feature"/>
+    
+
+
+    <!-- http://gmo#Fix -->
+
+    <owl:Class rdf:about="http://gmo#Fix">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#atTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasPosition"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://gmo#hasFix"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://gmo#Trajectory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#atTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasAttribute"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Attribute"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasDataSource"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasNextFix"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Fix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasPosition"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A fix represents a spatiotemporal point in the specification of a trajectory.  A fix has a location and a time stamp, and always belongs to one particular trajectory. Also, a fix cannot be followed by more than one other fix, and cannot follow itself. This gives a linear structure in the ordering of the fixes.</rdfs:comment>
+        <rdfs:label>Fix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#FundingAward -->
+
+    <owl:Class rdf:about="http://gmo#FundingAward">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#PrincipalInvestigatorRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#SponsorRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#endsOnDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasAwardAmount"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#AwardAmount"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#startsOnDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#endsOnDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#startsOnDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasAwardAmount"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#AwardAmount"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>FundingAward</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Geometry -->
+
+    <owl:Class rdf:about="http://gmo#Geometry">
+        <owl:equivalentClass rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <rdfs:comment>Represents geometry objects. Corresponds to GeoSPARQL&apos;s Geometry.</rdfs:comment>
+        <rdfs:label>Geometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Identifier -->
+
+    <owl:Class rdf:about="http://gmo#Identifier">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                        <owl:someValuesFrom rdf:resource="http://gmo#InformationObject"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasIdentifierScheme"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasIdentifierValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasIdentifierValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasIdentifierScheme"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents identifiers, each has exactly one identifier value and may have an identifier scheme.</rdfs:comment>
+        <rdfs:label>Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#InformationObject -->
+
+    <owl:Class rdf:about="http://gmo#InformationObject">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                        <owl:someValuesFrom rdf:resource="http://gmo#InformationObject"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasAlternativeIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasPrimaryIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#realizedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#InformationRealization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://gmo#describedBy"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#alsoKnownAs"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasCanonicalName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasWebpage"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An InformationObject describes informational aspect of the described object, which are not definitional in nature, e.g., alternative identifiers, webpages, textual description, etc.</rdfs:comment>
+        <rdfs:label>InformationObject</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://gmo#InformationObject"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#realizedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#InformationRealization"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>Range of realizedBy is InformationRealization  (guard: InformationObject)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://gmo#InformationObject"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#alsoKnownAs"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>Range of alsoKnownAs is xsd:string  (guard: InformationObject)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://gmo#InformationObject"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasCanonicalName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>Range of hasCanonicalName is xsd:string  (guard: InformationObject)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://gmo#InformationObject"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>Range of hasDescription is xsd:string  (guard: InformationObject)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://gmo#InformationObject"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasWebpage"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>Range of hasWebpage is xsd:anyURI  (guard: InformationObject)</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://gmo#InformationRealization -->
+
+    <owl:Class rdf:about="http://gmo#InformationRealization">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                        <owl:someValuesFrom rdf:resource="http://gmo#InformationObject"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>Some InformationObjects may be realized in some concrete manifestation, e.g., different digital copies of a publication. InformationRealization captures such manifestations.</rdfs:comment>
+        <rdfs:label>InformationRealization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#MovingObject -->
+
+    <owl:Class rdf:about="http://gmo#MovingObject">
+        <rdfs:label>MovingObject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Organization -->
+
+    <owl:Class rdf:about="http://gmo#Organization">
+        <rdfs:subClassOf rdf:resource="http://gmo#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasSite"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasSubOrganization"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Person -->
+
+    <owl:Class rdf:about="http://gmo#Person">
+        <rdfs:subClassOf rdf:resource="http://gmo#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasPersonName"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#PersonName"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasPersonName"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#PersonName"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasPersonalInfoItem"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#PersonalInfoItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://gmo#PersonName"/>
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#PersonName -->
+
+    <owl:Class rdf:about="http://gmo#PersonName">
+        <rdfs:subClassOf rdf:resource="http://gmo#PersonalInfoItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#familyOrSurname"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#firstOrGivenName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#fullName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#fullName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#familyOrSurname"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#firstOrGivenName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#PersonalInfoItem -->
+
+    <owl:Class rdf:about="http://gmo#PersonalInfoItem">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#endsAtTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#startsAtTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#startsAtTime"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://gmo#hasPersonalInfoItem"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#endsAtTime"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents a personal information item such as names, addresses, etc.</rdfs:comment>
+        <rdfs:label>PersonalInfoItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#PhysicalSample -->
+
+    <owl:Class rdf:about="http://gmo#PhysicalSample">
+        <rdfs:subClassOf rdf:resource="http://gmo#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#derivedUsing"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#SamplingProcess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasProperty"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#originatesFrom"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Feature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Place -->
+
+    <owl:Class rdf:about="http://gmo#Place">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasSpatialFootprint"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents a generic place, e.g., a port, a city, etc. May have a geometry information.</rdfs:comment>
+        <rdfs:label>Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Platform -->
+
+    <owl:Class rdf:about="http://gmo#Platform">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Platform</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Port -->
+
+    <owl:Class rdf:about="http://gmo#Port">
+        <rdfs:subClassOf rdf:resource="http://gmo#Place"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasSpatialFootprint"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#r_Port"/>
+                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents ports that may be relevant for a cruise.</rdfs:comment>
+        <rdfs:label>Port</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://gmo#Port"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#r_Port"/>
+                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <agentrole:DASE_RULE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R2___trajectory:hasPosition(?x,?y) ^ place:hasSpatialFootprint(?z,?y) ^ :Port(?z) -&gt; :atPort(?x,?z)___If position of a fix corresponds to a (spatial footprint of a) port, then that fix is at that port.___http://gmo#freshObjectProperty1</agentrole:DASE_RULE>
+    </owl:Axiom>
+    
+
+
+    <!-- http://gmo#Position -->
+
+    <owl:Class rdf:about="http://gmo#Position">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/gml#Point"/>
+        <rdfs:comment>Represents a geospatial location associated with a fix in the trajectory of a cruise. A position is understood as a point in either 2D or 3D space.</rdfs:comment>
+        <rdfs:label>Position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#PrincipalInvestigatorRole -->
+
+    <owl:Class rdf:about="http://gmo#PrincipalInvestigatorRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>PrincipalInvestigatorRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Program -->
+
+    <owl:Class rdf:about="http://gmo#Program">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#endsOnDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#startsOnDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#endsOnDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#startsOnDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Program</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#ProgramManagerRole -->
+
+    <owl:Class rdf:about="http://gmo#ProgramManagerRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>ProgramManagerRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Property -->
+
+    <owl:Class rdf:about="http://gmo#Property">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasUnit"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#PropertyUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#PropertyUnit -->
+
+    <owl:Class rdf:about="http://gmo#PropertyUnit">
+        <rdfs:label>PropertyUnit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#RegistrantRole -->
+
+    <owl:Class rdf:about="http://gmo#RegistrantRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>RegistrantRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#RightsHolderRole -->
+
+    <owl:Class rdf:about="http://gmo#RightsHolderRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>RightsHolderRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#SamplingProcess -->
+
+    <owl:Class rdf:about="http://gmo#SamplingProcess">
+        <rdfs:subClassOf rdf:resource="http://gmo#Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasInputFeature"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Feature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasInputFeature"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#Feature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://gmo#derivedUsing"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#PhysicalSample"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Segment -->
+
+    <owl:Class rdf:about="http://gmo#Segment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#endsAtFix"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#Fix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#startsFromFix"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#Fix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://gmo#hasSegment"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://gmo#Trajectory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#endsAtFix"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Fix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasAttribute"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Attribute"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#startsFromFix"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Fix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#traversedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#MovingObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A segment starts from exactly one fix, and for every fix with a successor fix, there is a segment that starts from it. If a fix belongs to a trajectory and there is a segment that starts from this fix, then the segment belongs to the trajectory. Furthermore, if a segment starts from a fix, then it ends at the successor of the fix.</rdfs:comment>
+        <rdfs:label>Segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Source -->
+
+    <owl:Class rdf:about="http://gmo#Source">
+        <rdfs:label>Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#SponsorRole -->
+
+    <owl:Class rdf:about="http://gmo#SponsorRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>SponsorRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#StartingFix -->
+
+    <owl:Class rdf:about="http://gmo#StartingFix">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gmo#Fix"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty>
+                                    <rdf:Description>
+                                        <owl:inverseOf rdf:resource="http://gmo#hasNextFix"/>
+                                    </rdf:Description>
+                                </owl:onProperty>
+                                <owl:someValuesFrom rdf:resource="http://gmo#Fix"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>An instance of StartingFix represents the first fix in a specification of a trajectory.  A trajectory is linked to at least two consecutive fixes where the first fix is the starting fix.</rdfs:comment>
+        <rdfs:label>StartingFix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Trajectory -->
+
+    <owl:Class rdf:about="http://gmo#Trajectory">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasFix"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#StartingFix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasFix"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Fix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasSegment"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Segment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class serves as the main access point of the pattern.</rdfs:comment>
+        <rdfs:label>Trajectory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#Vessel -->
+
+    <owl:Class rdf:about="http://gmo#Vessel">
+        <rdfs:subClassOf rdf:resource="http://gmo#MovingObject"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasProperty"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#VesselBeam"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasProperty"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#VesselDisplacement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasProperty"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#VesselDraft"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasProperty"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#VesselLength"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#hasProperty"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Vessel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#VesselBeam -->
+
+    <owl:Class rdf:about="http://gmo#VesselBeam">
+        <rdfs:subClassOf rdf:resource="http://gmo#Property"/>
+        <rdfs:comment>The beam of a vessel is the vessel&apos;s width at the widest point when measured at the vessel&apos;s nonimal waterline.</rdfs:comment>
+        <rdfs:label>VesselBeam</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#VesselDisplacement -->
+
+    <owl:Class rdf:about="http://gmo#VesselDisplacement">
+        <rdfs:subClassOf rdf:resource="http://gmo#Property"/>
+        <rdfs:comment>Displacement is the term used to indicate the vessel&apos;s weight</rdfs:comment>
+        <rdfs:label>VesselDisplacement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#VesselDraft -->
+
+    <owl:Class rdf:about="http://gmo#VesselDraft">
+        <rdfs:subClassOf rdf:resource="http://gmo#Property"/>
+        <rdfs:comment>The draft of a vessel&apos;s hull is the vertical distance between the bottom of the hull and the waterline.</rdfs:comment>
+        <rdfs:label>VesselDraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#VesselLength -->
+
+    <owl:Class rdf:about="http://gmo#VesselLength">
+        <rdfs:subClassOf rdf:resource="http://gmo#Property"/>
+        <rdfs:comment>The maximum length of the vessel&apos;s hull measured parallel to the waterline.</rdfs:comment>
+        <rdfs:label>VesselLength</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gmo#VesselOwnerRole -->
+
+    <owl:Class rdf:about="http://gmo#VesselOwnerRole">
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+        <rdfs:label>VesselOwnerRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Geometry -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/gml#Point -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/gml#Point"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#describedBy"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://gmo#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gmo#AffiliationRole -->
+
+    <owl:NamedIndividual rdf:about="http://gmo#AffiliationRole"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://gmo#Fix"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#atPort"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#Port"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://gmo#hasFix"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:allValuesFrom rdf:resource="http://gmo#CruiseTrajectory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gmo#Fix"/>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://gmo#hasFix"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://gmo#CruiseTrajectory"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://gmo#atPort"/>
+                        <owl:allValuesFrom rdf:resource="http://gmo#Port"/>
+                    </owl:Restriction>
+                </rdfs:subClassOf>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#atPort"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Port"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>Scoped range of atPort is Port where the scope is (inverse hasFix some CruiseTrajectory)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://gmo#Segment"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#traversedBy"/>
+                <owl:someValuesFrom rdf:resource="http://gmo#Vessel"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://gmo#hasSegment"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:allValuesFrom rdf:resource="http://gmo#CruiseTrajectory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gmo#Segment"/>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://gmo#hasSegment"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://gmo#CruiseTrajectory"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://gmo#traversedBy"/>
+                        <owl:allValuesFrom rdf:resource="http://gmo#Vessel"/>
+                    </owl:Restriction>
+                </rdfs:subClassOf>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gmo#traversedBy"/>
+                <owl:allValuesFrom rdf:resource="http://gmo#Vessel"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>Cruise trajectory&apos;s segments are traversed by a vessel</rdfs:comment>
+    </owl:Axiom>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#agentRoleIn"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#atPort"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Port"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Fix"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#atTime"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Fix"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#derivedUsing"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#SamplingProcess"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#PhysicalSample"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#endsAtFix"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Fix"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Segment"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#endsAtTime"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Event"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#endsAtTime"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#PersonalInfoItem"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#endsOnDate"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#FundingAward"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#endsOnDate"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Program"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasAgentRoleType"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#AgentRoleType"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasAgentRoleType"/>
+        <owl:someValuesFrom>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gmo#AffiliationRole"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:someValuesFrom>
+        <rdfs:subClassOf rdf:resource="http://gmo#AffiliationRole"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasAlternativeIdentifier"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#InformationObject"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasAttribute"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Attribute"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://gmo#Fix"/>
+                    <rdf:Description rdf:about="http://gmo#Segment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasAwardAmount"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#AwardAmount"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#FundingAward"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasCurrencyCode"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#CurrencyCode"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#AwardAmount"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasDataSource"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Source"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Fix"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasFix"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Fix"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Trajectory"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasInputFeature"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Feature"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#SamplingProcess"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasNextFix"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Fix"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Fix"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasNextFix"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Fix"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://gmo#startsFromFix"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://gmo#Segment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasPersonName"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#PersonName"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Person"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasPersonalInfoItem"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#PersonalInfoItem"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Person"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasPosition"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Position"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Fix"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasPrimaryIdentifier"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#InformationObject"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasProperty"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#VesselBeam"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Vessel"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasProperty"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#VesselDisplacement"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Vessel"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasProperty"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#VesselDraft"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Vessel"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasProperty"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#VesselLength"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Vessel"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasRelatedCruise"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Cruise"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Cruise"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasSegment"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Segment"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Trajectory"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasSite"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Place"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Organization"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasSpatialFootprint"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Geometry"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Place"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasSubOrganization"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Organization"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Organization"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasTemporalExtent"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasTrajectory"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#CruiseTrajectory"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Cruise"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasUnit"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#PropertyUnit"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Property"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#occursAtPlace"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Place"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Event"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#occursAtTime"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Event"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#originatesFrom"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Feature"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#PhysicalSample"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#performedBy"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Agent"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#AgentRole"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#AffiliationRole"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Organization"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#CoPrincipalInvestigatorRole"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#FundingAward"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#CoPrincipalInvestigatorRole"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Program"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#DataManagerRole"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Program"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#PrincipalInvestigatorRole"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#FundingAward"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#PrincipalInvestigatorRole"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Program"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#ProgramManagerRole"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Program"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#SponsorRole"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#FundingAward"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#providesAgentRole"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#VesselOwnerRole"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Vessel"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#realizedBy"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#InformationRealization"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#InformationObject"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#startsAtTime"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Event"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#startsAtTime"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#PersonalInfoItem"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#startsFromFix"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Fix"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Segment"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#startsOnDate"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#FundingAward"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#startsOnDate"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Program"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#traveledBy"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Vessel"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#CruiseTrajectory"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#traversedBy"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#MovingObject"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Segment"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#undertakenBy"/>
+        <owl:someValuesFrom rdf:resource="http://gmo#Vessel"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#Cruise"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#alsoKnownAs"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#InformationObject"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#familyOrSurname"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#PersonName"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#firstOrGivenName"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#PersonName"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#fullName"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#PersonName"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasCanonicalName"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#InformationObject"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasCurrencyValue"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#AwardAmount"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasDescription"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#InformationObject"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasIdentifierScheme"/>
+        <owl:someValuesFrom>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </owl:someValuesFrom>
+        <rdfs:subClassOf rdf:resource="http://gmo#Identifier"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://gmo#hasWebpage"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:subClassOf rdf:resource="http://gmo#InformationObject"/>
+    </owl:Restriction>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

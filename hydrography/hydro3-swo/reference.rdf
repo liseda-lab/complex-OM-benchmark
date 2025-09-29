@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<!DOCTYPE rdf:RDF [
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY align "http://knowledgeweb.semanticweb.org/heterogeneity/alignment#">
+<!ENTITY edoal "http://ns.inria.org/edoal/1.0/">
+<!ENTITY alext "http://exmo.inrialpes.fr/align/ext/1.0/">
+]>
+
+	<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+	xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+	xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#'
+	xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+	xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+	xmlns:edoal='http://ns.inria.org/edoal/1.0/'
+	xmlns:alext='http://exmo.inrialpes.fr/align/ext/1.0/'
+>
+
+	<Alignment>
+		<xml>yes</xml>
+		<level>2EDOAL</level>
+		<type>?*</type>
+		<onto1>
+			<Ontology rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/">
+				<formalism>
+					<Formalism align:name="OWL" align:uri="http://www.w3.org/2002/07/owl"/>
+				</formalism>
+			</Ontology>
+		</onto1>
+		<onto2>
+			<Ontology rdf:about="http://cegis.usgs.gov/SWO/">
+				<formalism>
+					<Formalism align:name="OWL" align:uri="http://www.w3.org/2002/07/owl"/>
+				</formalism>
+			</Ontology>
+		</onto2>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/Coastline"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/Coastline"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/Levee"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/Levee"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/Rapids"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/Rapids"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/Reservoir"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/Reservoir"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/Wetlands"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/SwampOrMarsh"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/Falls"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/Waterfall"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/DamWeir"/>
+				</entity1>
+				<entity2>
+					<edoal:Class>
+						<edoal:or rdf:parseType="Collection">
+							<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/Weir"/>
+							<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/Dam"/>
+						</edoal:or>
+					</edoal:Class>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>=</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/FreshwaterBay"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/BayOrInlet"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/Lake"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/LakeOrPond"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/Ocean"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/SeaOrOcean"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/River"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/SaltWaterBay"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/BayOrInlet"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/Spring"/>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/SpringOrSeep"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/Watershed"/>
+				</entity1>
+				<entity2>
+					<edoal:Class>
+						<edoal:or rdf:parseType="Collection">
+							<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/SwampOrMarsh"/>
+							<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/LakeOrPond"/>
+						</edoal:or>
+					</edoal:Class>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Class>
+						<edoal:or rdf:parseType="Collection">
+							<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/Hydrographic_Feature"/>
+							<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/Boundary"/>
+							<edoal:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/Hydrographic_Structure"/>
+						</edoal:or>
+					</edoal:Class>
+				</entity1>
+				<entity2>
+					<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/HydrographicFeature"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/flowsfrom"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/startsFrom"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/flowsinto"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/endsAt"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/flowsthrough"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/hasFlow"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/isDownstreamTo"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/hasDirection"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/isUpstreamOf"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/hasDirection"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/hasDam"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/adjoins"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/isDamOf"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/adjoins"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/hasPart"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/contains"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/hasHydrographicPart"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/contains"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/isHydrologicallyConnectedTo"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/isConnectedTo"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/hasMouth"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/endsAt"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/hasSource"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/startsFrom"/>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+		<map>
+			<Cell>
+				<entity1>
+					<edoal:Relation rdf:about="http://spatial.maine.edu/semgaz/HydroOntology/hasTributary"/>
+				</entity1>
+				<entity2>
+					<edoal:Relation>
+						<edoal:inverse>
+							<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/endsAt"/>
+						</edoal:inverse>
+					</edoal:Relation>
+				</entity2>
+				<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+				<relation>&lt;</relation>
+				<alext:provenance>Matcha; ?; unrevised</alext:provenance>
+			</Cell>
+		</map>
+	</Alignment>
+</rdf:RDF>
