@@ -8,6 +8,9 @@ Datasets for evaluating ontology matching systems in complex alignment scenarios
 
 Each testcase folder contains one source ontology, one target ontology, and one reference alignment.
 
+
+### References:
+
 [1] Lu Zhou, Michelle Cheatham, Adila Krisnadhi, Pascal Hitzler. A Complex Alignment Benchmark: GeoLink Dataset. In: International Semantic Web Conference. Springer, Proceedings, Part II, pp. 273-288, 2018.
 
 [2] Lu Zhou, Michelle Cheatham, Adila Krisnadhi, Pascal Hitzler. GeoLink DataSet: A Complex Alignment Benchmark from Real-world Ontology. In: Data Intellegence. MIT Press, Proceedings, 2019.
