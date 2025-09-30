@@ -1,6 +1,6 @@
 # Benchmark for Complex Ontology Matching
 
-Datasets for evaluating ontology matching systems in complex alignment scenarios (from the Complex Track of the [Ontology Alignment Evaluation Initiative]([url](https://oaei.ontologymatching.org/))), divided into five different tasks:
+Datasets for evaluating ontology matching systems in complex alignment scenarios (from the Complex Track of the [Ontology Alignment Evaluation Initiative](https://oaei.ontologymatching.org/)), divided into five different tasks:
 - Geolink (populated and unpopulated) [1, 2]
 - Conference [3, 4]
 - Enslaved [5]
