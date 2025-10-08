@@ -2,7 +2,7 @@
 
 Datasets for evaluating ontology matching systems in complex alignment scenarios (from the Complex Track of the [Ontology Alignment Evaluation Initiative](https://oaei.ontologymatching.org/)), divided into six different tasks:
 - Biomedical [1]
-- Conference [2, 3]
+- Conference (populated and unpopulated) [2, 3]
 - Enslaved [5]
 - Geolink (populated and unpopulated) [5, 6]
 - Hydrography [7, 8, 9]
