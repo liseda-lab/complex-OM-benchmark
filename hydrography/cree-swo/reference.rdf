@@ -494,7 +494,7 @@
 				<entity2>
 					<edoal:Class>
 						<edoal:and rdf:parseType="Collection">
-							<edoal:Class rdf:about="LakeOrPond"/>
+							<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/LakeOrPond"/>
 							<edoal:AttributeDomainRestriction>
 								<edoal:onAttribute>
 									<edoal:Relation rdf:about="http://cegis.usgs.gov/SWO/isContainedBy"/>
@@ -531,7 +531,7 @@
 									</edoal:AttributeDomainRestriction>
 								</edoal:not>
 							</edoal:Class>
-							<edoal:Class rdf:about="LakeOrPond"/>
+							<edoal:Class rdf:about="http://cegis.usgs.gov/SWO/LakeOrPond"/>
 						</edoal:and>
 					</edoal:Class>
 				</entity2>
