@@ -1,0 +1,36 @@
+	GED	Score	correct ref classes	category
+Lake.tsv v. Lake.tsv	1.0	0.6	0	incorrect
+isUpstreamOf.tsv				false negative
+FreshwaterBay.tsv				false negative
+Spring.tsv				false negative
+Reservoir.tsv				false negative
+Coastline.tsv				false negative
+hasTributary.tsv				false negative
+HydrographicFeature.tsv				false negative
+Wetlands.tsv v. Wetlands.tsv	1.0	0.6	0	incorrect
+isDownstreamTo.tsv				false negative
+hasMouth.tsv				false negative
+flowsfrom.tsv				false negative
+River.tsv v. River.tsv	1.0	0.6	0	incorrect
+isHydrologicallyConnectedTo.tsv v. isHydrologicallyConnectedTo.tsv	1.0	0.6	0	incorrect
+DamWeir.tsv				false negative
+hasPart.tsv				false negative
+hasHydrographicPart.tsv				false negative
+Falls.tsv				false negative
+flowsthrough.tsv				false negative
+Rapids.tsv v. Rapids_8614.tsv	1.0	0.6	0	incorrect
+Rapids.tsv v. Rapids.tsv	1.0	0.6	0	incorrect
+SaltWaterBay.tsv v. SaltWaterBay.tsv	1.0	0.6	0	incorrect
+hasDam.tsv				false negative
+flowsinto.tsv				false negative
+Levee.tsv				false negative
+Watershed.tsv v. Watershed.tsv	4.0	0.2727272727272727	0	incorrect
+Ocean.tsv				false negative
+hasSource.tsv				false negative
+isDamOf.tsv				false negative
+Hydrographic_Feature.tsv				false positive
+Hydrographic_Feature_2587.tsv				false positive
+Boundary.tsv				false positive
+hasHydrologicPart.tsv				false positive
+FreshWater_Feature_7857.tsv				false positive
+FreshWater_Feature.tsv				false positive

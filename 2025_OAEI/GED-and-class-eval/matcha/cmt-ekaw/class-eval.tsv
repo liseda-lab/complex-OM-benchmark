@@ -1,0 +1,27 @@
+mapping e1	mapping e2	ref e2
+http://ekaw#hasPart	http://cmt#hasBid		FP
+http://ekaw#Rejected_Paper	http://cmt#Rejection	http://ekaw#Rejected_Paper = OR[http://cmt#hasDecision some http://cmt#Rejection, http://cmt#rejectedBy min 1] (1.0, unrevised)	contained
+http://ekaw#Document	http://cmt#Document	http://ekaw#Document = http://cmt#Document (1.0, unrevised)	correct
+http://ekaw#writtenBy	http://cmt#writtenBy	http://ekaw#reviewWrittenBy = http://cmt#writtenBy (1.0, unrevised)	incorrect
+http://ekaw#writtenBy	http://cmt#writtenBy	http://ekaw#writtenBy < http://cmt#hasAuthor (1.0, unrevised)	incorrect
+http://ekaw#writtenBy	http://cmt#writtenBy	http://ekaw#writtenBy < http://cmt#writtenBy (1.0, unrevised)	correct
+http://ekaw#Paper_Author	http://cmt#Author	http://ekaw#Paper_Author = http://cmt#Author (1.0, unrevised)	correct
+http://ekaw#Person	http://cmt#Person	http://ekaw#Person = http://cmt#Person (1.0, unrevised)	correct
+http://ekaw#SC_Member	http://cmt#ConferenceMember	http://ekaw#Conference_Participant = http://cmt#ConferenceMember (1.0, unrevised)	incorrect
+http://ekaw#Conference	http://cmt#Conference	http://ekaw#Conference = http://cmt#Conference (1.0, unrevised)	correct
+http://ekaw#Review	http://cmt#Review	http://ekaw#Review = http://cmt#Review (1.0, unrevised)	correct
+http://ekaw#Session_Chair	http://cmt#ProgramCommitteeChair	http://ekaw#PC_Chair = http://cmt#ProgramCommitteeChair (1.0, unrevised)	incorrect
+http://ekaw#Session_Chair	http://cmt#ProgramCommitteeChair	http://ekaw#Session_Chair > http://cmt#Chairman (1.0, unrevised)	incorrect
+http://ekaw#hasReviewer	http://cmt#readByReviewer	http://ekaw#hasReviewer < http://cmt#assignedTo (1.0, unrevised)	incorrect
+http://ekaw#hasReviewer	http://cmt#readByReviewer	http://ekaw#hasReviewer < http://cmt#readByReviewer (1.0, unrevised)	correct
+AND[http://ekaw#Regular_Paper, http://ekaw#updatedVersionOf]	http://cmt#PaperFullVersion	http://ekaw#Regular_Paper = http://cmt#PaperFullVersion (1.0, unrevised)	overlap
+http://ekaw#authorOf	http://cmt#Co-author	http://ekaw#authorOf < http://cmt#writePaper (1.0, unrevised)	incorrect
+http://ekaw#authorOf	http://cmt#Co-author	http://ekaw#authorOf < http://cmt#writeReview (1.0, unrevised)	incorrect
+http://ekaw#authorOf	http://cmt#Co-author	http://ekaw#authorOf < http://cmt#co-writePaper (1.0, unrevised)	incorrect
+AND[http://ekaw#Regular_Paper, http://ekaw#Abstract]	http://cmt#PaperAbstract		FP
+http://ekaw#hasReview	http://cmt#endReview		FP
+http://ekaw#Workshop_Chair	http://cmt#AssociatedChair	http://ekaw#Workshop_Chair > http://cmt#Chairman (1.0, unrevised)	incorrect
+http://ekaw#Agency_Staff_Member	http://cmt#ProgramCommitteeMember	http://ekaw#PC_Member = http://cmt#ProgramCommitteeMember (1.0, unrevised)	incorrect
+http://ekaw#topicCoveredBy	http://cmt#SubjectArea	http://ekaw#Research_Topic = http://cmt#SubjectArea (1.0, unrevised)	incorrect
+http://ekaw#Paper	http://cmt#Paper	http://ekaw#Paper = http://cmt#Paper (1.0, unrevised)	correct
+http://ekaw#Accepted_Paper	http://cmt#Acceptance	http://ekaw#Accepted_Paper = OR[http://cmt#acceptedBy min 1, http://cmt#hasDecision some http://cmt#Acceptance] (1.0, unrevised)	contained

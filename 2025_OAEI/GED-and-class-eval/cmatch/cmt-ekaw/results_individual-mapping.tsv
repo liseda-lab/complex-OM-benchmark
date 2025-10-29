@@ -1,0 +1,38 @@
+	GED	Score	correct ref classes	category
+Conference.tsv				false negative
+Chairman.tsv				false negative
+Chairman_3110.tsv				false negative
+Chairman_5853.tsv				false negative
+Chairman_5463.tsv				false negative
+Chairman_9196.tsv				false negative
+writePaper.tsv				false negative
+readByReviewer.tsv				false negative
+Accepted_Paper.tsv				false negative
+Rejected_Paper.tsv				false negative
+Reviewer.tsv v. Reviewer.tsv	8.5	0.15000000000000002	0	incorrect
+hasCo-author.tsv				false negative
+Paper.tsv v. Paper.tsv	0.0	1.0	1	correct
+SubjectArea.tsv				false negative
+Author.tsv				false negative
+ConferenceMember.tsv v. ConferenceMember.tsv	0.0	1.0	1	correct
+Review.tsv v. Review.tsv	0.0	1.0	1	correct
+PaperFullVersion.tsv				false negative
+ProgramCommitteeChair.tsv				false negative
+Submitted_Paper.tsv				false negative
+writtenBy.tsv				false negative
+writtenBy_3547.tsv				false negative
+Document.tsv v. Document.tsv	0.0	1.0	1	correct
+co-writePaper.tsv				false negative
+readPaper.tsv				false negative
+hasBeenAssigned.tsv				false negative
+Person.tsv v. Person.tsv	0.0	1.0	1	correct
+Assigned_Paper.tsv				false negative
+Evaluated_Paper.tsv				false negative
+hasAuthor.tsv				false negative
+hasSubjectArea.tsv				false negative
+assignedTo.tsv				false negative
+writeReview.tsv				false negative
+ProgramCommitteeMember.tsv v. ProgramCommitteeMember.tsv	0.0	1.0	1	correct
+User.tsv				false positive
+Preference.tsv				false positive
+ProgramCommittee.tsv				false positive

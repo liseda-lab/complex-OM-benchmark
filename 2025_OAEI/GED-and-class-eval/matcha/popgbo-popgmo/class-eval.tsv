@@ -1,0 +1,246 @@
+mapping e1	mapping e2	ref e2
+http://gmo#Cruise	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2030	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2030	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#hasDataSource	http://gbo#Dataset		FP
+http://gmo#FundingAward	http://gbo#hasProgramManager http://lod.bco-dmo.org/geolink/id/person/51690	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Person	http://gbo#hasGivenName "b"^^http://www.w3.org/2001/XMLSchema#string	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#Cruise	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasStartDate "1976-11-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Fix	http://gbo#atPort http://data.rvdata.us/id/port/100013	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	incorrect
+http://gmo#Fix	http://gbo#atPort http://data.rvdata.us/id/port/101189	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	incorrect
+http://gmo#PhysicalSample	http://gbo#hasSampleType http://host.geolink.org/sesar/id/physicalsampletype/7e997704-ffd3-49b1-8a0f-da05179adbc4	http://gmo#PhysicalSample < http://gbo#hasSampleType min 1 (1.0, unrevised)	contains
+http://gmo#PhysicalSample	http://gbo#hasSampleType http://host.geolink.org/sesar/id/physicalsampletype/7e997704-ffd3-49b1-8a0f-da05179adbc4	http://gmo#PhysicalSample = http://gbo#PhysicalSample (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/514363		FP
+http://gmo#Feature	http://gbo#originatesFrom http://host.geolink.org/sesar/id/physicalsample/ARF0000EP		FP
+http://gmo#FundingAward	http://gbo#hasStartDate "1976-02-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasEndDate "1978-09-30t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Place	http://gbo#Place	http://gmo#Place < http://gbo#hasGeoFeatureType min 1 (1.0, unrevised)	incorrect
+http://gmo#Place	http://gbo#Place	http://gmo#Place < http://gbo#hasPlaceType min 1 (1.0, unrevised)	incorrect
+http://gmo#Place	http://gbo#Place	http://gmo#Place = http://gbo#Place (1.0, unrevised)	correct
+http://gmo#PhysicalSample	http://gbo#originatesFrom http://host.geolink.org/sesar/id/physicalsample/ARF0004CR	http://gmo#PhysicalSample < http://gbo#hasSampleType min 1 (1.0, unrevised)	incorrect
+http://gmo#PhysicalSample	http://gbo#originatesFrom http://host.geolink.org/sesar/id/physicalsample/ARF0004CR	http://gmo#PhysicalSample = http://gbo#PhysicalSample (1.0, unrevised)	incorrect
+http://gmo#hasSubOrganization	http://gbo#hasSubOrganization	http://gmo#hasSubOrganization = http://gbo#hasSubOrganization (1.0, unrevised)	correct
+http://gmo#MovingObject	http://gbo#hasOwner http://data.rvdata.us/id/organization/gov.nsf		FP
+http://gmo#Cruise	http://gbo#Cruise	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#Cruise	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	correct
+http://gmo#Person	http://gbo#hasGivenName "h"^^http://www.w3.org/2001/XMLSchema#string	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasEndDate "1980-02-29t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Fix	http://gbo#atPort http://data.rvdata.us/id/port/100036	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/gov.usap	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/gov.usap	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/55168	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/55168	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#hasOwner http://data.rvdata.us/id/organization/gov.nsf	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#hasOwner http://data.rvdata.us/id/organization/gov.nsf	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasPrincipalInvestigator http://data.geolink.org/id/person/8a681cdb-2872-4299-8b80-4eb95fa4d411	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasEndDate "1980-06-30t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasSponsor http://lod.bco-dmo.org/geolink/id/organization/355	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasStartDate "1976-05-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/101532		FP
+http://gmo#Event	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2030		FP
+http://gmo#Event	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/54610		FP
+http://gmo#AgentRoleType	http://gbo#RoleType		FP
+http://gmo#FundingAward	http://gbo#hasStartDate "1977-01-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Fix	http://gbo#atPort http://data.rvdata.us/id/port/100041	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasProgramManager http://lod.bco-dmo.org/geolink/id/person/50446	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasProgramManager http://lod.bco-dmo.org/geolink/id/person/50451	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/101529	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/101529	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasCruiseType http://schema.geolink.org/dev/voc/local#cruisetype_operational		FP
+http://gmo#Cruise	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/100872	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/100872	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.uri		FP
+http://gmo#hasPersonalInfoItem some http://gmo#PersonalInfoItem	http://gbo#Person	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://www.opengis.net/ont/geosparql#SpatialObject	http://gbo#DigitalObject		FP
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/514363	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/514363	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Agent	http://gbo#hasGivenName "m"^^http://www.w3.org/2001/XMLSchema#string		FP
+http://gmo#Person	http://gbo#hasGivenName "l"^^http://www.w3.org/2001/XMLSchema#string	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#providesAgentRole some http://gmo#VesselOwnerRole	http://gbo#Vessel	http://gmo#Vessel = http://gbo#Vessel (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasEndDate "1979-11-30t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Agent	http://gbo#hasGivenName "c"^^http://www.w3.org/2001/XMLSchema#string		FP
+http://gmo#FundingAward	http://gbo#hasEndDate "1977-11-30t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/529114	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/529114	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasEndDate "1978-06-30t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.uaf	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.uaf	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#PhysicalSample	http://gbo#originatesFrom http://host.geolink.org/sesar/id/physicalsample/ARF0004CQ	http://gmo#PhysicalSample < http://gbo#hasSampleType min 1 (1.0, unrevised)	incorrect
+http://gmo#PhysicalSample	http://gbo#originatesFrom http://host.geolink.org/sesar/id/physicalsample/ARF0004CQ	http://gmo#PhysicalSample = http://gbo#PhysicalSample (1.0, unrevised)	incorrect
+http://gmo#Person	http://gbo#hasGivenName "t"^^http://www.w3.org/2001/XMLSchema#string	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#associatedWithProgram	http://gbo#hasProgram	http://gmo#associatedWithProgram = http://gbo#hasProgram (1.0, unrevised)	correct
+http://gmo#Event	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/55168		FP
+http://gmo#Event	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.umn.d		FP
+http://gmo#hasAgentRoleType	http://gbo#RoleType		FP
+http://gmo#Person	http://gbo#hasGivenName "j"^^http://www.w3.org/2001/XMLSchema#string	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/ffe44f15-5eb3-4b86-85e3-551bc1684e5f	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/ffe44f15-5eb3-4b86-85e3-551bc1684e5f	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://www.w3.org/2006/time#unitType	http://gbo#MeasurementType		FP
+http://gmo#Event	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/101364		FP
+http://gmo#Event	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2031		FP
+http://gmo#Feature	http://gbo#hasSampleType http://host.geolink.org/sesar/id/physicalsampletype/7b893986-b410-40ee-9889-199c56fc85dc		FP
+http://gmo#FundingAward	http://gbo#hasCoPrincipalInvestigator http://data.geolink.org/id/person/c11a45bc-5066-487b-8d3e-f8b263a7cf15	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasEndDate "1979-12-31t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.lumcon		FP
+http://gmo#FundingAward	http://gbo#hasSponsor http://lod.bco-dmo.org/geolink/id/organization/392	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#MovingObject	http://gbo#hasOwner http://data.rvdata.us/id/organization/mil.navy		FP
+http://gmo#Fix	http://gbo#atPort http://data.rvdata.us/id/port/100065	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	incorrect
+http://gmo#providesAgentRole some http://gmo#CollectorRole	http://gbo#PhysicalSample	http://gmo#PhysicalSample = http://gbo#PhysicalSample (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/474676		FP
+http://gmo#Event	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/100872		FP
+http://gmo#FundingAward	http://gbo#hasEndDate "1977-12-31t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#Vessel	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#Vessel	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#Vessel	http://gmo#Vessel = http://gbo#Vessel (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasStartDate "1976-10-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasEndDate "1978-12-01t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasScheduler http://data.geolink.org/id/program/TAMU	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasScheduler http://data.geolink.org/id/program/TAMU	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/474676	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/474676	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2015	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2015	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/473026		FP
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.umn.d	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.umn.d	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasStartDate "1976-03-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasStartDate "1976-05-15t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/101529		FP
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.hawaii	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.hawaii	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/54626		FP
+http://gmo#Event	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2015		FP
+http://gmo#Agent	http://gbo#hasGivenName "g"^^http://www.w3.org/2001/XMLSchema#string		FP
+http://gmo#Cruise	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2031	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2031	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Vessel	http://gbo#hasOwner http://data.rvdata.us/id/organization/mil.navy	http://gmo#Vessel = http://gbo#Vessel (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#Platform	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#Platform	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	correct
+http://gmo#Agent	http://gbo#hasGivenName "j"^^http://www.w3.org/2001/XMLSchema#string		FP
+http://gmo#fundedBy	http://gbo#hasAward	http://gmo#fundedBy = http://gbo#hasAward (1.0, unrevised)	correct
+http://gmo#FundingAward	http://gbo#hasEndDate "1978-05-31t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#PhysicalSample	http://gbo#hasCollector http://host.geolink.org/ngdb/id/person/10619	http://gmo#PhysicalSample < http://gbo#hasSampleType min 1 (1.0, unrevised)	incorrect
+http://gmo#PhysicalSample	http://gbo#hasCollector http://host.geolink.org/ngdb/id/person/10619	http://gmo#PhysicalSample = http://gbo#PhysicalSample (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/54610	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/54610	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasProgramManager http://lod.bco-dmo.org/geolink/id/person/51467	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.lumcon	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.lumcon	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.hawaii		FP
+http://gmo#Event	http://gbo#hasScheduler http://data.geolink.org/id/program/TAMU		FP
+http://gmo#Event	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.washington		FP
+http://gmo#Agent	http://gbo#hasGivenName "h"^^http://www.w3.org/2001/XMLSchema#string		FP
+http://gmo#Fix	http://gbo#atPort http://data.rvdata.us/id/port/100027	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/473026	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/473026	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.uaf		FP
+http://gmo#Vessel	http://gbo#hasOwner http://data.rvdata.us/id/organization/gov.nsf	http://gmo#Vessel = http://gbo#Vessel (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasEndDate "1978-12-31t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Fix	http://gbo#atPort http://data.rvdata.us/id/port/100380	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	incorrect
+http://gmo#originatesFrom	http://gbo#originatesFrom	http://gmo#originatesFrom = http://gbo#originatesFrom (1.0, unrevised)	correct
+http://gmo#Event	http://gbo#hasScheduler http://data.geolink.org/id/operator/SCRIPPS		FP
+http://gmo#Program	http://gbo#Program	http://gmo#Program = http://gbo#Program (1.0, unrevised)	correct
+http://gmo#Person	http://gbo#hasGivenName "a"^^http://www.w3.org/2001/XMLSchema#string	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#Fix	http://gbo#atPort http://data.rvdata.us/id/port/100055	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.ucsd.sio	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.ucsd.sio	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/100352		FP
+http://gmo#Event	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/54625		FP
+http://gmo#Agent	http://gbo#hasGivenName "r"^^http://www.w3.org/2001/XMLSchema#string		FP
+http://gmo#PhysicalSample	http://gbo#originatesFrom http://host.geolink.org/sesar/id/physicalsample/ARF0000EP	http://gmo#PhysicalSample < http://gbo#hasSampleType min 1 (1.0, unrevised)	incorrect
+http://gmo#PhysicalSample	http://gbo#originatesFrom http://host.geolink.org/sesar/id/physicalsample/ARF0000EP	http://gmo#PhysicalSample = http://gbo#PhysicalSample (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasEndDate "1979-06-30t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Person	http://gbo#hasGivenName "g"^^http://www.w3.org/2001/XMLSchema#string	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#Feature	http://gbo#hasSampleType http://host.geolink.org/sesar/id/physicalsampletype/7e997704-ffd3-49b1-8a0f-da05179adbc4		FP
+http://gmo#Agent	http://gbo#hasGivenName "p"^^http://www.w3.org/2001/XMLSchema#string		FP
+http://gmo#FundingAward	http://gbo#hasEndDate "1979-02-28t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Person	http://gbo#hasGivenName "c"^^http://www.w3.org/2001/XMLSchema#string	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#Feature	http://gbo#originatesFrom http://host.geolink.org/sesar/id/physicalsample/ARF0004CR		FP
+http://gmo#Agent	http://gbo#hasGivenName "l"^^http://www.w3.org/2001/XMLSchema#string		FP
+http://gmo#Person	http://gbo#hasGivenName "m"^^http://www.w3.org/2001/XMLSchema#string	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasScheduler http://data.geolink.org/id/operator/SCRIPPS	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasScheduler http://data.geolink.org/id/operator/SCRIPPS	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.whoi	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.whoi	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasProgramManager http://lod.bco-dmo.org/geolink/id/person/51517	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#hasPersonName some http://gmo#PersonalInfoItem	http://gbo#Person	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#PhysicalSample	http://gbo#hasSampleType http://host.geolink.org/sesar/id/physicalsampletype/7b893986-b410-40ee-9889-199c56fc85dc	http://gmo#PhysicalSample < http://gbo#hasSampleType min 1 (1.0, unrevised)	contains
+http://gmo#PhysicalSample	http://gbo#hasSampleType http://host.geolink.org/sesar/id/physicalsampletype/7b893986-b410-40ee-9889-199c56fc85dc	http://gmo#PhysicalSample = http://gbo#PhysicalSample (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasStartDate "1976-12-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/54626	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/54626	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/101364	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/101364	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#atPort some http://gbo#Place	http://gbo#PortCall	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasProgramManager http://lod.bco-dmo.org/geolink/id/person/50534	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.whoi		FP
+http://www.opengis.net/ont/geosparql#ehMeet	http://gbo#Meeting		FP
+http://gmo#Fix	http://gbo#atPort http://data.rvdata.us/id/port/101206	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasStartDate "1976-09-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.ucsd.sio		FP
+http://gmo#FundingAward	http://gbo#hasStartDate "1976-06-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.washington	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.washington	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasSponsor http://lod.bco-dmo.org/geolink/id/organization/390	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Agent	http://gbo#hasGivenName "n"^^http://www.w3.org/2001/XMLSchema#string		FP
+http://gmo#Platform	http://gbo#hasPlatformType http://lod.bco-dmo.org/geolink/id/platform_type/105	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://lod.bco-dmo.org/geolink/id/platform_type/105	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#hasSubOrganization some http://gbo#Organization	http://gbo#Organization	http://gmo#Organization = http://gbo#Organization (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/e678a607-a854-4963-a7ca-7585fdc9a9b9	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/e678a607-a854-4963-a7ca-7585fdc9a9b9	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2012	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2012	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Feature	http://gbo#originatesFrom http://host.geolink.org/sesar/id/physicalsample/ARF0004CQ		FP
+http://gmo#Event	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.udel		FP
+http://gmo#Feature	http://gbo#hasCollector http://host.geolink.org/ngdb/id/person/10619		FP
+http://gmo#Cruise	http://gbo#hasCruiseType http://schema.geolink.org/dev/voc/local#cruisetype_operational	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	contains
+http://gmo#Cruise	http://gbo#hasCruiseType http://schema.geolink.org/dev/voc/local#cruisetype_operational	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#providesAgentRole some http://gmo#SponsorRole	http://gbo#Award	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasEndDate "1978-03-31t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasStartDate "1977-06-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2023		FP
+http://gmo#Fix	http://gbo#PortCall	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	correct
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.udel	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.udel	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2012		FP
+http://gmo#Cruise	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2023	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasProgram http://lod.bco-dmo.org/geolink/id/program/2023	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Person	http://gbo#hasGivenName "s"^^http://www.w3.org/2001/XMLSchema#string	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#MovingObject	http://gbo#Vessel	http://gmo#Vessel = http://gbo#Vessel (1.0, unrevised)	incorrect
+http://gmo#Agent	http://gbo#hasGivenName "b"^^http://www.w3.org/2001/XMLSchema#string		FP
+http://gmo#PhysicalSample	http://gbo#hasCollector http://host.geolink.org/ngdb/id/person/11150	http://gmo#PhysicalSample < http://gbo#hasSampleType min 1 (1.0, unrevised)	incorrect
+http://gmo#PhysicalSample	http://gbo#hasCollector http://host.geolink.org/ngdb/id/person/11150	http://gmo#PhysicalSample = http://gbo#PhysicalSample (1.0, unrevised)	incorrect
+http://gmo#Event	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.bios		FP
+http://gmo#Agent	http://gbo#hasGivenName "a"^^http://www.w3.org/2001/XMLSchema#string		FP
+http://gmo#FundingAward	http://gbo#hasStartDate "1977-03-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Vessel	http://gbo#Vessel	http://gmo#Vessel = http://gbo#Vessel (1.0, unrevised)	correct
+http://gmo#Person	http://gbo#hasGivenName "r"^^http://www.w3.org/2001/XMLSchema#string	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#Person	http://gbo#hasGivenName "n"^^http://www.w3.org/2001/XMLSchema#string	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#Person	http://gbo#hasGivenName "p"^^http://www.w3.org/2001/XMLSchema#string	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/101532	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/101532	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasStartDate "1976-07-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasStartDate "1976-01-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Feature	http://gbo#hasCollector http://host.geolink.org/ngdb/id/person/11150		FP
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.uri	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.uri	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+AND[http://gmo#performedBy, http://gmo#ContributorRole]	http://gbo#Participant		FP
+http://gmo#Fix	http://gbo#atPort http://data.rvdata.us/id/port/100058	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#hasOwner http://data.rvdata.us/id/organization/mil.navy	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#hasOwner http://data.rvdata.us/id/organization/mil.navy	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.bios	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasOperator http://data.rvdata.us/id/organization/edu.bios	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/100352	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasChiefScientist http://data.rvdata.us/id/person/100352	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#providesAgentRole some http://gmo#VesselOwnerRole	http://gbo#Platform	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#atPort	http://gbo#atPort	http://gmo#atPort = http://gbo#atPort (1.0, unrevised)	correct
+http://gmo#Event	http://gbo#hasOperator http://data.rvdata.us/id/organization/gov.usap		FP
+http://gmo#Event	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/529114		FP
+http://gmo#Agent	http://gbo#hasGivenName "t"^^http://www.w3.org/2001/XMLSchema#string		FP
+http://gmo#Agent	http://gbo#hasGivenName "s"^^http://www.w3.org/2001/XMLSchema#string		FP
+http://gmo#hasPersonName some http://gmo#PersonName	http://gbo#Person	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasEndDate "1978-11-30t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasEndDate "1979-09-30t23:59:59"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#FundingAward	http://gbo#hasStartDate "1976-04-01t00:00:00"^^http://www.w3.org/2001/XMLSchema#dateTime	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/54625	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#hasAward http://lod.bco-dmo.org/geolink/id/award/54625	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect

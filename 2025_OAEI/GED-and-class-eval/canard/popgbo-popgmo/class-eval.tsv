@@ -1,0 +1,64 @@
+mapping e1	mapping e2	ref e2
+http://gmo#Cruise	http://gbo#hasCruiseType http://schema.geolink.org/dev/voc/local#cruisetype_operational	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	contains
+http://gmo#Cruise	http://gbo#hasCruiseType http://schema.geolink.org/dev/voc/local#cruisetype_operational	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/15d0f0b4-d9df-4059-a3e3-16437527640a	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/15d0f0b4-d9df-4059-a3e3-16437527640a	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#Platform	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#Platform	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	correct
+http://gmo#atPort	http://gbo#atPort	http://gmo#atPort = http://gbo#atPort (1.0, unrevised)	correct
+AND[http://gmo#providesAgentRole, http://gmo#performedBy]	http://gbo#hasPrincipalInvestigator		FP
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/c4cfd6f1-ba48-4969-89ae-e2286f50fca1	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/c4cfd6f1-ba48-4969-89ae-e2286f50fca1	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+AND[http://gmo#hasPersonName, http://gmo#firstOrGivenName]	http://gbo#hasGivenName		FP
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/42a03029-8088-43d9-b703-d40e2d55ce44	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/42a03029-8088-43d9-b703-d40e2d55ce44	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#Identifier	http://gbo#Identifier	http://gmo#Identifier = http://gbo#Identifier (1.0, unrevised)	correct
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/d75f6ea4-035f-4ebc-bed1-030fb6ddf167	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/d75f6ea4-035f-4ebc-bed1-030fb6ddf167	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#hasSubOrganization	http://gbo#hasSubOrganization	http://gmo#hasSubOrganization = http://gbo#hasSubOrganization (1.0, unrevised)	correct
+http://gmo#originatesFrom	http://gbo#originatesFrom	http://gmo#originatesFrom = http://gbo#originatesFrom (1.0, unrevised)	correct
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/b2ae0f4c-1c04-4784-852f-470478274d0c	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/b2ae0f4c-1c04-4784-852f-470478274d0c	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#Organization	http://gbo#Organization	http://gmo#Organization = http://gbo#Organization (1.0, unrevised)	correct
+AND[Range(http://gmo#Program), http://gmo#associatedWithProgram]	http://gbo#hasProgram	http://gmo#associatedWithProgram = http://gbo#hasProgram (1.0, unrevised)	overlap
+AND[http://gmo#hasPersonName, http://gmo#fullName]	http://gbo#hasFullName		FP
+AND[http://gmo#providesAgentRole, http://gmo#performedBy]	http://gbo#hasAffiliation		FP
+http://gmo#hasIdentifierScheme min 1	http://gbo#hasIdentifierScheme http://purl.spar.org/datacite/doi	http://gmo#hasIdentifierScheme = http://gbo#hasIdentifierScheme (1.0, unrevised)	contains
+AND[http://gmo#providesAgentRole, http://gmo#performedBy]	http://gbo#hasSponsor		FP
+http://gmo#Program	http://gbo#Program	http://gmo#Program = http://gbo#Program (1.0, unrevised)	correct
+AND[http://gmo#providesAgentRole, http://gmo#performedBy]	http://gbo#hasCoPrincipalInvestigator		FP
+AND[http://gmo#providesAgentRole, http://gmo#performedBy]	http://gbo#hasProgramManager		FP
+AND[http://gmo#providesAgentRole, http://gmo#performedBy]	http://gbo#hasOwner		FP
+AND[http://gmo#providesAgentRole, http://gmo#performedBy]	http://gbo#hasCollector		FP
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/40498c3f-d892-4486-b327-08cbf60491c1	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/40498c3f-d892-4486-b327-08cbf60491c1	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/ffe44f15-5eb3-4b86-85e3-551bc1684e5f	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/ffe44f15-5eb3-4b86-85e3-551bc1684e5f	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+AND[http://gmo#describedBy, http://gmo#hasCanonicalName]	http://gbo#hasTitle	PATH[AND[http://gmo#describedBy, Range(http://gmo#InformationObject)], http://gmo#hasCanonicalName] = http://gbo#hasTitle (1.0, unrevised)	overlap
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/3f9b5b6a-b154-424a-af54-871aa01fdf12	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/3f9b5b6a-b154-424a-af54-871aa01fdf12	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+AND[http://gmo#providesAgentRole, http://gmo#performedBy]	http://gbo#hasOperator		FP
+AND[http://gmo#hasPersonName, http://gmo#familyOrSurname]	http://gbo#hasFamilyName		FP
+AND[http://gmo#providesAgentRole, http://gmo#performedBy]	http://gbo#hasScheduler		FP
+http://gmo#PhysicalSample	http://gbo#PhysicalSample	http://gmo#PhysicalSample < http://gbo#hasSampleType min 1 (1.0, unrevised)	incorrect
+http://gmo#PhysicalSample	http://gbo#PhysicalSample	http://gmo#PhysicalSample = http://gbo#PhysicalSample (1.0, unrevised)	correct
+http://gmo#FundingAward	http://gbo#Award	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	correct
+http://gmo#Platform	http://gbo#hasPlatformType http://lod.bco-dmo.org/geolink/id/platform_type/105	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://lod.bco-dmo.org/geolink/id/platform_type/105	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/529f7cd7-0e95-4149-9243-157effcf9006	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/529f7cd7-0e95-4149-9243-157effcf9006	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#Vessel	http://gbo#Vessel	http://gmo#Vessel = http://gbo#Vessel (1.0, unrevised)	correct
+AND[http://gmo#describedBy, http://gmo#alsoKnownAs]	http://gbo#hasAcronym		FP
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/0bdd1c89-f257-4609-a888-7b409ec88492	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/0bdd1c89-f257-4609-a888-7b409ec88492	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/e678a607-a854-4963-a7ca-7585fdc9a9b9	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	contains
+http://gmo#Platform	http://gbo#hasPlatformType http://host.geolink.org/sesar/id/platformtype/e678a607-a854-4963-a7ca-7585fdc9a9b9	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	incorrect
+http://gmo#fundedBy	http://gbo#hasAward	http://gmo#fundedBy = http://gbo#hasAward (1.0, unrevised)	correct
+AND[http://gmo#providesAgentRole, http://gmo#performedBy]	http://gbo#hasChiefScientist		FP
+http://gmo#Cruise	http://gbo#Cruise	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#Cruise	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	correct
+AND[http://gmo#describedBy, AND[Range(http://gmo#Identifier), http://gmo#hasPrimaryIdentifier]]	http://gbo#hasIdentifier	AND[AND[http://gmo#describedBy, Range(http://gmo#InformationObject)], http://gmo#hasPrimaryIdentifier] = http://gbo#hasIdentifier (1.0, unrevised)	overlap
+http://gmo#Person	http://gbo#Person	http://gmo#Person = http://gbo#Person (1.0, unrevised)	correct
+http://gmo#Place	http://gbo#Place	http://gmo#Place < http://gbo#hasGeoFeatureType min 1 (1.0, unrevised)	incorrect
+http://gmo#Place	http://gbo#Place	http://gmo#Place < http://gbo#hasPlaceType min 1 (1.0, unrevised)	incorrect
+http://gmo#Place	http://gbo#Place	http://gmo#Place = http://gbo#Place (1.0, unrevised)	correct

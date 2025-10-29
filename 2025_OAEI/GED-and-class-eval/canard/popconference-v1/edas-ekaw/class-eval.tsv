@@ -1,0 +1,82 @@
+mapping e1	mapping e2	ref e2
+INVERSE[http://ekaw#hasReviewer]	http://edas#isReviewing	http://ekaw#hasReviewer = http://edas#isReviewedBy (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasReviewer]	http://edas#isReviewing	http://ekaw#reviewerOfPaper = http://edas#isReviewing (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#coversTopic] min 1	http://edas#Topic	http://ekaw#Research_Topic = http://edas#Topic (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#coversTopic] min 1	http://edas#Topic	http://ekaw#coversTopic > http://edas#hasTopic (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#organisedBy] some http://ekaw#Conference	http://edas#ConferenceChair		FP
+http://ekaw#organises some http://ekaw#Conference	http://edas#ConferenceChair		FP
+http://ekaw#authorOf	http://edas#hasRelatedDocument	http://ekaw#authorOf < http://edas#hasRelatedPaper (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#writtenBy]	http://edas#hasRelatedDocument	http://ekaw#writtenBy < http://edas#isWrittenBy (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#writtenBy] some http://ekaw#Review	http://edas#Reviewer	OR[INVERSE[http://ekaw#reviewWrittenBy] min 1, http://ekaw#authorOf some http://ekaw#Review] = http://edas#Reviewer (1.0, unrevised)	overlap
+INVERSE[http://ekaw#reviewWrittenBy] some http://ekaw#Review	http://edas#Reviewer	OR[INVERSE[http://ekaw#reviewWrittenBy] min 1, http://ekaw#authorOf some http://ekaw#Review] = http://edas#Reviewer (1.0, unrevised)	overlap
+INVERSE[http://ekaw#hasReviewer] min 1	http://edas#Reviewer	http://ekaw#hasReviewer = http://edas#isReviewedBy (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasReviewer] min 1	http://edas#Reviewer	OR[INVERSE[http://ekaw#reviewWrittenBy] min 1, http://ekaw#authorOf some http://ekaw#Review] = http://edas#Reviewer (1.0, unrevised)	incorrect
+http://ekaw#authorOf some http://ekaw#Review	http://edas#Reviewer	OR[INVERSE[http://ekaw#reviewWrittenBy] min 1, http://ekaw#authorOf some http://ekaw#Review] = http://edas#Reviewer (1.0, unrevised)	overlap
+http://ekaw#Workshop	http://edas#Workshop	http://ekaw#Workshop = http://edas#Workshop (1.0, unrevised)	correct
+http://ekaw#Scientific_Event	http://edas#ConferenceEvent	http://ekaw#Scientific_Event = OR[http://edas#ConferenceSession, http://edas#AcademicEvent, http://edas#Conference] (1.0, unrevised)	incorrect
+http://ekaw#authorOf min 1	http://edas#Author	http://ekaw#Paper_Author = http://edas#Author (1.0, unrevised)	incorrect
+http://ekaw#authorOf min 1	http://edas#Author	http://ekaw#authorOf < http://edas#hasRelatedPaper (1.0, unrevised)	incorrect
+http://ekaw#Rejected_Paper	http://edas#RejectedPaper	http://ekaw#Rejected_Paper = http://edas#RejectedPaper (1.0, unrevised)	correct
+AND[INVERSE[http://ekaw#heldIn], http://www.w3.org/2000/01/rdf-schema#label]	http://edas#hasName		FP
+http://www.w3.org/2000/01/rdf-schema#label	http://edas#hasName		FP
+AND[http://ekaw#locationOf, http://www.w3.org/2000/01/rdf-schema#label]	http://edas#hasName		FP
+http://ekaw#Person	http://edas#Person	http://ekaw#Person = http://edas#Person (1.0, unrevised)	correct
+INVERSE[http://ekaw#hasReview] min 1	http://edas#Review	http://ekaw#Review = http://edas#Review (1.0, unrevised)	incorrect
+http://ekaw#Review	http://edas#Review	http://ekaw#Review = http://edas#Review (1.0, unrevised)	correct
+INVERSE[http://ekaw#paperPresentedAs] min 1	http://edas#PaperPresentation	http://ekaw#Individual_Presentation = http://edas#PaperPresentation (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#paperPresentedAs] min 1	http://edas#PaperPresentation	http://ekaw#paperPresentedAs < http://edas#relatedToEvent (1.0, unrevised)	incorrect
+http://ekaw#hasUpdatedVersion some http://ekaw#Document	http://edas#Document	http://ekaw#Document = http://edas#Document (1.0, unrevised)	overlap
+INVERSE[http://ekaw#hasReview] some http://ekaw#Document	http://edas#Document	http://ekaw#Document = http://edas#Document (1.0, unrevised)	overlap
+http://ekaw#Document	http://edas#Document	http://ekaw#Document = http://edas#Document (1.0, unrevised)	correct
+INVERSE[http://ekaw#updatedVersionOf] some http://ekaw#Document	http://edas#Document	http://ekaw#Document = http://edas#Document (1.0, unrevised)	overlap
+http://ekaw#reviewOfPaper some http://ekaw#Document	http://edas#Document	http://ekaw#Document = http://edas#Document (1.0, unrevised)	overlap
+http://ekaw#Social_Event	http://edas#SocialEvent	http://ekaw#Social_Event = http://edas#SocialEvent (1.0, unrevised)	correct
+INVERSE[http://ekaw#hasEvent] some http://ekaw#Event	http://edas#SocialEvent	http://ekaw#Social_Event = http://edas#SocialEvent (1.0, unrevised)	incorrect
+http://ekaw#partOfEvent some http://ekaw#Event	http://edas#SocialEvent	http://ekaw#Social_Event = http://edas#SocialEvent (1.0, unrevised)	incorrect
+AND[Range(http://ekaw#Location), http://ekaw#heldIn]	http://edas#hasLocation	http://ekaw#heldIn < http://edas#hasLocation (1.0, unrevised)	overlap
+AND[Range(http://ekaw#Location), INVERSE[http://ekaw#locationOf]]	http://edas#hasLocation	http://ekaw#heldIn < http://edas#hasLocation (1.0, unrevised)	incorrect
+AND[Range(http://ekaw#Accepted_Paper), http://ekaw#authorOf]	http://edas#hasRelatedPaper	http://ekaw#authorOf < http://edas#hasRelatedPaper (1.0, unrevised)	overlap
+AND[Range(http://ekaw#Accepted_Paper), INVERSE[http://ekaw#writtenBy]]	http://edas#hasRelatedPaper	http://ekaw#authorOf < http://edas#hasRelatedPaper (1.0, unrevised)	incorrect
+http://ekaw#Conference_Banquet	http://edas#ConferenceDinner	http://ekaw#Conference_Banquet = http://edas#ConferenceDinner (1.0, unrevised)	correct
+http://ekaw#partOf some http://ekaw#Conference	http://edas#ConferenceDinner	http://ekaw#Conference_Banquet = http://edas#ConferenceDinner (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasEvent] some http://ekaw#Conference	http://edas#ConferenceDinner	http://ekaw#Conference_Banquet = http://edas#ConferenceDinner (1.0, unrevised)	incorrect
+http://ekaw#hasReviewer	http://edas#isReviewedBy	http://ekaw#hasReviewer = http://edas#isReviewedBy (1.0, unrevised)	correct
+AND[Domain(http://ekaw#Location), INVERSE[http://ekaw#heldIn]]	http://edas#isLocationOf	http://ekaw#locationOf < http://edas#isLocationOf (1.0, unrevised)	incorrect
+AND[Domain(http://ekaw#Location), http://ekaw#locationOf]	http://edas#isLocationOf	http://ekaw#locationOf < http://edas#isLocationOf (1.0, unrevised)	overlap
+INVERSE[http://ekaw#coversTopic]	http://edas#isTopicOf	http://ekaw#coversTopic > http://edas#hasTopic (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#coversTopic]	http://edas#isTopicOf	http://ekaw#topicCoveredBy > http://edas#isTopicOf (1.0, unrevised)	incorrect
+http://ekaw#topicCoveredBy	http://edas#isTopicOf	http://ekaw#topicCoveredBy > http://edas#isTopicOf (1.0, unrevised)	correct
+http://ekaw#Social_Event	http://edas#NonAcademicEvent	http://ekaw#Social_Event = http://edas#SocialEvent (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#updatedVersionOf] some http://ekaw#Paper	http://edas#Paper	http://ekaw#Paper = http://edas#Paper (1.0, unrevised)	overlap
+http://ekaw#hasUpdatedVersion some http://ekaw#Paper	http://edas#Paper	http://ekaw#Paper = http://edas#Paper (1.0, unrevised)	overlap
+http://ekaw#Paper	http://edas#Paper	http://ekaw#Paper = http://edas#Paper (1.0, unrevised)	correct
+INVERSE[http://ekaw#hasEvent] some http://ekaw#Event	http://edas#MealEvent		FP
+http://ekaw#partOfEvent some http://ekaw#Event	http://edas#MealEvent		FP
+AND[http://ekaw#hasUpdatedVersion, INVERSE[http://ekaw#presentationOfPaper]]	http://edas#relatedToEvent	http://ekaw#paperPresentedAs < http://edas#relatedToEvent (1.0, unrevised)	incorrect
+AND[INVERSE[http://ekaw#updatedVersionOf], INVERSE[http://ekaw#presentationOfPaper]]	http://edas#relatedToEvent	http://ekaw#paperPresentedAs < http://edas#relatedToEvent (1.0, unrevised)	incorrect
+AND[http://ekaw#hasUpdatedVersion, http://ekaw#paperPresentedAs]	http://edas#relatedToEvent	http://ekaw#paperPresentedAs < http://edas#relatedToEvent (1.0, unrevised)	overlap
+AND[INVERSE[http://ekaw#updatedVersionOf], http://ekaw#paperPresentedAs]	http://edas#relatedToEvent	http://ekaw#paperPresentedAs < http://edas#relatedToEvent (1.0, unrevised)	overlap
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type some http://www.w3.org/2002/07/owl#Class	http://edas#Place	http://ekaw#Location = http://edas#Place (1.0, unrevised)	incorrect
+AND[INVERSE[http://ekaw#paperPresentedAs], AND[Range(http://ekaw#Evaluated_Paper), INVERSE[http://ekaw#hasUpdatedVersion]]]	http://edas#relatedToPaper	http://ekaw#presentationOfPaper < http://edas#relatedToPaper (1.0, unrevised)	incorrect
+AND[INVERSE[http://ekaw#paperPresentedAs], AND[Range(http://ekaw#Evaluated_Paper), http://ekaw#updatedVersionOf]]	http://edas#relatedToPaper	http://ekaw#presentationOfPaper < http://edas#relatedToPaper (1.0, unrevised)	incorrect
+AND[http://ekaw#presentationOfPaper, AND[Range(http://ekaw#Evaluated_Paper), INVERSE[http://ekaw#hasUpdatedVersion]]]	http://edas#relatedToPaper	http://ekaw#presentationOfPaper < http://edas#relatedToPaper (1.0, unrevised)	overlap
+AND[http://ekaw#presentationOfPaper, AND[Range(http://ekaw#Evaluated_Paper), http://ekaw#updatedVersionOf]]	http://edas#relatedToPaper	http://ekaw#presentationOfPaper < http://edas#relatedToPaper (1.0, unrevised)	overlap
+http://ekaw#Accepted_Paper	http://edas#AcceptedPaper	http://ekaw#Accepted_Paper = http://edas#AcceptedPaper (1.0, unrevised)	correct
+http://ekaw#PC_Member	http://edas#Presenter		FP
+http://ekaw#coversTopic	http://edas#hasTopic	http://ekaw#coversTopic > http://edas#hasTopic (1.0, unrevised)	correct
+AND[http://ekaw#hasReviewer, http://ekaw#organises, INVERSE[http://ekaw#hasEvent]]	http://edas#relatesTo		FP
+AND[INVERSE[http://ekaw#reviewerOfPaper], http://ekaw#organises, INVERSE[http://ekaw#hasEvent]]	http://edas#relatesTo		FP
+AND[INVERSE[http://ekaw#reviewerOfPaper], http://ekaw#organises, http://ekaw#partOfEvent]	http://edas#relatesTo		FP
+AND[INVERSE[http://ekaw#reviewerOfPaper], INVERSE[http://ekaw#organisedBy], http://ekaw#partOfEvent]	http://edas#relatesTo		FP
+AND[http://ekaw#hasReviewer, http://ekaw#organises, http://ekaw#partOfEvent]	http://edas#relatesTo		FP
+AND[INVERSE[http://ekaw#reviewerOfPaper], INVERSE[http://ekaw#organisedBy], INVERSE[http://ekaw#hasEvent]]	http://edas#relatesTo		FP
+INVERSE[http://ekaw#locationOf] some http://ekaw#Location	http://edas#Reception		FP
+INVERSE[http://ekaw#writtenBy] some http://ekaw#Conference_Paper	http://edas#isMemberOf http://edas-instances#conference594425059		FP
+http://ekaw#authorOf some http://ekaw#Conference_Paper	http://edas#isMemberOf http://edas-instances#conference594425059		FP
+http://ekaw#Scientific_Event	http://edas#AcademicEvent	http://ekaw#Scientific_Event = OR[http://edas#ConferenceSession, http://edas#AcademicEvent, http://edas#Conference] (1.0, unrevised)	contained
+INVERSE[http://ekaw#hasUpdatedVersion] some http://ekaw#Submitted_Paper	http://edas#PublishedPaper	http://ekaw#paperInVolume some http://ekaw#Conference_Proceedings = http://edas#PublishedPaper (1.0, unrevised)	incorrect
+http://ekaw#updatedVersionOf some http://ekaw#Submitted_Paper	http://edas#PublishedPaper	http://ekaw#paperInVolume some http://ekaw#Conference_Proceedings = http://edas#PublishedPaper (1.0, unrevised)	incorrect
+http://ekaw#locationOf some http://ekaw#Conference	http://edas#Conference	http://ekaw#Conference = http://edas#Conference (1.0, unrevised)	overlap
+http://ekaw#Conference	http://edas#Conference	http://ekaw#Conference = http://edas#Conference (1.0, unrevised)	correct
+INVERSE[http://ekaw#heldIn] some http://ekaw#Conference	http://edas#Conference	http://ekaw#Conference = http://edas#Conference (1.0, unrevised)	overlap
+http://ekaw#writtenBy	http://edas#isWrittenBy	http://ekaw#writtenBy < http://edas#isWrittenBy (1.0, unrevised)	correct

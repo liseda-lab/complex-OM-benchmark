@@ -1,0 +1,10 @@
+mapping e1	mapping e2	ref e2
+http://cegis.usgs.gov/SWO#StreamOrRiver	http://spatial.maine.edu/semgaz/HydroOntology#River		FP
+http://cegis.usgs.gov/SWO#HydrographicFeature	http://spatial.maine.edu/semgaz/HydroOntology#Hydrographic_Feature		FP
+http://cegis.usgs.gov/SWO#Waterbody	http://spatial.maine.edu/semgaz/HydroOntology#FreshWater_Feature		FP
+http://cegis.usgs.gov/SWO#LakeOrPond	http://spatial.maine.edu/semgaz/HydroOntology#Lake		FP
+http://cegis.usgs.gov/SWO#HydrographicFeature	http://spatial.maine.edu/semgaz/HydroOntology#FreshWater_Feature		FP
+http://cegis.usgs.gov/SWO#isConnectedTo	http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicallyConnectedTo		FP
+http://cegis.usgs.gov/SWO#Rapids	http://spatial.maine.edu/semgaz/HydroOntology#Rapids		FP
+http://cegis.usgs.gov/SWO#SwampOrMarsh	http://spatial.maine.edu/semgaz/HydroOntology#Wetlands		FP
+http://cegis.usgs.gov/SWO#contains	http://spatial.maine.edu/semgaz/HydroOntology#hasHydrologicPart		FP

@@ -1,0 +1,45 @@
+mapping e1	mapping e2	ref e2
+AND[Range(http://confOf#Paper), http://confOf#reviewes]	http://cmt#readPaper	http://confOf#reviewes < http://cmt#readPaper (1.0, unrevised)	overlap
+INVERSE[http://confOf#writtenBy]	http://cmt#writePaper	http://confOf#writtenBy = http://cmt#hasAuthor (1.0, unrevised)	incorrect
+INVERSE[http://confOf#writtenBy]	http://cmt#writePaper	http://confOf#writes = http://cmt#writePaper (1.0, unrevised)	incorrect
+http://confOf#writes	http://cmt#writePaper	http://confOf#writes = http://cmt#writePaper (1.0, unrevised)	correct
+OR[http://confOf#writtenBy http://confOf-instances#person-1289866755, http://confOf#writtenBy http://confOf-instances#person-788076726, http://confOf#writtenBy http://confOf-instances#person-1307497202, http://confOf#writtenBy http://confOf-instances#person-1712520470, http://confOf#writtenBy http://confOf-instances#person837870437, http://confOf#writtenBy http://confOf-instances#person1080046350, http://confOf#writtenBy http://confOf-instances#person-193324767]	http://cmt#rejectedBy http://cmt-instances#person-826848348		FP
+INVERSE[http://confOf#reviewes] http://confOf-instances#person-836803373	http://cmt#rejectedBy http://cmt-instances#person-826848348		FP
+OR[http://confOf#writtenBy http://confOf-instances#person-61831363, http://confOf#writtenBy http://confOf-instances#person1727185389, http://confOf#writtenBy http://confOf-instances#person-1455297413, http://confOf#writtenBy http://confOf-instances#person1235711472, http://confOf#writtenBy http://confOf-instances#person-1872968917, http://confOf#writtenBy http://confOf-instances#person-1993644559, http://confOf#writtenBy http://confOf-instances#person-1253694339]	http://cmt#acceptedBy http://cmt-instances#person-826848348		FP
+http://confOf#writes	http://cmt#markConflictOfInterest	http://confOf#writes = http://cmt#writePaper (1.0, unrevised)	incorrect
+INVERSE[http://confOf#writtenBy]	http://cmt#markConflictOfInterest	http://confOf#writtenBy = http://cmt#hasAuthor (1.0, unrevised)	incorrect
+AND[Range(http://confOf#Author), INVERSE[http://confOf#writes]]	http://cmt#hasAuthor	http://confOf#writtenBy = http://cmt#hasAuthor (1.0, unrevised)	incorrect
+AND[Range(http://confOf#Author), http://confOf#writtenBy]	http://cmt#hasAuthor	http://confOf#writtenBy = http://cmt#hasAuthor (1.0, unrevised)	overlap
+INVERSE[http://confOf#writtenBy]	http://cmt#co-writePaper	http://confOf#writtenBy = http://cmt#hasAuthor (1.0, unrevised)	incorrect
+http://confOf#writes	http://cmt#co-writePaper	http://confOf#writes = http://cmt#writePaper (1.0, unrevised)	incorrect
+http://confOf#Conference	http://cmt#Conference	http://confOf#Conference = http://cmt#Conference (1.0, unrevised)	correct
+AND[Range(http://confOf#Member_PC), INVERSE[http://confOf#reviewes]]	http://cmt#readByReviewer		FP
+INVERSE[http://confOf#reviewes]	http://cmt#readByMeta-Reviewer	http://confOf#reviewes < http://cmt#readPaper (1.0, unrevised)	incorrect
+INVERSE[http://confOf#reviewes]	http://cmt#readByMeta-Reviewer	http://confOf#reviewes min 1 = http://cmt#Reviewer (1.0, unrevised)	incorrect
+http://confOf#starts_on	http://cmt#date		FP
+INVERSE[http://confOf#writtenBy] some http://confOf#Contribution	http://cmt#Co-author		FP
+http://confOf#Author	http://cmt#Co-author	http://confOf#Author = http://cmt#Author (1.0, unrevised)	incorrect
+http://confOf#writes some http://confOf#Contribution	http://cmt#Co-author		FP
+http://confOf#Administrator	http://cmt#Administrator	http://confOf#Administrator = http://cmt#Administrator (1.0, unrevised)	correct
+http://confOf#has_title	http://cmt#name		FP
+http://confOf#Member_PC	http://cmt#Meta-Reviewer	http://confOf#Member_PC = http://cmt#ProgramCommitteeMember (1.0, unrevised)	incorrect
+INVERSE[http://confOf#writes]	http://cmt#hasCo-author	http://confOf#writes = http://cmt#writePaper (1.0, unrevised)	incorrect
+http://confOf#writtenBy	http://cmt#hasCo-author	http://confOf#writtenBy = http://cmt#hasAuthor (1.0, unrevised)	incorrect
+INVERSE[http://confOf#writtenBy]	http://cmt#submitPaper	http://confOf#writtenBy = http://cmt#hasAuthor (1.0, unrevised)	incorrect
+http://confOf#writes	http://cmt#submitPaper	http://confOf#writes = http://cmt#writePaper (1.0, unrevised)	incorrect
+http://confOf#Paper	http://cmt#Paper	http://confOf#Contribution = http://cmt#Paper (1.0, unrevised)	incorrect
+http://confOf#Paper	http://cmt#Paper	http://confOf#Paper = http://cmt#PaperFullVersion (1.0, unrevised)	incorrect
+http://confOf#Chair_PC	http://cmt#Chairman	http://confOf#Chair_PC = http://cmt#ProgramCommitteeChair (1.0, unrevised)	incorrect
+INVERSE[http://confOf#reviewes]	http://cmt#assignedTo	http://confOf#reviewes < http://cmt#readPaper (1.0, unrevised)	incorrect
+INVERSE[http://confOf#reviewes]	http://cmt#assignedTo	http://confOf#reviewes min 1 = http://cmt#Reviewer (1.0, unrevised)	incorrect
+http://confOf#Person	http://cmt#Person	http://confOf#Person = http://cmt#Person (1.0, unrevised)	correct
+INVERSE[http://confOf#writtenBy] some http://confOf#Paper	http://cmt#User		FP
+http://confOf#reviewes some http://confOf#Paper	http://cmt#User		FP
+http://confOf#Author	http://cmt#Author	http://confOf#Author = http://cmt#Author (1.0, unrevised)	correct
+http://confOf#dealsWith	http://cmt#hasSubjectArea	http://confOf#dealsWith = http://cmt#hasSubjectArea (1.0, unrevised)	correct
+http://confOf#reviewes	http://cmt#hasBeenAssigned	http://confOf#reviewes < http://cmt#readPaper (1.0, unrevised)	incorrect
+http://confOf#reviewes	http://cmt#hasBeenAssigned	http://confOf#reviewes min 1 = http://cmt#Reviewer (1.0, unrevised)	incorrect
+http://confOf#reviewes min 1	http://cmt#Reviewer	http://confOf#reviewes < http://cmt#readPaper (1.0, unrevised)	incorrect
+http://confOf#reviewes min 1	http://cmt#Reviewer	http://confOf#reviewes min 1 = http://cmt#Reviewer (1.0, unrevised)	correct
+http://confOf#Member_PC	http://cmt#Reviewer	http://confOf#Member_PC = http://cmt#ProgramCommitteeMember (1.0, unrevised)	incorrect
+http://confOf#Member_PC	http://cmt#Reviewer	http://confOf#reviewes min 1 = http://cmt#Reviewer (1.0, unrevised)	incorrect

@@ -1,0 +1,43 @@
+	GED	Score	correct ref classes	category
+Conference.tsv v. Conference.tsv	0.0006745362563237774	0.9997301854974705	0	incorrect
+Chairman.tsv				false negative
+Chairman_3810.tsv				false negative
+writePaper.tsv				false negative
+readByReviewer.tsv				false negative
+Reviewer.tsv v. Reviewer.tsv	4.0	0.2727272727272727	0	incorrect
+hasCo-author.tsv				false negative
+Paper.tsv v. Paper.tsv	1.0	0.6	0	incorrect
+PaperAbstract.tsv v. PaperAbstract.tsv	4.0	0.11111111111111116	0	incorrect
+PaperAbstract.tsv v. PaperAbstract_4821.tsv	4.0	0.11111111111111116	1	contained in ref
+SubjectArea.tsv v. SubjectArea.tsv	0.0	1.0	1	correct
+assignedByReviewer.tsv				false negative
+Author.tsv v. Author.tsv	1.0	0.6	0	incorrect
+Review.tsv v. Review.tsv	0.0	1.0	1	correct
+PaperFullVersion.tsv v. PaperFullVersion.tsv	1.0	0.6	0	incorrect
+hasProgramCommitteeMember.tsv v. hasProgramCommitteeMember.tsv	1.0	0.6	0	incorrect
+Co-author.tsv v. Co-author.tsv	0.0	1.0	1	correct
+ProgramCommitteeChair.tsv				false negative
+writtenBy.tsv				false negative
+Document.tsv v. Document.tsv	0.0	1.0	1	correct
+co-writePaper.tsv				false negative
+readPaper.tsv				false negative
+Rejected_contribution.tsv				false negative
+Person.tsv v. Person.tsv	0.0	1.0	1	correct
+Preference.tsv v. Preference.tsv	0.0	1.0	1	correct
+assignExternalReviewer.tsv				false negative
+hasAuthor.tsv				false negative
+Reviewed_contribution.tsv				false negative
+ProgramCommittee.tsv v. ProgramCommittee.tsv	0.0	1.0	1	correct
+Submitted_contribution.tsv				false negative
+ExternalReviewer.tsv v. ExternalReviewer.tsv	4.0	0.2727272727272727	0	incorrect
+memberOfProgramCommittee.tsv v. memberOfProgramCommittee.tsv	1.0	0.6	0	incorrect
+Accepted_contribution.tsv				false negative
+writeReview.tsv				false negative
+email.tsv v. email.tsv	0.0	1.0	1	correct
+ProgramCommitteeMember.tsv v. ProgramCommitteeMember.tsv	2.5	0.375	0	incorrect
+AssociatedChair.tsv				false positive
+User.tsv				false positive
+Meta-Review.tsv				false positive
+ConferenceChair.tsv				false positive
+endReview.tsv				false positive
+Rejection.tsv				false positive

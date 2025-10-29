@@ -1,0 +1,270 @@
+	GED	Score	correct ref classes	category
+Platform_5546.tsv v. Platform_166.tsv	2.5	0.2857142857142857	0	incorrect
+Platform_5546.tsv v. Platform_540.tsv	2.5	0.2857142857142857	0	incorrect
+Platform_5546.tsv v. Platform_259.tsv	0.0	1.0	1	correct
+Platform_5546.tsv v. Platform_9600.tsv	2.5	0.2857142857142857	0	incorrect
+Platform_5546.tsv v. Platform.tsv	2.5	0.2857142857142857	0	incorrect
+Platform_5546.tsv v. Platform_1138.tsv	2.5	0.2857142857142857	0	incorrect
+Platform_5546.tsv v. Platform_8895.tsv	2.5	0.2857142857142857	0	incorrect
+Platform.tsv v. Platform_166.tsv	2.0	0.5	0	incorrect
+Platform.tsv v. Platform_540.tsv	1.0	0.75	1	contained in ref
+Platform.tsv v. Platform_259.tsv	2.5	0.375	0	incorrect
+Platform.tsv v. Platform_9600.tsv	1.0	0.75	1	contained in ref
+Platform.tsv v. Platform.tsv	2.0	0.5	0	incorrect
+Platform.tsv v. Platform_1138.tsv	1.0	0.75	1	contained in ref
+Platform.tsv v. Platform_8895.tsv	2.0	0.5	0	incorrect
+hasPlatformType.tsv				false negative
+Place.tsv v. Place.tsv	2.5	0.375	0	incorrect
+Place_5001.tsv v. Place.tsv	2.5	0.375	0	incorrect
+Place_5173.tsv v. Place.tsv	0.0	1.0	1	correct
+hasAbstract.tsv				false negative
+hasCruiseType.tsv				false negative
+hasSubOrganization_2862.tsv v. hasSubOrganization.tsv	2.5	0.375	0	incorrect
+hasSubOrganization.tsv v. hasSubOrganization.tsv	0.0	1.0	1	correct
+GeoFeatureType.tsv				false negative
+hasDescription.tsv				false negative
+CruiseType.tsv				false negative
+Organization.tsv v. Organization.tsv	2.5	0.2857142857142857	0	incorrect
+Award.tsv v. Award.tsv	2.5	0.2857142857142857	0	incorrect
+hasIdentifierValue.tsv				false negative
+hasSampleType.tsv				false negative
+PhysicalSampleType.tsv				false negative
+Cruise_7180.tsv v. Cruise_571.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_2492.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_2379.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_7836.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_1867.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_1120.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_5255.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_6214.tsv	0.0	1.0	1	correct
+Cruise_7180.tsv v. Cruise_4247.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_3.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_6718.tsv	8.047188714622546e-06	0.9999967811245142	0	incorrect
+Cruise_7180.tsv v. Cruise_4752.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_2373.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_6103.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_2889.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_4243.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_850.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_8637.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_4071.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_8441.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_4634.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_353.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_9485.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_5727.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_3832.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_2319.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_3993.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_8635.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_9851.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_8850.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_6973.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_2600.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_7180.tsv v. Cruise_5798.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise.tsv v. Cruise_571.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_2492.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_2379.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_7836.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_1867.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_1120.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_5255.tsv	1.0	0.75	1	contained in ref
+Cruise.tsv v. Cruise_6214.tsv	2.5	0.375	0	incorrect
+Cruise.tsv v. Cruise_4247.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_3.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_6718.tsv	2.5	0.375	0	incorrect
+Cruise.tsv v. Cruise_4752.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_2373.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_6103.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_2889.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_4243.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_850.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_8637.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_4071.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_8441.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_4634.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_353.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_9485.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_5727.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_3832.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_2319.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_3993.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_8635.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_9851.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_8850.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_6973.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_2600.tsv	2.0	0.5	0	incorrect
+Cruise.tsv v. Cruise_5798.tsv	2.0	0.5	0	incorrect
+PhysicalSample_5823.tsv v. PhysicalSample_6157.tsv	2.5	0.2857142857142857	0	incorrect
+PhysicalSample_5823.tsv v. PhysicalSample_1556.tsv	2.5	0.2857142857142857	0	incorrect
+PhysicalSample_5823.tsv v. PhysicalSample_6304.tsv	2.5	0.2857142857142857	0	incorrect
+PhysicalSample_5823.tsv v. PhysicalSample_2865.tsv	2.5	0.2857142857142857	0	incorrect
+PhysicalSample_5823.tsv v. PhysicalSample_9311.tsv	2.5	0.2857142857142857	0	incorrect
+PhysicalSample_5823.tsv v. PhysicalSample_9805.tsv	2.5	0.2857142857142857	0	incorrect
+PhysicalSample_5823.tsv v. PhysicalSample.tsv	2.5	0.2857142857142857	0	incorrect
+PhysicalSample_5823.tsv v. PhysicalSample_2933.tsv	2.5	0.2857142857142857	0	incorrect
+PhysicalSample.tsv v. PhysicalSample_6157.tsv	2.0	0.5	0	incorrect
+PhysicalSample.tsv v. PhysicalSample_1556.tsv	2.0	0.5	0	incorrect
+PhysicalSample.tsv v. PhysicalSample_6304.tsv	2.0	0.5	0	incorrect
+PhysicalSample.tsv v. PhysicalSample_2865.tsv	2.0	0.5	0	incorrect
+PhysicalSample.tsv v. PhysicalSample_9311.tsv	1.0	0.75	1	contained in ref
+PhysicalSample.tsv v. PhysicalSample_9805.tsv	2.0	0.5	0	incorrect
+PhysicalSample.tsv v. PhysicalSample.tsv	1.0	0.75	1	contained in ref
+PhysicalSample.tsv v. PhysicalSample_2933.tsv	2.0	0.5	0	incorrect
+hasIdentifierScheme.tsv				false negative
+Vessel.tsv v. Vessel_5820.tsv	2.5	0.2857142857142857	0	incorrect
+Vessel.tsv v. Vessel_2117.tsv	8.047188714622546e-06	0.9999967811245142	0	incorrect
+Vessel.tsv v. Vessel_6385.tsv	8.047188714622546e-06	0.9999967811245142	0	incorrect
+Vessel.tsv v. Vessel_7184.tsv	0.0	1.0	1	correct
+Vessel.tsv v. Vessel.tsv	2.5	0.2857142857142857	0	incorrect
+Vessel.tsv v. Vessel_1625.tsv	2.5	0.2857142857142857	0	incorrect
+fundedBy.tsv				false negative
+hasAward.tsv v. hasAward.tsv	0.0	1.0	1	correct
+atPort_8549.tsv v. atPort.tsv	2.5	0.375	0	incorrect
+atPort.tsv v. atPort.tsv	0.0	1.0	1	correct
+hasProgram.tsv v. hasProgram.tsv	0.0	1.0	1	correct
+Person.tsv v. Person_1653.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_3505.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_9034.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_4651.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_5340.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_7186.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_6489.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_9903.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_8203.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_4407.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_8005.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_9787.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_3137.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_4966.tsv	2.5	0.2857142857142857	0	incorrect
+Person.tsv v. Person_9664.tsv	2.5	0.2857142857142857	0	incorrect
+PlatformType.tsv				false negative
+Identifier.tsv				false negative
+hasTitle.tsv				false negative
+hasPlaceType.tsv				false negative
+PlaceType.tsv				false negative
+associatedWithProgram.tsv				false negative
+originatesFrom.tsv v. originatesFrom.tsv	0.0	1.0	1	correct
+originatesFrom_8152.tsv v. originatesFrom.tsv	2.5	0.375	0	incorrect
+hasGeoFeatureType.tsv				false negative
+hasIdentifier.tsv				false negative
+PortCall.tsv v. PortCall_4634.tsv	0.0	1.0	1	correct
+PortCall.tsv v. PortCall.tsv	2.5	0.2857142857142857	0	incorrect
+GeoFeature.tsv				false negative
+Program.tsv v. Program.tsv	0.0	1.0	1	correct
+Fix_81.tsv				false positive
+Fix_8954.tsv				false positive
+Fix_7213.tsv				false positive
+Fix_968.tsv				false positive
+Fix_7999.tsv				false positive
+Fix.tsv				false positive
+Fix_8713.tsv				false positive
+Fix_4815.tsv				false positive
+Fix_5217.tsv				false positive
+Fix_2702.tsv				false positive
+FundingAward_7717.tsv				false positive
+FundingAward_2990.tsv				false positive
+FundingAward_7016.tsv				false positive
+FundingAward_4809.tsv				false positive
+FundingAward_787.tsv				false positive
+FundingAward_6414.tsv				false positive
+FundingAward_1984.tsv				false positive
+FundingAward_9528.tsv				false positive
+FundingAward_4267.tsv				false positive
+FundingAward_9005.tsv				false positive
+FundingAward_4586.tsv				false positive
+FundingAward_4011.tsv				false positive
+FundingAward_4734.tsv				false positive
+FundingAward_9819.tsv				false positive
+FundingAward_1274.tsv				false positive
+FundingAward_6914.tsv				false positive
+FundingAward_523.tsv				false positive
+FundingAward_6863.tsv				false positive
+FundingAward_9875.tsv				false positive
+FundingAward_7963.tsv				false positive
+FundingAward_2795.tsv				false positive
+FundingAward_3675.tsv				false positive
+FundingAward_5395.tsv				false positive
+FundingAward_5551.tsv				false positive
+FundingAward_2759.tsv				false positive
+FundingAward_1146.tsv				false positive
+FundingAward_3108.tsv				false positive
+FundingAward.tsv				false positive
+FundingAward_952.tsv				false positive
+FundingAward_2835.tsv				false positive
+FundingAward_6672.tsv				false positive
+FundingAward_8225.tsv				false positive
+FundingAward_2521.tsv				false positive
+FundingAward_6723.tsv				false positive
+FundingAward_906.tsv				false positive
+FundingAward_7773.tsv				false positive
+FundingAward_2614.tsv				false positive
+FundingAward_887.tsv				false positive
+FundingAward_6687.tsv				false positive
+FundingAward_2421.tsv				false positive
+FundingAward_7091.tsv				false positive
+FundingAward_9815.tsv				false positive
+Event_9452.tsv				false positive
+Event_9330.tsv				false positive
+Event_9643.tsv				false positive
+Event_6806.tsv				false positive
+Event_1073.tsv				false positive
+Event_4359.tsv				false positive
+Event_5378.tsv				false positive
+Event_5985.tsv				false positive
+Event_4379.tsv				false positive
+Event_9057.tsv				false positive
+Event.tsv				false positive
+Event_8347.tsv				false positive
+Event_3828.tsv				false positive
+Event_7680.tsv				false positive
+Event_2037.tsv				false positive
+Event_6082.tsv				false positive
+Event_5931.tsv				false positive
+Event_3911.tsv				false positive
+Event_431.tsv				false positive
+Event_4703.tsv				false positive
+Event_1971.tsv				false positive
+Event_4717.tsv				false positive
+Event_3286.tsv				false positive
+Event_252.tsv				false positive
+Event_2198.tsv				false positive
+Event_8945.tsv				false positive
+Event_2581.tsv				false positive
+Event_5621.tsv				false positive
+Event_3427.tsv				false positive
+Event_8655.tsv				false positive
+Event_8165.tsv				false positive
+Event_1399.tsv				false positive
+Meeting.tsv				false positive
+MovingObject_1534.tsv				false positive
+MovingObject.tsv				false positive
+Feature_8661.tsv				false positive
+Feature_9702.tsv				false positive
+Feature_9857.tsv				false positive
+Feature.tsv				false positive
+Feature_9149.tsv				false positive
+Feature_7285.tsv				false positive
+Feature_153.tsv				false positive
+Agent_3438.tsv				false positive
+Agent_7578.tsv				false positive
+Agent_5982.tsv				false positive
+Agent_324.tsv				false positive
+Agent_7924.tsv				false positive
+Agent_7639.tsv				false positive
+Agent_7678.tsv				false positive
+Agent_6900.tsv				false positive
+Agent_3933.tsv				false positive
+Agent_5836.tsv				false positive
+Agent.tsv				false positive
+Agent_3658.tsv				false positive
+Agent_6135.tsv				false positive
+Participant.tsv				false positive
+DigitalObject.tsv				false positive
+MeasurementType.tsv				false positive
+Dataset.tsv				false positive
+RoleType_2193.tsv				false positive
+RoleType.tsv				false positive

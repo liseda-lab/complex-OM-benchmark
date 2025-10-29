@@ -1,0 +1,46 @@
+mapping e1	mapping e2	ref e2
+http://gmo#Cruise	http://gbo#Cruise	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#Cruise	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	correct
+http://gmo#FundingAward	http://gbo#Award	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	correct
+http://gmo#Organization	http://gbo#Organization	http://gmo#Organization = http://gbo#Organization (1.0, unrevised)	correct
+http://gmo#Person	http://gbo#Person	http://gmo#Person = http://gbo#Person (1.0, unrevised)	correct
+http://gmo#Identifier	http://gbo#Identifier	http://gmo#Identifier = http://gbo#Identifier (1.0, unrevised)	correct
+http://gmo#PhyiscalSample	http://gbo#PhyiscalSample		FP
+http://gmo#Place	http://gbo#Place	http://gmo#Place < http://gbo#hasGeoFeatureType min 1 (1.0, unrevised)	incorrect
+http://gmo#Place	http://gbo#Place	http://gmo#Place < http://gbo#hasPlaceType min 1 (1.0, unrevised)	incorrect
+http://gmo#Place	http://gbo#Place	http://gmo#Place = http://gbo#Place (1.0, unrevised)	correct
+http://gmo#Platform	http://gbo#Platform	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#Platform	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	correct
+http://gmo#Vessel	http://gbo#Vessel	http://gmo#Vessel = http://gbo#Vessel (1.0, unrevised)	correct
+http://gmo#Fix	http://gbo#PortCall	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	correct
+http://gmo#Program	http://gbo#Program	http://gmo#Program = http://gbo#Program (1.0, unrevised)	correct
+http://gmo#fundedBy	http://gbo#hasAward	http://gmo#fundedBy = http://gbo#hasAward (1.0, unrevised)	correct
+http://gmo#associatedWithProgram	http://gbo#hasProgram	http://gmo#associatedWithProgram = http://gbo#hasProgram (1.0, unrevised)	correct
+http://gmo#atPort	http://gbo#atPort	http://gmo#atPort = http://gbo#atPort (1.0, unrevised)	correct
+http://gmo#hasIdentifierScheme	http://gbo#hasIdentifierScheme	http://gmo#hasIdentifierScheme = http://gbo#hasIdentifierScheme (1.0, unrevised)	correct
+http://gmo#originatesFrom	http://gbo#originatesFrom	http://gmo#originatesFrom = http://gbo#originatesFrom (1.0, unrevised)	correct
+http://gmo#PhysicalSample	http://gbo#hasSampleType min 1	http://gmo#PhysicalSample < http://gbo#hasSampleType min 1 (1.0, unrevised)	correct
+http://gmo#Platform	http://gbo#hasPlatformType min 1	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	correct
+http://gmo#Cruise	http://gbo#hasCruiseType min 1	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	correct
+AND[http://gmo#providesAgentRole, Domain(http://gmo#FundingAward), Range(http://gmo#CoPrincipalInvestigatorRole)]	AND[http://gbo#hasCoPrincipalInvestigator, Range(http://gbo#Person)]		FP
+AND[http://gmo#describedBy, Range(http://gmo#InformationObject)]	http://gbo#hasDescription	PATH[AND[http://gmo#describedBy, Range(http://gmo#InformationObject)], http://gmo#hasDescription] = http://gbo#hasDescription (1.0, unrevised)	overlap
+AND[http://gmo#providesAgentRole, Domain(http://gmo#FundingAward), Range(http://gmo#SponsorRole)]	AND[http://gbo#hasSponsor, Range(http://gbo#Organization)]		FP
+AND[http://gmo#startsOnDate, Range(http://www.w3.org/2006/time#Instant)]	http://gbo#hasStartDate		FP
+AND[http://gmo#describedBy, Range(http://gmo#InformationObject)]	http://gbo#hasTitle	PATH[AND[http://gmo#describedBy, Range(http://gmo#InformationObject)], http://gmo#hasCanonicalName] = http://gbo#hasTitle (1.0, unrevised)	overlap
+AND[http://gmo#describedBy, Range(http://gmo#InformationObject)]	http://gbo#hasIdentifier	AND[AND[http://gmo#describedBy, Range(http://gmo#InformationObject)], http://gmo#hasPrimaryIdentifier] = http://gbo#hasIdentifier (1.0, unrevised)	overlap
+AND[http://gmo#hasPersonName, Domain(http://gmo#Person), Range(http://gmo#PersonName)]	http://gbo#hasFamilyName		FP
+AND[http://gmo#hasPersonalInfoItem, Domain(http://gmo#Person), Range(http://gmo#PersonalInfoItem)]	http://gbo#hasFamilyName		FP
+AND[http://gmo#describedBy, Range(http://gmo#InformationObject)]	http://gbo#hasAbstract	PATH[AND[http://gmo#describedBy, Range(http://gmo#InformationObject)], http://gmo#hasDescription] < http://gbo#hasAbstract (1.0, unrevised)	overlap
+AND[http://gmo#describedBy, Domain(http://gmo#Program), Range(http://gmo#InformationObject)]	http://gbo#hasAcronym		FP
+AND[http://gmo#providesAgentRole, Domain(http://gmo#Organization), Range(http://gmo#AffiliationRole)]	http://gbo#hasAffiliation		FP
+AND[http://gmo#providesAgentRole, Domain(http://gmo#Cruise), Range(http://gmo#AgentRole)]	http://gbo#hasChiefScientist		FP
+AND[http://gmo#providesAgentRole, Domain(http://gmo#Platform), Range(http://gmo#AgentRole)]	http://gmo#hasOwner		FP
+AND[http://gmo#providesAgentRole, Domain(http://gmo#PhysicalSample), Range(http://gmo#CollectorRole)]	http://gbo#hasCollector		FP
+AND[http://gmo#providesAgentRole, Domain(http://gmo#FundingAward), Range(http://gmo#ProgramManagerRole)]	http://gbo#hasProgramManager		FP
+AND[http://gmo#hasPersonalInfoItem, Domain(http://gmo#Person), Range(http://gmo#PersonalInfoItem)]	http://gbo#hasGivenName		FP
+AND[http://gmo#hasPersonName, Domain(http://gmo#Person), Range(http://gmo#PersonName)]	http://gbo#hasGivenName		FP
+AND[http://gmo#hasPersonName, Domain(http://gmo#Person), Range(http://gmo#PersonName)]	http://gbo#hasFullName		FP
+AND[http://gmo#providesAgentRole, Domain(http://gmo#FundingAward), Range(http://gmo#PrincipalInvestigatorRole)]	http://gbo#hasPrincipalInvestigator		FP
+AND[http://gmo#endsOnDate, Range(http://www.w3.org/2006/time#Instant)]	http://gbo#hasEndDate		FP
+AND[http://gmo#providesAgentRole, Domain(http://gmo#Cruise), Range(http://gmo#AgentRole)]	http://gbo#hasScheduler		FP
+AND[http://gmo#providesAgentRole, Domain(http://gmo#Cruise), Range(http://gmo#AgentRole)]	http://gbo#hasOperator		FP

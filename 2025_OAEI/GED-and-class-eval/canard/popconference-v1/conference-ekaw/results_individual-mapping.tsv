@@ -1,0 +1,430 @@
+	GED	Score	correct ref classes	category
+OC_Chair.tsv				false negative
+OC_Member.tsv				false negative
+Conference_part.tsv v. Conference.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_part.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_applicant.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_volume.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_document_8546.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_proceedings.tsv	1.0	0.6	0	incorrect
+Conference_part.tsv v. Conference_document_8583.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_document.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_5912.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_part_5731.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_contributor.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_applicant_5263.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_document_1406.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_6657.tsv	0.00045184125310640863	0.9998192634987574	0	incorrect
+Conference_part.tsv v. Conference_volume_4243.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_participant.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_applicant_423.tsv	1.0	0.6	0	incorrect
+Conference_part.tsv v. Conference_participant_7594.tsv	1.0	0.6	0	incorrect
+Conference_part.tsv v. Conference_part_6335.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_part_634.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_document_2771.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_document_6607.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_contribution.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_document_9448.tsv	1.0	0.6	0	incorrect
+Conference_part.tsv v. Conference_contribution_3179.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_part.tsv v. Conference_participant_9759.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference.tsv	2.5	0.2857142857142857	1	correct
+Conference_volume.tsv v. Conference_part.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_applicant.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_volume.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_document_8546.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_proceedings.tsv	1.0	0.6	0	incorrect
+Conference_volume.tsv v. Conference_document_8583.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_document.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_5912.tsv	2.5	0.2857142857142857	1	correct
+Conference_volume.tsv v. Conference_part_5731.tsv	2.5	0.2857142857142857	1	correct
+Conference_volume.tsv v. Conference_contributor.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_applicant_5263.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_document_1406.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_6657.tsv	0.0	1.0	1	correct
+Conference_volume.tsv v. Conference_volume_4243.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_participant.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_applicant_423.tsv	1.0	0.6	0	incorrect
+Conference_volume.tsv v. Conference_participant_7594.tsv	1.0	0.6	0	incorrect
+Conference_volume.tsv v. Conference_part_6335.tsv	2.5	0.2857142857142857	1	correct
+Conference_volume.tsv v. Conference_part_634.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_document_2771.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_document_6607.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_contribution.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_document_9448.tsv	1.0	0.6	0	incorrect
+Conference_volume.tsv v. Conference_contribution_3179.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_participant_9759.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_part.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_applicant.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_volume.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_document_8546.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_proceedings.tsv	0.0	1.0	1	correct
+Conference_proceedings.tsv v. Conference_document_8583.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_document.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_5912.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_part_5731.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_contributor.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_applicant_5263.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_document_1406.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_6657.tsv	1.0	0.6	0	incorrect
+Conference_proceedings.tsv v. Conference_volume_4243.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_participant.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_applicant_423.tsv	1.0	0.6	0	incorrect
+Conference_proceedings.tsv v. Conference_participant_7594.tsv	1.0	0.6	0	incorrect
+Conference_proceedings.tsv v. Conference_part_6335.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_part_634.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_document_2771.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_document_6607.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_contribution.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_document_9448.tsv	1.0	0.6	0	incorrect
+Conference_proceedings.tsv v. Conference_contribution_3179.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_proceedings.tsv v. Conference_participant_9759.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_part.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_applicant.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_volume.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_document_8546.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_proceedings.tsv	1.0	0.6	0	incorrect
+Conference_www.tsv v. Conference_document_8583.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_document.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_5912.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_part_5731.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_contributor.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_applicant_5263.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_document_1406.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_6657.tsv	1.0	0.6	0	incorrect
+Conference_www.tsv v. Conference_volume_4243.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_participant.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_applicant_423.tsv	1.0	0.6	0	incorrect
+Conference_www.tsv v. Conference_participant_7594.tsv	1.0	0.6	0	incorrect
+Conference_www.tsv v. Conference_part_6335.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_part_634.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_document_2771.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_document_6607.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_contribution.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_document_9448.tsv	1.0	0.6	0	incorrect
+Conference_www.tsv v. Conference_contribution_3179.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_participant_9759.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_part.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_applicant.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_volume.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_document_8546.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_proceedings.tsv	1.0	0.6	0	incorrect
+Conference_contributor.tsv v. Conference_document_8583.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_document.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_5912.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_part_5731.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_contributor.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_applicant_5263.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_document_1406.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_6657.tsv	0.00045184125310640863	0.9998192634987574	0	incorrect
+Conference_contributor.tsv v. Conference_volume_4243.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_participant.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_applicant_423.tsv	0.00045184125310640863	0.9998192634987574	0	incorrect
+Conference_contributor.tsv v. Conference_participant_7594.tsv	0.00045184125310640863	0.9998192634987574	0	incorrect
+Conference_contributor.tsv v. Conference_part_6335.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_part_634.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_document_2771.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_document_6607.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_contribution.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_document_9448.tsv	1.0	0.6	0	incorrect
+Conference_contributor.tsv v. Conference_contribution_3179.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_participant_9759.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_part.tsv	2.5	0.2857142857142857	1	correct
+Conference_participant.tsv v. Conference_applicant.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_volume.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_document_8546.tsv	2.5	0.2857142857142857	1	correct
+Conference_participant.tsv v. Conference_proceedings.tsv	1.0	0.6	0	incorrect
+Conference_participant.tsv v. Conference_document_8583.tsv	2.5	0.2857142857142857	1	correct
+Conference_participant.tsv v. Conference_document.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_5912.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_part_5731.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_contributor.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_applicant_5263.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_document_1406.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_6657.tsv	1.0	0.6	0	incorrect
+Conference_participant.tsv v. Conference_volume_4243.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_participant.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_applicant_423.tsv	0.0	1.0	1	correct
+Conference_participant.tsv v. Conference_participant_7594.tsv	0.0	1.0	1	correct
+Conference_participant.tsv v. Conference_part_6335.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_part_634.tsv	2.5	0.2857142857142857	1	correct
+Conference_participant.tsv v. Conference_document_2771.tsv	2.5	0.2857142857142857	1	correct
+Conference_participant.tsv v. Conference_document_6607.tsv	2.5	0.2857142857142857	1	correct
+Conference_participant.tsv v. Conference_contribution.tsv	2.5	0.2857142857142857	1	correct
+Conference_participant.tsv v. Conference_document_9448.tsv	1.0	0.6	0	incorrect
+Conference_participant.tsv v. Conference_contribution_3179.tsv	2.5	0.2857142857142857	1	correct
+Conference_participant.tsv v. Conference_participant_9759.tsv	2.5	0.2857142857142857	0	incorrect
+Abstract.tsv				false negative
+Reviewer.tsv v. Reviewer.tsv	7.0	0.30000000000000004	1	contained in ref
+Reviewer.tsv v. Reviewer_8489.tsv	6.5	0.35	0	incorrect
+Reviewer.tsv v. Reviewer_7998.tsv	7.0	0.30000000000000004	1	contained in ref
+Reviewer.tsv v. Reviewer_3648.tsv	7.0	0.30000000000000004	1	contained in ref
+PC_Chair.tsv				false negative
+PC_Member.tsv				false negative
+Regular_author.tsv v. Regular_author.tsv	2.5	0.2857142857142857	0	incorrect
+Regular_author.tsv v. Regular_contribution.tsv	1.0	0.6	0	incorrect
+Regular_author.tsv v. Regular_author_1676.tsv	2.5	0.2857142857142857	0	incorrect
+Workshop_Chair.tsv v. Workshop.tsv	2.5	0.375	0	incorrect
+Workshop.tsv v. Workshop.tsv	0.0	1.0	1	correct
+Paper.tsv v. Paper.tsv	2.5	0.2857142857142857	0	incorrect
+Paper.tsv v. Paper_9321.tsv	2.5	0.2857142857142857	0	incorrect
+Paper.tsv v. Paper_4644.tsv	0.00045184125310640863	0.9998192634987574	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_tutorials_2395.tsv	5.5	0.0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_a_track-workshop-tutorial_chair_8402.tsv	1.0	0.6	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_contributions_367.tsv	5.5	0.0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_tutorials_3596.tsv	4.0	0.11111111111111116	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_workshops_7948.tsv	5.5	0.0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_a_publisher.tsv	2.5	0.2857142857142857	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_authors_9577.tsv	2.5	0.2857142857142857	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_tutorials_4584.tsv	7.0	0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_contributions_798.tsv	4.0	0.11111111111111116	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_a_track-workshop-tutorial_chair.tsv	2.5	0.2857142857142857	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_a_review.tsv	1.0	0.6	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_contributions_130.tsv	7.0	0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_a_location.tsv	2.5	0.2857142857142857	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_tutorials.tsv	5.5	0.0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_tutorials_1611.tsv	2.5	0.2857142857142857	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_contributions_9730.tsv	5.5	0.0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_workshops.tsv	7.0	0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_parts_9968.tsv	1.0	0.6	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_contributions_6216.tsv	7.0	0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_contributions_4960.tsv	5.5	0.0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_tutorials_7801.tsv	4.0	0.11111111111111116	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_a_location_4679.tsv	5.5	0.0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_contributions.tsv	4.0	0.11111111111111116	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_authors.tsv	4.0	0.11111111111111116	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_a_location_7726.tsv	4.0	0.11111111111111116	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_contributions_2033.tsv	5.5	0.0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_parts_7508.tsv	2.5	0.2857142857142857	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_contributions_4433.tsv	8.5	0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_workshops_5116.tsv	4.0	0.11111111111111116	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_contributions_2663.tsv	2.5	0.2857142857142857	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_parts.tsv	4.0	0.11111111111111116	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_workshops_4101.tsv	2.5	0.2857142857142857	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_contributions_5012.tsv	7.0	0	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_workshops_3946.tsv	4.0	0.11111111111111116	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_contributions_9367.tsv	4.0	0.11111111111111116	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_workshops_3794.tsv	5.5	0.0	0	incorrect
+has_authors_4444.tsv v. has_tutorials_2395.tsv	5.5	0.0	0	incorrect
+has_authors_4444.tsv v. has_a_track-workshop-tutorial_chair_8402.tsv	1.0	0.6	0	incorrect
+has_authors_4444.tsv v. has_contributions_367.tsv	5.5	0.0	0	incorrect
+has_authors_4444.tsv v. has_tutorials_3596.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors_4444.tsv v. has_workshops_7948.tsv	5.5	0.0	0	incorrect
+has_authors_4444.tsv v. has_a_publisher.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors_4444.tsv v. has_authors_9577.tsv	1.5	0.5714285714285714	1	contained in ref
+has_authors_4444.tsv v. has_tutorials_4584.tsv	7.0	0	0	incorrect
+has_authors_4444.tsv v. has_contributions_798.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors_4444.tsv v. has_a_track-workshop-tutorial_chair.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors_4444.tsv v. has_a_review.tsv	1.0	0.6	0	incorrect
+has_authors_4444.tsv v. has_contributions_130.tsv	7.0	0	0	incorrect
+has_authors_4444.tsv v. has_a_location.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors_4444.tsv v. has_tutorials.tsv	5.5	0.0	0	incorrect
+has_authors_4444.tsv v. has_tutorials_1611.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors_4444.tsv v. has_contributions_9730.tsv	5.5	0.0	0	incorrect
+has_authors_4444.tsv v. has_workshops.tsv	7.0	0	0	incorrect
+has_authors_4444.tsv v. has_parts_9968.tsv	1.0	0.6	0	incorrect
+has_authors_4444.tsv v. has_contributions_6216.tsv	7.0	0	0	incorrect
+has_authors_4444.tsv v. has_contributions_4960.tsv	5.5	0.0	0	incorrect
+has_authors_4444.tsv v. has_tutorials_7801.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors_4444.tsv v. has_a_location_4679.tsv	5.5	0.0	0	incorrect
+has_authors_4444.tsv v. has_contributions.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors_4444.tsv v. has_authors.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors_4444.tsv v. has_a_location_7726.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors_4444.tsv v. has_contributions_2033.tsv	5.5	0.0	0	incorrect
+has_authors_4444.tsv v. has_parts_7508.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors_4444.tsv v. has_contributions_4433.tsv	8.5	0	0	incorrect
+has_authors_4444.tsv v. has_workshops_5116.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors_4444.tsv v. has_contributions_2663.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors_4444.tsv v. has_parts.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors_4444.tsv v. has_workshops_4101.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors_4444.tsv v. has_contributions_5012.tsv	7.0	0	0	incorrect
+has_authors_4444.tsv v. has_workshops_3946.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors_4444.tsv v. has_contributions_9367.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors_4444.tsv v. has_workshops_3794.tsv	5.5	0.0	0	incorrect
+has_authors.tsv v. has_tutorials_2395.tsv	5.5	0.0	0	incorrect
+has_authors.tsv v. has_a_track-workshop-tutorial_chair_8402.tsv	1.0	0.6	0	incorrect
+has_authors.tsv v. has_contributions_367.tsv	5.5	0.0	0	incorrect
+has_authors.tsv v. has_tutorials_3596.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors.tsv v. has_workshops_7948.tsv	5.5	0.0	0	incorrect
+has_authors.tsv v. has_a_publisher.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors.tsv v. has_authors_9577.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors.tsv v. has_tutorials_4584.tsv	7.0	0	0	incorrect
+has_authors.tsv v. has_contributions_798.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors.tsv v. has_a_track-workshop-tutorial_chair.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors.tsv v. has_a_review.tsv	1.0	0.6	0	incorrect
+has_authors.tsv v. has_contributions_130.tsv	7.0	0	0	incorrect
+has_authors.tsv v. has_a_location.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors.tsv v. has_tutorials.tsv	5.5	0.0	0	incorrect
+has_authors.tsv v. has_tutorials_1611.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors.tsv v. has_contributions_9730.tsv	5.5	0.0	0	incorrect
+has_authors.tsv v. has_workshops.tsv	7.0	0	0	incorrect
+has_authors.tsv v. has_parts_9968.tsv	1.0	0.6	0	incorrect
+has_authors.tsv v. has_contributions_6216.tsv	7.0	0	0	incorrect
+has_authors.tsv v. has_contributions_4960.tsv	5.5	0.0	0	incorrect
+has_authors.tsv v. has_tutorials_7801.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors.tsv v. has_a_location_4679.tsv	5.5	0.0	0	incorrect
+has_authors.tsv v. has_contributions.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors.tsv v. has_authors.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors.tsv v. has_a_location_7726.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors.tsv v. has_contributions_2033.tsv	5.5	0.0	0	incorrect
+has_authors.tsv v. has_parts_7508.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors.tsv v. has_contributions_4433.tsv	8.5	0	0	incorrect
+has_authors.tsv v. has_workshops_5116.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors.tsv v. has_contributions_2663.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors.tsv v. has_parts.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors.tsv v. has_workshops_4101.tsv	2.5	0.2857142857142857	0	incorrect
+has_authors.tsv v. has_contributions_5012.tsv	7.0	0	0	incorrect
+has_authors.tsv v. has_workshops_3946.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors.tsv v. has_contributions_9367.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors.tsv v. has_workshops_3794.tsv	5.5	0.0	0	incorrect
+has_parts.tsv v. has_tutorials_2395.tsv	4.5	0.18181818181818177	1	contained in ref
+has_parts.tsv v. has_a_track-workshop-tutorial_chair_8402.tsv	1.0	0.6	0	incorrect
+has_parts.tsv v. has_contributions_367.tsv	5.5	0.0	0	incorrect
+has_parts.tsv v. has_tutorials_3596.tsv	4.0	0.11111111111111116	0	incorrect
+has_parts.tsv v. has_workshops_7948.tsv	4.5	0.18181818181818177	1	contained in ref
+has_parts.tsv v. has_a_publisher.tsv	2.5	0.2857142857142857	0	incorrect
+has_parts.tsv v. has_authors_9577.tsv	2.5	0.2857142857142857	0	incorrect
+has_parts.tsv v. has_tutorials_4584.tsv	7.0	0	0	incorrect
+has_parts.tsv v. has_contributions_798.tsv	4.0	0.11111111111111116	0	incorrect
+has_parts.tsv v. has_a_track-workshop-tutorial_chair.tsv	2.5	0.2857142857142857	0	incorrect
+has_parts.tsv v. has_a_review.tsv	1.0	0.6	0	incorrect
+has_parts.tsv v. has_contributions_130.tsv	7.0	0	0	incorrect
+has_parts.tsv v. has_a_location.tsv	2.5	0.2857142857142857	0	incorrect
+has_parts.tsv v. has_tutorials.tsv	5.5	0.0	0	incorrect
+has_parts.tsv v. has_tutorials_1611.tsv	1.5	0.5714285714285714	1	contained in ref
+has_parts.tsv v. has_contributions_9730.tsv	5.5	0.0	0	incorrect
+has_parts.tsv v. has_workshops.tsv	7.0	0	0	incorrect
+has_parts.tsv v. has_parts_9968.tsv	0.0	1.0	1	correct
+has_parts.tsv v. has_contributions_6216.tsv	7.0	0	0	incorrect
+has_parts.tsv v. has_contributions_4960.tsv	5.5	0.0	0	incorrect
+has_parts.tsv v. has_tutorials_7801.tsv	3.0	0.33333333333333337	1	contained in ref
+has_parts.tsv v. has_a_location_4679.tsv	5.5	0.0	0	incorrect
+has_parts.tsv v. has_contributions.tsv	4.0	0.11111111111111116	0	incorrect
+has_parts.tsv v. has_authors.tsv	4.0	0.11111111111111116	0	incorrect
+has_parts.tsv v. has_a_location_7726.tsv	4.0	0.11111111111111116	0	incorrect
+has_parts.tsv v. has_contributions_2033.tsv	5.5	0.0	0	incorrect
+has_parts.tsv v. has_parts_7508.tsv	1.5	0.5714285714285714	1	contained in ref
+has_parts.tsv v. has_contributions_4433.tsv	8.5	0	0	incorrect
+has_parts.tsv v. has_workshops_5116.tsv	4.0	0.11111111111111116	0	incorrect
+has_parts.tsv v. has_contributions_2663.tsv	2.5	0.2857142857142857	0	incorrect
+has_parts.tsv v. has_parts.tsv	3.0	0.33333333333333337	1	contained in ref
+has_parts.tsv v. has_workshops_4101.tsv	1.5	0.5714285714285714	1	contained in ref
+has_parts.tsv v. has_contributions_5012.tsv	7.0	0	0	incorrect
+has_parts.tsv v. has_workshops_3946.tsv	3.0	0.33333333333333337	1	contained in ref
+has_parts.tsv v. has_contributions_9367.tsv	4.0	0.11111111111111116	0	incorrect
+has_parts.tsv v. has_workshops_3794.tsv	5.5	0.0	0	incorrect
+contributes.tsv v. contributes_4187.tsv	0.0	1.0	1	correct
+contributes.tsv v. contributes.tsv	2.5	0.2857142857142857	0	incorrect
+Track.tsv				false negative
+issues.tsv v. issues.tsv	0.0	1.0	1	correct
+is_a_topis_of_conference_parts.tsv v. is_submitted_at_320.tsv	7.0	0	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_given_by_2777.tsv	5.5	0.0	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_submitted_at_1692.tsv	8.5	0	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_part_of_conference_volumes_8211.tsv	4.0	0.11111111111111116	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_part_of_conference_volumes_7375.tsv	2.5	0.2857142857142857	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_given_by.tsv	4.0	0.11111111111111116	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_submitted_at_8639.tsv	7.0	0	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_submitted_at_4511.tsv	8.5	0	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_part_of_conference_volumes_5310.tsv	1.0	0.6	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_part_of_conference_volumes.tsv	5.5	0.0	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_part_of_conference_volumes_4462.tsv	2.5	0.2857142857142857	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_submitted_at_2870.tsv	5.5	0.0	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_given_by_85.tsv	4.0	0.11111111111111116	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_submitted_at.tsv	5.5	0.0	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_given_by_7040.tsv	2.5	0.2857142857142857	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_submitted_at_1696.tsv	5.5	0.0	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_submitted_at_9017.tsv	8.5	0	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_submitted_at_7901.tsv	7.0	0	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_submitted_at_6698.tsv	10.0	0	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_submitted_at_3670.tsv	4.0	0.11111111111111116	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_part_of_conference_volumes_993.tsv	4.0	0.11111111111111116	0	incorrect
+is_a_topis_of_conference_parts.tsv v. is_submitted_at_6642.tsv	7.0	0	0	incorrect
+is_part_of_conference_volumes.tsv v. is_submitted_at_320.tsv	7.0	0	0	incorrect
+is_part_of_conference_volumes.tsv v. is_given_by_2777.tsv	5.5	0.0	0	incorrect
+is_part_of_conference_volumes.tsv v. is_submitted_at_1692.tsv	8.5	0	0	incorrect
+is_part_of_conference_volumes.tsv v. is_part_of_conference_volumes_8211.tsv	4.0	0.11111111111111116	0	incorrect
+is_part_of_conference_volumes.tsv v. is_part_of_conference_volumes_7375.tsv	2.5	0.2857142857142857	0	incorrect
+is_part_of_conference_volumes.tsv v. is_given_by.tsv	4.0	0.11111111111111116	0	incorrect
+is_part_of_conference_volumes.tsv v. is_submitted_at_8639.tsv	7.0	0	0	incorrect
+is_part_of_conference_volumes.tsv v. is_submitted_at_4511.tsv	8.5	0	0	incorrect
+is_part_of_conference_volumes.tsv v. is_part_of_conference_volumes_5310.tsv	0.0	1.0	1	correct
+is_part_of_conference_volumes.tsv v. is_part_of_conference_volumes.tsv	5.5	0.0	0	incorrect
+is_part_of_conference_volumes.tsv v. is_part_of_conference_volumes_4462.tsv	1.5	0.5714285714285714	1	contained in ref
+is_part_of_conference_volumes.tsv v. is_submitted_at_2870.tsv	5.5	0.0	0	incorrect
+is_part_of_conference_volumes.tsv v. is_given_by_85.tsv	4.0	0.11111111111111116	0	incorrect
+is_part_of_conference_volumes.tsv v. is_submitted_at.tsv	5.5	0.0	0	incorrect
+is_part_of_conference_volumes.tsv v. is_given_by_7040.tsv	2.5	0.2857142857142857	0	incorrect
+is_part_of_conference_volumes.tsv v. is_submitted_at_1696.tsv	5.5	0.0	0	incorrect
+is_part_of_conference_volumes.tsv v. is_submitted_at_9017.tsv	8.5	0	0	incorrect
+is_part_of_conference_volumes.tsv v. is_submitted_at_7901.tsv	7.0	0	0	incorrect
+is_part_of_conference_volumes.tsv v. is_submitted_at_6698.tsv	10.0	0	0	incorrect
+is_part_of_conference_volumes.tsv v. is_submitted_at_3670.tsv	4.0	0.11111111111111116	0	incorrect
+is_part_of_conference_volumes.tsv v. is_part_of_conference_volumes_993.tsv	3.0	0.33333333333333337	1	contained in ref
+is_part_of_conference_volumes.tsv v. is_submitted_at_6642.tsv	7.0	0	0	incorrect
+is_the_1th_part_of.tsv v. is_submitted_at_320.tsv	7.0	0	0	incorrect
+is_the_1th_part_of.tsv v. is_given_by_2777.tsv	5.5	0.0	0	incorrect
+is_the_1th_part_of.tsv v. is_submitted_at_1692.tsv	8.5	0	0	incorrect
+is_the_1th_part_of.tsv v. is_part_of_conference_volumes_8211.tsv	4.0	0.11111111111111116	0	incorrect
+is_the_1th_part_of.tsv v. is_part_of_conference_volumes_7375.tsv	2.5	0.2857142857142857	0	incorrect
+is_the_1th_part_of.tsv v. is_given_by.tsv	4.0	0.11111111111111116	0	incorrect
+is_the_1th_part_of.tsv v. is_submitted_at_8639.tsv	7.0	0	0	incorrect
+is_the_1th_part_of.tsv v. is_submitted_at_4511.tsv	8.5	0	0	incorrect
+is_the_1th_part_of.tsv v. is_part_of_conference_volumes_5310.tsv	1.0	0.6	0	incorrect
+is_the_1th_part_of.tsv v. is_part_of_conference_volumes.tsv	5.5	0.0	0	incorrect
+is_the_1th_part_of.tsv v. is_part_of_conference_volumes_4462.tsv	2.5	0.2857142857142857	0	incorrect
+is_the_1th_part_of.tsv v. is_submitted_at_2870.tsv	5.5	0.0	0	incorrect
+is_the_1th_part_of.tsv v. is_given_by_85.tsv	4.0	0.11111111111111116	0	incorrect
+is_the_1th_part_of.tsv v. is_submitted_at.tsv	5.5	0.0	0	incorrect
+is_the_1th_part_of.tsv v. is_given_by_7040.tsv	2.5	0.2857142857142857	0	incorrect
+is_the_1th_part_of.tsv v. is_submitted_at_1696.tsv	5.5	0.0	0	incorrect
+is_the_1th_part_of.tsv v. is_submitted_at_9017.tsv	8.5	0	0	incorrect
+is_the_1th_part_of.tsv v. is_submitted_at_7901.tsv	7.0	0	0	incorrect
+is_the_1th_part_of.tsv v. is_submitted_at_6698.tsv	10.0	0	0	incorrect
+is_the_1th_part_of.tsv v. is_submitted_at_3670.tsv	4.0	0.11111111111111116	0	incorrect
+is_the_1th_part_of.tsv v. is_part_of_conference_volumes_993.tsv	4.0	0.11111111111111116	0	incorrect
+is_the_1th_part_of.tsv v. is_submitted_at_6642.tsv	7.0	0	0	incorrect
+Organization.tsv				false negative
+Tutorial_Chair.tsv v. Tutorial.tsv	2.5	0.375	0	incorrect
+Tutorial.tsv v. Tutorial.tsv	0.0	1.0	1	correct
+Review.tsv v. Review.tsv	0.0	1.0	1	correct
+Review.tsv v. Review_5876.tsv	4.0	0.11111111111111116	0	incorrect
+Publisher.tsv v. Publisher.tsv	2.5	0.2857142857142857	0	incorrect
+Topic.tsv				false negative
+Document.tsv				false negative
+Written_contribution.tsv v. Written_contribution.tsv	3.5	0.36363636363636365	0	incorrect
+Rejected_contribution.tsv v. Rejected_contribution.tsv	0.0	1.0	1	correct
+Person.tsv v. Person.tsv	0.0	1.0	1	correct
+Information_for_participants.tsv				false negative
+Organizer.tsv				false negative
+Reviewed_contribution.tsv				false negative
+Session_Chair.tsv				false negative
+SC_Member.tsv v. SC_Member.tsv	1.5004518412531063	0.6248870396867234	0	incorrect
+Invited_Talk_Abstract.tsv v. Invited_speaker.tsv	2.5	0.375	0	incorrect
+Invited_speaker.tsv v. Invited_speaker.tsv	0.0	1.0	1	correct
+Submitted_contribution.tsv v. Submitted_Paper.tsv	2.0	0.33333333333333337	0	incorrect
+Submitted_contribution.tsv v. Submitted_contribution.tsv	0.0	1.0	1	correct
+Accepted_contribution.tsv v. Accepted_contribution.tsv	0.0	1.0	1	correct
+Passive_conference_participant.tsv				false positive
+Chair_7414.tsv				false positive
+Chair.tsv				false positive
+Late_paid_applicant.tsv				false positive
+Track-workshop_chair.tsv				false positive
+Early_paid_applicant.tsv				false positive
+gives_presentations.tsv				false positive
+gives_presentations_3612.tsv				false positive
+gives_presentations_3247.tsv				false positive
+gives_presentations_1175.tsv				false positive
+Committee_member_9965.tsv				false positive
+Committee_member.tsv				false positive
+reviews_8426.tsv				false positive
+reviews.tsv				false positive
+was_a_track-workshop_chair_of_753.tsv				false positive
+was_a_track-workshop_chair_of.tsv				false positive
+Camera_ready_contribution_4637.tsv				false positive
+Camera_ready_contribution.tsv				false positive
+Presentation.tsv				false positive
+Active_conference_participant.tsv				false positive
+Registeered_applicant.tsv				false positive

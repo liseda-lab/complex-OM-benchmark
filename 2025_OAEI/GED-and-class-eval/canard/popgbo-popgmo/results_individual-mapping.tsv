@@ -1,0 +1,84 @@
+	GED	Score	correct ref classes	category
+PhysicalSample_1555.tsv v. PhysicalSample.tsv	0.0	1.0	1	correct
+PhysicalSample.tsv v. PhysicalSample.tsv	2.5	0.375	0	incorrect
+hasPlatformType.tsv				false negative
+Place_234.tsv v. Place.tsv	0.0	1.0	1	correct
+Place.tsv v. Place.tsv	2.5	0.375	0	incorrect
+Place_5587.tsv v. Place.tsv	2.5	0.375	0	incorrect
+hasAbstract.tsv				false negative
+Platform_7064.tsv v. Platform_2736.tsv	2.0	0.33333333333333337	0	incorrect
+Platform_7064.tsv v. Platform_8735.tsv	2.0	0.33333333333333337	0	incorrect
+Platform_7064.tsv v. Platform_554.tsv	2.0	0.33333333333333337	0	incorrect
+Platform_7064.tsv v. Platform_9400.tsv	2.0	0.33333333333333337	0	incorrect
+Platform_7064.tsv v. Platform_4587.tsv	2.0	0.33333333333333337	0	incorrect
+Platform_7064.tsv v. Platform_9207.tsv	2.0	0.33333333333333337	0	incorrect
+Platform_7064.tsv v. Platform_8122.tsv	0.0	1.0	1	correct
+Platform_7064.tsv v. Platform_8307.tsv	2.0	0.33333333333333337	0	incorrect
+Platform_7064.tsv v. Platform_7780.tsv	2.0	0.33333333333333337	0	incorrect
+Platform_7064.tsv v. Platform_3238.tsv	2.0	0.33333333333333337	0	incorrect
+Platform_7064.tsv v. Platform_2232.tsv	2.0	0.33333333333333337	0	incorrect
+Platform_7064.tsv v. Platform.tsv	2.0	0.33333333333333337	0	incorrect
+Platform_7064.tsv v. Platform_9700.tsv	2.0	0.33333333333333337	0	incorrect
+Platform.tsv v. Platform_2736.tsv	1.5	0.625	1	contained in ref
+Platform.tsv v. Platform_8735.tsv	1.5	0.625	1	contained in ref
+Platform.tsv v. Platform_554.tsv	1.5	0.625	1	contained in ref
+Platform.tsv v. Platform_9400.tsv	1.5	0.625	1	contained in ref
+Platform.tsv v. Platform_4587.tsv	1.5	0.625	1	contained in ref
+Platform.tsv v. Platform_9207.tsv	1.5	0.625	1	contained in ref
+Platform.tsv v. Platform_8122.tsv	2.5	0.375	0	incorrect
+Platform.tsv v. Platform_8307.tsv	1.5	0.625	1	contained in ref
+Platform.tsv v. Platform_7780.tsv	1.5	0.625	1	contained in ref
+Platform.tsv v. Platform_3238.tsv	1.5	0.625	1	contained in ref
+Platform.tsv v. Platform_2232.tsv	1.5	0.625	1	contained in ref
+Platform.tsv v. Platform.tsv	1.5	0.625	1	contained in ref
+Platform.tsv v. Platform_9700.tsv	1.5	0.625	1	contained in ref
+atPort_89.tsv v. atPort.tsv	2.5	0.375	0	incorrect
+atPort.tsv v. atPort.tsv	0.0	1.0	1	correct
+hasCruiseType.tsv				false negative
+GeoFeatureType.tsv				false negative
+hasDescription.tsv				false negative
+CruiseType.tsv				false negative
+Organization.tsv v. Organization.tsv	0.0	1.0	1	correct
+Award.tsv v. Award.tsv	0.0	1.0	1	correct
+hasIdentifierValue.tsv				false negative
+hasSampleType.tsv				false negative
+PhysicalSampleType.tsv				false negative
+hasIdentifierScheme.tsv				false negative
+Vessel.tsv v. Vessel.tsv	0.0	1.0	1	correct
+fundedBy.tsv				false negative
+hasAward.tsv v. hasAward.tsv	0.0	1.0	1	correct
+Cruise_2153.tsv v. Cruise.tsv	2.0	0.33333333333333337	0	incorrect
+Cruise_2153.tsv v. Cruise_6064.tsv	0.0	1.0	1	correct
+Cruise.tsv v. Cruise.tsv	1.5	0.625	1	contained in ref
+Cruise.tsv v. Cruise_6064.tsv	2.5	0.375	0	incorrect
+hasSubOrganization.tsv v. hasSubOrganization.tsv	0.0	1.0	1	correct
+hasSubOrganization_9050.tsv v. hasSubOrganization.tsv	2.5	0.375	0	incorrect
+hasProgram.tsv v. hasProgram.tsv	1.5	0.5714285714285714	1	contained in ref
+Person.tsv v. Person.tsv	0.0	1.0	1	correct
+PlatformType.tsv				false negative
+Identifier.tsv v. Identifier.tsv	0.0	1.0	1	correct
+hasTitle.tsv v. hasTitle.tsv	4.0	0.4285714285714286	2	contained in ref
+hasPlaceType.tsv				false negative
+PlaceType.tsv				false negative
+originatesFrom_8252.tsv v. originatesFrom.tsv	2.5	0.375	0	incorrect
+originatesFrom.tsv v. originatesFrom.tsv	0.0	1.0	1	correct
+associatedWithProgram.tsv				false negative
+hasGeoFeatureType.tsv				false negative
+hasIdentifier.tsv v. hasIdentifier.tsv	1.0	0.8181818181818181	0	incorrect
+PortCall.tsv				false negative
+GeoFeature.tsv				false negative
+Program.tsv v. Program.tsv	0.0	1.0	1	correct
+hasProgramManager.tsv				false positive
+hasAffiliation.tsv				false positive
+hasFamilyName.tsv				false positive
+hasFullName.tsv				false positive
+hasAcronym.tsv				false positive
+hasGivenName.tsv				false positive
+hasOwner.tsv				false positive
+hasOperator.tsv				false positive
+hasScheduler.tsv				false positive
+hasSponsor.tsv				false positive
+hasChiefScientist.tsv				false positive
+hasPrincipalInvestigator.tsv				false positive
+hasCoPrincipalInvestigator.tsv				false positive
+hasCollector.tsv				false positive

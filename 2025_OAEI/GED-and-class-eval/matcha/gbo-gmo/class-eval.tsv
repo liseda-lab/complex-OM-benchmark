@@ -1,0 +1,71 @@
+mapping e1	mapping e2	ref e2
+http://gmo#Cruise	http://gbo#Cruise	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#Cruise	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	correct
+http://www.w3.org/2006/time#hasDuration	http://gbo#hasCurator		FP
+http://gmo#Program	http://gbo#Program	http://gmo#Program = http://gbo#Program (1.0, unrevised)	correct
+http://www.w3.org/2006/time#unitType	http://gbo#MeasurementType		FP
+http://www.w3.org/2006/time#xsdDateTime	http://gbo#hasEndDate		FP
+http://gmo#hasDataSource	http://gbo#Dataset		FP
+http://gmo#hasAwardAmount	http://gbo#hasAward	http://gmo#fundedBy = http://gbo#hasAward (1.0, unrevised)	incorrect
+http://gmo#hasIdentifierScheme	http://gbo#hasIdentifierResolveURL	http://gmo#hasIdentifierScheme = http://gbo#hasIdentifierScheme (1.0, unrevised)	incorrect
+http://gmo#hasCanonicalName	http://gbo#hasNameSuffix		FP
+http://gmo#associatedWithProgram	http://gbo#isProgramOf	http://gmo#associatedWithProgram = http://gbo#hasProgram (1.0, unrevised)	incorrect
+http://gmo#associatedWithProgram	http://gbo#isProgramOf	http://gmo#associatedWithProgram = INVERSE[http://gbo#isProgramOf] (1.0, unrevised)	correct
+http://gmo#hasName	http://gbo#hasGivenName		FP
+http://gmo#familyOrSurname	http://gbo#hasFamilyName		FP
+http://gmo#Place	http://gbo#Place	http://gmo#Place < http://gbo#hasGeoFeatureType min 1 (1.0, unrevised)	incorrect
+http://gmo#Place	http://gbo#Place	http://gmo#Place < http://gbo#hasPlaceType min 1 (1.0, unrevised)	incorrect
+http://gmo#Place	http://gbo#Place	http://gmo#Place = http://gbo#Place (1.0, unrevised)	correct
+http://gmo#hasAttribute	http://gbo#hasContributor		FP
+http://gmo#hasRelatedCruise	http://gbo#hasRelatedCruise		FP
+http://gmo#hasSubOrganization	http://gbo#hasSubOrganization	http://gmo#hasSubOrganization = http://gbo#hasSubOrganization (1.0, unrevised)	correct
+http://www.opengis.net/ont/geosparql#hasVolume	http://gbo#hasInstrument		FP
+http://www.opengis.net/ont/geosparql#hasSize	http://gbo#hasSponsor		FP
+http://www.opengis.net/ont/geosparql#Feature	http://gbo#FeatureType		FP
+http://gmo#performedBy	http://gbo#isPerformedBy		FP
+http://www.opengis.net/ont/geosparql#hasArea	http://gbo#hasOperationArea		FP
+http://gmo#hasIdentifierValue	http://gbo#hasIdentifierValue	http://gmo#hasIdentifierValue = http://gbo#hasIdentifierValue (1.0, unrevised)	correct
+http://gmo#hasName	http://gbo#hasStageName		FP
+http://gmo#hasFix	http://gbo#hasFormat		FP
+http://gmo#Port	http://gbo#PortCall	http://gmo#Fix < http://gbo#PortCall (1.0, unrevised)	incorrect
+http://gmo#hasCanonicalName	http://gbo#hasMiddleName		FP
+http://gmo#performsAgentRole	http://gbo#performs		FP
+http://gmo#atPort	http://gbo#isPortOf	http://gmo#atPort = http://gbo#atPort (1.0, unrevised)	incorrect
+http://gmo#atPort	http://gbo#isPortOf	http://gmo#atPort = INVERSE[http://gbo#isPortOf] (1.0, unrevised)	correct
+http://gmo#hasSegment	http://gbo#hasStudent		FP
+http://gmo#occursAtPlace	http://gbo#isPlaceOf		FP
+http://gmo#Vessel	http://gbo#Vessel	http://gmo#Vessel = http://gbo#Vessel (1.0, unrevised)	correct
+http://gmo#AgentRoleType	http://gbo#RoleType		FP
+http://gmo#hasSubOrganization	http://gbo#isSubOrganizationOf	http://gmo#hasSubOrganization = http://gbo#hasSubOrganization (1.0, unrevised)	incorrect
+http://gmo#hasSubOrganization	http://gbo#isSubOrganizationOf	http://gmo#hasSubOrganization = INVERSE[http://gbo#isSubOrganizationOf] (1.0, unrevised)	correct
+http://gmo#hasCurrencyValue	http://gbo#hasGeologicAgeValue		FP
+http://gmo#Platform	http://gbo#Platform	http://gmo#Platform < http://gbo#hasPlatformType min 1 (1.0, unrevised)	incorrect
+http://gmo#Platform	http://gbo#Platform	http://gmo#Platform = http://gbo#Platform (1.0, unrevised)	correct
+http://gmo#hasInputFeature	http://gbo#hasFeatureType		FP
+http://gmo#Identifier	http://gbo#Identifier	http://gmo#Identifier = http://gbo#Identifier (1.0, unrevised)	correct
+http://gmo#hasPrimaryIdentifier	http://gbo#hasIdentifier	AND[AND[http://gmo#describedBy, Range(http://gmo#InformationObject)], http://gmo#hasPrimaryIdentifier] = http://gbo#hasIdentifier (1.0, unrevised)	overlap
+http://gmo#FundingAward	http://gbo#Award	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	correct
+http://gmo#PhysicalSample	http://gbo#PhysicalSample	http://gmo#PhysicalSample < http://gbo#hasSampleType min 1 (1.0, unrevised)	incorrect
+http://gmo#PhysicalSample	http://gbo#PhysicalSample	http://gmo#PhysicalSample = http://gbo#PhysicalSample (1.0, unrevised)	correct
+http://gmo#hasAgentRoleType	http://gbo#hasRoleType		FP
+http://gmo#hasProperty	http://gbo#hasOperator		FP
+http://www.opengis.net/ont/geosparql#SpatialObject	http://gbo#DigitalObject		FP
+http://www.w3.org/2006/time#hasXSDDuration	http://gbo#hasDuration		FP
+https://schema.org/Person	http://gbo#Person	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect
+http://gmo#hasWebpage	http://gbo#hasLandingPage		FP
+http://gmo#Organization	http://gbo#Organization	http://gmo#Organization = http://gbo#Organization (1.0, unrevised)	correct
+http://gmo#hasCanonicalName	http://gbo#hasNamePrefix		FP
+http://gmo#hasDescription	http://gbo#hasDescription	PATH[AND[http://gmo#describedBy, Range(http://gmo#InformationObject)], http://gmo#hasDescription] = http://gbo#hasDescription (1.0, unrevised)	overlap
+http://www.opengis.net/ont/geosparql#ehMeet	http://gbo#Meeting		FP
+http://gmo#hasPosition	http://gbo#hasAffiliation		FP
+http://gmo#fullName	http://gbo#hasFullName		FP
+http://gmo#occursAtPlace	http://gbo#hasPlace		FP
+http://gmo#hasTrajectory	http://gbo#hasCollector		FP
+AND[http://gmo#performedBy, http://gmo#ContributorRole]	http://gbo#Participant		FP
+http://gmo#hasAlternativeIdentifier	http://gbo#hasIdentifierScheme	http://gmo#hasIdentifierScheme = http://gbo#hasIdentifierScheme (1.0, unrevised)	incorrect
+http://gmo#atPort	http://gbo#atPort	http://gmo#atPort = http://gbo#atPort (1.0, unrevised)	correct
+http://gmo#Feature	http://gbo#Feature		FP
+http://gmo#associatedWithProgram	http://gbo#hasProgram	http://gmo#associatedWithProgram = http://gbo#hasProgram (1.0, unrevised)	correct
+http://gmo#hasSite	http://gbo#hasRepository		FP
+http://gmo#hasUnit	http://gbo#hasStratigraphicUnit		FP
+http://gmo#originatesFrom	http://gbo#originatesFrom	http://gmo#originatesFrom = http://gbo#originatesFrom (1.0, unrevised)	correct

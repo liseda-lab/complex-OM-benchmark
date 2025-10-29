@@ -1,0 +1,58 @@
+mapping e1	mapping e2	ref e2
+INVERSE[http://edas#hasRelatedDocument] http://edas-instances#conference594425059	http://conference#is_submitted_at http://conference-instances#conference594425059		FP
+http://edas#relatesTo http://edas-instances#conference594425059	http://conference#is_submitted_at http://conference-instances#conference594425059		FP
+OR[INVERSE[http://edas#hasRelatedDocument] http://edas-instances#conference594425059, INVERSE[http://edas#hasRelatedDocument] http://edas-instances#person1995416664]	http://conference#Conference_document	http://edas#Document = http://conference#Conference_document (1.0, unrevised)	incorrect
+INVERSE[http://edas#relatesTo]	http://conference#has_contributions		FP
+http://edas#hasRelatedDocument	http://conference#has_contributions		FP
+INVERSE[http://edas#isWrittenBy] some http://edas#RejectedPaper	http://conference#Invited_speaker		FP
+http://edas#RejectedPaper	http://conference#Rejected_contribution	http://edas#RejectedPaper = http://conference#Rejected_contribution (1.0, unrevised)	correct
+http://edas#Workshop	http://conference#Workshop	http://edas#Workshop = http://conference#Workshop (1.0, unrevised)	correct
+http://edas#hasRelatedPaper	http://conference#contributes	http://edas#hasRelatedPaper > http://conference#contributes (1.0, unrevised)	correct
+INVERSE[http://edas#isWrittenBy]	http://conference#contributes	http://edas#isWrittenBy > http://conference#has_authors (1.0, unrevised)	incorrect
+INVERSE[http://edas#isWrittenBy]	http://conference#contributes	http://edas#hasRelatedPaper > http://conference#contributes (1.0, unrevised)	incorrect
+INVERSE[http://edas#hasRelatedDocument]	http://conference#is_submitted_at		FP
+http://edas#relatesTo	http://conference#is_submitted_at		FP
+http://edas#AcceptedPaper	http://conference#Accepted_contribution	http://edas#AcceptedPaper = http://conference#Accepted_contribution (1.0, unrevised)	correct
+http://edas#relatedToEvent some http://edas#PaperPresentation	http://conference#Camera_ready_contribution		FP
+http://edas#relatesTo some http://edas#Reviewer	http://conference#Review	http://edas#Review = http://conference#Review (1.0, unrevised)	incorrect
+INVERSE[http://edas#hasRelatedDocument] some http://edas#Reviewer	http://conference#Review	http://edas#Review = http://conference#Review (1.0, unrevised)	incorrect
+http://edas#Review	http://conference#Review	http://edas#Review = http://conference#Review (1.0, unrevised)	correct
+AND[INVERSE[http://edas#relatesTo], AND[Range(http://edas#PaperPresentation), INVERSE[http://edas#hasRelatedDocument]]]	http://conference#gives_presentations		FP
+AND[INVERSE[http://edas#isWrittenBy], AND[Range(http://edas#PaperPresentation), http://edas#relatedToEvent]]	http://conference#gives_presentations		FP
+AND[http://edas#hasRelatedPaper, AND[Range(http://edas#PaperPresentation), http://edas#relatedToEvent]]	http://conference#gives_presentations		FP
+http://edas#PaperPresentation	http://conference#Presentation	http://edas#SlideSet = http://conference#Presentation (1.0, unrevised)	incorrect
+http://edas#isMemberOf min 1	http://conference#was_a_member_of http://conference-instances#pc594425059		FP
+INVERSE[http://edas#hasMember] min 1	http://conference#was_a_member_of http://conference-instances#pc594425059		FP
+http://edas#location	http://conference#has_a_location		FP
+http://edas#relatedToEvent some http://edas#ConferenceEvent	http://conference#Conference_contribution		FP
+http://edas#Paper	http://conference#Paper	http://edas#Paper = http://conference#Written_contribution (1.0, unrevised)	incorrect
+http://edas#Author	http://conference#Regular_author	http://edas#Author = http://conference#Regular_author (1.0, unrevised)	correct
+http://edas#Person	http://conference#Person	http://edas#Person = http://conference#Person (1.0, unrevised)	correct
+http://edas#isMemberOf http://edas-instances#conference594425059	http://conference#Conference_contributor		FP
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type some http://www.w3.org/2002/07/owl#Class	http://conference#Chair		FP
+AND[Range(http://edas#Author), INVERSE[http://edas#hasRelatedPaper]]	http://conference#has_authors	http://edas#isWrittenBy > http://conference#has_authors (1.0, unrevised)	incorrect
+AND[Range(http://edas#Author), http://edas#isWrittenBy]	http://conference#has_authors	http://edas#isWrittenBy > http://conference#has_authors (1.0, unrevised)	overlap
+AND[AND[Domain(http://edas#Review), http://edas#relatesTo], AND[Domain(http://edas#Reviewer), INVERSE[http://edas#isReviewedBy]]]	http://conference#reviews		FP
+AND[AND[Domain(http://edas#Review), INVERSE[http://edas#hasRelatedDocument]], AND[Domain(http://edas#Reviewer), INVERSE[http://edas#isReviewedBy]]]	http://conference#reviews		FP
+AND[AND[Domain(http://edas#Review), http://edas#relatesTo], AND[Domain(http://edas#Reviewer), http://edas#isReviewing]]	http://conference#reviews		FP
+AND[AND[Domain(http://edas#Review), INVERSE[http://edas#hasRelatedDocument]], AND[Domain(http://edas#Reviewer), http://edas#isReviewing]]	http://conference#reviews		FP
+INVERSE[http://edas#hasMember] http://edas-instances#conference594425059	http://conference#Conference_participant	http://edas#Attendee = http://conference#Conference_participant (1.0, unrevised)	incorrect
+http://edas#isMemberOf http://edas-instances#conference594425059	http://conference#Conference_participant	http://edas#Attendee = http://conference#Conference_participant (1.0, unrevised)	incorrect
+http://edas#Conference	http://conference#Conference	http://edas#Conference = http://conference#Conference_volume (1.0, unrevised)	incorrect
+INVERSE[http://edas#relatesTo] some http://edas#Review	http://conference#Reviewer	http://edas#Reviewer = http://conference#Reviewer (1.0, unrevised)	incorrect
+http://edas#hasRelatedDocument some http://edas#Review	http://conference#Reviewer	http://edas#Reviewer = http://conference#Reviewer (1.0, unrevised)	incorrect
+http://edas#Reviewer	http://conference#Reviewer	http://edas#Reviewer = http://conference#Reviewer (1.0, unrevised)	correct
+AND[INVERSE[http://edas#isReviewing], INVERSE[http://edas#relatesTo]]	http://conference#has_a_review		FP
+AND[INVERSE[http://edas#isReviewing], http://edas#hasRelatedDocument]	http://conference#has_a_review		FP
+AND[http://edas#isReviewedBy, http://edas#hasRelatedDocument]	http://conference#has_a_review		FP
+INVERSE[http://edas#hasMember] http://edas-instances#conference594425059	http://conference#Conference_applicant		FP
+http://edas#isMemberOf http://edas-instances#conference594425059	http://conference#Conference_applicant		FP
+http://edas#ConferenceEvent	http://conference#Conference_part	http://edas#AcademicEvent = http://conference#Conference_part (1.0, unrevised)	incorrect
+http://edas#hasLocation some http://edas#ConferenceVenuePlace	http://conference#Conference_part	http://edas#AcademicEvent = http://conference#Conference_part (1.0, unrevised)	incorrect
+INVERSE[http://edas#isLocationOf] some http://edas#ConferenceVenuePlace	http://conference#Conference_part	http://edas#AcademicEvent = http://conference#Conference_part (1.0, unrevised)	incorrect
+INVERSE[http://edas#hasMember] http://edas-instances#conference594425059	http://conference#was_a_member_of http://conference-instances#oc594425059		FP
+http://edas#isMemberOf min 1	http://conference#was_a_member_of http://conference-instances#oc594425059		FP
+http://edas#Conference	http://conference#Conference_volume	http://edas#Conference = http://conference#Conference_volume (1.0, unrevised)	correct
+http://edas#isMemberOf min 1	http://conference#was_a_member_of http://conference-instances#sc594425059		FP
+INVERSE[http://edas#hasMember] min 1	http://conference#was_a_member_of http://conference-instances#sc594425059		FP
+AND[INVERSE[http://edas#relatedToEvent], http://edas#isWrittenBy]	http://conference#is_given_by		FP

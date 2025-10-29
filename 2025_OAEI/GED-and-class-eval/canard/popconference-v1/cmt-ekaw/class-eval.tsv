@@ -1,0 +1,93 @@
+mapping e1	mapping e2	ref e2
+http://ekaw#authorOf some http://ekaw#Conference_Paper	http://cmt#ConferenceMember	http://ekaw#Conference_Participant = http://cmt#ConferenceMember (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasReviewer] some http://ekaw#Conference_Paper	http://cmt#ConferenceMember	http://ekaw#Conference_Participant = http://cmt#ConferenceMember (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#writtenBy] some http://ekaw#Conference_Paper	http://cmt#ConferenceMember	http://ekaw#Conference_Participant = http://cmt#ConferenceMember (1.0, unrevised)	incorrect
+http://ekaw#reviewerOfPaper some http://ekaw#Conference_Paper	http://cmt#ConferenceMember	http://ekaw#Conference_Participant = http://cmt#ConferenceMember (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasReviewer] min 1	http://cmt#Meta-Reviewer	http://ekaw#hasReviewer < http://cmt#assignedTo (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasReviewer] min 1	http://cmt#Meta-Reviewer	http://ekaw#hasReviewer < http://cmt#readByReviewer (1.0, unrevised)	incorrect
+http://ekaw#Paper	http://cmt#Paper	http://ekaw#Paper = http://cmt#Paper (1.0, unrevised)	correct
+AND[Range(http://ekaw#Regular_Paper), http://ekaw#reviewerOfPaper]	http://cmt#readPaper	http://ekaw#reviewerOfPaper < http://cmt#readPaper (1.0, unrevised)	overlap
+AND[Range(http://ekaw#Regular_Paper), INVERSE[http://ekaw#hasReviewer]]	http://cmt#readPaper	http://ekaw#reviewerOfPaper < http://cmt#readPaper (1.0, unrevised)	incorrect
+http://ekaw#reviewerOfPaper some http://ekaw#Conference_Paper	http://cmt#memberOfConference http://cmt-instances#conference594425059		FP
+http://ekaw#authorOf some http://ekaw#Conference_Paper	http://cmt#memberOfConference http://cmt-instances#conference594425059		FP
+http://ekaw#authorOf min 1	http://cmt#Author	http://ekaw#Paper_Author = http://cmt#Author (1.0, unrevised)	incorrect
+http://ekaw#authorOf min 1	http://cmt#Author	http://ekaw#authorOf < http://cmt#writePaper (1.0, unrevised)	incorrect
+http://ekaw#authorOf min 1	http://cmt#Author	http://ekaw#authorOf < http://cmt#writeReview (1.0, unrevised)	incorrect
+http://ekaw#authorOf min 1	http://cmt#Author	http://ekaw#authorOf < http://cmt#co-writePaper (1.0, unrevised)	incorrect
+AND[AND[Domain(http://ekaw#Conference), http://ekaw#organisedBy], INVERSE[http://ekaw#writtenBy], AND[Domain(http://ekaw#Conference_Paper), http://ekaw#hasReviewer]]	http://cmt#hasConferenceMember		FP
+AND[AND[Domain(http://ekaw#Conference), INVERSE[http://ekaw#organises]], INVERSE[http://ekaw#writtenBy], AND[Domain(http://ekaw#Conference_Paper), http://ekaw#hasReviewer]]	http://cmt#hasConferenceMember		FP
+AND[AND[Domain(http://ekaw#Conference), http://ekaw#organisedBy], http://ekaw#authorOf, AND[Domain(http://ekaw#Conference_Paper), http://ekaw#hasReviewer]]	http://cmt#hasConferenceMember		FP
+AND[AND[Domain(http://ekaw#Conference), INVERSE[http://ekaw#organises]], http://ekaw#authorOf, AND[Domain(http://ekaw#Conference_Paper), http://ekaw#hasReviewer]]	http://cmt#hasConferenceMember		FP
+AND[AND[Domain(http://ekaw#Conference), INVERSE[http://ekaw#organises]], INVERSE[http://ekaw#hasReviewer], AND[Domain(http://ekaw#Conference_Paper), INVERSE[http://ekaw#reviewerOfPaper]]]	http://cmt#hasConferenceMember		FP
+http://ekaw#Person	http://cmt#Person	http://ekaw#Person = http://cmt#Person (1.0, unrevised)	correct
+INVERSE[http://ekaw#hasReview] min 1	http://cmt#Review	http://ekaw#Review = http://cmt#Review (1.0, unrevised)	incorrect
+http://ekaw#Review	http://cmt#Review	http://ekaw#Review = http://cmt#Review (1.0, unrevised)	correct
+AND[Range(http://ekaw#Paper_Author), http://ekaw#writtenBy]	http://cmt#hasCo-author	http://ekaw#writtenBy < http://cmt#hasCo-author (1.0, unrevised)	overlap
+AND[Range(http://ekaw#Paper_Author), INVERSE[http://ekaw#authorOf]]	http://cmt#hasCo-author	http://ekaw#writtenBy < http://cmt#hasCo-author (1.0, unrevised)	incorrect
+http://www.w3.org/2000/01/rdf-schema#label	http://cmt#name		FP
+AND[Range(http://ekaw#Review), INVERSE[http://ekaw#writtenBy]]	http://cmt#writeReview	http://ekaw#authorOf < http://cmt#writeReview (1.0, unrevised)	incorrect
+AND[Range(http://ekaw#Review), http://ekaw#authorOf]	http://cmt#writeReview	http://ekaw#authorOf < http://cmt#writeReview (1.0, unrevised)	overlap
+INVERSE[http://ekaw#hasReview] min 1	http://cmt#Meta-Review		FP
+http://ekaw#Conference	http://cmt#Conference	http://ekaw#Conference = http://cmt#Conference (1.0, unrevised)	correct
+http://ekaw#reviewerOfPaper some http://ekaw#Paper	http://cmt#User		FP
+http://ekaw#authorOf some http://ekaw#Paper	http://cmt#User		FP
+INVERSE[http://ekaw#hasReviewer]	http://cmt#hasBeenAssigned	http://ekaw#hasReviewer < http://cmt#assignedTo (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasReviewer]	http://cmt#hasBeenAssigned	http://ekaw#hasReviewer < http://cmt#readByReviewer (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasReviewer]	http://cmt#hasBeenAssigned	http://ekaw#reviewerOfPaper < http://cmt#hasBeenAssigned (1.0, unrevised)	incorrect
+http://ekaw#Paper_Author	http://cmt#Co-author	http://ekaw#Paper_Author = http://cmt#Author (1.0, unrevised)	incorrect
+OR[http://ekaw#writtenBy http://ekaw-instances#person-1289866755, http://ekaw#writtenBy http://ekaw-instances#person-1307497202, http://ekaw#writtenBy http://ekaw-instances#person-1712520470, http://ekaw#writtenBy http://ekaw-instances#person-193324767, http://ekaw#writtenBy http://ekaw-instances#person837870437, http://ekaw#writtenBy http://ekaw-instances#person1080046350, http://ekaw#writtenBy http://ekaw-instances#person-788076726]	http://cmt#rejectedBy http://cmt-instances#person-826848348		FP
+http://ekaw#hasReviewer http://ekaw-instances#person-836803373	http://cmt#rejectedBy http://cmt-instances#person-826848348		FP
+INVERSE[http://ekaw#reviewerOfPaper] http://ekaw-instances#person-836803373	http://cmt#rejectedBy http://cmt-instances#person-826848348		FP
+INVERSE[http://ekaw#coversTopic] some http://ekaw#Submitted_Paper	http://cmt#SubjectArea	http://ekaw#Research_Topic = http://cmt#SubjectArea (1.0, unrevised)	incorrect
+http://ekaw#topicCoveredBy some http://ekaw#Submitted_Paper	http://cmt#SubjectArea	http://ekaw#Research_Topic = http://cmt#SubjectArea (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#writtenBy] some http://ekaw#Review	http://cmt#Reviewer	OR[INVERSE[http://ekaw#reviewWrittenBy] min 1, http://ekaw#authorOf some http://ekaw#Review] = http://cmt#Reviewer (1.0, unrevised)	overlap
+INVERSE[http://ekaw#hasReviewer] min 1	http://cmt#Reviewer	http://ekaw#hasReviewer < http://cmt#assignedTo (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasReviewer] min 1	http://cmt#Reviewer	http://ekaw#hasReviewer < http://cmt#readByReviewer (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasReviewer] min 1	http://cmt#Reviewer	OR[INVERSE[http://ekaw#reviewWrittenBy] min 1, http://ekaw#authorOf some http://ekaw#Review] = http://cmt#Reviewer (1.0, unrevised)	incorrect
+http://ekaw#authorOf some http://ekaw#Review	http://cmt#Reviewer	OR[INVERSE[http://ekaw#reviewWrittenBy] min 1, http://ekaw#authorOf some http://ekaw#Review] = http://cmt#Reviewer (1.0, unrevised)	overlap
+INVERSE[http://ekaw#reviewWrittenBy] some http://ekaw#Review	http://cmt#Reviewer	OR[INVERSE[http://ekaw#reviewWrittenBy] min 1, http://ekaw#authorOf some http://ekaw#Review] = http://cmt#Reviewer (1.0, unrevised)	overlap
+AND[Range(http://ekaw#Submitted_Paper), INVERSE[http://ekaw#writtenBy]]	http://cmt#submitPaper	http://ekaw#Submitted_Paper = INVERSE[http://cmt#submitPaper] min 1 (1.0, unrevised)	overlap
+AND[Range(http://ekaw#Submitted_Paper), http://ekaw#authorOf]	http://cmt#submitPaper	http://ekaw#Submitted_Paper = INVERSE[http://cmt#submitPaper] min 1 (1.0, unrevised)	overlap
+http://ekaw#hasReviewer	http://cmt#readByMeta-Reviewer	http://ekaw#hasReviewer < http://cmt#assignedTo (1.0, unrevised)	incorrect
+http://ekaw#hasReviewer	http://cmt#readByMeta-Reviewer	http://ekaw#hasReviewer < http://cmt#readByReviewer (1.0, unrevised)	incorrect
+http://ekaw#authorOf min 1	http://cmt#AuthorNotReviewer	http://ekaw#authorOf < http://cmt#writePaper (1.0, unrevised)	incorrect
+http://ekaw#authorOf min 1	http://cmt#AuthorNotReviewer	http://ekaw#authorOf < http://cmt#writeReview (1.0, unrevised)	incorrect
+http://ekaw#authorOf min 1	http://cmt#AuthorNotReviewer	http://ekaw#authorOf < http://cmt#co-writePaper (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#writtenBy]	http://cmt#markConflictOfInterest	http://ekaw#writtenBy < http://cmt#hasAuthor (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#writtenBy]	http://cmt#markConflictOfInterest	http://ekaw#writtenBy < http://cmt#writtenBy (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#writtenBy]	http://cmt#markConflictOfInterest	http://ekaw#writtenBy < http://cmt#hasCo-author (1.0, unrevised)	incorrect
+http://ekaw#authorOf	http://cmt#markConflictOfInterest	http://ekaw#authorOf < http://cmt#writePaper (1.0, unrevised)	incorrect
+http://ekaw#authorOf	http://cmt#markConflictOfInterest	http://ekaw#authorOf < http://cmt#writeReview (1.0, unrevised)	incorrect
+http://ekaw#authorOf	http://cmt#markConflictOfInterest	http://ekaw#authorOf < http://cmt#co-writePaper (1.0, unrevised)	incorrect
+http://ekaw#coversTopic	http://cmt#hasSubjectArea	http://ekaw#coversTopic < http://cmt#hasSubjectArea (1.0, unrevised)	correct
+INVERSE[http://ekaw#topicCoveredBy]	http://cmt#hasSubjectArea	http://ekaw#coversTopic < http://cmt#hasSubjectArea (1.0, unrevised)	incorrect
+AND[Range(http://ekaw#Possible_Reviewer), INVERSE[http://ekaw#reviewerOfPaper]]	http://cmt#readByReviewer	http://ekaw#hasReviewer < http://cmt#readByReviewer (1.0, unrevised)	incorrect
+AND[Range(http://ekaw#Possible_Reviewer), http://ekaw#hasReviewer]	http://cmt#readByReviewer	http://ekaw#hasReviewer < http://cmt#readByReviewer (1.0, unrevised)	overlap
+AND[INVERSE[http://ekaw#hasReviewer], http://ekaw#hasReviewer, AND[Range(http://ekaw#Conference), http://ekaw#organises]]	http://cmt#memberOfConference		FP
+AND[INVERSE[http://ekaw#hasReviewer], http://ekaw#writtenBy, AND[Range(http://ekaw#Conference), INVERSE[http://ekaw#organisedBy]]]	http://cmt#memberOfConference		FP
+AND[INVERSE[http://ekaw#hasReviewer], INVERSE[http://ekaw#authorOf], AND[Range(http://ekaw#Conference), INVERSE[http://ekaw#organisedBy]]]	http://cmt#memberOfConference		FP
+AND[http://ekaw#reviewerOfPaper, http://ekaw#hasReviewer, AND[Range(http://ekaw#Conference), http://ekaw#organises]]	http://cmt#memberOfConference		FP
+AND[INVERSE[http://ekaw#hasReviewer], INVERSE[http://ekaw#reviewerOfPaper], AND[Range(http://ekaw#Conference), http://ekaw#organises]]	http://cmt#memberOfConference		FP
+AND[Range(http://ekaw#Submitted_Paper), http://ekaw#authorOf]	http://cmt#writePaper	http://ekaw#authorOf < http://cmt#writePaper (1.0, unrevised)	overlap
+AND[Range(http://ekaw#Submitted_Paper), INVERSE[http://ekaw#writtenBy]]	http://cmt#writePaper	http://ekaw#authorOf < http://cmt#writePaper (1.0, unrevised)	incorrect
+AND[Domain(http://ekaw#Assigned_Paper), INVERSE[http://ekaw#reviewerOfPaper]]	http://cmt#assignedTo	http://ekaw#hasReviewer < http://cmt#assignedTo (1.0, unrevised)	incorrect
+AND[Domain(http://ekaw#Assigned_Paper), INVERSE[http://ekaw#reviewerOfPaper]]	http://cmt#assignedTo	http://ekaw#Assigned_Paper = http://cmt#assignedTo min 1 (1.0, unrevised)	overlap
+AND[Domain(http://ekaw#Assigned_Paper), http://ekaw#hasReviewer]	http://cmt#assignedTo	http://ekaw#hasReviewer < http://cmt#assignedTo (1.0, unrevised)	overlap
+AND[Domain(http://ekaw#Assigned_Paper), http://ekaw#hasReviewer]	http://cmt#assignedTo	http://ekaw#Assigned_Paper = http://cmt#assignedTo min 1 (1.0, unrevised)	overlap
+AND[Range(http://ekaw#Paper_Author), http://ekaw#writtenBy]	http://cmt#hasAuthor	http://ekaw#writtenBy < http://cmt#hasAuthor (1.0, unrevised)	overlap
+AND[Range(http://ekaw#Paper_Author), INVERSE[http://ekaw#authorOf]]	http://cmt#hasAuthor	http://ekaw#writtenBy < http://cmt#hasAuthor (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasReview] some http://ekaw#Document	http://cmt#Document	http://ekaw#Document = http://cmt#Document (1.0, unrevised)	overlap
+http://ekaw#Document	http://cmt#Document	http://ekaw#Document = http://cmt#Document (1.0, unrevised)	correct
+http://ekaw#hasReview some http://ekaw#Document	http://cmt#Document	http://ekaw#Document = http://cmt#Document (1.0, unrevised)	overlap
+INVERSE[http://ekaw#reviewOfPaper] some http://ekaw#Document	http://cmt#Document	http://ekaw#Document = http://cmt#Document (1.0, unrevised)	overlap
+http://ekaw#reviewOfPaper some http://ekaw#Document	http://cmt#Document	http://ekaw#Document = http://cmt#Document (1.0, unrevised)	overlap
+OR[http://ekaw#writtenBy http://ekaw-instances#person-1993644559, http://ekaw#writtenBy http://ekaw-instances#person-1872968917, http://ekaw#writtenBy http://ekaw-instances#person1727185389, http://ekaw#writtenBy http://ekaw-instances#person-1455297413, http://ekaw#writtenBy http://ekaw-instances#person1235711472, http://ekaw#writtenBy http://ekaw-instances#person-1253694339, http://ekaw#writtenBy http://ekaw-instances#person-61831363]	http://cmt#acceptedBy http://cmt-instances#person-826848348		FP
+http://ekaw#writtenBy	http://cmt#writtenBy	http://ekaw#reviewWrittenBy = http://cmt#writtenBy (1.0, unrevised)	incorrect
+http://ekaw#writtenBy	http://cmt#writtenBy	http://ekaw#writtenBy < http://cmt#hasAuthor (1.0, unrevised)	incorrect
+http://ekaw#writtenBy	http://cmt#writtenBy	http://ekaw#writtenBy < http://cmt#writtenBy (1.0, unrevised)	correct
+INVERSE[http://ekaw#organisedBy] some http://ekaw#Conference	http://cmt#ConferenceChair		FP
+http://ekaw#organises some http://ekaw#Conference	http://cmt#ConferenceChair		FP
+AND[Range(http://ekaw#Conference_Paper), INVERSE[http://ekaw#writtenBy]]	http://cmt#co-writePaper	http://ekaw#authorOf < http://cmt#co-writePaper (1.0, unrevised)	incorrect
+AND[Range(http://ekaw#Conference_Paper), http://ekaw#authorOf]	http://cmt#co-writePaper	http://ekaw#authorOf < http://cmt#co-writePaper (1.0, unrevised)	overlap
+http://ekaw#reviewerOfPaper some http://ekaw#Assigned_Paper	http://cmt#assignedByAdministrator http://cmt-instances#person-826848348		FP
+INVERSE[http://ekaw#hasReviewer] some http://ekaw#Assigned_Paper	http://cmt#assignedByAdministrator http://cmt-instances#person-826848348		FP

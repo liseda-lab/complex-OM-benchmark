@@ -1,0 +1,9 @@
+mapping e1	mapping e2	ref e2
+http://ekaw#Person	http://cmt#Person	http://ekaw#Person = http://cmt#Person (1.0, unrevised)	correct
+http://ekaw#Document	http://cmt#Document	http://ekaw#Document = http://cmt#Document (1.0, unrevised)	correct
+http://ekaw#PC_Chair	http://cmt#ProgramCommittee	http://ekaw#PC_Chair = http://cmt#ProgramCommitteeChair (1.0, unrevised)	incorrect
+http://ekaw#Paper	http://cmt#Paper	http://ekaw#Paper = http://cmt#Paper (1.0, unrevised)	correct
+http://ekaw#Possible_Reviewer	http://cmt#Reviewer	OR[INVERSE[http://ekaw#reviewWrittenBy] min 1, http://ekaw#authorOf some http://ekaw#Review] = http://cmt#Reviewer (1.0, unrevised)	incorrect
+http://example.org/ontology2/User	http://cmt#User		FP
+http://ekaw#Conference_Participant	http://cmt#ConferenceMember	http://ekaw#Conference_Participant = http://cmt#ConferenceMember (1.0, unrevised)	correct
+http://ekaw#PC_Member	http://cmt#ProgramCommitteeMember	http://ekaw#PC_Member = http://cmt#ProgramCommitteeMember (1.0, unrevised)	correct

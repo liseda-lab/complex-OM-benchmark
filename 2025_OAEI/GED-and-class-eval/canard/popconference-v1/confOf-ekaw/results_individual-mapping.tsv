@@ -1,0 +1,53 @@
+	GED	Score	correct ref classes	category
+Conference.tsv v. Conference.tsv	0.0	1.0	1	correct
+Conference.tsv v. Conference_9002.tsv	2.5	0.2857142857142857	1	correct
+Conference.tsv v. Conference_9519.tsv	2.5	0.2857142857142857	1	correct
+Country.tsv				false negative
+Chair_PC.tsv v. Chair_PC.tsv	2.5	0.2857142857142857	0	incorrect
+Participant.tsv v. Participant.tsv	0.0	1.0	1	correct
+Event.tsv v. Event.tsv	2.5	0.2857142857142857	1	correct
+Event.tsv v. Event_9004.tsv	2.5	0.2857142857142857	1	correct
+Event.tsv v. Event_6526.tsv	0.0	1.0	1	correct
+Organization.tsv				false negative
+Author.tsv v. Author.tsv	2.5	0.2857142857142857	0	incorrect
+University.tsv				false negative
+Working_event.tsv v. Working_event.tsv	2.5	0.2857142857142857	1	correct
+Topic.tsv v. Topic.tsv	4.0	0.11111111111111116	0	incorrect
+writtenBy.tsv v. writtenBy.tsv	0.0	1.0	1	correct
+Trip.tsv				false negative
+Late-Registered_Participant.tsv				false negative
+writes.tsv v. writes.tsv	2.5	0.2857142857142857	0	incorrect
+Scholar.tsv				false negative
+Banquet.tsv				false negative
+Person.tsv v. Person.tsv	0.0	1.0	1	correct
+City.tsv				false negative
+Evaluated_Paper.tsv				false negative
+dealsWith.tsv v. dealsWith_531.tsv	0.0	1.0	1	correct
+dealsWith.tsv v. dealsWith.tsv	2.5	0.2857142857142857	0	incorrect
+Workshop.tsv v. Workshop.tsv	0.0	1.0	1	correct
+hasTopic.tsv				false negative
+Social_event.tsv v. Social_event_648.tsv	2.5	0.2857142857142857	1	correct
+Social_event.tsv v. Social_event_625.tsv	0.0	1.0	1	correct
+Social_event.tsv v. Social_event_1840.tsv	2.5	0.2857142857142857	0	incorrect
+Social_event.tsv v. Social_event.tsv	2.5	0.2857142857142857	1	correct
+Social_event.tsv v. Social_event_7903.tsv	2.5	0.2857142857142857	0	incorrect
+reviewes.tsv v. reviewes.tsv	0.0	1.0	1	correct
+reviewes.tsv v. reviewes_6497.tsv	2.5	0.2857142857142857	0	incorrect
+Early-Registered_Participant.tsv				false negative
+Tutorial.tsv v. Tutorial.tsv	0.0	1.0	1	correct
+Poster.tsv v. Poster_9462.tsv	2.5	0.2857142857142857	0	incorrect
+Poster.tsv v. Poster.tsv	0.0005383097075183922	0.9997846761169926	0	incorrect
+Member_PC.tsv v. Member_PC_9323.tsv	2.5	0.2857142857142857	0	incorrect
+Member_PC.tsv v. Member_PC_7708.tsv	2.5	0.2857142857142857	0	incorrect
+Member_PC.tsv v. Member_PC_4973.tsv	2.5	0.2857142857142857	0	incorrect
+Member_PC.tsv v. Member_PC.tsv	4.0	0.11111111111111116	0	incorrect
+Contribution.tsv				false negative
+has_title.tsv				false positive
+Paper_5477.tsv				false positive
+Paper.tsv				false positive
+Paper_8451.tsv				false positive
+Reception.tsv				false positive
+Administrator.tsv				false positive
+location_2722.tsv				false positive
+location.tsv				false positive
+location_7392.tsv				false positive

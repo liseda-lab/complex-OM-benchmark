@@ -1,0 +1,66 @@
+	GED	Score	correct ref classes	category
+hasSubOrganization_3532.tsv				false negative
+hasSubOrganization.tsv				false negative
+hasPlatformType.tsv				false negative
+Place.tsv v. Place.tsv	2.5	0.375	0	incorrect
+Place_7419.tsv v. Place.tsv	2.5	0.375	0	incorrect
+Place_5624.tsv v. Place.tsv	0.0	1.0	1	correct
+hasAbstract.tsv v. hasAbstract.tsv	4.0	0.4285714285714286	2	contained in ref
+hasCruiseType.tsv				false negative
+GeoFeatureType.tsv				false negative
+hasDescription.tsv v. hasDescription.tsv	4.0	0.4285714285714286	2	contained in ref
+CruiseType.tsv				false negative
+Organization.tsv v. Organization.tsv	0.0	1.0	1	correct
+Award.tsv v. Award.tsv	0.0	1.0	1	correct
+hasIdentifierValue.tsv				false negative
+hasSampleType.tsv				false negative
+PhysicalSampleType.tsv				false negative
+hasIdentifierScheme.tsv v. hasIdentifierScheme.tsv	0.0	1.0	1	correct
+Vessel.tsv v. Vessel.tsv	0.0	1.0	1	correct
+fundedBy.tsv				false negative
+hasAward.tsv v. hasAward.tsv	0.0	1.0	1	correct
+Platform_5773.tsv v. Platform_7489.tsv	2.5	0.2857142857142857	0	incorrect
+Platform_5773.tsv v. Platform.tsv	0.0	1.0	1	correct
+Platform.tsv v. Platform_7489.tsv	0.0	1.0	1	correct
+Platform.tsv v. Platform.tsv	2.5	0.375	0	incorrect
+hasProgram.tsv v. hasProgram.tsv	0.0	1.0	1	correct
+PhysicalSample_1120.tsv v. PhysicalSample.tsv	2.5	0.2857142857142857	0	incorrect
+PhysicalSample.tsv v. PhysicalSample.tsv	0.0	1.0	1	correct
+Person.tsv v. Person.tsv	0.0	1.0	1	correct
+PlatformType.tsv				false negative
+originatesFrom_4584.tsv v. originatesFrom.tsv	2.5	0.375	0	incorrect
+originatesFrom.tsv v. originatesFrom.tsv	0.0	1.0	1	correct
+Identifier.tsv v. Identifier.tsv	0.0	1.0	1	correct
+hasTitle.tsv v. hasTitle.tsv	4.0	0.4285714285714286	2	contained in ref
+Cruise.tsv v. Cruise_5474.tsv	0.0	1.0	1	correct
+Cruise.tsv v. Cruise.tsv	2.5	0.375	0	incorrect
+Cruise_4829.tsv v. Cruise_5474.tsv	2.5	0.2857142857142857	0	incorrect
+Cruise_4829.tsv v. Cruise.tsv	0.0	1.0	1	correct
+hasPlaceType.tsv				false negative
+PlaceType.tsv				false negative
+associatedWithProgram.tsv				false negative
+atPort_7191.tsv v. atPort.tsv	2.5	0.375	0	incorrect
+atPort.tsv v. atPort.tsv	0.0	1.0	1	correct
+hasGeoFeatureType.tsv				false negative
+hasIdentifier.tsv v. hasIdentifier.tsv	1.5	0.7272727272727273	2	contained in ref
+PortCall.tsv v. PortCall.tsv	0.0	1.0	1	correct
+GeoFeature.tsv				false negative
+Program.tsv v. Program.tsv	0.0	1.0	1	correct
+PhyiscalSample.tsv				false positive
+hasProgramManager.tsv				false positive
+hasGivenName_394.tsv				false positive
+hasGivenName_8730.tsv				false positive
+hasGivenName.tsv				false positive
+hasFamilyName_2145.tsv				false positive
+hasFamilyName.tsv				false positive
+hasAffiliation.tsv				false positive
+hasEndDate.tsv				false positive
+hasFullName.tsv				false positive
+hasAcronym.tsv				false positive
+hasOwner.tsv				false positive
+hasOperator.tsv				false positive
+hasScheduler.tsv				false positive
+hasStartDate.tsv				false positive
+hasChiefScientist.tsv				false positive
+hasPrincipalInvestigator.tsv				false positive
+hasCollector.tsv				false positive

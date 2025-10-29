@@ -1,0 +1,30 @@
+mapping e1	mapping e2	ref e2
+http://conference#Rejected_contribution	http://cmt#Rejection	http://conference#Rejected_contribution = OR[http://cmt#hasDecision some http://cmt#Rejection, http://cmt#rejectedBy min 1] (1.0, unrevised)	contained
+http://conference#Contribution_co-author	http://cmt#Co-author	http://conference#Contribution_co-author = http://cmt#Co-author (1.0, unrevised)	correct
+http://conference#has_a_review	http://cmt#endReview		FP
+http://conference#has_members	http://cmt#User	http://conference#has_members < http://cmt#hasProgramCommitteeMember (1.0, unrevised)	incorrect
+http://conference#Conference	http://cmt#Conference	http://conference#Conference_volume = http://cmt#Conference (1.0, unrevised)	incorrect
+http://conference#Committee_member	http://cmt#ProgramCommitteeMember	http://conference#was_a_member_of some http://conference#Program_committee = http://cmt#ProgramCommitteeMember (1.0, unrevised)	incorrect
+http://conference#Review_preference	http://cmt#Preference	http://conference#Review_preference = http://cmt#Preference (1.0, unrevised)	correct
+http://conference#Reviewer	http://cmt#Reviewer	http://conference#Reviewer = OR[http://cmt#Reviewer, http://cmt#ExternalReviewer] (1.0, unrevised)	contained
+http://conference#Review	http://cmt#Review	http://conference#Review = http://cmt#Review (1.0, unrevised)	correct
+http://conference#has_authors	http://cmt#Author	http://conference#Regular_author = http://cmt#Author (1.0, unrevised)	incorrect
+http://conference#has_authors	http://cmt#Author	http://conference#has_authors < http://cmt#hasAuthor (1.0, unrevised)	incorrect
+http://conference#has_authors	http://cmt#Author	http://conference#has_authors < http://cmt#writtenBy (1.0, unrevised)	incorrect
+http://conference#has_authors	http://cmt#Author	http://conference#has_authors < http://cmt#hasCo-author (1.0, unrevised)	incorrect
+http://conference#Topic	http://cmt#SubjectArea	http://conference#Topic = http://cmt#SubjectArea (1.0, unrevised)	correct
+http://conference#Call_for_paper	http://cmt#PaperFullVersion	http://conference#Paper = http://cmt#PaperFullVersion (1.0, unrevised)	incorrect
+AND[http://conference#has_an_abstract, http://conference#Call_for_paper]	http://cmt#PaperAbstract	http://conference#Abstract = http://cmt#PaperAbstract (1.0, unrevised)	incorrect
+http://conference#Person	http://cmt#Person	http://conference#Person = http://cmt#Person (1.0, unrevised)	correct
+http://conference#has_a_track-workshop-tutorial_chair	http://cmt#AssociatedChair		FP
+http://conference#has_a_program_committee	http://cmt#memberOfProgramCommittee	http://conference#was_a_member_of < http://cmt#memberOfProgramCommittee (1.0, unrevised)	incorrect
+http://conference#Conference_document	http://cmt#Document	http://conference#Conference_document = http://cmt#Document (1.0, unrevised)	correct
+http://conference#was_a_program_committee_of	http://cmt#hasProgramCommitteeMember	http://conference#has_members < http://cmt#hasProgramCommitteeMember (1.0, unrevised)	incorrect
+http://conference#Paper	http://cmt#Paper	http://conference#Written_contribution = http://cmt#Paper (1.0, unrevised)	incorrect
+http://conference#Paper	http://cmt#Paper	http://conference#Paper = http://cmt#PaperFullVersion (1.0, unrevised)	incorrect
+http://conference#Chair	http://cmt#ConferenceChair	http://conference#Chair > http://cmt#Chairman (1.0, unrevised)	incorrect
+http://conference#Program_committee	http://cmt#ProgramCommittee	http://conference#Program_committee = http://cmt#ProgramCommittee (1.0, unrevised)	correct
+http://conference#reviews	http://cmt#Meta-Review		FP
+AND[http://conference#Abstract, http://conference#Call_for_paper]	http://cmt#PaperAbstract	http://conference#Abstract = http://cmt#PaperAbstract (1.0, unrevised)	overlap
+http://conference#belongs_to_reviewers	http://cmt#ExternalReviewer	INVERSE[http://conference#invited_by] min 1 = http://cmt#ExternalReviewer (1.0, unrevised)	incorrect
+http://conference#has_an_email	http://cmt#email	http://conference#has_an_email = http://cmt#email (1.0, unrevised)	correct

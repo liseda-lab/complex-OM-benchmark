@@ -1,0 +1,51 @@
+	GED	Score	correct ref classes	category
+Minishtikuchuun_9780.tsv				false negative
+Minishtikuchuun.tsv				false negative
+Minishtik.tsv				false negative
+Minishtik_3625.tsv				false negative
+isConstructedFrom.tsv				false negative
+Muschiwinipaakw.tsv				false negative
+Naasipaatimihch.tsv				false negative
+Saakihiikin.tsv				false negative
+Aamaataashtikwaayaach.tsv				false negative
+Paaushtikui.tsv				false negative
+parallelTo_4032.tsv				false negative
+parallelTo.tsv				false negative
+parallelTo_4714.tsv				false negative
+parallelTo_2985.tsv				false negative
+Anatwaayach.tsv				false negative
+Anatwaayach_1802.tsv				false negative
+partOf.tsv				false negative
+ContainedBy.tsv v. ContainedBy.tsv	0.0	1.0	1	correct
+Shikaapishii.tsv				false negative
+UpstreamOf.tsv				false negative
+Aa_saachiiuch.tsv				false negative
+Aa_aschipuutaakinuwich.tsv				false negative
+Aa_upaach.tsv				false negative
+Aa_uchihchich.tsv				false negative
+Kapataakan.tsv				false negative
+Kapataakan_8640.tsv				false negative
+Shiipaashtikw.tsv				false negative
+DownstreamOf.tsv				false negative
+EmptiesInto.tsv				false negative
+Mischaakusaakihiikin.tsv				false negative
+Wiinipaakw.tsv				false negative
+HasPart.tsv				false negative
+Shakaapishiish.tsv				false negative
+ConnectedTo.tsv v. ConnectedTo.tsv	0.0	1.0	1	correct
+Pikutaauhkw.tsv				false negative
+Iihthuwikimaauh.tsv				false negative
+Yaatiwaakimii.tsv				false negative
+Mischaakw.tsv				false negative
+FeedsFrom.tsv				false negative
+Shiipiish.tsv				false negative
+Upikimaau.tsv				false negative
+Contains.tsv v. Contains.tsv	0.0	1.0	1	correct
+Waashaau.tsv				false negative
+Siipii.tsv				false negative
+PartOf.tsv				false negative
+portagesAround.tsv				false negative
+Mischaakushtikw.tsv				false negative
+Earth.tsv				false positive
+Sand.tsv				false positive
+Hydrography.tsv				false positive

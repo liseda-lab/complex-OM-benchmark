@@ -1,0 +1,142 @@
+mapping e1	mapping e2	ref e2
+INVERSE[http://conference#has_authors] some http://conference#Conference_document	http://cmt#ConferenceMember		FP
+http://conference#contributes some http://conference#Conference_document	http://cmt#ConferenceMember		FP
+http://conference#was_a_program_committee_of min 1	http://cmt#ProgramCommittee	http://conference#Program_committee = http://cmt#ProgramCommittee (1.0, unrevised)	incorrect
+http://conference#Program_committee	http://cmt#ProgramCommittee	http://conference#Program_committee = http://cmt#ProgramCommittee (1.0, unrevised)	correct
+INVERSE[http://conference#has_a_program_committee] min 1	http://cmt#ProgramCommittee	http://conference#Program_committee = http://cmt#ProgramCommittee (1.0, unrevised)	incorrect
+http://conference#Reviewer	http://cmt#Meta-Reviewer	http://conference#Reviewer = OR[http://cmt#Reviewer, http://cmt#ExternalReviewer] (1.0, unrevised)	incorrect
+http://conference#Paper	http://cmt#Paper	http://conference#Written_contribution = http://cmt#Paper (1.0, unrevised)	incorrect
+http://conference#Paper	http://cmt#Paper	http://conference#Paper = http://cmt#PaperFullVersion (1.0, unrevised)	incorrect
+AND[http://conference#contributes, AND[Range(http://conference#Paper), http://conference#reviews]]	http://cmt#readPaper	AND[AND[http://conference#contributes, http://conference#reviews], Domain(http://conference#Reviewer)] = http://cmt#readPaper (1.0, unrevised)	overlap
+AND[INVERSE[http://conference#has_authors], AND[Range(http://conference#Paper), INVERSE[http://conference#has_a_review]]]	http://cmt#readPaper	AND[AND[http://conference#contributes, http://conference#reviews], Domain(http://conference#Reviewer)] = http://cmt#readPaper (1.0, unrevised)	incorrect
+AND[INVERSE[http://conference#has_authors], AND[Range(http://conference#Paper), http://conference#reviews]]	http://cmt#readPaper	AND[AND[http://conference#contributes, http://conference#reviews], Domain(http://conference#Reviewer)] = http://cmt#readPaper (1.0, unrevised)	overlap
+http://conference#Abstract	http://cmt#PaperAbstract	http://conference#Abstract = http://cmt#PaperAbstract (1.0, unrevised)	correct
+INVERSE[http://conference#has_an_abstract] min 1	http://cmt#PaperAbstract	http://conference#Abstract = http://cmt#PaperAbstract (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors] min 1	http://cmt#Author	http://conference#Regular_author = http://cmt#Author (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors] min 1	http://cmt#Author	http://conference#has_authors < http://cmt#hasAuthor (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors] min 1	http://cmt#Author	http://conference#has_authors < http://cmt#writtenBy (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors] min 1	http://cmt#Author	http://conference#has_authors < http://cmt#hasCo-author (1.0, unrevised)	incorrect
+AND[AND[Domain(http://conference#Conference), INVERSE[http://conference#is_submitted_at]], http://conference#has_authors]	http://cmt#hasConferenceMember		FP
+AND[AND[Domain(http://conference#Conference), http://conference#has_contributions], http://conference#has_authors]	http://cmt#hasConferenceMember		FP
+AND[AND[Domain(http://conference#Conference), INVERSE[http://conference#was_a_committee_of]], http://conference#has_members]	http://cmt#hasConferenceMember		FP
+AND[AND[Domain(http://conference#Conference), http://conference#has_a_commtitee], http://conference#has_members]	http://cmt#hasConferenceMember		FP
+AND[AND[Domain(http://conference#Conference), INVERSE[http://conference#was_a_committee_of]], INVERSE[http://conference#was_a_member_of]]	http://cmt#hasConferenceMember		FP
+AND[AND[Domain(http://conference#Conference), INVERSE[http://conference#is_submitted_at]], INVERSE[http://conference#contributes]]	http://cmt#hasConferenceMember		FP
+http://conference#Person	http://cmt#Person	http://conference#Person = http://cmt#Person (1.0, unrevised)	correct
+http://conference#has_authors some http://conference#Reviewer	http://cmt#Review	http://conference#Review = http://cmt#Review (1.0, unrevised)	incorrect
+http://conference#reviews min 1	http://cmt#Review	http://conference#Review = http://cmt#Review (1.0, unrevised)	incorrect
+http://conference#Review	http://cmt#Review	http://conference#Review = http://cmt#Review (1.0, unrevised)	correct
+INVERSE[http://conference#contributes] some http://conference#Reviewer	http://cmt#Review	http://conference#Review = http://cmt#Review (1.0, unrevised)	incorrect
+AND[Range(http://conference#Program_committee), http://conference#was_a_member_of]	http://cmt#memberOfProgramCommittee	http://conference#was_a_member_of < http://cmt#memberOfProgramCommittee (1.0, unrevised)	overlap
+AND[Range(http://conference#Program_committee), http://conference#was_a_member_of]	http://cmt#memberOfProgramCommittee	http://conference#was_a_member_of some http://conference#Program_committee = http://cmt#ProgramCommitteeMember (1.0, unrevised)	incorrect
+AND[Range(http://conference#Program_committee), INVERSE[http://conference#has_members]]	http://cmt#memberOfProgramCommittee	http://conference#was_a_member_of < http://cmt#memberOfProgramCommittee (1.0, unrevised)	incorrect
+http://conference#has_authors	http://cmt#hasCo-author	http://conference#has_authors < http://cmt#hasAuthor (1.0, unrevised)	incorrect
+http://conference#has_authors	http://cmt#hasCo-author	http://conference#has_authors < http://cmt#writtenBy (1.0, unrevised)	incorrect
+http://conference#has_authors	http://cmt#hasCo-author	http://conference#has_authors < http://cmt#hasCo-author (1.0, unrevised)	correct
+AND[Range(http://conference#Review), http://conference#contributes]	http://cmt#writeReview	http://conference#contributes < http://cmt#writeReview (1.0, unrevised)	overlap
+AND[Range(http://conference#Review), INVERSE[http://conference#has_authors]]	http://cmt#writeReview	http://conference#contributes < http://cmt#writeReview (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_a_review] min 1	http://cmt#Meta-Review		FP
+http://conference#was_a_committee_chair_of some http://conference#Program_committee	http://cmt#ProgramCommitteeChair	http://conference#was_a_committee_chair_of some http://conference#Program_committee = http://cmt#ProgramCommitteeChair (1.0, unrevised)	correct
+INVERSE[http://conference#has_a_committee_chair] some http://conference#Committee	http://cmt#ProgramCommitteeChair	http://conference#was_a_committee_chair_of some http://conference#Program_committee = http://cmt#ProgramCommitteeChair (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_members] some http://conference#Program_committee	http://cmt#ProgramCommitteeChair	http://conference#was_a_committee_chair_of some http://conference#Program_committee = http://cmt#ProgramCommitteeChair (1.0, unrevised)	overlap
+http://conference#has_tracks some http://conference#Conference_part	http://cmt#Conference	http://conference#Conference_volume = http://cmt#Conference (1.0, unrevised)	incorrect
+http://conference#Conference	http://cmt#Conference	http://conference#Conference_volume = http://cmt#Conference (1.0, unrevised)	incorrect
+http://conference#has_parts some http://conference#Conference_part	http://cmt#Conference	http://conference#Conference_volume = http://cmt#Conference (1.0, unrevised)	incorrect
+http://conference#has_tutorials some http://conference#Conference_part	http://cmt#Conference	http://conference#Conference_volume = http://cmt#Conference (1.0, unrevised)	incorrect
+http://conference#has_workshops some http://conference#Conference_part	http://cmt#Conference	http://conference#Conference_volume = http://cmt#Conference (1.0, unrevised)	incorrect
+INVERSE[http://conference#is_part_of_conference_volumes] some http://conference#Conference_part	http://cmt#Conference	http://conference#Conference_volume = http://cmt#Conference (1.0, unrevised)	incorrect
+http://conference#was_a_member_of http://conference-instances#pc594425059	http://cmt#memberOfProgramCommittee http://cmt-instances#pc594425059		FP
+INVERSE[http://conference#has_members] http://conference-instances#pc594425059	http://cmt#memberOfProgramCommittee http://cmt-instances#pc594425059		FP
+http://conference#contributes some http://conference#Paper	http://cmt#User		FP
+http://conference#Chair	http://cmt#Chairman	http://conference#Chair > http://cmt#Chairman (1.0, unrevised)	correct
+AND[INVERSE[http://conference#has_authors], INVERSE[http://conference#has_a_review]]	http://cmt#hasBeenAssigned		FP
+AND[http://conference#contributes, http://conference#reviews]	http://cmt#hasBeenAssigned		FP
+AND[INVERSE[http://conference#has_authors], http://conference#reviews]	http://cmt#hasBeenAssigned		FP
+http://conference#Committee_member	http://cmt#ProgramCommitteeMember	http://conference#was_a_member_of some http://conference#Program_committee = http://cmt#ProgramCommitteeMember (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_members] some http://conference#Program_committee	http://cmt#ProgramCommitteeMember	http://conference#was_a_member_of some http://conference#Program_committee = http://cmt#ProgramCommitteeMember (1.0, unrevised)	overlap
+http://conference#was_a_member_of some http://conference#Program_committee	http://cmt#ProgramCommitteeMember	http://conference#was_a_member_of some http://conference#Program_committee = http://cmt#ProgramCommitteeMember (1.0, unrevised)	correct
+INVERSE[http://conference#has_authors] min 1	http://cmt#Co-author	http://conference#Contribution_co-author = http://cmt#Co-author (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors] min 1	http://cmt#Co-author	http://conference#has_authors < http://cmt#hasAuthor (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors] min 1	http://cmt#Co-author	http://conference#has_authors < http://cmt#writtenBy (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors] min 1	http://cmt#Co-author	http://conference#has_authors < http://cmt#hasCo-author (1.0, unrevised)	incorrect
+AND[INVERSE[http://conference#has_contributions], INVERSE[http://conference#was_a_committee_of], http://conference#has_members]	http://cmt#acceptedBy		FP
+AND[http://conference#is_submitted_at, http://conference#has_a_commtitee, http://conference#has_members]	http://cmt#acceptedBy		FP
+AND[INVERSE[http://conference#has_contributions], INVERSE[http://conference#was_a_committee_of], INVERSE[http://conference#was_a_member_of]]	http://cmt#acceptedBy		FP
+AND[INVERSE[http://conference#has_contributions], http://conference#has_a_commtitee, http://conference#has_members]	http://cmt#acceptedBy		FP
+INVERSE[http://conference#has_authors] some http://conference#Review	http://cmt#Reviewer		FP
+http://conference#contributes some http://conference#Review	http://cmt#Reviewer		FP
+http://conference#Reviewer	http://cmt#Reviewer	http://conference#Reviewer = OR[http://cmt#Reviewer, http://cmt#ExternalReviewer] (1.0, unrevised)	contained
+AND[http://conference#was_a_member_of, http://conference#was_a_committee_of, http://conference#has_contributions]	http://cmt#rejectPaper		FP
+AND[INVERSE[http://conference#has_members], INVERSE[http://conference#has_a_commtitee], http://conference#has_contributions]	http://cmt#rejectPaper		FP
+AND[INVERSE[http://conference#has_members], INVERSE[http://conference#has_a_commtitee], INVERSE[http://conference#is_submitted_at]]	http://cmt#rejectPaper		FP
+AND[INVERSE[http://conference#has_members], http://conference#was_a_committee_of, http://conference#has_contributions]	http://cmt#rejectPaper		FP
+INVERSE[http://conference#has_authors]	http://cmt#submitPaper	http://conference#has_authors < http://cmt#hasAuthor (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors]	http://cmt#submitPaper	http://conference#has_authors < http://cmt#writtenBy (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors]	http://cmt#submitPaper	http://conference#has_authors < http://cmt#hasCo-author (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors]	http://cmt#submitPaper	http://conference#Submitted_contribution = INVERSE[http://cmt#submitPaper] min 1 (1.0, unrevised)	incorrect
+http://conference#contributes	http://cmt#submitPaper	http://conference#contributes < http://cmt#writePaper (1.0, unrevised)	incorrect
+http://conference#contributes	http://cmt#submitPaper	http://conference#contributes < http://cmt#writeReview (1.0, unrevised)	incorrect
+http://conference#contributes	http://cmt#submitPaper	http://conference#contributes < http://cmt#co-writePaper (1.0, unrevised)	incorrect
+http://conference#contributes	http://cmt#submitPaper	http://conference#Submitted_contribution = INVERSE[http://cmt#submitPaper] min 1 (1.0, unrevised)	incorrect
+AND[http://conference#has_a_review, http://conference#has_authors]	http://cmt#readByMeta-Reviewer		FP
+http://conference#contributes	http://cmt#markConflictOfInterest	http://conference#contributes < http://cmt#writePaper (1.0, unrevised)	incorrect
+http://conference#contributes	http://cmt#markConflictOfInterest	http://conference#contributes < http://cmt#writeReview (1.0, unrevised)	incorrect
+http://conference#contributes	http://cmt#markConflictOfInterest	http://conference#contributes < http://cmt#co-writePaper (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors]	http://cmt#markConflictOfInterest	http://conference#has_authors < http://cmt#hasAuthor (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors]	http://cmt#markConflictOfInterest	http://conference#has_authors < http://cmt#writtenBy (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors]	http://cmt#markConflictOfInterest	http://conference#has_authors < http://cmt#hasCo-author (1.0, unrevised)	incorrect
+AND[INVERSE[http://conference#reviews], AND[Range(http://conference#Reviewer), http://conference#has_authors]]	http://cmt#readByReviewer	AND[AND[http://conference#has_a_review, http://conference#has_authors], Range(http://conference#Reviewer)] = http://cmt#readByReviewer (1.0, unrevised)	overlap
+AND[INVERSE[http://conference#reviews], AND[Range(http://conference#Reviewer), INVERSE[http://conference#contributes]]]	http://cmt#readByReviewer	AND[AND[http://conference#has_a_review, http://conference#has_authors], Range(http://conference#Reviewer)] = http://cmt#readByReviewer (1.0, unrevised)	overlap
+AND[INVERSE[http://conference#reviews], AND[Range(http://conference#Reviewer), INVERSE[http://conference#contributes]]]	http://cmt#readByReviewer	AND[AND[http://conference#contributes, http://conference#reviews], Domain(http://conference#Reviewer)] = http://cmt#readPaper (1.0, unrevised)	incorrect
+AND[http://conference#has_a_review, AND[Range(http://conference#Reviewer), http://conference#has_authors]]	http://cmt#readByReviewer	AND[AND[http://conference#has_a_review, http://conference#has_authors], Range(http://conference#Reviewer)] = http://cmt#readByReviewer (1.0, unrevised)	correct
+http://conference#has_authors http://conference-instances#person-1289866755	http://cmt#rejectedBy http://cmt-instances#person-826848348		FP
+INVERSE[http://conference#has_authors] some http://conference#Conference_document	http://cmt#memberOfConference http://cmt-instances#conference594425059		FP
+http://conference#contributes some http://conference#Conference_document	http://cmt#memberOfConference http://cmt-instances#conference594425059		FP
+AND[http://conference#is_submitted_at, http://conference#has_a_commtitee, http://conference#has_members]	http://cmt#rejectedBy		FP
+AND[INVERSE[http://conference#has_contributions], INVERSE[http://conference#was_a_committee_of], INVERSE[http://conference#was_a_member_of]]	http://cmt#rejectedBy		FP
+AND[INVERSE[http://conference#has_contributions], INVERSE[http://conference#was_a_committee_of], http://conference#has_members]	http://cmt#rejectedBy		FP
+AND[INVERSE[http://conference#has_contributions], http://conference#has_a_commtitee, http://conference#has_members]	http://cmt#rejectedBy		FP
+AND[http://conference#was_a_member_of, AND[Range(http://conference#Conference), http://conference#was_a_committee_of]]	http://cmt#memberOfConference		FP
+AND[INVERSE[http://conference#has_authors], AND[Range(http://conference#Conference), INVERSE[http://conference#has_contributions]]]	http://cmt#memberOfConference		FP
+AND[http://conference#contributes, AND[Range(http://conference#Conference), http://conference#is_submitted_at]]	http://cmt#memberOfConference		FP
+AND[INVERSE[http://conference#has_members], AND[Range(http://conference#Conference), http://conference#was_a_committee_of]]	http://cmt#memberOfConference		FP
+AND[INVERSE[http://conference#has_authors], AND[Range(http://conference#Conference), http://conference#is_submitted_at]]	http://cmt#memberOfConference		FP
+AND[INVERSE[http://conference#has_members], AND[Range(http://conference#Conference), INVERSE[http://conference#has_a_commtitee]]]	http://cmt#memberOfConference		FP
+http://conference#contributes	http://cmt#writePaper	http://conference#contributes < http://cmt#writePaper (1.0, unrevised)	correct
+INVERSE[http://conference#has_authors]	http://cmt#writePaper	http://conference#has_authors < http://cmt#hasAuthor (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors]	http://cmt#writePaper	http://conference#has_authors < http://cmt#writtenBy (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors]	http://cmt#writePaper	http://conference#has_authors < http://cmt#hasCo-author (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors]	http://cmt#writePaper	http://conference#contributes < http://cmt#writePaper (1.0, unrevised)	incorrect
+AND[http://conference#has_a_review, http://conference#has_authors]	http://cmt#assignedTo		FP
+AND[INVERSE[http://conference#reviews], INVERSE[http://conference#contributes]]	http://cmt#assignedTo		FP
+AND[INVERSE[http://conference#reviews], http://conference#has_authors]	http://cmt#assignedTo		FP
+AND[INVERSE[http://conference#has_members], http://conference#was_a_committee_of, http://conference#has_contributions]	http://cmt#acceptPaper		FP
+AND[INVERSE[http://conference#has_members], INVERSE[http://conference#has_a_commtitee], http://conference#has_contributions]	http://cmt#acceptPaper		FP
+AND[INVERSE[http://conference#has_members], INVERSE[http://conference#has_a_commtitee], INVERSE[http://conference#is_submitted_at]]	http://cmt#acceptPaper		FP
+AND[http://conference#was_a_member_of, http://conference#was_a_committee_of, http://conference#has_contributions]	http://cmt#acceptPaper		FP
+http://conference#has_authors	http://cmt#hasAuthor	http://conference#has_authors < http://cmt#hasAuthor (1.0, unrevised)	correct
+http://conference#reviews some http://conference#Conference_document	http://cmt#Document	http://conference#Conference_document = http://cmt#Document (1.0, unrevised)	overlap
+http://conference#Conference_document	http://cmt#Document	http://conference#Conference_document = http://cmt#Document (1.0, unrevised)	correct
+INVERSE[http://conference#contributes]	http://cmt#writtenBy	http://conference#has_authors < http://cmt#writtenBy (1.0, unrevised)	incorrect
+INVERSE[http://conference#contributes]	http://cmt#writtenBy	http://conference#contributes < http://cmt#writePaper (1.0, unrevised)	incorrect
+INVERSE[http://conference#contributes]	http://cmt#writtenBy	http://conference#contributes < http://cmt#writeReview (1.0, unrevised)	incorrect
+INVERSE[http://conference#contributes]	http://cmt#writtenBy	http://conference#contributes < http://cmt#co-writePaper (1.0, unrevised)	incorrect
+http://conference#has_authors	http://cmt#writtenBy	http://conference#has_authors < http://cmt#hasAuthor (1.0, unrevised)	incorrect
+http://conference#has_authors	http://cmt#writtenBy	http://conference#has_authors < http://cmt#writtenBy (1.0, unrevised)	correct
+http://conference#Conference_applicant	http://cmt#ConferenceChair		FP
+AND[INVERSE[http://conference#has_members], INVERSE[http://conference#was_a_member_of]]	http://cmt#assignedByAdministrator		FP
+AND[http://conference#was_a_member_of, http://conference#has_members]	http://cmt#assignedByAdministrator		FP
+AND[INVERSE[http://conference#has_members], http://conference#has_members]	http://cmt#assignedByAdministrator	http://conference#has_members < http://cmt#hasProgramCommitteeMember (1.0, unrevised)	incorrect
+http://conference#contributes	http://cmt#co-writePaper	http://conference#contributes < http://cmt#writePaper (1.0, unrevised)	incorrect
+http://conference#contributes	http://cmt#co-writePaper	http://conference#contributes < http://cmt#writeReview (1.0, unrevised)	incorrect
+http://conference#contributes	http://cmt#co-writePaper	http://conference#contributes < http://cmt#co-writePaper (1.0, unrevised)	correct
+INVERSE[http://conference#has_authors]	http://cmt#co-writePaper	http://conference#has_authors < http://cmt#hasAuthor (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors]	http://cmt#co-writePaper	http://conference#has_authors < http://cmt#writtenBy (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors]	http://cmt#co-writePaper	http://conference#has_authors < http://cmt#hasCo-author (1.0, unrevised)	incorrect
+INVERSE[http://conference#has_authors]	http://cmt#co-writePaper	http://conference#contributes < http://cmt#co-writePaper (1.0, unrevised)	incorrect
+AND[INVERSE[http://conference#has_members], AND[Range(http://conference#Reviewer), INVERSE[http://conference#was_a_member_of]]]	http://cmt#assignReviewer		FP
+AND[INVERSE[http://conference#has_members], AND[Range(http://conference#Reviewer), http://conference#has_members]]	http://cmt#assignReviewer		FP
+AND[http://conference#was_a_member_of, AND[Range(http://conference#Reviewer), http://conference#has_members]]	http://cmt#assignReviewer		FP
+OR[INVERSE[http://conference#contributes] http://conference-instances#person-1253694339, INVERSE[http://conference#contributes] http://conference-instances#person-61831363]	http://cmt#acceptedBy http://cmt-instances#person-826848348		FP
+AND[Domain(http://conference#Program_committee), Range(http://conference#Committee_member), INVERSE[http://conference#was_a_member_of]]	http://cmt#hasProgramCommitteeMember	http://conference#has_members < http://cmt#hasProgramCommitteeMember (1.0, unrevised)	incorrect
+AND[Domain(http://conference#Program_committee), Range(http://conference#Committee_member), http://conference#has_members]	http://cmt#hasProgramCommitteeMember	http://conference#has_members < http://cmt#hasProgramCommitteeMember (1.0, unrevised)	overlap

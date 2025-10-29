@@ -1,0 +1,88 @@
+mapping e1	mapping e2	ref e2
+INVERSE[http://edas#hasMember] some http://edas#Conference	http://cmt#ConferenceMember	http://edas#isMemberOf min 1 = http://cmt#ConferenceMember (1.0, unrevised)	incorrect
+http://edas#isMemberOf some http://edas#Conference	http://cmt#ConferenceMember	http://edas#isMemberOf min 1 = http://cmt#ConferenceMember (1.0, unrevised)	overlap
+http://edas#Reviewer	http://cmt#Meta-Reviewer	http://edas#Reviewer = http://cmt#Reviewer (1.0, unrevised)	incorrect
+http://edas#Paper	http://cmt#Paper	http://edas#Paper = http://cmt#Paper (1.0, unrevised)	correct
+AND[Range(http://edas#RejectedPaper), http://edas#isReviewing]	http://cmt#readPaper	http://edas#isReviewing < http://cmt#readPaper (1.0, unrevised)	overlap
+AND[Range(http://edas#RejectedPaper), INVERSE[http://edas#isReviewedBy]]	http://cmt#readPaper	http://edas#isReviewing < http://cmt#readPaper (1.0, unrevised)	incorrect
+http://edas#isMemberOf http://edas-instances#conference594425059	http://cmt#memberOfConference http://cmt-instances#conference594425059		FP
+INVERSE[http://edas#hasMember] http://edas-instances#conference594425059	http://cmt#memberOfConference http://cmt-instances#conference594425059		FP
+http://edas#Author	http://cmt#Author	http://edas#Author = http://cmt#Author (1.0, unrevised)	correct
+AND[Domain(http://edas#Conference), http://edas#hasMember]	http://cmt#hasConferenceMember	http://edas#hasMember = http://cmt#hasConferenceMember (1.0, unrevised)	overlap
+AND[Domain(http://edas#Conference), INVERSE[http://edas#isMemberOf]]	http://cmt#hasConferenceMember	http://edas#hasMember = http://cmt#hasConferenceMember (1.0, unrevised)	incorrect
+http://edas#Person	http://cmt#Person	http://edas#Person = http://cmt#Person (1.0, unrevised)	correct
+http://edas#relatesTo some http://edas#Reviewer	http://cmt#Review	http://edas#Review = http://cmt#Review (1.0, unrevised)	incorrect
+http://edas#Review	http://cmt#Review	http://edas#Review = http://cmt#Review (1.0, unrevised)	correct
+INVERSE[http://edas#hasRelatedDocument] some http://edas#Reviewer	http://cmt#Review	http://edas#Review = http://cmt#Review (1.0, unrevised)	incorrect
+INVERSE[http://edas#hasRelatedPaper]	http://cmt#hasCo-author	http://edas#hasRelatedPaper = http://cmt#writePaper (1.0, unrevised)	incorrect
+http://edas#isWrittenBy	http://cmt#hasCo-author	http://edas#isWrittenBy = http://cmt#hasAuthor (1.0, unrevised)	incorrect
+AND[Range(http://edas#Review), http://edas#hasRelatedDocument]	http://cmt#writeReview	http://edas#hasRelatedDocument < http://cmt#writeReview (1.0, unrevised)	overlap
+AND[Range(http://edas#Review), INVERSE[http://edas#relatesTo]]	http://cmt#writeReview	http://edas#hasRelatedDocument < http://cmt#writeReview (1.0, unrevised)	incorrect
+http://edas#hasName	http://cmt#name	http://edas#hasName > http://cmt#name (1.0, unrevised)	correct
+http://edas#Review	http://cmt#Meta-Review	http://edas#Review = http://cmt#Review (1.0, unrevised)	incorrect
+http://edas#isMemberOf http://edas-instances#conference594425059	http://cmt#memberOfProgramCommittee http://cmt-instances#pc594425059		FP
+INVERSE[http://edas#hasMember] http://edas-instances#conference594425059	http://cmt#memberOfProgramCommittee http://cmt-instances#pc594425059		FP
+http://edas#Conference	http://cmt#Conference	http://edas#Conference = http://cmt#Conference (1.0, unrevised)	correct
+http://edas#hasRelatedPaper some http://edas#Paper	http://cmt#User		FP
+INVERSE[http://edas#isReviewedBy] some http://edas#Paper	http://cmt#User		FP
+INVERSE[http://edas#isReviewedBy]	http://cmt#hasBeenAssigned	http://edas#isReviewedBy < http://cmt#readByReviewer (1.0, unrevised)	incorrect
+INVERSE[http://edas#isReviewedBy]	http://cmt#hasBeenAssigned	http://edas#isReviewedBy < http://cmt#readByMeta-Reviewer (1.0, unrevised)	incorrect
+http://edas#isReviewing	http://cmt#hasBeenAssigned	http://edas#isReviewing < http://cmt#readPaper (1.0, unrevised)	incorrect
+http://edas#AcceptedPaper	http://cmt#acceptedBy http://cmt-instances#person-826848348	http://edas#AcceptedPaper = OR[http://cmt#acceptedBy min 1, http://cmt#hasDecision some http://cmt#Acceptance] (1.0, unrevised)	overlap
+OR[http://edas#isReviewedBy http://edas-instances#person414686799, http://edas#isReviewedBy http://edas-instances#person-1866256515, http://edas#isReviewedBy http://edas-instances#person1016850689, http://edas#isReviewedBy http://edas-instances#person886264772, http://edas#isReviewedBy http://edas-instances#person-1191153903, http://edas#isReviewedBy http://edas-instances#person-836803373]	http://cmt#rejectedBy http://cmt-instances#person-826848348		FP
+INVERSE[http://edas#isReviewing] http://edas-instances#person-836803373	http://cmt#rejectedBy http://cmt-instances#person-826848348		FP
+http://edas#RejectedPaper	http://cmt#rejectedBy http://cmt-instances#person-826848348	http://edas#RejectedPaper = OR[http://cmt#hasDecision some http://cmt#Rejection, http://cmt#rejectedBy min 1] (1.0, unrevised)	overlap
+http://edas#Author	http://cmt#Co-author	http://edas#Author = http://cmt#Author (1.0, unrevised)	incorrect
+AND[AND[Domain(http://edas#AcceptedPaper), INVERSE[http://edas#hasRelatedDocument]], http://edas#hasMember]	http://cmt#acceptedBy		FP
+AND[AND[Domain(http://edas#AcceptedPaper), http://edas#relatesTo], http://edas#hasMember]	http://cmt#acceptedBy		FP
+AND[AND[Domain(http://edas#AcceptedPaper), http://edas#relatesTo], INVERSE[http://edas#isMemberOf]]	http://cmt#acceptedBy		FP
+AND[AND[Domain(http://edas#AcceptedPaper), INVERSE[http://edas#hasRelatedDocument]], INVERSE[http://edas#isMemberOf]]	http://cmt#acceptedBy		FP
+INVERSE[http://edas#relatesTo] some http://edas#Review	http://cmt#Reviewer	http://edas#Reviewer = http://cmt#Reviewer (1.0, unrevised)	incorrect
+http://edas#Reviewer	http://cmt#Reviewer	http://edas#Reviewer = http://cmt#Reviewer (1.0, unrevised)	correct
+http://edas#hasRelatedDocument some http://edas#Review	http://cmt#Reviewer	http://edas#Reviewer = http://cmt#Reviewer (1.0, unrevised)	incorrect
+AND[INVERSE[http://edas#hasMember], AND[Range(http://edas#RejectedPaper), INVERSE[http://edas#relatesTo]]]	http://cmt#rejectPaper		FP
+AND[http://edas#isMemberOf, AND[Range(http://edas#RejectedPaper), http://edas#hasRelatedDocument]]	http://cmt#rejectPaper		FP
+AND[http://edas#isMemberOf, AND[Range(http://edas#RejectedPaper), INVERSE[http://edas#relatesTo]]]	http://cmt#rejectPaper		FP
+AND[INVERSE[http://edas#hasMember], AND[Range(http://edas#RejectedPaper), http://edas#hasRelatedDocument]]	http://cmt#rejectPaper		FP
+http://edas#hasRelatedPaper	http://cmt#submitPaper	http://edas#hasRelatedPaper = http://cmt#writePaper (1.0, unrevised)	incorrect
+http://edas#isReviewedBy	http://cmt#readByMeta-Reviewer	http://edas#isReviewedBy < http://cmt#readByReviewer (1.0, unrevised)	incorrect
+http://edas#isReviewedBy	http://cmt#readByMeta-Reviewer	http://edas#isReviewedBy < http://cmt#readByMeta-Reviewer (1.0, unrevised)	correct
+INVERSE[http://edas#isReviewing]	http://cmt#readByMeta-Reviewer	http://edas#isReviewing < http://cmt#readPaper (1.0, unrevised)	incorrect
+INVERSE[http://edas#isReviewing]	http://cmt#readByMeta-Reviewer	http://edas#isReviewedBy < http://cmt#readByMeta-Reviewer (1.0, unrevised)	incorrect
+http://edas#hasRelatedPaper	http://cmt#markConflictOfInterest	http://edas#hasRelatedPaper = http://cmt#writePaper (1.0, unrevised)	incorrect
+INVERSE[http://edas#isWrittenBy]	http://cmt#markConflictOfInterest	http://edas#isWrittenBy = http://cmt#hasAuthor (1.0, unrevised)	incorrect
+INVERSE[http://edas#isTopicOf]	http://cmt#hasSubjectArea	http://edas#hasTopic < http://cmt#hasSubjectArea (1.0, unrevised)	incorrect
+http://edas#hasTopic	http://cmt#hasSubjectArea	http://edas#hasTopic < http://cmt#hasSubjectArea (1.0, unrevised)	correct
+AND[Range(http://edas#Reviewer), INVERSE[http://edas#isReviewing]]	http://cmt#readByReviewer	http://edas#isReviewedBy < http://cmt#readByReviewer (1.0, unrevised)	incorrect
+AND[Range(http://edas#Reviewer), http://edas#isReviewedBy]	http://cmt#readByReviewer	http://edas#isReviewedBy < http://cmt#readByReviewer (1.0, unrevised)	overlap
+AND[AND[Domain(http://edas#RejectedPaper), INVERSE[http://edas#hasRelatedDocument]], INVERSE[http://edas#isMemberOf]]	http://cmt#rejectedBy		FP
+AND[AND[Domain(http://edas#RejectedPaper), http://edas#relatesTo], http://edas#hasMember]	http://cmt#rejectedBy		FP
+AND[AND[Domain(http://edas#RejectedPaper), http://edas#relatesTo], INVERSE[http://edas#isMemberOf]]	http://cmt#rejectedBy		FP
+AND[AND[Domain(http://edas#RejectedPaper), INVERSE[http://edas#hasRelatedDocument]], http://edas#hasMember]	http://cmt#rejectedBy		FP
+AND[Range(http://edas#Conference), http://edas#isMemberOf]	http://cmt#memberOfConference	http://edas#isMemberOf = http://cmt#memberOfConference (1.0, unrevised)	overlap
+AND[Range(http://edas#Conference), INVERSE[http://edas#hasMember]]	http://cmt#memberOfConference	http://edas#isMemberOf = http://cmt#memberOfConference (1.0, unrevised)	incorrect
+AND[Range(http://edas#RejectedPaper), http://edas#hasRelatedPaper]	http://cmt#writePaper	http://edas#hasRelatedPaper = http://cmt#writePaper (1.0, unrevised)	overlap
+AND[Range(http://edas#RejectedPaper), INVERSE[http://edas#isWrittenBy]]	http://cmt#writePaper	http://edas#hasRelatedPaper = http://cmt#writePaper (1.0, unrevised)	incorrect
+INVERSE[http://edas#isReviewing]	http://cmt#assignedTo	http://edas#isReviewing < http://cmt#readPaper (1.0, unrevised)	incorrect
+http://edas#isReviewedBy	http://cmt#assignedTo	http://edas#isReviewedBy < http://cmt#readByReviewer (1.0, unrevised)	incorrect
+http://edas#isReviewedBy	http://cmt#assignedTo	http://edas#isReviewedBy < http://cmt#readByMeta-Reviewer (1.0, unrevised)	incorrect
+AND[http://edas#isMemberOf, AND[Range(http://edas#AcceptedPaper), http://edas#hasRelatedDocument]]	http://cmt#acceptPaper		FP
+AND[INVERSE[http://edas#hasMember], AND[Range(http://edas#AcceptedPaper), INVERSE[http://edas#relatesTo]]]	http://cmt#acceptPaper		FP
+AND[http://edas#isMemberOf, AND[Range(http://edas#AcceptedPaper), INVERSE[http://edas#relatesTo]]]	http://cmt#acceptPaper		FP
+AND[INVERSE[http://edas#hasMember], AND[Range(http://edas#AcceptedPaper), http://edas#hasRelatedDocument]]	http://cmt#acceptPaper		FP
+AND[Range(http://edas#Author), http://edas#isWrittenBy]	http://cmt#hasAuthor	http://edas#isWrittenBy = http://cmt#hasAuthor (1.0, unrevised)	overlap
+AND[Range(http://edas#Author), INVERSE[http://edas#hasRelatedPaper]]	http://cmt#hasAuthor	http://edas#isWrittenBy = http://cmt#hasAuthor (1.0, unrevised)	incorrect
+http://edas#Document	http://cmt#Document	http://edas#Document = http://cmt#Document (1.0, unrevised)	correct
+INVERSE[http://edas#hasRelatedDocument]	http://cmt#writtenBy	http://edas#hasRelatedDocument < http://cmt#writeReview (1.0, unrevised)	incorrect
+INVERSE[http://edas#hasRelatedDocument]	http://cmt#writtenBy	http://edas#relatesTo < http://cmt#writtenBy (1.0, unrevised)	incorrect
+http://edas#relatesTo	http://cmt#writtenBy	http://edas#relatesTo < http://cmt#writtenBy (1.0, unrevised)	correct
+INVERSE[http://edas#hasMember] some http://edas#Conference	http://cmt#ConferenceChair	http://edas#ConferenceChair = http://cmt#ConferenceChair (1.0, unrevised)	incorrect
+http://edas#isMemberOf some http://edas#Conference	http://cmt#ConferenceChair	http://edas#ConferenceChair = http://cmt#ConferenceChair (1.0, unrevised)	incorrect
+http://edas#ConferenceChair	http://cmt#ConferenceChair	http://edas#ConferenceChair = http://cmt#ConferenceChair (1.0, unrevised)	correct
+AND[INVERSE[http://edas#hasMember], INVERSE[http://edas#isMemberOf]]	http://cmt#assignedByAdministrator		FP
+AND[http://edas#isMemberOf, http://edas#hasMember]	http://cmt#assignedByAdministrator		FP
+AND[INVERSE[http://edas#hasMember], http://edas#hasMember]	http://cmt#assignedByAdministrator	http://edas#hasMember = http://cmt#hasConferenceMember (1.0, unrevised)	incorrect
+http://edas#hasRelatedPaper	http://cmt#co-writePaper	http://edas#hasRelatedPaper = http://cmt#writePaper (1.0, unrevised)	incorrect
+AND[INVERSE[http://edas#hasMember], AND[Range(http://edas#Reviewer), INVERSE[http://edas#isMemberOf]]]	http://cmt#assignReviewer		FP
+AND[INVERSE[http://edas#hasMember], AND[Range(http://edas#Reviewer), http://edas#hasMember]]	http://cmt#assignReviewer		FP
+AND[http://edas#isMemberOf, AND[Range(http://edas#Reviewer), http://edas#hasMember]]	http://cmt#assignReviewer		FP

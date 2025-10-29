@@ -1,0 +1,12 @@
+mapping e1	mapping e2	ref e2
+http://gmo#Person	http://gbo#Person	http://gmo#Person = http://gbo#Person (1.0, unrevised)	correct
+http://gmo#Cruise	http://gbo#Cruise	http://gmo#Cruise < http://gbo#hasCruiseType min 1 (1.0, unrevised)	incorrect
+http://gmo#Cruise	http://gbo#Cruise	http://gmo#Cruise = http://gbo#Cruise (1.0, unrevised)	correct
+http://gmo#Organization	http://gbo#Organization	http://gmo#Organization = http://gbo#Organization (1.0, unrevised)	correct
+http://gmo#Program	http://gbo#Program	http://gmo#Program = http://gbo#Program (1.0, unrevised)	correct
+http://gmo#FundingAward	http://gbo#Award	http://gmo#FundingAward = http://gbo#Award (1.0, unrevised)	correct
+http://gmo#Place	http://gbo#Place	http://gmo#Place < http://gbo#hasGeoFeatureType min 1 (1.0, unrevised)	incorrect
+http://gmo#Place	http://gbo#Place	http://gmo#Place < http://gbo#hasPlaceType min 1 (1.0, unrevised)	incorrect
+http://gmo#Place	http://gbo#Place	http://gmo#Place = http://gbo#Place (1.0, unrevised)	correct
+http://gmo#firstOrGivenName	http://gbo#hasGivenName		FP
+http://example.org/ontology2/Person	http://gbo#Person	http://gmo#Person = http://gbo#Person (1.0, unrevised)	incorrect

@@ -1,0 +1,47 @@
+	GED	Score	correct ref classes	category
+OC_Chair.tsv				false negative
+OC_Member.tsv				false negative
+Conference_part.tsv v. Conference_part.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_part.tsv	2.5	0.2857142857142857	1	correct
+Conference_proceedings.tsv v. Conference_part.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_www.tsv v. Conference_part.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contributor.tsv v. Conference_part.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_part.tsv	2.5	0.2857142857142857	0	incorrect
+Abstract.tsv				false negative
+Reviewer.tsv				false negative
+PC_Chair.tsv				false negative
+PC_Member.tsv				false negative
+Regular_author.tsv v. Regular_author.tsv	2.5	0.2857142857142857	0	incorrect
+Workshop_Chair.tsv v. Workshop_Chair.tsv	0.0	1.0	1	correct
+Workshop.tsv v. Workshop_Chair.tsv	2.5	0.2857142857142857	0	incorrect
+Paper.tsv				false negative
+has_a_track-workshop-tutorial_topic.tsv				false negative
+has_authors_5209.tsv				false negative
+has_authors.tsv				false negative
+has_parts.tsv				false negative
+contributes.tsv				false negative
+Track.tsv				false negative
+issues.tsv				false negative
+is_a_topis_of_conference_parts.tsv				false negative
+is_part_of_conference_volumes.tsv				false negative
+is_the_1th_part_of.tsv				false negative
+Organization.tsv				false negative
+Tutorial_Chair.tsv v. Tutorial_Chair.tsv	0.0	1.0	1	correct
+Tutorial.tsv v. Tutorial_Chair.tsv	2.5	0.2857142857142857	0	incorrect
+Review.tsv				false negative
+Publisher.tsv				false negative
+Topic.tsv				false negative
+Document.tsv				false negative
+Written_contribution.tsv				false negative
+Rejected_contribution.tsv				false negative
+Person.tsv				false negative
+Information_for_participants.tsv				false negative
+Organizer.tsv				false negative
+Reviewed_contribution.tsv v. Reviewed_contribution.tsv	2.5	0.2857142857142857	0	incorrect
+Session_Chair.tsv				false negative
+SC_Member.tsv				false negative
+Invited_Talk_Abstract.tsv				false negative
+Invited_speaker.tsv				false negative
+Submitted_contribution.tsv				false negative
+Accepted_contribution.tsv				false negative
+Contributed_Talk.tsv				false positive

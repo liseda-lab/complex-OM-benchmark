@@ -1,0 +1,86 @@
+	GED	Score	correct ref classes	category
+Place_3406.tsv v. Place.tsv	2.5	0.375	0	incorrect
+Place.tsv v. Place.tsv	2.5	0.375	0	incorrect
+Place_7423.tsv v. Place.tsv	0.0	1.0	1	correct
+hasPlatformType.tsv				false negative
+Cruise_6552.tsv v. Cruise.tsv	0.0	1.0	1	correct
+Cruise.tsv v. Cruise.tsv	2.5	0.375	0	incorrect
+hasAbstract.tsv				false negative
+hasCruiseType.tsv				false negative
+GeoFeatureType.tsv				false negative
+hasDescription.tsv v. hasDescription.tsv	5.5	0.2142857142857143	1	contained in ref
+PhysicalSample_8483.tsv v. PhysicalSample.tsv	0.0	1.0	1	correct
+PhysicalSample.tsv v. PhysicalSample.tsv	2.5	0.375	0	incorrect
+CruiseType.tsv				false negative
+Organization.tsv v. Organization.tsv	0.0	1.0	1	correct
+Award.tsv v. Award.tsv	0.0	1.0	1	correct
+hasIdentifierValue.tsv v. hasIdentifierValue.tsv	0.0	1.0	1	correct
+hasSampleType.tsv				false negative
+PhysicalSampleType.tsv				false negative
+hasIdentifierScheme.tsv v. hasIdentifierScheme.tsv	1.0	0.6	0	incorrect
+Vessel.tsv v. Vessel.tsv	0.0	1.0	1	correct
+fundedBy.tsv				false negative
+Platform_7071.tsv v. Platform.tsv	0.0	1.0	1	correct
+Platform.tsv v. Platform.tsv	2.5	0.375	0	incorrect
+hasAward.tsv v. hasAward.tsv	1.0	0.6	0	incorrect
+hasSubOrganization.tsv v. hasSubOrganization.tsv	0.0	1.0	1	correct
+hasSubOrganization_7587.tsv v. hasSubOrganization.tsv	2.5	0.375	0	incorrect
+atPort_6747.tsv v. atPort.tsv	2.5	0.375	0	incorrect
+atPort.tsv v. atPort.tsv	0.0	1.0	1	correct
+hasProgram.tsv v. hasProgram.tsv	0.0	1.0	1	correct
+Person.tsv v. Person.tsv	1.0	0.6	0	incorrect
+PlatformType.tsv				false negative
+Identifier.tsv v. Identifier.tsv	0.0	1.0	1	correct
+hasTitle.tsv				false negative
+hasPlaceType.tsv				false negative
+PlaceType.tsv				false negative
+associatedWithProgram.tsv				false negative
+originatesFrom.tsv v. originatesFrom.tsv	0.0	1.0	1	correct
+originatesFrom_2406.tsv v. originatesFrom.tsv	2.5	0.375	0	incorrect
+hasGeoFeatureType.tsv				false negative
+hasIdentifier.tsv v. hasIdentifier.tsv	3.0	0.4545454545454546	1	contained in ref
+PortCall.tsv v. PortCall.tsv	1.0	0.6	0	incorrect
+GeoFeature.tsv				false negative
+Program.tsv v. Program.tsv	0.0	1.0	1	correct
+hasNameSuffix.tsv				false positive
+hasGeologicAgeValue.tsv				false positive
+Meeting.tsv				false positive
+hasRelatedCruise.tsv				false positive
+hasFormat.tsv				false positive
+isPortOf.tsv				false positive
+performs.tsv				false positive
+Participant.tsv				false positive
+hasStudent.tsv				false positive
+hasIdentifierResolveURL.tsv				false positive
+hasAffiliation.tsv				false positive
+hasStratigraphicUnit.tsv				false positive
+hasNamePrefix.tsv				false positive
+hasFamilyName.tsv				false positive
+hasStageName.tsv				false positive
+hasEndDate.tsv				false positive
+hasFullName.tsv				false positive
+hasRoleType.tsv				false positive
+DigitalObject.tsv				false positive
+hasGivenName.tsv				false positive
+hasOperator.tsv				false positive
+FeatureType.tsv				false positive
+hasInstrument.tsv				false positive
+isPerformedBy.tsv				false positive
+hasPlace.tsv				false positive
+hasContributor.tsv				false positive
+isSubOrganizationOf.tsv				false positive
+hasMiddleName.tsv				false positive
+MeasurementType.tsv				false positive
+Feature.tsv				false positive
+hasSponsor.tsv				false positive
+hasDuration.tsv				false positive
+Dataset.tsv				false positive
+isPlaceOf.tsv				false positive
+hasOperationArea.tsv				false positive
+hasCurator.tsv				false positive
+RoleType.tsv				false positive
+hasCollector.tsv				false positive
+isProgramOf.tsv				false positive
+hasRepository.tsv				false positive
+hasFeatureType.tsv				false positive
+hasLandingPage.tsv				false positive

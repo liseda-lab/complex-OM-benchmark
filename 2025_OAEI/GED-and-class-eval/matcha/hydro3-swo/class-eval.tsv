@@ -1,0 +1,26 @@
+mapping e1	mapping e2	ref e2
+http://cegis.usgs.gov/SWO/SeaOrOcean	http://spatial.maine.edu/semgaz/HydroOntology/Ocean	http://cegis.usgs.gov/SWO/SeaOrOcean < http://spatial.maine.edu/semgaz/HydroOntology/Ocean (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/isConnectedTo	http://spatial.maine.edu/semgaz/HydroOntology/isHydrologicallyConnectedTo	http://cegis.usgs.gov/SWO/isConnectedTo < http://spatial.maine.edu/semgaz/HydroOntology/isHydrologicallyConnectedTo (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/LakeOrPond	http://spatial.maine.edu/semgaz/HydroOntology/Lake	http://cegis.usgs.gov/SWO/LakeOrPond < http://spatial.maine.edu/semgaz/HydroOntology/Lake (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/Waterfall	http://spatial.maine.edu/semgaz/HydroOntology/Falls	http://cegis.usgs.gov/SWO/Waterfall = http://spatial.maine.edu/semgaz/HydroOntology/Falls (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/Rapids	http://spatial.maine.edu/semgaz/HydroOntology/Rapids	http://cegis.usgs.gov/SWO/Rapids = http://spatial.maine.edu/semgaz/HydroOntology/Rapids (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/UnderwaterFeature	http://spatial.maine.edu/semgaz/HydroOntology/SaltWater_Feature		FP
+http://cegis.usgs.gov/SWO/hasOperationalStatus	http://spatial.maine.edu/semgaz/HydroOntology/hasGagingStation		FP
+http://cegis.usgs.gov/SWO/hasFlow	http://spatial.maine.edu/semgaz/HydroOntology/hasInflow	http://cegis.usgs.gov/SWO/hasFlow < http://spatial.maine.edu/semgaz/HydroOntology/flowsthrough (1.0, unrevised)	incorrect
+http://cegis.usgs.gov/SWO/SpringOrSeep	http://spatial.maine.edu/semgaz/HydroOntology/Spring	http://cegis.usgs.gov/SWO/SpringOrSeep < http://spatial.maine.edu/semgaz/HydroOntology/Spring (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/measuresHydrographicQuality	http://spatial.maine.edu/semgaz/HydroOntology/hasHydrographicStructure		FP
+AND[http://cegis.usgs.gov/SWO/Weir, http://cegis.usgs.gov/SWO/Dam]	http://spatial.maine.edu/semgaz/HydroOntology/DamWeir	OR[http://cegis.usgs.gov/SWO/Weir, http://cegis.usgs.gov/SWO/Dam] = http://spatial.maine.edu/semgaz/HydroOntology/DamWeir (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/Reservoir	http://spatial.maine.edu/semgaz/HydroOntology/Reservoir	http://cegis.usgs.gov/SWO/Reservoir = http://spatial.maine.edu/semgaz/HydroOntology/Reservoir (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/hasUnit	http://spatial.maine.edu/semgaz/HydroOntology/hasSaltWaterBay		FP
+http://cegis.usgs.gov/SWO/Gaging	http://spatial.maine.edu/semgaz/HydroOntology/GagingStation		FP
+http://cegis.usgs.gov/SWO/Levee	http://spatial.maine.edu/semgaz/HydroOntology/Levee	http://cegis.usgs.gov/SWO/Levee = http://spatial.maine.edu/semgaz/HydroOntology/Levee (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/Estuary	http://spatial.maine.edu/semgaz/HydroOntology/FreshwaterBay	http://cegis.usgs.gov/SWO/BayOrInlet < http://spatial.maine.edu/semgaz/HydroOntology/FreshwaterBay (1.0, unrevised)	incorrect
+http://cegis.usgs.gov/SWO/SwampOrMarsh	http://spatial.maine.edu/semgaz/HydroOntology/Wetlands	http://cegis.usgs.gov/SWO/SwampOrMarsh = http://spatial.maine.edu/semgaz/HydroOntology/Wetlands (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/Coastline	http://spatial.maine.edu/semgaz/HydroOntology/Coastline	http://cegis.usgs.gov/SWO/Coastline = http://spatial.maine.edu/semgaz/HydroOntology/Coastline (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/HydrographicFeature	http://spatial.maine.edu/semgaz/HydroOntology/Hydrographic_Feature	http://cegis.usgs.gov/SWO/HydrographicFeature < OR[http://spatial.maine.edu/semgaz/HydroOntology/Hydrographic_Feature, http://spatial.maine.edu/semgaz/HydroOntology/Boundary, http://spatial.maine.edu/semgaz/HydroOntology/Hydrographic_Structure] (1.0, unrevised)	contained
+http://cegis.usgs.gov/SWO/StreamOrRiver	http://spatial.maine.edu/semgaz/HydroOntology/River	http://cegis.usgs.gov/SWO/StreamOrRiver < http://spatial.maine.edu/semgaz/HydroOntology/River (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/BayOrInlet	http://spatial.maine.edu/semgaz/HydroOntology/SaltWaterBay	http://cegis.usgs.gov/SWO/BayOrInlet < http://spatial.maine.edu/semgaz/HydroOntology/FreshwaterBay (1.0, unrevised)	incorrect
+http://cegis.usgs.gov/SWO/BayOrInlet	http://spatial.maine.edu/semgaz/HydroOntology/SaltWaterBay	http://cegis.usgs.gov/SWO/BayOrInlet < http://spatial.maine.edu/semgaz/HydroOntology/SaltWaterBay (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/hasDirection	http://spatial.maine.edu/semgaz/HydroOntology/hasDam	http://cegis.usgs.gov/SWO/hasDirection < http://spatial.maine.edu/semgaz/HydroOntology/isDownstreamTo (1.0, unrevised)	incorrect
+http://cegis.usgs.gov/SWO/hasDirection	http://spatial.maine.edu/semgaz/HydroOntology/hasDam	http://cegis.usgs.gov/SWO/hasDirection < http://spatial.maine.edu/semgaz/HydroOntology/isUpstreamOf (1.0, unrevised)	incorrect
+http://cegis.usgs.gov/SWO/hasDirection	http://spatial.maine.edu/semgaz/HydroOntology/hasDam	http://cegis.usgs.gov/SWO/adjoins < http://spatial.maine.edu/semgaz/HydroOntology/hasDam (1.0, unrevised)	incorrect

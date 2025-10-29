@@ -1,0 +1,64 @@
+	GED	Score	correct ref classes	category
+Conference.tsv v. Conference.tsv	0.0	1.0	1	correct
+has_title.tsv v. has_title.tsv	1.0	0.6	0	incorrect
+Country.tsv				false negative
+Reviewing_event.tsv v. Reviewing_event.tsv	2.5	0.2857142857142857	0	incorrect
+Reviewing_event.tsv v. Reviewing_event_8843.tsv	2.5	0.2857142857142857	0	incorrect
+ends_on_2194.tsv				false negative
+ends_on_7441.tsv				false negative
+ends_on_9517.tsv				false negative
+ends_on_993.tsv				false negative
+ends_on.tsv				false negative
+ends_on_7840.tsv				false negative
+Administrative_event.tsv v. Administrative_event.tsv	2.5	0.2857142857142857	0	incorrect
+Reviewer.tsv				false negative
+hasEmail.tsv				false negative
+Participant.tsv v. Participant.tsv	2.5	0.2857142857142857	0	incorrect
+Event.tsv v. Event.tsv	4.000070706356501	0.428561327663357	0	incorrect
+starts_on_2729.tsv				false negative
+starts_on.tsv				false negative
+Organization.tsv				false negative
+Author.tsv v. Author.tsv	0.0	1.0	1	correct
+University.tsv				false negative
+Reception.tsv v. Reception_1433.tsv	2.5	0.2857142857142857	1	correct
+Reception.tsv v. Reception.tsv	2.5	0.2857142857142857	1	correct
+Reception.tsv v. Reception_6232.tsv	0.0	1.0	1	correct
+Working_event.tsv v. Working_event.tsv	2.0000707063565013	0.6363507806624543	0	incorrect
+Topic.tsv v. Topic.tsv	0.0	1.0	1	correct
+Topic.tsv v. Topic_717.tsv	4.0	0.11111111111111116	0	incorrect
+writtenBy.tsv v. writtenBy.tsv	0.0	1.0	1	correct
+Trip.tsv				false negative
+hasFirstName.tsv				false negative
+hasAdministrativeEvent.tsv v. hasAdministrativeEvent_1911.tsv	2.5	0.2857142857142857	0	incorrect
+hasAdministrativeEvent.tsv v. hasAdministrativeEvent.tsv	0.0	1.0	1	correct
+writes.tsv v. writes.tsv	2.5	0.2857142857142857	0	incorrect
+hasSurname.tsv				false negative
+Submission_event.tsv v. Submission_event.tsv	2.5	0.2857142857142857	0	incorrect
+Banquet.tsv				false negative
+Person.tsv v. Person.tsv	0.0	1.0	1	correct
+Company.tsv				false negative
+dealsWith.tsv v. dealsWith_7297.tsv	0.0	1.0	1	correct
+dealsWith.tsv v. dealsWith.tsv	2.5	0.2857142857142857	0	incorrect
+Camera_Ready_event.tsv v. Camera_Ready_event.tsv	2.5	0.2857142857142857	0	incorrect
+Workshop.tsv v. Workshop.tsv	0.0	1.0	1	correct
+Social_event.tsv v. Social_event_6701.tsv	2.5	0.2857142857142857	1	correct
+Social_event.tsv v. Social_event_1069.tsv	2.5	0.2857142857142857	1	correct
+Social_event.tsv v. Social_event.tsv	0.0	1.0	1	correct
+reviewes.tsv v. reviewes_7355.tsv	4.0	0.11111111111111116	0	incorrect
+reviewes.tsv v. reviewes.tsv	1.5	0.5714285714285714	1	contained in ref
+Contribution.tsv v. Contribution_7794.tsv	2.5	0.2857142857142857	0	incorrect
+Contribution.tsv v. Contribution.tsv	2.5	0.2857142857142857	0	incorrect
+Member_PC_8325.tsv				false positive
+Member_PC_2670.tsv				false positive
+Member_PC_6616.tsv				false positive
+Member_PC.tsv				false positive
+Chair_PC.tsv				false positive
+Paper.tsv				false positive
+location_5472.tsv				false positive
+location.tsv				false positive
+location_6071.tsv				false positive
+Administrator.tsv				false positive
+follows.tsv				false positive
+follows_1534.tsv				false positive
+follows_5455.tsv				false positive
+Poster.tsv				false positive

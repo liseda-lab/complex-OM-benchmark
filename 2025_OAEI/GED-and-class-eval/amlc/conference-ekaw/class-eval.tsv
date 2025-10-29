@@ -1,0 +1,7 @@
+mapping e1	mapping e2	ref e2
+http://ekaw#partOfEvent only http://ekaw#Conference	http://conference#Conference_part	http://ekaw#Scientific_Event < http://conference#Conference_part (1.0, unrevised)	incorrect
+http://ekaw#hasReview only http://ekaw#Positive_Review	http://conference#Reviewed_contribution	http://ekaw#Evaluated_Paper > http://conference#Reviewed_contribution (1.0, unrevised)	incorrect
+http://ekaw#authorOf only http://ekaw#Regular_Paper	http://conference#Regular_author	http://ekaw#Paper_Author = http://conference#Regular_author (1.0, unrevised)	incorrect
+http://conference#contributes only http://conference#Invited_talk	http://ekaw#Contributed_Talk		FP
+http://conference#was_a_track-workshop_chair_of only http://conference#Workshop	http://ekaw#Workshop_Chair	http://ekaw#Workshop_Chair = http://conference#was_a_track-workshop_chair_of some http://conference#Workshop (1.0, unrevised)	correct
+http://conference#was_a_track-workshop_chair_of only http://conference#Tutorial	http://ekaw#Tutorial_Chair	http://ekaw#Tutorial_Chair = http://conference#was_a_track-workshop_chair_of some http://conference#Tutorial (1.0, unrevised)	correct

@@ -1,0 +1,3 @@
+mapping e1	mapping e2	ref e2
+http://cegis.usgs.gov/SWO#HydrographicFeature	http://www.owl-ontologies.com/Cree_hydro.owl#Saakihiikin		FP
+http://cegis.usgs.gov/SWO#HydrographicFeature	http://www.owl-ontologies.com/Cree_hydro.owl#Hydrography		FP

@@ -1,0 +1,2 @@
+mapping e1	mapping e2	ref e2
+http://gbo#isOwnerOf only http://gbo#Vessel	http://gmo#VesselOwnerRole	AND[AND[http://gmo#providesAgentRole, Range(http://gmo#Vessel), Range(http://gmo#VesselOwnerRole)], http://gmo#performedBy] = INVERSE[AND[Domain(http://gbo#Vessel), http://gbo#isOwnerOf]] (1.0, unrevised)	overlap

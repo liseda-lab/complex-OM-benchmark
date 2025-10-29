@@ -1,0 +1,115 @@
+	GED	Score	correct ref classes	category
+Conference.tsv v. Conference.tsv	2.5	0.2857142857142857	0	incorrect
+Conference.tsv v. Conference_1761.tsv	2.5	0.2857142857142857	0	incorrect
+Conference.tsv v. Conference_6410.tsv	2.5	0.2857142857142857	0	incorrect
+Conference.tsv v. Conference_5824.tsv	2.5	0.2857142857142857	0	incorrect
+Conference.tsv v. Conference_3573.tsv	2.5	0.2857142857142857	0	incorrect
+Conference.tsv v. Conference_5944.tsv	0.0006745362563237774	0.9997301854974705	0	incorrect
+Chairman.tsv v. Chairman.tsv	0.0	1.0	1	correct
+Chairman_5376.tsv v. Chairman.tsv	1.0	0.6	0	incorrect
+writePaper.tsv v. writePaper.tsv	0.0	1.0	1	correct
+writePaper.tsv v. writePaper_6153.tsv	2.5	0.2857142857142857	0	incorrect
+readByReviewer.tsv v. readByReviewer.tsv	2.5	0.6153846153846154	0	incorrect
+readByReviewer.tsv v. readByReviewer_2005.tsv	0.0	1.0	3	correct
+readByReviewer.tsv v. readByReviewer_2491.tsv	5.0	0.33333333333333337	0	incorrect
+Reviewer.tsv v. Reviewer.tsv	2.5	0.5454545454545454	0	incorrect
+Reviewer.tsv v. Reviewer_4574.tsv	4.0	0.2727272727272727	0	incorrect
+Reviewer.tsv v. Reviewer_1088.tsv	2.5	0.5454545454545454	0	incorrect
+hasCo-author.tsv v. hasCo-author.tsv	0.0	1.0	1	correct
+Paper.tsv v. Paper.tsv	1.0	0.6	0	incorrect
+PaperAbstract.tsv v. PaperAbstract.tsv	0.0	1.0	1	correct
+PaperAbstract.tsv v. PaperAbstract_9527.tsv	4.0	0.11111111111111116	0	incorrect
+SubjectArea.tsv				false negative
+assignedByReviewer.tsv				false negative
+Author.tsv v. Author.tsv	4.0	0.11111111111111116	0	incorrect
+Review.tsv v. Review_4260.tsv	2.5	0.2857142857142857	0	incorrect
+Review.tsv v. Review.tsv	2.5	0.2857142857142857	0	incorrect
+Review.tsv v. Review_9463.tsv	2.5	0.2857142857142857	0	incorrect
+Review.tsv v. Review_1047.tsv	0.0	1.0	1	correct
+PaperFullVersion.tsv				false negative
+hasProgramCommitteeMember.tsv v. hasProgramCommitteeMember.tsv	5.5	0.0	0	incorrect
+hasProgramCommitteeMember.tsv v. hasProgramCommitteeMember_8635.tsv	3.0	0.33333333333333337	1	contained in ref
+Co-author.tsv v. Co-author.tsv	4.0	0.11111111111111116	0	incorrect
+ProgramCommitteeChair.tsv v. ProgramCommitteeChair_2123.tsv	0.0	1.0	1	correct
+ProgramCommitteeChair.tsv v. ProgramCommitteeChair_9713.tsv	0.0006745362563237774	0.999831365935919	0	incorrect
+ProgramCommitteeChair.tsv v. ProgramCommitteeChair.tsv	0.0	1.0	1	correct
+writtenBy.tsv v. writtenBy_6356.tsv	0.0	1.0	1	correct
+writtenBy.tsv v. writtenBy.tsv	2.5	0.2857142857142857	0	incorrect
+Document.tsv v. Document_3391.tsv	0.0	1.0	1	correct
+Document.tsv v. Document.tsv	2.5	0.2857142857142857	1	correct
+co-writePaper.tsv v. co-writePaper.tsv	0.0	1.0	1	correct
+co-writePaper.tsv v. co-writePaper_9651.tsv	2.5	0.2857142857142857	0	incorrect
+readPaper.tsv v. readPaper.tsv	1.0	0.8181818181818181	0	incorrect
+readPaper.tsv v. readPaper_4628.tsv	6.0	0.19999999999999996	0	incorrect
+readPaper.tsv v. readPaper_1686.tsv	3.5	0.46153846153846156	0	incorrect
+Rejected_contribution.tsv				false negative
+Person.tsv v. Person.tsv	0.0	1.0	1	correct
+Preference.tsv				false negative
+assignExternalReviewer.tsv				false negative
+hasAuthor.tsv v. hasAuthor.tsv	0.0	1.0	1	correct
+Reviewed_contribution.tsv				false negative
+ProgramCommittee.tsv v. ProgramCommittee_8080.tsv	4.0	0.11111111111111116	0	incorrect
+ProgramCommittee.tsv v. ProgramCommittee_6872.tsv	0.0	1.0	1	correct
+ProgramCommittee.tsv v. ProgramCommittee.tsv	2.5	0.2857142857142857	0	incorrect
+Submitted_contribution.tsv				false negative
+ExternalReviewer.tsv				false negative
+memberOfProgramCommittee.tsv v. memberOfProgramCommittee_5212.tsv	4.0	0.11111111111111116	0	incorrect
+memberOfProgramCommittee.tsv v. memberOfProgramCommittee.tsv	1.5	0.5714285714285714	1	contained in ref
+Accepted_contribution.tsv				false negative
+writeReview.tsv v. writeReview_4430.tsv	4.0	0.11111111111111116	0	incorrect
+writeReview.tsv v. writeReview.tsv	1.5	0.5714285714285714	1	contained in ref
+email.tsv				false negative
+ProgramCommitteeMember.tsv v. ProgramCommitteeMember_5034.tsv	0.0	1.0	1	correct
+ProgramCommitteeMember.tsv v. ProgramCommitteeMember_362.tsv	0.0	1.0	1	correct
+ProgramCommitteeMember.tsv v. ProgramCommitteeMember.tsv	2.5	0.375	0	incorrect
+rejectPaper_8896.tsv				false positive
+rejectPaper.tsv				false positive
+rejectPaper_4331.tsv				false positive
+rejectPaper_3850.tsv				false positive
+markConflictOfInterest.tsv				false positive
+markConflictOfInterest_9270.tsv				false positive
+hasConferenceMember_431.tsv				false positive
+hasConferenceMember_3919.tsv				false positive
+hasConferenceMember_6370.tsv				false positive
+hasConferenceMember.tsv				false positive
+hasConferenceMember_751.tsv				false positive
+hasConferenceMember_4966.tsv				false positive
+memberOfConference_2982.tsv				false positive
+memberOfConference_973.tsv				false positive
+memberOfConference_2108.tsv				false positive
+memberOfConference_8371.tsv				false positive
+memberOfConference_6779.tsv				false positive
+memberOfConference.tsv				false positive
+rejectedBy_585.tsv				false positive
+rejectedBy_2726.tsv				false positive
+rejectedBy_2511.tsv				false positive
+rejectedBy.tsv				false positive
+acceptPaper.tsv				false positive
+acceptPaper_5504.tsv				false positive
+acceptPaper_9641.tsv				false positive
+acceptPaper_6711.tsv				false positive
+ConferenceMember_4035.tsv				false positive
+ConferenceMember.tsv				false positive
+assignReviewer_6637.tsv				false positive
+assignReviewer_2242.tsv				false positive
+assignReviewer.tsv				false positive
+assignedByAdministrator_2665.tsv				false positive
+assignedByAdministrator_3616.tsv				false positive
+assignedByAdministrator.tsv				false positive
+acceptedBy.tsv				false positive
+acceptedBy_4505.tsv				false positive
+acceptedBy_7523.tsv				false positive
+acceptedBy_8249.tsv				false positive
+User.tsv				false positive
+submitPaper.tsv				false positive
+submitPaper_2868.tsv				false positive
+assignedTo_5369.tsv				false positive
+assignedTo_4125.tsv				false positive
+assignedTo.tsv				false positive
+hasBeenAssigned_4847.tsv				false positive
+hasBeenAssigned.tsv				false positive
+hasBeenAssigned_2772.tsv				false positive
+Meta-Reviewer.tsv				false positive
+readByMeta-Reviewer.tsv				false positive
+Meta-Review.tsv				false positive
+ConferenceChair.tsv				false positive

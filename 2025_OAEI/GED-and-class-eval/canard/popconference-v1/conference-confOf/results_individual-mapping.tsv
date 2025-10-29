@@ -1,0 +1,83 @@
+	GED	Score	correct ref classes	category
+Conference_volume.tsv v. Conference.tsv	0.0	1.0	1	correct
+Conference_volume.tsv v. Conference_volume.tsv	0.0	1.0	1	correct
+Conference_volume.tsv v. Conference_contributor.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_volume.tsv v. Conference_participant.tsv	1.0	0.6	0	incorrect
+Conference_volume.tsv v. Conference_contribution.tsv	1.0	0.6	0	incorrect
+Conference_volume.tsv v. Conference_contributor_3396.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference.tsv	1.0	0.6	0	incorrect
+Conference_participant.tsv v. Conference_volume.tsv	1.0	0.6	0	incorrect
+Conference_participant.tsv v. Conference_contributor.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_participant.tsv v. Conference_participant.tsv	0.0	1.0	1	correct
+Conference_participant.tsv v. Conference_contribution.tsv	1.0	0.6	0	incorrect
+Conference_participant.tsv v. Conference_contributor_3396.tsv	2.5	0.2857142857142857	0	incorrect
+Conference_contribution.tsv v. Conference.tsv	1.0	0.6	0	incorrect
+Conference_contribution.tsv v. Conference_volume.tsv	1.0	0.6	0	incorrect
+Conference_contribution.tsv v. Conference_contributor.tsv	2.5	0.2857142857142857	1	correct
+Conference_contribution.tsv v. Conference_participant.tsv	1.0	0.6	0	incorrect
+Conference_contribution.tsv v. Conference_contribution.tsv	0.0	1.0	1	correct
+Conference_contribution.tsv v. Conference_contributor_3396.tsv	2.5	0.2857142857142857	1	correct
+Chair_PC.tsv v. Chair.tsv	2.5	0.375	0	incorrect
+Chair_PC_3073.tsv v. Chair.tsv	2.5	0.375	0	incorrect
+Reviewer.tsv v. Reviewer.tsv	0.0	1.0	1	correct
+Reviewer.tsv v. Reviewer_7157.tsv	2.5	0.375	0	incorrect
+Regular_author.tsv v. Regular_author.tsv	0.0	1.0	1	correct
+Regular_author.tsv v. Regular_contribution.tsv	1.0	0.6	0	incorrect
+Paper.tsv v. Paper.tsv	0.0	1.0	1	correct
+has_a_track-workshop-tutorial_topic.tsv v. has_a_location.tsv	1.0	0.6	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_authors_8401.tsv	4.0	0.11111111111111116	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_authors.tsv	2.5	0.2857142857142857	0	incorrect
+has_a_track-workshop-tutorial_topic.tsv v. has_important_dates.tsv	1.0	0.6	0	incorrect
+has_a_location.tsv v. has_a_location.tsv	0.0	1.0	1	correct
+has_a_location.tsv v. has_authors_8401.tsv	4.0	0.11111111111111116	0	incorrect
+has_a_location.tsv v. has_authors.tsv	2.5	0.2857142857142857	0	incorrect
+has_a_location.tsv v. has_important_dates.tsv	1.0	0.6	0	incorrect
+has_the_first_name.tsv v. has_a_location.tsv	1.0	0.6	0	incorrect
+has_the_first_name.tsv v. has_authors_8401.tsv	4.0	0.11111111111111116	0	incorrect
+has_the_first_name.tsv v. has_authors.tsv	2.5	0.2857142857142857	0	incorrect
+has_the_first_name.tsv v. has_important_dates.tsv	1.0	0.6	0	incorrect
+has_the_last_name.tsv v. has_a_location.tsv	1.0	0.6	0	incorrect
+has_the_last_name.tsv v. has_authors_8401.tsv	4.0	0.11111111111111116	0	incorrect
+has_the_last_name.tsv v. has_authors.tsv	2.5	0.2857142857142857	0	incorrect
+has_the_last_name.tsv v. has_important_dates.tsv	1.0	0.6	0	incorrect
+has_authors.tsv v. has_a_location.tsv	1.0	0.6	0	incorrect
+has_authors.tsv v. has_authors_8401.tsv	4.0	0.11111111111111116	0	incorrect
+has_authors.tsv v. has_authors.tsv	1.5	0.5714285714285714	1	contained in ref
+has_authors.tsv v. has_important_dates.tsv	1.0	0.6	0	incorrect
+has_an_email.tsv v. has_a_location.tsv	1.0	0.6	0	incorrect
+has_an_email.tsv v. has_authors_8401.tsv	4.0	0.11111111111111116	0	incorrect
+has_an_email.tsv v. has_authors.tsv	2.5	0.2857142857142857	0	incorrect
+has_an_email.tsv v. has_important_dates.tsv	1.0	0.6	0	incorrect
+contributes.tsv v. contributes.tsv	4.0	0.11111111111111116	0	incorrect
+contributes.tsv v. contributes_2070.tsv	1.5	0.5714285714285714	1	contained in ref
+Organization.tsv				false negative
+Working_event.tsv				false negative
+Topic.tsv				false negative
+expertOn.tsv				false negative
+Person.tsv v. Person.tsv	0.0	1.0	1	correct
+Reviewed_contribution.tsv v. Reviewed_contribution.tsv	4.0	0.2727272727272727	0	incorrect
+Workshop.tsv v. Workshop.tsv	0.0	1.0	1	correct
+reviewes.tsv				false negative
+Tutorial.tsv v. Tutorial.tsv	0.0	1.0	1	correct
+Poster.tsv				false negative
+Member_PC_6839.tsv				false positive
+Member_PC_1722.tsv				false positive
+Member_PC.tsv				false positive
+Early_paid_applicant.tsv				false positive
+is_a_date_of_acceptance_announcement.tsv				false positive
+is_a_date_of_camera_ready_paper_submission.tsv				false positive
+is_a_full_paper_submission_date.tsv				false positive
+is_a_starting_date.tsv				false positive
+is_an_ending_date.tsv				false positive
+is_a_date_of_acceptance_announcement_4108.tsv				false positive
+is_a_full_paper_submission_date_990.tsv				false positive
+belong_to_a_conference_volume.tsv				false positive
+Contribution_co-author.tsv				false positive
+Contribution_co-author_8120.tsv				false positive
+Contribution_1th-author.tsv				false positive
+Written_contribution.tsv				false positive
+Rejected_contribution.tsv				false positive
+Camera_ready_contribution.tsv				false positive
+Paid_applicant.tsv				false positive
+Submitted_contribution.tsv				false positive
+Accepted_contribution.tsv				false positive

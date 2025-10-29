@@ -1,0 +1,47 @@
+	GED	Score	correct ref classes	category
+atPort_7746.tsv				false negative
+atPort.tsv				false negative
+Platform_4985.tsv				false negative
+Platform.tsv				false negative
+Place_3694.tsv v. Place.tsv	0.0	1.0	1	correct
+Place_4828.tsv v. Place.tsv	2.5	0.375	0	incorrect
+Place.tsv v. Place.tsv	2.5	0.375	0	incorrect
+hasPlatformType.tsv				false negative
+originatesFrom_72.tsv				false negative
+originatesFrom.tsv				false negative
+hasAbstract.tsv				false negative
+hasCruiseType.tsv				false negative
+GeoFeatureType.tsv				false negative
+hasDescription.tsv				false negative
+CruiseType.tsv				false negative
+Organization.tsv v. Organization.tsv	0.0	1.0	1	correct
+Award.tsv v. Award.tsv	0.0	1.0	1	correct
+hasIdentifierValue.tsv				false negative
+hasSampleType.tsv				false negative
+Cruise_3309.tsv v. Cruise.tsv	0.0	1.0	1	correct
+Cruise.tsv v. Cruise.tsv	2.5	0.375	0	incorrect
+PhysicalSampleType.tsv				false negative
+hasIdentifierScheme.tsv				false negative
+Vessel.tsv				false negative
+hasSubOrganization_7965.tsv				false negative
+hasSubOrganization.tsv				false negative
+fundedBy.tsv				false negative
+hasAward.tsv				false negative
+hasProgram.tsv				false negative
+Person.tsv v. Person_8461.tsv	1.0	0.6	0	incorrect
+Person.tsv v. Person.tsv	0.0	1.0	1	correct
+PlatformType.tsv				false negative
+Identifier.tsv				false negative
+hasTitle.tsv				false negative
+PhysicalSample.tsv				false negative
+PhysicalSample_5280.tsv				false negative
+hasPlaceType.tsv				false negative
+PlaceType.tsv				false negative
+associatedWithProgram.tsv				false negative
+hasGeoFeatureType.tsv				false negative
+hasIdentifier.tsv				false negative
+PortCall.tsv				false negative
+GeoFeature.tsv				false negative
+Program.tsv v. Program.tsv	0.0	1.0	1	correct
+hasGivenName.tsv				false positive
+hasMiddleName.tsv				false positive

@@ -1,0 +1,180 @@
+	GED	Score	correct ref classes	category
+Corriente_Subterránea.tsv				false negative
+Corriente.tsv				false negative
+Recinto.tsv				false negative
+Aguas_Continentales.tsv v. Aguas_Corrientes_Naturales.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Continentales.tsv v. Aguas_Marinas.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Continentales.tsv v. Aguas_Superficiales.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Continentales.tsv v. Aguas_Subterráneas.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Continentales.tsv v. Aguas_Corrientes.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes_Naturales.tsv v. Aguas_Corrientes_Naturales.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes_Naturales.tsv v. Aguas_Marinas.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes_Naturales.tsv v. Aguas_Superficiales.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes_Naturales.tsv v. Aguas_Subterráneas.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes_Naturales.tsv v. Aguas_Corrientes.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes_Artificiales.tsv v. Aguas_Corrientes_Naturales.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes_Artificiales.tsv v. Aguas_Marinas.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes_Artificiales.tsv v. Aguas_Superficiales.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes_Artificiales.tsv v. Aguas_Subterráneas.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes_Artificiales.tsv v. Aguas_Corrientes.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Costera.tsv v. Aguas_Corrientes_Naturales.tsv	2.5	0.375	0	incorrect
+Aguas_Costera.tsv v. Aguas_Marinas.tsv	2.5	0.375	0	incorrect
+Aguas_Costera.tsv v. Aguas_Superficiales.tsv	2.5	0.375	0	incorrect
+Aguas_Costera.tsv v. Aguas_Subterráneas.tsv	2.5	0.375	0	incorrect
+Aguas_Costera.tsv v. Aguas_Corrientes.tsv	2.5	0.375	0	incorrect
+Aguas_Marinas.tsv v. Aguas_Corrientes_Naturales.tsv	2.5	0.375	0	incorrect
+Aguas_Marinas.tsv v. Aguas_Marinas.tsv	2.5	0.375	0	incorrect
+Aguas_Marinas.tsv v. Aguas_Superficiales.tsv	2.5	0.375	0	incorrect
+Aguas_Marinas.tsv v. Aguas_Subterráneas.tsv	2.5	0.375	0	incorrect
+Aguas_Marinas.tsv v. Aguas_Corrientes.tsv	2.5	0.375	0	incorrect
+Aguas_Superficiales.tsv v. Aguas_Corrientes_Naturales.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Superficiales.tsv v. Aguas_Marinas.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Superficiales.tsv v. Aguas_Superficiales.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Superficiales.tsv v. Aguas_Subterráneas.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Superficiales.tsv v. Aguas_Corrientes.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Quietas.tsv v. Aguas_Corrientes_Naturales.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Quietas.tsv v. Aguas_Marinas.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Quietas.tsv v. Aguas_Superficiales.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Quietas.tsv v. Aguas_Subterráneas.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Quietas.tsv v. Aguas_Corrientes.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_de_Transición.tsv v. Aguas_Corrientes_Naturales.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_de_Transición.tsv v. Aguas_Marinas.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_de_Transición.tsv v. Aguas_Superficiales.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_de_Transición.tsv v. Aguas_Subterráneas.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_de_Transición.tsv v. Aguas_Corrientes.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Quietas_Naturales.tsv v. Aguas_Corrientes_Naturales.tsv	1.0	0.6	0	incorrect
+Aguas_Quietas_Naturales.tsv v. Aguas_Marinas.tsv	1.0	0.6	0	incorrect
+Aguas_Quietas_Naturales.tsv v. Aguas_Superficiales.tsv	1.0	0.6	0	incorrect
+Aguas_Quietas_Naturales.tsv v. Aguas_Subterráneas.tsv	1.0	0.6	0	incorrect
+Aguas_Quietas_Naturales.tsv v. Aguas_Corrientes.tsv	1.0	0.6	0	incorrect
+Aguas_Subterráneas.tsv v. Aguas_Corrientes_Naturales.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Subterráneas.tsv v. Aguas_Marinas.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Subterráneas.tsv v. Aguas_Superficiales.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Subterráneas.tsv v. Aguas_Subterráneas.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Subterráneas.tsv v. Aguas_Corrientes.tsv	4.0	0.2727272727272727	0	incorrect
+Aguas_Corrientes.tsv v. Aguas_Corrientes_Naturales.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes.tsv v. Aguas_Marinas.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes.tsv v. Aguas_Superficiales.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes.tsv v. Aguas_Subterráneas.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Corrientes.tsv v. Aguas_Corrientes.tsv	7.0	0.17647058823529416	0	incorrect
+Aguas_Quietas_Artificiales.tsv v. Aguas_Corrientes_Naturales.tsv	1.0	0.6	0	incorrect
+Aguas_Quietas_Artificiales.tsv v. Aguas_Marinas.tsv	1.0	0.6	0	incorrect
+Aguas_Quietas_Artificiales.tsv v. Aguas_Superficiales.tsv	1.0	0.6	0	incorrect
+Aguas_Quietas_Artificiales.tsv v. Aguas_Subterráneas.tsv	1.0	0.6	0	incorrect
+Aguas_Quietas_Artificiales.tsv v. Aguas_Corrientes.tsv	1.0	0.6	0	incorrect
+UndergroundFeature.tsv				false negative
+Venaje.tsv				false negative
+Acequia.tsv				false negative
+es_originado_por.tsv				false negative
+es_almacenado_en.tsv				false negative
+es_conectado_con.tsv				false negative
+es_comunicada_por.tsv				false negative
+es_almancenado_en.tsv				false negative
+Piscina.tsv				false negative
+Depósito.tsv				false negative
+Zona_Económic_Exclusiva.tsv				false negative
+Zona_Contigua.tsv				false negative
+Zona_Encharcable.tsv				false negative
+Mar.tsv				false negative
+Mar_Territorial.tsv				false negative
+evacúa_de.tsv				false negative
+Vado.tsv				false negative
+Efluente.tsv				false negative
+Efluente_4048.tsv				false negative
+Lago.tsv v. Lago.tsv	1.0	0.6	0	incorrect
+Lago_Subterráno.tsv v. Lago.tsv	4.0	0.2727272727272727	0	incorrect
+Lago_Salado.tsv v. Lago.tsv	1.0	0.6	0	incorrect
+Lago_Subterráneo.tsv v. Lago.tsv	4.0	0.2727272727272727	0	incorrect
+Saladar.tsv				false negative
+vierte_en.tsv				false negative
+Isla_Fluvial_2455.tsv				false negative
+Isla_Fluvial.tsv				false negative
+comunica_con.tsv				false negative
+Cascada.tsv				false negative
+Canal_de_Lago.tsv				false negative
+Canal.tsv				false negative
+Canal_Aguas_Marinas.tsv				false negative
+Fuente_Artesana.tsv				false negative
+Fuente_Vauclusiana.tsv				false negative
+Fuente_Salada.tsv				false negative
+SurfaceFeature.tsv				false negative
+Albufera_4396.tsv				false negative
+Albufera.tsv				false negative
+Albufera_7111.tsv				false negative
+ManmadeFeature.tsv				false negative
+Alta_Mar.tsv				false negative
+Pozo.tsv				false negative
+Arroyo.tsv v. Arroyo.tsv	7.0	0.17647058823529416	0	incorrect
+Arroyo_9177.tsv v. Arroyo.tsv	5.5	0.2142857142857143	0	incorrect
+Tubería.tsv				false negative
+Aluvión.tsv				false negative
+conecta_con.tsv				false negative
+Ojo.tsv				false negative
+Surgencia_Natural.tsv				false negative
+Surgencia_Artificial.tsv				false negative
+está_proxima_a.tsv				false negative
+Charca.tsv				false negative
+Masa_de_Agua_Artificial.tsv				false negative
+Masa_de_Hielo.tsv				false negative
+Chorrera.tsv				false negative
+Gola.tsv				false negative
+Marisma.tsv				false negative
+Conducto.tsv				false negative
+ElevatedFeature.tsv				false negative
+Desembocadura_4902.tsv				false negative
+Desembocadura.tsv				false negative
+Acuífero.tsv				false negative
+Nacimiento.tsv				false negative
+Río.tsv				false negative
+Delta.tsv				false negative
+Delta_4511.tsv				false negative
+permite.tsv				false negative
+Fenómeno_hidrográfic.tsv				false negative
+Fenómeno_hidrográfic_2960.tsv				false negative
+Fenómeno_hidrográfico_526.tsv				false negative
+Fenómeno_hidrográfico.tsv				false negative
+TransportingFeature_9150.tsv				false negative
+TransportingFeature_2156.tsv				false negative
+TransportingFeature.tsv				false negative
+TransportingFeature_5708.tsv				false negative
+Acuitardo.tsv				false negative
+Barranco.tsv				false negative
+tiene_afluente.tsv				false negative
+Aljibe.tsv				false negative
+Brazo_766.tsv				false negative
+Brazo.tsv				false negative
+Humedal.tsv				false negative
+sufre_descarga_de.tsv				false negative
+Glaciar.tsv				false negative
+Desagüe.tsv				false negative
+Océano.tsv				false negative
+estaEn.tsv				false negative
+Guadi.tsv				false negative
+Estuario_7249.tsv				false negative
+Estuario_3198.tsv				false negative
+Estuario.tsv				false negative
+Estuario_7090.tsv				false negative
+Torrente.tsv				false negative
+almancena.tsv				false negative
+origina.tsv				false negative
+Despósito.tsv				false negative
+Afluente.tsv				false negative
+Estanque.tsv				false negative
+desagua_en_6457.tsv				false negative
+desagua_en.tsv				false negative
+Poza.tsv				false negative
+Garganta.tsv				false negative
+Sumidero.tsv				false negative
+Rápido.tsv				false negative
+almacena.tsv				false negative
+Surgencias.tsv				false negative
+Salina.tsv				false negative
+Manantial_Salado.tsv				false negative
+Ribera.tsv				false negative
+Toma.tsv				false negative
+Confluencia.tsv				false negative
+Rambla.tsv				false negative
+Laguna.tsv				false negative
+Géiser.tsv				false negative
+parte_de.tsv				false positive
+Embalse.tsv				false positive

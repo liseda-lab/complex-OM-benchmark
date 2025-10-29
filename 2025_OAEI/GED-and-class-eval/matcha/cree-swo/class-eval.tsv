@@ -1,0 +1,7 @@
+mapping e1	mapping e2	ref e2
+http://cegis.usgs.gov/SWO/Shore	http://www.owl-ontologies.com/Cree_hydro/Sand	http://cegis.usgs.gov/SWO/Shore < http://www.owl-ontologies.com/Cree_hydro/Naasipaatimihch (1.0, unrevised)	incorrect
+http://cegis.usgs.gov/SWO/contains	http://www.owl-ontologies.com/Cree_hydro/Contains	http://cegis.usgs.gov/SWO/contains < http://www.owl-ontologies.com/Cree_hydro/Contains (1.0, unrevised)	correct
+http://cegis.usgs.gov/SWO/isContainedBy	http://www.owl-ontologies.com/Cree_hydro/ContainedBy	http://cegis.usgs.gov/SWO/isContainedBy < http://www.owl-ontologies.com/Cree_hydro/ContainedBy (1.0, unrevised)	correct
+AND[http://cegis.usgs.gov/SWO/EarthenConstructionMaterial, http://cegis.usgs.gov/SWO/SeaOrOcean]	http://www.owl-ontologies.com/Cree_hydro/Earth		FP
+http://cegis.usgs.gov/SWO/HydrographicMeasurement	http://www.owl-ontologies.com/Cree_hydro/Hydrography		FP
+http://cegis.usgs.gov/SWO/isConnectedTo	http://www.owl-ontologies.com/Cree_hydro/ConnectedTo	http://cegis.usgs.gov/SWO/isConnectedTo < http://www.owl-ontologies.com/Cree_hydro/ConnectedTo (1.0, unrevised)	correct

@@ -1,0 +1,6 @@
+mapping e1	mapping e2	ref e2
+http://conference#has_authors only http://conference#Reviewer	http://cmt#AuthorNotReviewer		FP
+http://conference#was_a_committee_chair_of only http://conference#Program_committee	http://cmt#ProgramCommitteeChair	http://conference#was_a_committee_chair_of some http://conference#Program_committee = http://cmt#ProgramCommitteeChair (1.0, unrevised)	correct
+http://conference#was_a_member_of only http://conference#Program_committee	http://cmt#ProgramCommitteeMember	http://conference#was_a_member_of some http://conference#Program_committee = http://cmt#ProgramCommitteeMember (1.0, unrevised)	correct
+http://conference#has_authors only http://conference#Co-chair	http://cmt#Co-author	http://conference#Contribution_co-author = http://cmt#Co-author (1.0, unrevised)	incorrect
+http://cmt#endReview only http://cmt#Meta-Review	http://conference#Reviewed_contribution	http://conference#Reviewed_contribution = http://cmt#hasDecision min 1 (1.0, unrevised)	incorrect

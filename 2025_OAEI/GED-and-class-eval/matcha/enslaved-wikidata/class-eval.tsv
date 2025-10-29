@@ -1,0 +1,270 @@
+mapping e1	mapping e2	ref e2
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt some https://lod.enslaved.org/entity/Q238		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q308208		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/NameRecord		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasInterAgentRelationshipRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasInterAgentRelationshipRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasECVO https://lod.enslaved.org/entity/Q734		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasInterAgentRelationshipType https://lod.enslaved.org/entity/Q112		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/TemporalExtent		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1458		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12337		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasSexRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasSexRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12538		FP
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/hasOriginalSourceType some https://enslaved.org/ontology/DocumentTypes	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/Person	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/Person	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	correct
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasAgeRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasAgeRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/InterAgentRelationshipRecord		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12836		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasInterAgentRelationshipType some https://enslaved.org/ontology/PSCategories		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasStatusGeneratedEvent some https://enslaved.org/ontology/Event		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasECVO https://lod.enslaved.org/entity/Q729		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOriginRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOriginRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue some https://lod.enslaved.org/entity/Q412		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q13082		FP
+https://lod.enslaved.org/entity/Q301	https://enslaved.org/ontology/Place	https://lod.enslaved.org/entity/Q301 = https://enslaved.org/ontology/Place (1.0, unrevised)	correct
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasInterAgentRelationshipType https://lod.enslaved.org/entity/Q456		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue some https://enslaved.org/ontology/SexTypes		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasInterAgentRelationshipRecord some https://enslaved.org/ontology/InterAgentRelationshipRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasInterAgentRelationshipRecord some https://enslaved.org/ontology/InterAgentRelationshipRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/AgentRecord		FP
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/hasOriginalSourceType https://lod.enslaved.org/entity/Q133	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1424		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasRaceRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasRaceRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasParticipantRoleRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasParticipantRoleRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1382		FP
+https://lod.enslaved.org/entity/Q433	https://enslaved.org/ontology/LicenseInformation		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasRaceRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasRaceRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q238	https://enslaved.org/ontology/atPlace https://lod.enslaved.org/entity/Q10018	https://lod.enslaved.org/entity/Q238 = https://enslaved.org/ontology/Event (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12608		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1320		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1315		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOccupationRecord some https://enslaved.org/ontology/OccupationRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOccupationRecord some https://enslaved.org/ontology/OccupationRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue https://lod.enslaved.org/entity/Q425		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue some https://lod.enslaved.org/entity/Q108		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasSexRecord some https://enslaved.org/ontology/SexRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasSexRecord some https://enslaved.org/ontology/SexRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue https://lod.enslaved.org/entity/Q104		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasNameVariant some https://enslaved.org/ontology/NameVariant		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12881		FP
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/hasOriginalSourceType https://lod.enslaved.org/entity/Q144	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1316		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1321		FP
+https://lod.enslaved.org/entity/Q301	https://enslaved.org/ontology/hasBroader some https://lod.enslaved.org/entity/Q303403	https://lod.enslaved.org/entity/Q301 = https://enslaved.org/ontology/Place (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q305690		FP
+https://lod.enslaved.org/entity/Q238	https://enslaved.org/ontology/atPlace https://lod.enslaved.org/entity/Q9977	https://lod.enslaved.org/entity/Q238 = https://enslaved.org/ontology/Event (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasParticipantRoleRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasParticipantRoleRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasNameRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasNameRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12315		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q11739		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasSexRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasSexRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12338		FP
+https://lod.enslaved.org/entity/Q238	https://enslaved.org/ontology/atPlace some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q238 = https://enslaved.org/ontology/Event (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q463	https://enslaved.org/ontology/InterAgentRelationshipTypes	https://lod.enslaved.org/entity/Q463 = https://enslaved.org/ontology/InterAgentRelationshipTypes (1.0, unrevised)	correct
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/OccupationRecord		FP
+https://lod.enslaved.org/entity/Q238	https://enslaved.org/ontology/atPlace https://lod.enslaved.org/entity/Q10024	https://lod.enslaved.org/entity/Q238 = https://enslaved.org/ontology/Event (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1412		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasInterAgentRelationshipType some https://lod.enslaved.org/entity/Q375		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q224462		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/refersToPlaceOfOrigin https://lod.enslaved.org/entity/Q292		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOccupationRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOccupationRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q316	https://enslaved.org/ontology/ParticipantRoleTypes	https://lod.enslaved.org/entity/Q316 = https://enslaved.org/ontology/ParticipantRoleTypes (1.0, unrevised)	correct
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q13067		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn some https://enslaved.org/ontology/EntityWithProvenance		FP
+https://lod.enslaved.org/entity/Q108	https://enslaved.org/ontology/Occupations	https://lod.enslaved.org/entity/Q108 = https://enslaved.org/ontology/Occupations (1.0, unrevised)	correct
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue some https://enslaved.org/ontology/AgeCategory		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOriginRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOriginRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1317		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12904		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/RaceRecord		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasInterAgentRelationshipType some https://enslaved.org/ontology/InterAgentRelationshipTypes		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasInterAgentRelationshipType some https://lod.enslaved.org/entity/Q463		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasNameRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasNameRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue some https://lod.enslaved.org/entity/Q375		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasNameRecord some https://enslaved.org/ontology/NameRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasNameRecord some https://enslaved.org/ontology/NameRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasStatusGeneratedEvent some https://lod.enslaved.org/entity/Q238		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/refersToPlaceOfOrigin https://lod.enslaved.org/entity/Q1466		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasInterAgentRelationshipType https://lod.enslaved.org/entity/Q253		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasParticipantRoleType some https://enslaved.org/ontology/ParticipantRoleTypes		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/refersToPlaceOfOrigin some https://lod.enslaved.org/entity/Q301		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue some https://enslaved.org/ontology/PSCategories		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt some https://enslaved.org/ontology/Event		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasParticipantRoleType https://lod.enslaved.org/entity/Q169		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue https://lod.enslaved.org/entity/Q109		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q224195		FP
+https://lod.enslaved.org/entity/Q238	https://enslaved.org/ontology/atPlace https://lod.enslaved.org/entity/Q14094	https://lod.enslaved.org/entity/Q238 = https://enslaved.org/ontology/Event (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/isRelationshipFrom some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/isRelationshipFrom some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasStatusGeneratedEvent https://lod.enslaved.org/entity/Q1313		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasInterAgentRelationshipRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasInterAgentRelationshipRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q238	https://enslaved.org/ontology/atPlace https://lod.enslaved.org/entity/Q9959	https://lod.enslaved.org/entity/Q238 = https://enslaved.org/ontology/Event (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/hasOriginalSourceType https://lod.enslaved.org/entity/Q134	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/OriginRecord		FP
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/hasOriginalSourceType https://lod.enslaved.org/entity/Q111	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12182		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasECVO https://lod.enslaved.org/entity/Q578		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/refersToPlaceOfOrigin some https://enslaved.org/ontology/Place		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasStatusGeneratedEvent https://lod.enslaved.org/entity/Q1319		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue some https://lod.enslaved.org/entity/Q463		FP
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/hasOriginalSourceType https://lod.enslaved.org/entity/Q145	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasECVO some https://lod.enslaved.org/entity/Q298		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12299		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasNameRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasNameRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue some https://enslaved.org/ontology/InterAgentRelationshipTypes		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasParticipantRoleRecord some https://enslaved.org/ontology/ParticipantRoleRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasParticipantRoleRecord some https://enslaved.org/ontology/ParticipantRoleRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1432		FP
+https://lod.enslaved.org/entity/Q238	https://enslaved.org/ontology/hasEventType https://lod.enslaved.org/entity/Q146	https://lod.enslaved.org/entity/Q238 = https://enslaved.org/ontology/Event (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12786		FP
+https://lod.enslaved.org/entity/Q291	https://enslaved.org/ontology/SexTypes	https://lod.enslaved.org/entity/Q291 = https://enslaved.org/ontology/SexTypes (1.0, unrevised)	correct
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q304573		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12872		FP
+https://lod.enslaved.org/entity/Q301	https://enslaved.org/ontology/hasBroader some https://enslaved.org/ontology/PlaceCV	https://lod.enslaved.org/entity/Q301 = https://enslaved.org/ontology/Place (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1318		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/refersToPlaceOfOrigin https://lod.enslaved.org/entity/Q1468		FP
+https://lod.enslaved.org/entity/Q412	https://enslaved.org/ontology/AgeCategory	https://lod.enslaved.org/entity/Q412 = https://enslaved.org/ontology/AgeCategory (1.0, unrevised)	correct
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12384		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasStatusGeneratedEvent https://lod.enslaved.org/entity/Q1315		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue https://lod.enslaved.org/entity/Q88		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isRelationshipTo https://lod.enslaved.org/entity/Q9444		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q223927		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasPersonStatusRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasPersonStatusRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue https://lod.enslaved.org/entity/Q429		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasECVO https://lod.enslaved.org/entity/Q749		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasRaceRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasRaceRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12816		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q11851		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12184		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isRelationshipTo https://lod.enslaved.org/entity/Q9445		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasInterAgentRelationshipType https://lod.enslaved.org/entity/Q458		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q224015		FP
+https://lod.enslaved.org/entity/Q238	https://enslaved.org/ontology/atPlace some https://lod.enslaved.org/entity/Q301	https://lod.enslaved.org/entity/Q238 = https://enslaved.org/ontology/Event (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue https://lod.enslaved.org/entity/Q294		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12448		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue https://lod.enslaved.org/entity/Q101		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasAgeRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasAgeRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q172	https://enslaved.org/ontology/ResearchProject	https://lod.enslaved.org/entity/Q172 = https://enslaved.org/ontology/ResearchProject (1.0, unrevised)	correct
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasECVO https://lod.enslaved.org/entity/Q683		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue https://lod.enslaved.org/entity/Q94		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1313		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/Agent	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/Agent	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue some https://lod.enslaved.org/entity/Q291		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasSexRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasSexRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasPersonStatusRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasPersonStatusRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasStatusGeneratedEvent https://lod.enslaved.org/entity/Q1314		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/refersToPlaceOfOrigin https://lod.enslaved.org/entity/Q1467		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasPreferredNameVariant some https://enslaved.org/ontology/NameVariant		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasAgeRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasAgeRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1319		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q224168		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q303823		FP
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/generatedBy some https://lod.enslaved.org/entity/Q172	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/generatedBy some https://enslaved.org/ontology/Event	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasInterAgentRelationshipType some https://lod.enslaved.org/entity/Q316		FP
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/hasOriginalSourceType some https://lod.enslaved.org/entity/Q122	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q238	https://enslaved.org/ontology/atPlace https://lod.enslaved.org/entity/Q14300	https://lod.enslaved.org/entity/Q238 = https://enslaved.org/ontology/Event (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/PersonStatusRecord		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOriginRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOriginRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue https://lod.enslaved.org/entity/Q87		FP
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/generatedBy https://lod.enslaved.org/entity/Q11586	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q298	https://enslaved.org/ontology/ECVO	https://lod.enslaved.org/entity/Q298 = https://enslaved.org/ontology/ECVO (1.0, unrevised)	correct
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/ParticipantRoleRecord		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasStatusGeneratedEvent https://lod.enslaved.org/entity/Q1317		FP
+https://lod.enslaved.org/entity/Q238	https://enslaved.org/ontology/hasEventType https://lod.enslaved.org/entity/Q250	https://lod.enslaved.org/entity/Q238 = https://enslaved.org/ontology/Event (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/generatedBy https://lod.enslaved.org/entity/Q9866	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12321		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasECVO https://lod.enslaved.org/entity/Q1199		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasRaceRecord some https://enslaved.org/ontology/RaceRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasRaceRecord some https://enslaved.org/ontology/RaceRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/hasOriginalSourceType https://lod.enslaved.org/entity/Q143	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue https://lod.enslaved.org/entity/Q427		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isRelationshipTo some https://enslaved.org/ontology/Agent		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q224333		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q303975		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue https://lod.enslaved.org/entity/Q296		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasParticipantRoleRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasParticipantRoleRecord some https://enslaved.org/ontology/AgentRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q238	https://enslaved.org/ontology/atPlace https://lod.enslaved.org/entity/Q10010	https://lod.enslaved.org/entity/Q238 = https://enslaved.org/ontology/Event (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q304530		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q307954		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasValue some https://enslaved.org/ontology/Occupations		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q224450		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isRelationshipTo some https://enslaved.org/ontology/Person		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOriginRecord some https://enslaved.org/ontology/OriginRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOriginRecord some https://enslaved.org/ontology/OriginRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/AgeRecord		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasStatusGeneratedEvent https://lod.enslaved.org/entity/Q1316		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/SexRecord		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12163		FP
+https://lod.enslaved.org/entity/Q282	https://enslaved.org/ontology/EventTypes	https://lod.enslaved.org/entity/Q282 = https://enslaved.org/ontology/EventTypes (1.0, unrevised)	correct
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOccupationRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOccupationRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasPersonStatusRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasPersonStatusRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasPersonStatusRecord some https://enslaved.org/ontology/PersonStatusRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasPersonStatusRecord some https://enslaved.org/ontology/PersonStatusRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/isRelationshipFrom some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/isRelationshipFrom some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q11731		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/refersToPlaceOfOrigin some https://enslaved.org/ontology/EntityWithProvenance		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q305896		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q224258		FP
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/generatedBy some https://enslaved.org/ontology/ResearchProject	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasECVO https://lod.enslaved.org/entity/Q453		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn some https://lod.enslaved.org/entity/Q67		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasECVO some https://enslaved.org/ontology/ECVO		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1376		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isRelationshipTo some https://lod.enslaved.org/entity/Q410		FP
+https://lod.enslaved.org/entity/Q303403	https://enslaved.org/ontology/PlaceCV	https://lod.enslaved.org/entity/Q303403 = https://enslaved.org/ontology/PlaceCV (1.0, unrevised)	correct
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasInterAgentRelationshipType some https://enslaved.org/ontology/ParticipantRoleTypes		FP
+https://lod.enslaved.org/entity/Q238	https://enslaved.org/ontology/atPlace some https://enslaved.org/ontology/Place	https://lod.enslaved.org/entity/Q238 = https://enslaved.org/ontology/Event (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/isRelationshipFrom some https://enslaved.org/ontology/InterAgentRelationshipRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/isRelationshipFrom some https://enslaved.org/ontology/InterAgentRelationshipRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isRelationshipTo https://lod.enslaved.org/entity/Q9443		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12968		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1388		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q1314		FP
+https://lod.enslaved.org/entity/Q122	https://enslaved.org/ontology/DocumentTypes		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasInterAgentRelationshipRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasInterAgentRelationshipRecord some https://enslaved.org/ontology/EntityWithProvenance	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12973		FP
+https://lod.enslaved.org/entity/Q238	https://enslaved.org/ontology/atPlace https://lod.enslaved.org/entity/Q9983	https://lod.enslaved.org/entity/Q238 = https://enslaved.org/ontology/Event (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasParticipantRoleType some https://lod.enslaved.org/entity/Q316		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/hasECVO https://lod.enslaved.org/entity/Q519		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12531		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasAgeRecord some https://enslaved.org/ontology/AgeRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasAgeRecord some https://enslaved.org/ontology/AgeRecord	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/recordedAt https://lod.enslaved.org/entity/Q223335		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12190		FP
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/isRelationshipFrom some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/isRelationshipFrom some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q67	https://enslaved.org/ontology/generatedBy some https://enslaved.org/ontology/ProvenanceActivity	https://lod.enslaved.org/entity/Q67 = https://enslaved.org/ontology/EntityWithProvenance (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOccupationRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Preson (1.0, unrevised)	incorrect
+https://lod.enslaved.org/entity/Q410	https://enslaved.org/ontology/hasOccupationRecord some http://wikiba.se/ontology#Statement	https://lod.enslaved.org/entity/Q410 = https://enslaved.org/ontology/Person (1.0, unrevised)	incorrect
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q12897		FP
+http://wikiba.se/ontology#Statement	https://enslaved.org/ontology/isDirectlyBasedOn https://lod.enslaved.org/entity/Q1209		FP

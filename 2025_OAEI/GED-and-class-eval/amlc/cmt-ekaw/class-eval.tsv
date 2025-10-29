@@ -1,0 +1,9 @@
+mapping e1	mapping e2	ref e2
+http://ekaw#authorOf only http://ekaw#Review	http://cmt#AuthorNotReviewer		FP
+http://ekaw#updatedVersionOf only http://ekaw#Paper	http://cmt#PaperFullVersion	http://ekaw#Regular_Paper = http://cmt#PaperFullVersion (1.0, unrevised)	incorrect
+http://ekaw#hasReview only http://ekaw#Positive_Review	http://cmt#ExternalReviewer		FP
+http://cmt#submitPaper only http://cmt#PaperAbstract	http://ekaw#Submitted_Paper	http://ekaw#Submitted_Paper = INVERSE[http://cmt#submitPaper] min 1 (1.0, unrevised)	overlap
+http://cmt#acceptPaper only http://cmt#PaperAbstract	http://ekaw#Accepted_Paper	http://ekaw#Accepted_Paper = OR[http://cmt#acceptedBy min 1, http://cmt#hasDecision some http://cmt#Acceptance] (1.0, unrevised)	incorrect
+http://cmt#hasBeenAssigned only http://cmt#PaperAbstract	http://ekaw#Assigned_Paper	http://ekaw#Assigned_Paper = http://cmt#assignedTo min 1 (1.0, unrevised)	incorrect
+http://cmt#rejectPaper only http://cmt#PaperAbstract	http://ekaw#Rejected_Paper	http://ekaw#Rejected_Paper = OR[http://cmt#hasDecision some http://cmt#Rejection, http://cmt#rejectedBy min 1] (1.0, unrevised)	incorrect
+http://cmt#endReview only http://cmt#Meta-Review	http://ekaw#Possible_Reviewer		FP

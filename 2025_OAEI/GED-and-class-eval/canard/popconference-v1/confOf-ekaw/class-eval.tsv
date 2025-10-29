@@ -1,0 +1,47 @@
+mapping e1	mapping e2	ref e2
+INVERSE[http://ekaw#topicCoveredBy]	http://confOf#dealsWith	http://ekaw#coversTopic < http://confOf#dealsWith (1.0, unrevised)	incorrect
+http://ekaw#coversTopic	http://confOf#dealsWith	http://ekaw#coversTopic < http://confOf#dealsWith (1.0, unrevised)	correct
+http://ekaw#authorOf min 1	http://confOf#Author	http://ekaw#Paper_Author = http://confOf#Author (1.0, unrevised)	incorrect
+http://ekaw#authorOf min 1	http://confOf#Author	http://ekaw#authorOf < http://confOf#writes (1.0, unrevised)	incorrect
+http://ekaw#locationOf some http://ekaw#Social_Event	http://confOf#Social_event	http://ekaw#Social_Event = http://confOf#Social_event (1.0, unrevised)	overlap
+http://ekaw#partOfEvent some http://ekaw#Scientific_Event	http://confOf#Social_event	http://ekaw#Social_Event = http://confOf#Social_event (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#heldIn] some http://ekaw#Social_Event	http://confOf#Social_event	http://ekaw#Social_Event = http://confOf#Social_event (1.0, unrevised)	overlap
+INVERSE[http://ekaw#hasEvent] some http://ekaw#Scientific_Event	http://confOf#Social_event	http://ekaw#Social_Event = http://confOf#Social_event (1.0, unrevised)	incorrect
+http://ekaw#Social_Event	http://confOf#Social_event	http://ekaw#Social_Event = http://confOf#Social_event (1.0, unrevised)	correct
+http://ekaw#Conference	http://confOf#Conference	http://ekaw#Conference = http://confOf#Conference (1.0, unrevised)	correct
+INVERSE[http://ekaw#heldIn] some http://ekaw#Conference	http://confOf#Conference	http://ekaw#Conference = http://confOf#Conference (1.0, unrevised)	overlap
+http://ekaw#locationOf some http://ekaw#Conference	http://confOf#Conference	http://ekaw#Conference = http://confOf#Conference (1.0, unrevised)	overlap
+INVERSE[http://ekaw#writtenBy]	http://confOf#writes	http://ekaw#writtenBy < http://confOf#writtenBy (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#writtenBy]	http://confOf#writes	http://ekaw#authorOf < http://confOf#writes (1.0, unrevised)	incorrect
+http://ekaw#writtenBy	http://confOf#writtenBy	http://ekaw#writtenBy < http://confOf#writtenBy (1.0, unrevised)	correct
+http://ekaw#reviewerOfPaper	http://confOf#reviewes	http://ekaw#reviewerOfPaper = http://confOf#reviewes (1.0, unrevised)	correct
+INVERSE[http://ekaw#hasReviewer]	http://confOf#reviewes	http://ekaw#reviewerOfPaper = http://confOf#reviewes (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasReviewer]	http://confOf#reviewes	http://ekaw#Evaluated_Paper = INVERSE[http://confOf#reviewes] min 1 (1.0, unrevised)	incorrect
+http://www.w3.org/2000/01/rdf-schema#label	http://confOf#has_title		FP
+http://ekaw#organises some http://ekaw#Conference	http://confOf#Administrator		FP
+http://ekaw#Person	http://confOf#Person	http://ekaw#Person = http://confOf#Person (1.0, unrevised)	correct
+http://ekaw#organises some http://ekaw#Conference	http://confOf#Chair_PC	http://ekaw#PC_Chair = http://confOf#Chair_PC (1.0, unrevised)	incorrect
+http://ekaw#Workshop	http://confOf#Workshop	http://ekaw#Workshop = http://confOf#Workshop (1.0, unrevised)	correct
+http://ekaw#hasUpdatedVersion some http://ekaw#Paper	http://confOf#Paper		FP
+INVERSE[http://ekaw#updatedVersionOf] some http://ekaw#Paper	http://confOf#Paper		FP
+http://ekaw#Paper	http://confOf#Paper	http://ekaw#Paper = http://confOf#Contribution (1.0, unrevised)	incorrect
+http://ekaw#Tutorial	http://confOf#Tutorial	http://ekaw#Tutorial = http://confOf#Tutorial (1.0, unrevised)	correct
+AND[http://ekaw#heldIn, AND[Domain(http://ekaw#Location), http://www.w3.org/2000/01/rdf-schema#label]]	http://confOf#location		FP
+AND[Domain(http://ekaw#Location), http://www.w3.org/2000/01/rdf-schema#label]	http://confOf#location		FP
+AND[INVERSE[http://ekaw#locationOf], AND[Domain(http://ekaw#Location), http://www.w3.org/2000/01/rdf-schema#label]]	http://confOf#location		FP
+INVERSE[http://ekaw#hasReviewer] min 1	http://confOf#Member_PC	http://ekaw#PC_Member = http://confOf#Member_PC (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#reviewWrittenBy] some http://ekaw#Review	http://confOf#Member_PC	http://ekaw#PC_Member = http://confOf#Member_PC (1.0, unrevised)	incorrect
+http://ekaw#authorOf some http://ekaw#Review	http://confOf#Member_PC	http://ekaw#PC_Member = http://confOf#Member_PC (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#writtenBy] some http://ekaw#Review	http://confOf#Member_PC	http://ekaw#PC_Member = http://confOf#Member_PC (1.0, unrevised)	incorrect
+http://ekaw#Paper	http://confOf#Poster	http://ekaw#Paper = http://confOf#Contribution (1.0, unrevised)	incorrect
+http://ekaw#Paper	http://confOf#Poster	http://ekaw#Poster_Paper = http://confOf#Poster (1.0, unrevised)	incorrect
+http://ekaw#hasUpdatedVersion some http://ekaw#Paper	http://confOf#Poster	http://ekaw#Poster_Paper = http://confOf#Poster (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#coversTopic] min 1	http://confOf#Topic	http://ekaw#Research_Topic = http://confOf#Topic (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#coversTopic] min 1	http://confOf#Topic	http://ekaw#coversTopic < http://confOf#dealsWith (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#coversTopic] min 1	http://confOf#Topic	http://ekaw#coversTopic < http://confOf#hasTopic (1.0, unrevised)	incorrect
+http://ekaw#Conference_Participant	http://confOf#Participant	http://ekaw#Conference_Participant = http://confOf#Participant (1.0, unrevised)	correct
+INVERSE[http://ekaw#hasEvent] some http://ekaw#Event	http://confOf#Event	http://ekaw#Event = http://confOf#Event (1.0, unrevised)	overlap
+http://ekaw#Event	http://confOf#Event	http://ekaw#Event = http://confOf#Event (1.0, unrevised)	correct
+http://ekaw#partOfEvent some http://ekaw#Event	http://confOf#Event	http://ekaw#Event = http://confOf#Event (1.0, unrevised)	overlap
+INVERSE[http://ekaw#locationOf] some http://ekaw#Location	http://confOf#Reception		FP
+http://ekaw#partOfEvent some http://ekaw#Scientific_Event	http://confOf#Working_event	http://ekaw#Scientific_Event = http://confOf#Working_event (1.0, unrevised)	overlap

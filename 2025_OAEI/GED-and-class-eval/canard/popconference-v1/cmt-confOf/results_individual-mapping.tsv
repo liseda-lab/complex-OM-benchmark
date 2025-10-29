@@ -1,0 +1,42 @@
+	GED	Score	correct ref classes	category
+Conference.tsv v. Conference.tsv	0.0	1.0	1	correct
+writePaper.tsv v. writePaper.tsv	2.5	0.2857142857142857	0	incorrect
+writePaper.tsv v. writePaper_8327.tsv	0.0	1.0	1	correct
+Reviewer.tsv v. Reviewer.tsv	0.0	1.0	1	correct
+Reviewer.tsv v. Reviewer_9069.tsv	2.5	0.375	0	incorrect
+Paper.tsv v. Paper.tsv	0.0005915409642117716	0.9997633836143153	0	incorrect
+SubjectArea.tsv				false negative
+Author.tsv v. Author.tsv	0.0	1.0	1	correct
+ConferenceMember.tsv				false negative
+PaperFullVersion.tsv				false negative
+ProgramCommitteeChair.tsv				false negative
+Administrator.tsv v. Administrator.tsv	0.0	1.0	1	correct
+readPaper.tsv v. readPaper.tsv	1.5	0.5714285714285714	1	contained in ref
+title.tsv				false negative
+Person.tsv v. Person.tsv	0.0	1.0	1	correct
+hasAuthor.tsv v. hasAuthor_318.tsv	1.5	0.5714285714285714	1	contained in ref
+hasAuthor.tsv v. hasAuthor.tsv	4.0	0.11111111111111116	0	incorrect
+hasSubjectArea.tsv v. hasSubjectArea.tsv	0.0	1.0	1	correct
+email.tsv				false negative
+ProgramCommitteeMember.tsv				false negative
+co-writePaper_6843.tsv				false positive
+co-writePaper.tsv				false positive
+Chairman.tsv				false positive
+readByReviewer.tsv				false positive
+markConflictOfInterest.tsv				false positive
+markConflictOfInterest_7624.tsv				false positive
+Co-author_9013.tsv				false positive
+Co-author_5776.tsv				false positive
+Co-author.tsv				false positive
+hasCo-author.tsv				false positive
+hasCo-author_3381.tsv				false positive
+date.tsv				false positive
+name.tsv				false positive
+User.tsv				false positive
+User_9511.tsv				false positive
+submitPaper.tsv				false positive
+submitPaper_2822.tsv				false positive
+hasBeenAssigned.tsv				false positive
+Meta-Reviewer.tsv				false positive
+readByMeta-Reviewer.tsv				false positive
+assignedTo.tsv				false positive

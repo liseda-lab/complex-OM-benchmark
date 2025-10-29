@@ -1,0 +1,140 @@
+mapping e1	mapping e2	ref e2
+http://ekaw#OC_Chair	http://conference#Chair	http://ekaw#OC_Chair = http://conference#was_a_committee_chair_of some http://conference#Organizing_committee (1.0, unrevised)	incorrect
+http://ekaw#PC_Chair	http://conference#Chair	http://ekaw#PC_Chair = http://conference#was_a_committee_chair_of some http://conference#Program_committee (1.0, unrevised)	incorrect
+AND[INVERSE[http://ekaw#organises], http://ekaw#reviewerOfPaper]	http://conference#has_contributions		FP
+AND[INVERSE[http://ekaw#heldIn], INVERSE[http://ekaw#organises], INVERSE[http://ekaw#hasReviewer]]	http://conference#has_contributions		FP
+AND[http://ekaw#locationOf, http://ekaw#organisedBy, INVERSE[http://ekaw#hasReviewer]]	http://conference#has_contributions		FP
+AND[INVERSE[http://ekaw#organises], INVERSE[http://ekaw#hasReviewer]]	http://conference#has_contributions		FP
+AND[http://ekaw#locationOf, INVERSE[http://ekaw#organises], INVERSE[http://ekaw#hasReviewer]]	http://conference#has_contributions		FP
+AND[INVERSE[http://ekaw#heldIn], http://ekaw#organisedBy, INVERSE[http://ekaw#hasReviewer]]	http://conference#has_contributions		FP
+AND[INVERSE[http://ekaw#heldIn], INVERSE[http://ekaw#organises], http://ekaw#reviewerOfPaper]	http://conference#has_contributions		FP
+AND[http://ekaw#organisedBy, INVERSE[http://ekaw#hasReviewer]]	http://conference#has_contributions		FP
+AND[http://ekaw#organisedBy, http://ekaw#reviewerOfPaper]	http://conference#has_contributions		FP
+AND[http://ekaw#locationOf, INVERSE[http://ekaw#organises], http://ekaw#reviewerOfPaper]	http://conference#has_contributions		FP
+AND[INVERSE[http://ekaw#heldIn], http://ekaw#organisedBy, http://ekaw#reviewerOfPaper]	http://conference#has_contributions		FP
+AND[http://ekaw#locationOf, http://ekaw#organisedBy, http://ekaw#reviewerOfPaper]	http://conference#has_contributions		FP
+INVERSE[http://ekaw#hasReviewer] some http://ekaw#Submitted_Paper	http://conference#Committee_member		FP
+http://ekaw#reviewerOfPaper some http://ekaw#Submitted_Paper	http://conference#Committee_member		FP
+INVERSE[http://ekaw#organisedBy] http://ekaw-instances#conference594425059	http://conference#was_a_member_of http://conference-instances#oc594425059		FP
+http://ekaw#Late-Registered_Participant	http://conference#Late_paid_applicant		FP
+http://ekaw#Invited_Speaker	http://conference#Invited_speaker	http://ekaw#Invited_Speaker = http://conference#Invited_speaker (1.0, unrevised)	correct
+AND[http://ekaw#presentationOfPaper, INVERSE[http://ekaw#authorOf]]	http://conference#is_given_by		FP
+AND[INVERSE[http://ekaw#paperPresentedAs], http://ekaw#writtenBy]	http://conference#is_given_by		FP
+AND[INVERSE[http://ekaw#paperPresentedAs], INVERSE[http://ekaw#authorOf]]	http://conference#is_given_by		FP
+AND[http://ekaw#presentationOfPaper, http://ekaw#writtenBy]	http://conference#is_given_by		FP
+http://ekaw#Rejected_Paper	http://conference#Rejected_contribution	http://ekaw#Rejected_Paper > http://conference#Rejected_contribution (1.0, unrevised)	correct
+http://ekaw#SC_Member	http://conference#was_a_member_of http://conference-instances#sc594425059	http://ekaw#SC_Member = http://conference#was_a_member_of some http://conference#Steering_committee (1.0, unrevised)	overlap
+http://ekaw#hasReview	http://conference#has_a_review		FP
+http://ekaw#Early-Registered_Participant	http://conference#Early_paid_applicant		FP
+http://ekaw#hasUpdatedVersion some http://ekaw#Paper	http://conference#Paper	http://ekaw#Regular_Paper = http://conference#Paper (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#updatedVersionOf] some http://ekaw#Paper	http://conference#Paper	http://ekaw#Regular_Paper = http://conference#Paper (1.0, unrevised)	incorrect
+http://ekaw#Paper	http://conference#Paper	http://ekaw#Regular_Paper = http://conference#Paper (1.0, unrevised)	incorrect
+http://ekaw#hasUpdatedVersion some http://ekaw#Camera_Ready_Paper	http://conference#Camera_ready_contribution		FP
+INVERSE[http://ekaw#updatedVersionOf] some http://ekaw#Camera_Ready_Paper	http://conference#Camera_ready_contribution		FP
+http://ekaw#Accepted_Paper	http://conference#Accepted_contribution	http://ekaw#Accepted_Paper > http://conference#Accepted_contribution (1.0, unrevised)	correct
+AND[INVERSE[http://ekaw#writtenBy], AND[Range(http://ekaw#Individual_Presentation), INVERSE[http://ekaw#presentationOfPaper]]]	http://conference#gives_presentations		FP
+AND[http://ekaw#authorOf, AND[Range(http://ekaw#Individual_Presentation), http://ekaw#paperPresentedAs]]	http://conference#gives_presentations		FP
+AND[http://ekaw#authorOf, AND[Range(http://ekaw#Individual_Presentation), INVERSE[http://ekaw#presentationOfPaper]]]	http://conference#gives_presentations		FP
+AND[INVERSE[http://ekaw#writtenBy], AND[Range(http://ekaw#Individual_Presentation), http://ekaw#paperPresentedAs]]	http://conference#gives_presentations		FP
+http://ekaw#Conference_Participant	http://conference#Active_conference_participant	http://ekaw#Conference_Participant = http://conference#Conference_participant (1.0, unrevised)	incorrect
+http://ekaw#Workshop_Chair	http://conference#Track-workshop_chair	http://ekaw#Workshop_Chair = http://conference#was_a_track-workshop_chair_of some http://conference#Workshop (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#reviewerOfPaper] some http://ekaw#Conference_Participant	http://conference#Conference_contribution		FP
+http://ekaw#writtenBy some http://ekaw#Conference_Participant	http://conference#Conference_contribution		FP
+http://ekaw#Tutorial	http://conference#Tutorial	http://ekaw#Tutorial = http://conference#Tutorial (1.0, unrevised)	correct
+http://ekaw#Submitted_Paper	http://conference#is_submitted_at http://conference-instances#conference594425059	http://ekaw#Submitted_Paper > http://conference#Submitted_contribution (1.0, unrevised)	incorrect
+http://ekaw#locationOf some http://ekaw#Conference	http://conference#Conference		FP
+INVERSE[http://ekaw#heldIn] some http://ekaw#Conference	http://conference#Conference		FP
+http://ekaw#Conference	http://conference#Conference	http://ekaw#Conference = http://conference#Conference_volume (1.0, unrevised)	incorrect
+http://ekaw#Regular_Paper	http://conference#Regular_contribution	http://ekaw#Regular_Paper = http://conference#Paper (1.0, unrevised)	incorrect
+http://ekaw#authorOf some http://ekaw#Conference_Paper	http://conference#Conference_participant	http://ekaw#Conference_Participant = http://conference#Conference_participant (1.0, unrevised)	incorrect
+http://ekaw#Conference_Participant	http://conference#Conference_participant	http://ekaw#Conference_Participant = http://conference#Conference_participant (1.0, unrevised)	correct
+INVERSE[http://ekaw#writtenBy] some http://ekaw#Conference_Paper	http://conference#Conference_participant	http://ekaw#Conference_Participant = http://conference#Conference_participant (1.0, unrevised)	incorrect
+http://ekaw#Late-Registered_Participant	http://conference#Registeered_applicant		FP
+INVERSE[http://ekaw#partOf] some http://ekaw#Conference_Banquet	http://conference#Conference_volume	http://ekaw#Conference = http://conference#Conference_volume (1.0, unrevised)	incorrect
+http://ekaw#hasEvent some http://ekaw#Conference_Banquet	http://conference#Conference_volume	http://ekaw#Conference = http://conference#Conference_volume (1.0, unrevised)	incorrect
+AND[INVERSE[http://ekaw#heldIn], http://ekaw#hasEvent]	http://conference#has_parts	http://ekaw#hasEvent < http://conference#has_parts (1.0, unrevised)	overlap
+AND[http://ekaw#locationOf, http://ekaw#hasEvent]	http://conference#has_parts	http://ekaw#hasEvent < http://conference#has_parts (1.0, unrevised)	overlap
+http://ekaw#hasEvent	http://conference#has_parts	http://ekaw#hasEvent < http://conference#has_parts (1.0, unrevised)	correct
+INVERSE[http://ekaw#organises]	http://conference#has_a_track-workshop-tutorial_chair	http://ekaw#organises min 1 = http://conference#Organizer (1.0, unrevised)	incorrect
+http://ekaw#organisedBy	http://conference#has_a_track-workshop-tutorial_chair		FP
+INVERSE[http://ekaw#writtenBy] some http://ekaw#Review	http://conference#Reviewer	OR[INVERSE[http://ekaw#reviewWrittenBy] min 1, http://ekaw#authorOf some http://ekaw#Review] = http://conference#Reviewer (1.0, unrevised)	overlap
+http://ekaw#authorOf some http://ekaw#Review	http://conference#Reviewer	OR[INVERSE[http://ekaw#reviewWrittenBy] min 1, http://ekaw#authorOf some http://ekaw#Review] = http://conference#Reviewer (1.0, unrevised)	overlap
+INVERSE[http://ekaw#hasReviewer] min 1	http://conference#Reviewer	OR[INVERSE[http://ekaw#reviewWrittenBy] min 1, http://ekaw#authorOf some http://ekaw#Review] = http://conference#Reviewer (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#reviewWrittenBy] some http://ekaw#Review	http://conference#Reviewer	OR[INVERSE[http://ekaw#reviewWrittenBy] min 1, http://ekaw#authorOf some http://ekaw#Review] = http://conference#Reviewer (1.0, unrevised)	overlap
+INVERSE[http://ekaw#writtenBy] some http://ekaw#Conference_Paper	http://conference#Conference_contributor	http://ekaw#Presenter > http://conference#Conference_contributor (1.0, unrevised)	incorrect
+http://ekaw#Workshop	http://conference#Workshop	http://ekaw#Workshop = http://conference#Workshop (1.0, unrevised)	correct
+AND[INVERSE[http://ekaw#hasEvent], INVERSE[http://ekaw#locationOf]]	http://conference#is_part_of_conference_volumes	http://ekaw#partOfEvent < http://conference#is_part_of_conference_volumes (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasEvent]	http://conference#is_part_of_conference_volumes	http://ekaw#hasEvent < http://conference#has_parts (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasEvent]	http://conference#is_part_of_conference_volumes	http://ekaw#partOfEvent < http://conference#is_part_of_conference_volumes (1.0, unrevised)	incorrect
+AND[INVERSE[http://ekaw#hasEvent], http://ekaw#heldIn]	http://conference#is_part_of_conference_volumes	http://ekaw#partOfEvent < http://conference#is_part_of_conference_volumes (1.0, unrevised)	incorrect
+AND[http://ekaw#partOfEvent, INVERSE[http://ekaw#locationOf]]	http://conference#is_part_of_conference_volumes	http://ekaw#partOfEvent < http://conference#is_part_of_conference_volumes (1.0, unrevised)	overlap
+AND[http://ekaw#partOfEvent, http://ekaw#heldIn]	http://conference#is_part_of_conference_volumes	http://ekaw#partOfEvent < http://conference#is_part_of_conference_volumes (1.0, unrevised)	overlap
+http://ekaw#partOfEvent	http://conference#is_part_of_conference_volumes	http://ekaw#partOfEvent < http://conference#is_part_of_conference_volumes (1.0, unrevised)	correct
+INVERSE[http://ekaw#organisedBy] http://ekaw-instances#conference594425059	http://conference#was_a_member_of http://conference-instances#pc594425059		FP
+http://ekaw#Person	http://conference#Person	http://ekaw#Person = http://conference#Person (1.0, unrevised)	correct
+http://ekaw#Review	http://conference#Review	http://ekaw#Review = http://conference#Review (1.0, unrevised)	correct
+INVERSE[http://ekaw#hasReview] min 1	http://conference#Review	http://ekaw#Review = http://conference#Review (1.0, unrevised)	incorrect
+http://ekaw#Conference_Proceedings	http://conference#Conference_proceedings	http://ekaw#Conference_Proceedings = http://conference#Conference_proceedings (1.0, unrevised)	correct
+http://ekaw#Submitted_Paper	http://conference#Submitted_contribution	http://ekaw#Submitted_Paper > http://conference#Submitted_contribution (1.0, unrevised)	correct
+INVERSE[http://ekaw#hasReview] some http://ekaw#Conference_Paper	http://conference#Conference_document		FP
+http://ekaw#writtenBy some http://ekaw#Conference_Participant	http://conference#Conference_document		FP
+http://ekaw#reviewOfPaper some http://ekaw#Conference_Paper	http://conference#Conference_document		FP
+http://ekaw#Conference_Paper	http://conference#Conference_document		FP
+INVERSE[http://ekaw#reviewerOfPaper] some http://ekaw#Conference_Participant	http://conference#Conference_document		FP
+http://ekaw#hasReviewer some http://ekaw#Conference_Participant	http://conference#Conference_document		FP
+INVERSE[http://ekaw#authorOf] some http://ekaw#Conference_Participant	http://conference#Conference_document		FP
+http://ekaw#writtenBy min 1	http://conference#Written_contribution	http://ekaw#writtenBy < http://conference#has_authors (1.0, unrevised)	incorrect
+http://ekaw#writtenBy min 1	http://conference#Written_contribution	OR[http://ekaw#Paper, http://ekaw#Abstract] > http://conference#Written_contribution (1.0, unrevised)	incorrect
+AND[http://ekaw#locationOf, AND[Range(http://ekaw#Tutorial), INVERSE[http://ekaw#partOfEvent]]]	http://conference#has_tutorials		FP
+AND[Range(http://ekaw#Tutorial), INVERSE[http://ekaw#partOfEvent]]	http://conference#has_tutorials		FP
+AND[http://ekaw#locationOf, AND[Range(http://ekaw#Tutorial), http://ekaw#hasEvent]]	http://conference#has_tutorials		FP
+AND[INVERSE[http://ekaw#heldIn], AND[Range(http://ekaw#Tutorial), INVERSE[http://ekaw#partOfEvent]]]	http://conference#has_tutorials		FP
+AND[Range(http://ekaw#Tutorial), http://ekaw#hasEvent]	http://conference#has_tutorials		FP
+AND[INVERSE[http://ekaw#heldIn], AND[Range(http://ekaw#Tutorial), http://ekaw#hasEvent]]	http://conference#has_tutorials		FP
+http://ekaw#authorOf some http://ekaw#Conference_Paper	http://conference#Conference_applicant		FP
+http://ekaw#Conference_Participant	http://conference#Conference_applicant	http://ekaw#Conference_Participant = http://conference#Conference_participant (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#writtenBy] some http://ekaw#Conference_Paper	http://conference#Conference_applicant		FP
+AND[Domain(http://ekaw#Location), http://www.w3.org/2000/01/rdf-schema#label]	http://conference#has_a_location		FP
+AND[http://ekaw#heldIn, AND[Domain(http://ekaw#Location), http://www.w3.org/2000/01/rdf-schema#label]]	http://conference#has_a_location		FP
+AND[INVERSE[http://ekaw#locationOf], AND[Domain(http://ekaw#Location), http://www.w3.org/2000/01/rdf-schema#label]]	http://conference#has_a_location		FP
+http://ekaw#organisedBy some http://ekaw#Conference_Participant	http://conference#Conference_part	http://ekaw#Scientific_Event < http://conference#Conference_part (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#organises] some http://ekaw#Conference_Participant	http://conference#Conference_part	http://ekaw#Scientific_Event < http://conference#Conference_part (1.0, unrevised)	incorrect
+http://ekaw#partOfEvent some http://ekaw#Conference	http://conference#Conference_part	http://ekaw#Scientific_Event < http://conference#Conference_part (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#hasPart] some http://ekaw#Conference	http://conference#Conference_part	http://ekaw#Scientific_Event < http://conference#Conference_part (1.0, unrevised)	incorrect
+http://ekaw#authorOf some http://ekaw#Regular_Paper	http://conference#Regular_author	http://ekaw#Paper_Author = http://conference#Regular_author (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#writtenBy] some http://ekaw#Regular_Paper	http://conference#Regular_author	http://ekaw#Paper_Author = http://conference#Regular_author (1.0, unrevised)	incorrect
+AND[Range(http://ekaw#Paper_Author), INVERSE[http://ekaw#authorOf]]	http://conference#has_authors	http://ekaw#reviewWrittenBy > http://conference#has_authors (1.0, unrevised)	incorrect
+AND[Range(http://ekaw#Paper_Author), INVERSE[http://ekaw#authorOf]]	http://conference#has_authors	http://ekaw#writtenBy < http://conference#has_authors (1.0, unrevised)	incorrect
+AND[Range(http://ekaw#Paper_Author), http://ekaw#writtenBy]	http://conference#has_authors	http://ekaw#reviewWrittenBy > http://conference#has_authors (1.0, unrevised)	incorrect
+AND[Range(http://ekaw#Paper_Author), http://ekaw#writtenBy]	http://conference#has_authors	http://ekaw#writtenBy < http://conference#has_authors (1.0, unrevised)	overlap
+http://ekaw#presentationOfPaper min 1	http://conference#Presentation		FP
+INVERSE[http://ekaw#writtenBy]	http://conference#contributes	http://ekaw#writtenBy < http://conference#has_authors (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#writtenBy]	http://conference#contributes	http://ekaw#authorOf < http://conference#contributes (1.0, unrevised)	incorrect
+http://ekaw#authorOf	http://conference#contributes	http://ekaw#authorOf < http://conference#contributes (1.0, unrevised)	correct
+AND[INVERSE[http://ekaw#heldIn], AND[Range(http://ekaw#Workshop), INVERSE[http://ekaw#partOfEvent]]]	http://conference#has_workshops		FP
+AND[INVERSE[http://ekaw#heldIn], AND[Range(http://ekaw#Workshop), http://ekaw#hasEvent]]	http://conference#has_workshops		FP
+AND[Range(http://ekaw#Workshop), INVERSE[http://ekaw#partOfEvent]]	http://conference#has_workshops		FP
+AND[http://ekaw#locationOf, AND[Range(http://ekaw#Workshop), http://ekaw#hasEvent]]	http://conference#has_workshops		FP
+AND[Range(http://ekaw#Workshop), http://ekaw#hasEvent]	http://conference#has_workshops		FP
+AND[http://ekaw#locationOf, AND[Range(http://ekaw#Workshop), INVERSE[http://ekaw#partOfEvent]]]	http://conference#has_workshops		FP
+http://ekaw#publisherOf min 1	http://conference#Publisher	http://ekaw#Proceedings_Publisher = http://conference#Publisher (1.0, unrevised)	incorrect
+http://ekaw#publisherOf min 1	http://conference#Publisher	http://ekaw#publisherOf < http://conference#issues (1.0, unrevised)	incorrect
+AND[Domain(http://ekaw#Review), INVERSE[http://ekaw#hasReview]]	http://conference#reviews		FP
+AND[Domain(http://ekaw#Review), http://ekaw#reviewOfPaper]	http://conference#reviews		FP
+http://ekaw#organises	http://conference#was_a_track-workshop_chair_of	http://ekaw#organises min 1 = http://conference#Organizer (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#organisedBy]	http://conference#was_a_track-workshop_chair_of		FP
+http://ekaw#Conference_Participant	http://conference#Passive_conference_participant	http://ekaw#Conference_Participant = http://conference#Conference_participant (1.0, unrevised)	incorrect
+INVERSE[http://ekaw#publisherOf]	http://conference#has_a_publisher	http://ekaw#publisherOf < http://conference#issues (1.0, unrevised)	incorrect
+http://ekaw#publisherOf	http://conference#issues	http://ekaw#publisherOf < http://conference#issues (1.0, unrevised)	correct
+AND[AND[Domain(http://ekaw#Submitted_Paper), http://ekaw#hasReviewer], http://ekaw#organises, http://ekaw#heldIn]	http://conference#is_submitted_at		FP
+AND[AND[Domain(http://ekaw#Submitted_Paper), http://ekaw#hasReviewer], INVERSE[http://ekaw#organisedBy]]	http://conference#is_submitted_at		FP
+AND[AND[Domain(http://ekaw#Submitted_Paper), http://ekaw#hasReviewer], INVERSE[http://ekaw#organisedBy], http://ekaw#heldIn]	http://conference#is_submitted_at		FP
+AND[AND[Domain(http://ekaw#Submitted_Paper), http://ekaw#hasReviewer], INVERSE[http://ekaw#organisedBy], INVERSE[http://ekaw#locationOf]]	http://conference#is_submitted_at		FP
+AND[AND[Domain(http://ekaw#Submitted_Paper), http://ekaw#hasReviewer], http://ekaw#organises, INVERSE[http://ekaw#locationOf]]	http://conference#is_submitted_at		FP
+AND[AND[Domain(http://ekaw#Submitted_Paper), http://ekaw#hasReviewer], http://ekaw#organises]	http://conference#is_submitted_at		FP
+AND[AND[Domain(http://ekaw#Submitted_Paper), INVERSE[http://ekaw#reviewerOfPaper]], INVERSE[http://ekaw#organisedBy]]	http://conference#is_submitted_at		FP
+AND[AND[Domain(http://ekaw#Submitted_Paper), INVERSE[http://ekaw#reviewerOfPaper]], INVERSE[http://ekaw#organisedBy], http://ekaw#heldIn]	http://conference#is_submitted_at		FP
+AND[AND[Domain(http://ekaw#Submitted_Paper), INVERSE[http://ekaw#reviewerOfPaper]], http://ekaw#organises]	http://conference#is_submitted_at		FP
+AND[AND[Domain(http://ekaw#Submitted_Paper), INVERSE[http://ekaw#reviewerOfPaper]], http://ekaw#organises, INVERSE[http://ekaw#locationOf]]	http://conference#is_submitted_at		FP
+AND[AND[Domain(http://ekaw#Submitted_Paper), INVERSE[http://ekaw#reviewerOfPaper]], http://ekaw#organises, http://ekaw#heldIn]	http://conference#is_submitted_at		FP
+AND[AND[Domain(http://ekaw#Submitted_Paper), INVERSE[http://ekaw#reviewerOfPaper]], INVERSE[http://ekaw#organisedBy], INVERSE[http://ekaw#locationOf]]	http://conference#is_submitted_at		FP

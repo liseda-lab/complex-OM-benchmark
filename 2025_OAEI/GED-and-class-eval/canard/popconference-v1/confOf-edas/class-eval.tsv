@@ -1,0 +1,51 @@
+mapping e1	mapping e2	ref e2
+INVERSE[http://edas#isTopicOf]	http://confOf#dealsWith	http://edas#hasTopic > http://confOf#dealsWith (1.0, unrevised)	incorrect
+http://edas#hasTopic	http://confOf#dealsWith	http://edas#hasTopic > http://confOf#dealsWith (1.0, unrevised)	correct
+http://edas#forEvent some http://edas#ConferenceEvent	http://confOf#Administrative_event	http://edas#Call > http://confOf#Administrative_event (1.0, unrevised)	incorrect
+http://edas#Conference	http://confOf#Conference	http://edas#Conference = http://confOf#Conference (1.0, unrevised)	correct
+http://edas#Author	http://confOf#Author	http://edas#Author = http://confOf#Author (1.0, unrevised)	correct
+http://edas#SocialEvent	http://confOf#Social_event	http://edas#SocialEvent = http://confOf#Social_event (1.0, unrevised)	correct
+http://edas#isLocationOf some http://edas#SocialEvent	http://confOf#Social_event	http://edas#SocialEvent = http://confOf#Social_event (1.0, unrevised)	overlap
+INVERSE[http://edas#hasLocation] some http://edas#SocialEvent	http://confOf#Social_event	http://edas#SocialEvent = http://confOf#Social_event (1.0, unrevised)	overlap
+INVERSE[http://edas#isWrittenBy]	http://confOf#writes	http://edas#isWrittenBy = http://confOf#writtenBy (1.0, unrevised)	incorrect
+INVERSE[http://edas#isWrittenBy]	http://confOf#writes	http://edas#hasRelatedPaper = http://confOf#writes (1.0, unrevised)	incorrect
+http://edas#forEvent some http://edas#AcademicEvent	http://confOf#Reviewing_event	http://edas#CallForReviews = http://confOf#Reviewing_event (1.0, unrevised)	incorrect
+INVERSE[http://edas#hasCall] some http://edas#AcademicEvent	http://confOf#Reviewing_event	http://edas#CallForReviews = http://confOf#Reviewing_event (1.0, unrevised)	incorrect
+http://edas#isWrittenBy	http://confOf#writtenBy	http://edas#isWrittenBy = http://confOf#writtenBy (1.0, unrevised)	correct
+AND[Domain(http://edas#Reviewer), http://edas#isReviewing]	http://confOf#reviewes	http://edas#isReviewing = http://confOf#reviewes (1.0, unrevised)	overlap
+AND[Domain(http://edas#Reviewer), http://edas#isReviewing]	http://confOf#reviewes	http://edas#Reviewer = http://confOf#reviewes min 1 (1.0, unrevised)	overlap
+AND[Domain(http://edas#Reviewer), INVERSE[http://edas#isReviewedBy]]	http://confOf#reviewes	http://edas#isReviewing = http://confOf#reviewes (1.0, unrevised)	incorrect
+AND[Domain(http://edas#Reviewer), INVERSE[http://edas#isReviewedBy]]	http://confOf#reviewes	http://edas#Reviewer = http://confOf#reviewes min 1 (1.0, unrevised)	overlap
+http://www.w3.org/2000/01/rdf-schema#label	http://confOf#has_title	http://edas#hasName > http://confOf#has_title (1.0, unrevised)	incorrect
+INVERSE[http://edas#hasMember] some http://edas#Conference	http://confOf#Administrator		FP
+http://edas#Person	http://confOf#Person	http://edas#Person = http://confOf#Person (1.0, unrevised)	correct
+http://edas#hasCall	http://confOf#hasAdministrativeEvent	http://edas#hasCall > http://confOf#hasAdministrativeEvent (1.0, unrevised)	correct
+INVERSE[http://edas#forEvent]	http://confOf#hasAdministrativeEvent	http://edas#hasCall > http://confOf#hasAdministrativeEvent (1.0, unrevised)	incorrect
+INVERSE[http://edas#hasMember] some http://edas#Conference	http://confOf#Chair_PC		FP
+INVERSE[http://edas#hasRelatedDocument] some http://edas#Conference	http://confOf#Contribution	http://edas#Paper = http://confOf#Contribution (1.0, unrevised)	incorrect
+http://edas#relatesTo some http://edas#Conference	http://confOf#Contribution	http://edas#Paper = http://confOf#Contribution (1.0, unrevised)	incorrect
+http://edas#Workshop	http://confOf#Workshop	http://edas#Workshop = http://confOf#Workshop (1.0, unrevised)	correct
+http://edas#hasSubmissionDeadline min 1	http://confOf#Submission_event	http://edas#CallForPapers = http://confOf#Submission_event (1.0, unrevised)	incorrect
+http://edas#hasSubmissionDeadline min 1	http://confOf#Submission_event	http://edas#hasSubmissionDeadline > http://confOf#ends_on (1.0, unrevised)	incorrect
+http://edas#Paper	http://confOf#Paper	http://edas#Paper = http://confOf#Contribution (1.0, unrevised)	incorrect
+http://edas#forEvent some http://edas#AcademicEvent	http://confOf#Camera_Ready_event	http://edas#CallForManuscripts = http://confOf#Camera_Ready_event (1.0, unrevised)	incorrect
+AND[INVERSE[http://edas#hasCall], INVERSE[http://edas#forEvent]]	http://confOf#follows		FP
+AND[INVERSE[http://edas#hasCall], http://edas#hasCall]	http://confOf#follows	http://edas#hasCall > http://confOf#hasAdministrativeEvent (1.0, unrevised)	incorrect
+AND[http://edas#forEvent, http://edas#hasCall]	http://confOf#follows		FP
+http://edas#location	http://confOf#location		FP
+AND[INVERSE[http://edas#isLocationOf], http://www.w3.org/2000/01/rdf-schema#label]	http://confOf#location		FP
+AND[http://edas#hasLocation, http://www.w3.org/2000/01/rdf-schema#label]	http://confOf#location		FP
+http://edas#isMemberOf some http://edas#Conference	http://confOf#Member_PC		FP
+http://edas#Reviewer	http://confOf#Member_PC	http://edas#Reviewer = http://confOf#reviewes min 1 (1.0, unrevised)	incorrect
+http://edas#hasRelatedDocument some http://edas#Review	http://confOf#Member_PC		FP
+INVERSE[http://edas#relatesTo] some http://edas#Review	http://confOf#Member_PC		FP
+http://edas#Paper	http://confOf#Poster	http://edas#Paper = http://confOf#Contribution (1.0, unrevised)	incorrect
+http://edas#Topic	http://confOf#Topic	http://edas#Topic = http://confOf#Topic (1.0, unrevised)	correct
+INVERSE[http://edas#hasTopic] min 1	http://confOf#Topic	http://edas#Topic = http://confOf#Topic (1.0, unrevised)	incorrect
+INVERSE[http://edas#hasTopic] min 1	http://confOf#Topic	http://edas#hasTopic > http://confOf#dealsWith (1.0, unrevised)	incorrect
+INVERSE[http://edas#hasMember] some http://edas#Conference	http://confOf#Participant	http://edas#Attendee = http://confOf#Participant (1.0, unrevised)	incorrect
+http://edas#forEvent min 1	http://confOf#Event	OR[http://edas#ConferenceEvent, http://edas#Call, http://edas#Conference] > http://confOf#Event (1.0, unrevised)	incorrect
+http://edas#isLocationOf some http://edas#Reception	http://confOf#Reception	http://edas#Reception = http://confOf#Reception (1.0, unrevised)	overlap
+http://edas#Reception	http://confOf#Reception	http://edas#Reception = http://confOf#Reception (1.0, unrevised)	correct
+INVERSE[http://edas#hasLocation] some http://edas#Reception	http://confOf#Reception	http://edas#Reception = http://confOf#Reception (1.0, unrevised)	overlap
+INVERSE[http://edas#forEvent] min 1	http://confOf#Working_event	OR[http://edas#AcademicEvent, http://edas#Conference] > http://confOf#Working_event (1.0, unrevised)	incorrect

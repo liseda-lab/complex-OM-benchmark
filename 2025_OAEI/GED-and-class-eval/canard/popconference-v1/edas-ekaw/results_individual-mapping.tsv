@@ -1,0 +1,84 @@
+	GED	Score	correct ref classes	category
+Excursion.tsv				false negative
+PublishedPaper.tsv v. PublishedPaper.tsv	1.0	0.75	0	incorrect
+PublishedPaper.tsv v. PublishedPaper_3588.tsv	1.0	0.75	0	incorrect
+Conference.tsv v. Conference.tsv	2.5	0.2857142857142857	1	correct
+Conference.tsv v. Conference_8093.tsv	2.5	0.2857142857142857	1	correct
+Conference.tsv v. Conference_6701.tsv	0.0	1.0	1	correct
+relatedToEvent.tsv v. relatedToEvent.tsv	4.0	0.11111111111111116	0	incorrect
+relatedToEvent.tsv v. relatedToEvent_6699.tsv	5.5	0.0	0	incorrect
+relatedToEvent.tsv v. relatedToEvent_9752.tsv	3.0	0.33333333333333337	1	contained in ref
+relatedToEvent.tsv v. relatedToEvent_5036.tsv	1.5	0.5714285714285714	1	contained in ref
+hasLocation.tsv v. hasLocation.tsv	1.5	0.5714285714285714	1	contained in ref
+hasLocation.tsv v. hasLocation_3143.tsv	4.0	0.11111111111111116	0	incorrect
+isReviewing.tsv v. isReviewing.tsv	2.5	0.2857142857142857	0	incorrect
+Reviewer.tsv v. Reviewer.tsv	7.0	0.30000000000000004	1	contained in ref
+Reviewer.tsv v. Reviewer_1936.tsv	6.5	0.35	0	incorrect
+Reviewer.tsv v. Reviewer_6596.tsv	7.0	0.30000000000000004	1	contained in ref
+Reviewer.tsv v. Reviewer_3187.tsv	7.0	0.30000000000000004	1	contained in ref
+Place.tsv v. Place.tsv	2.5	0.2857142857142857	0	incorrect
+SessionChair.tsv				false negative
+isWrittenBy.tsv v. isWrittenBy.tsv	0.0	1.0	1	correct
+Paper.tsv v. Paper_639.tsv	0.0	1.0	1	correct
+Paper.tsv v. Paper.tsv	2.5	0.2857142857142857	1	correct
+Paper.tsv v. Paper_7064.tsv	2.5	0.2857142857142857	1	correct
+Event.tsv				false negative
+Organization.tsv				false negative
+Author.tsv v. Author.tsv	2.5	0.2857142857142857	0	incorrect
+AcademiaOrganization.tsv				false negative
+Programme.tsv				false negative
+ConferenceSession.tsv				false negative
+Review.tsv v. Review.tsv	4.0	0.11111111111111116	0	incorrect
+Review.tsv v. Review_3133.tsv	0.0	1.0	1	correct
+SocialEvent.tsv v. SocialEvent.tsv	0.0	1.0	1	correct
+SocialEvent.tsv v. SocialEvent_7748.tsv	2.5	0.2857142857142857	0	incorrect
+SocialEvent.tsv v. SocialEvent_5111.tsv	2.5	0.2857142857142857	0	incorrect
+hasRelatedPaper.tsv v. hasRelatedPaper.tsv	1.5	0.5714285714285714	1	contained in ref
+hasRelatedPaper.tsv v. hasRelatedPaper_1636.tsv	4.0	0.11111111111111116	0	incorrect
+Topic.tsv v. Topic.tsv	4.0	0.11111111111111116	0	incorrect
+Document.tsv v. Document_6214.tsv	2.5	0.2857142857142857	1	correct
+Document.tsv v. Document_603.tsv	0.0	1.0	1	correct
+Document.tsv v. Document.tsv	2.5	0.2857142857142857	1	correct
+Document.tsv v. Document_7080.tsv	2.5	0.2857142857142857	1	correct
+Document.tsv v. Document_8721.tsv	2.5	0.2857142857142857	1	correct
+isTopicOf.tsv v. isTopicOf.tsv	2.5	0.2857142857142857	0	incorrect
+isTopicOf.tsv v. isTopicOf_541.tsv	0.0	1.0	1	correct
+RejectedPaper.tsv v. RejectedPaper.tsv	0.0	1.0	1	correct
+Person.tsv v. Person.tsv	0.0	1.0	1	correct
+isLocationOf.tsv v. isLocationOf_6521.tsv	1.5	0.5714285714285714	1	contained in ref
+isLocationOf.tsv v. isLocationOf.tsv	4.0	0.11111111111111116	0	incorrect
+relatedToPaper.tsv v. relatedToPaper_6469.tsv	5.5	0.0	0	incorrect
+relatedToPaper.tsv v. relatedToPaper_206.tsv	4.5	0.18181818181818177	1	contained in ref
+relatedToPaper.tsv v. relatedToPaper.tsv	7.0	0	0	incorrect
+relatedToPaper.tsv v. relatedToPaper_7606.tsv	3.0	0.33333333333333337	1	contained in ref
+Assigned_Paper.tsv				false negative
+Attendee.tsv				false negative
+isReviewedBy.tsv v. isReviewedBy.tsv	0.0	1.0	1	correct
+PaperPresentation.tsv v. PaperPresentation.tsv	4.0	0.11111111111111116	0	incorrect
+ConferenceDinner.tsv v. ConferenceDinner_1187.tsv	2.5	0.2857142857142857	0	incorrect
+ConferenceDinner.tsv v. ConferenceDinner_5369.tsv	2.5	0.2857142857142857	0	incorrect
+ConferenceDinner.tsv v. ConferenceDinner.tsv	0.0	1.0	1	correct
+Scientific_Event.tsv				false negative
+Workshop.tsv v. Workshop.tsv	0.0	1.0	1	correct
+hasTopic.tsv v. hasTopic.tsv	0.0	1.0	1	correct
+AcceptedPaper.tsv v. AcceptedPaper.tsv	0.0	1.0	1	correct
+NonAcademicEvent.tsv				false positive
+Presenter.tsv				false positive
+MealEvent.tsv				false positive
+MealEvent_5227.tsv				false positive
+hasName_1316.tsv				false positive
+hasName.tsv				false positive
+hasName_1718.tsv				false positive
+relatesTo_852.tsv				false positive
+relatesTo.tsv				false positive
+relatesTo_2385.tsv				false positive
+relatesTo_832.tsv				false positive
+relatesTo_5846.tsv				false positive
+relatesTo_1683.tsv				false positive
+hasRelatedDocument.tsv				false positive
+hasRelatedDocument_9521.tsv				false positive
+AcademicEvent.tsv				false positive
+Reception.tsv				false positive
+ConferenceEvent.tsv				false positive
+ConferenceChair_5454.tsv				false positive
+ConferenceChair.tsv				false positive
