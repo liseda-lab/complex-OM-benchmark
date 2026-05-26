@@ -6,6 +6,7 @@ Datasets for evaluating ontology matching systems in complex alignment scenarios
 - Enslaved [5]
 - Geolink (populated and unpopulated) [5, 6]
 - Hydrography [7, 8, 9]
+- Taxon [10]
 
 Each testcase folder contains one source ontology, one target ontology, and one reference alignment.
 
@@ -29,3 +30,5 @@ Each testcase folder contains one source ontology, one target ontology, and one 
 [8] Vilches-Blázquez, L. M., Ramos, J. A., López-Pellicer, F. J., Corcho, O., Nogueras-Iso, J. (2009) An approach to comparing different ontologies in the context of hydrographical information. Popovich et al., (eds.): IF&GIS'09. LNG&C Springer. Pages: 193-207, St. Petersburg, Russia.
 
 [9] Sinha, G. et al. (2014). An Ontology Design Pattern for Surface Water Features. In: Duckham, M., Pebesma, E., Stewart, K., Frank, A.U. (eds) Geographic Information Science. GIScience 2014. Lecture Notes in Computer Science, vol 8728. Springer, Cham.
+
+[10] Élodie Thiéblin, Fabien Amarger, Nathalie Hernandez, Catherine Roussey, Cassia Trojahn. Cross-querying LOD datasets using complex alignments: an application to agronomic taxa. In: Research Conference on Metadata and Semantics Research. Springer, Cham, 25-37, 2017.
